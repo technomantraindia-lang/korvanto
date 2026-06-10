@@ -47,7 +47,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.3rem 0.55rem;
+  padding: 0.2rem 0.4rem;
   background: var(--white);
   border: 1px solid rgba(197, 154, 74, 0.28);
   border-radius: 10px;
@@ -62,16 +62,16 @@
 
 .logo-img {
   display: block;
-  height: 60px;
+  height: clamp(72px, 9vw, 92px);
   width: auto;
-  max-width: 172px;
+  max-width: min(280px, 34vw);
   object-fit: contain;
   transition: height var(--transition), max-width var(--transition);
 }
 
 .site-header.is-scrolled .logo-img {
-  height: 52px;
-  max-width: 150px;
+  height: clamp(64px, 7.5vw, 78px);
+  max-width: min(240px, 30vw);
 }
 
 .main-nav {
