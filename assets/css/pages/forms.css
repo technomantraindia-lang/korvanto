@@ -1,0 +1,102 @@
+﻿/* Korvanto — Forms & contact page */
+/* Forms */
+.form-section { background: var(--grey-light); }
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.form-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-card);
+}
+
+.form-group { margin-bottom: 1.25rem; }
+
+.form-group label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--text-dark);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: border-color var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.form-group input.is-invalid,
+.form-group textarea.is-invalid { border-color: var(--navy-secondary); }
+
+.field-error {
+  font-size: 0.8rem;
+  color: var(--navy-secondary);
+  margin-top: 0.35rem;
+}
+
+.tilt-card {
+  transform: rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+  transform-style: preserve-3d;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-success {
+  background: var(--grey-light);
+  border: 1px solid var(--gold);
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  color: var(--navy);
+  font-size: 0.9rem;
+}
+
+/* Contact */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.contact-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 2rem;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.contact-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-card p { color: var(--text-soft); font-size: 0.9rem; }
+

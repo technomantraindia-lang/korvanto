@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Request a quote from Korvanto for industrial mineral export supply.">
+  <title>Request a Quote | Korvanto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/shared/base.css">
+  <link rel="stylesheet" href="assets/css/shared/header.css">
+  <link rel="stylesheet" href="assets/css/shared/footer.css">
+  <link rel="stylesheet" href="assets/css/pages/inner.css">
+  <link rel="stylesheet" href="assets/css/pages/forms.css">
+  <link rel="stylesheet" href="assets/css/shared/responsive.css">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <main>
+    <section class="page-hero page-hero--light">
+      <div class="container">
+        <nav class="breadcrumb"><a href="index.html">Home</a> / Request a Quote</nav>
+        <p class="section-label">Procurement</p>
+        <h1>Request a Quote</h1>
+        <p class="page-hero-lead">Submit your mineral requirements — product, grade, volume, packaging preference and destination — for a tailored B2B supply response.</p>
+      </div>
+    </section>
+
+    <section class="section form-section">
+      <div class="container form-grid reveal">
+        <div>
+          <div class="prose">
+          <h2>What to Include</h2>
+          <ul>
+            <li>Product name and required grade</li>
+            <li>Estimated volume per shipment or annual programme</li>
+            <li>Preferred packaging (jumbo bag, sacks, bulk)</li>
+            <li>Destination port or country</li>
+            <li>Target specification parameters if available</li>
+          </ul>
+          <p>Our team will respond to enquiries sent to <strong>[your-email@company.com]</strong>.</p>
+          </div>
+          <img src="assets/images/quote/hero.jpg" alt="Industrial export operations" width="900" height="1100" style="margin-top:2rem;border-radius:var(--radius-lg);box-shadow:var(--shadow-soft);width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;">
+        </div>
+        <form class="form-card" data-validate novalidate>
+          <div class="form-success" hidden>Thank you. Your quote request has been submitted. Our export team will contact you shortly.</div>
+          <div class="form-row">
+            <div class="form-group"><label for="qname">Full Name *</label><input type="text" id="qname" name="name" required></div>
+            <div class="form-group"><label for="qcompany">Company *</label><input type="text" id="qcompany" name="company" required></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="qemail">Email *</label><input type="email" id="qemail" name="email" required></div>
+            <div class="form-group"><label for="qphone">Phone</label><input type="tel" id="qphone" name="phone"></div>
+          </div>
+          <div class="form-group">
+            <label for="product">Product *</label>
+            <select id="product" name="product" required>
+              <option value="">Select product</option>
+              <option value="bentonite">Bentonite</option>
+              <option value="kaolin">Kaolin / China Clay</option>
+              <option value="ball-clay">Ball Clay</option>
+              <option value="chamotte">Chamotte / Calcined Clay</option>
+              <option value="calcined-bauxite">Calcined Bauxite</option>
+              <option value="laterite">Laterite</option>
+              <option value="coal-additive">Coal Additive / Lustrous Coal</option>
+              <option value="multiple">Multiple Products</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="volume">Estimated Volume</label><input type="text" id="volume" name="volume" placeholder="e.g. 500 MT / month"></div>
+            <div class="form-group"><label for="packaging">Packaging Preference</label>
+              <select id="packaging" name="packaging">
+                <option value="">Select</option>
+                <option value="jumbo">Jumbo Bags</option>
+                <option value="sacks">25/50 kg Sacks</option>
+                <option value="bulk">Bulk Container</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group"><label for="destination">Destination Port / Country *</label><input type="text" id="destination" name="destination" required></div>
+          <div class="form-group"><label for="specs">Specification / Grade Requirements</label><textarea id="specs" name="specs" rows="4" placeholder="Share technical parameters, mesh size, chemical limits, etc."></textarea></div>
+          <div class="form-group"><label for="notes">Additional Notes</label><textarea id="notes" name="notes" rows="3"></textarea></div>
+          <button type="submit" class="btn btn-gold">Submit Quote Request <span class="arrow">&rarr;</span></button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <div id="footer-placeholder"></div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+

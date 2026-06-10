@@ -1,0 +1,195 @@
+﻿/* Korvanto — Header & navigation */
+/* Header */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1.25rem 0;
+  background: rgba(9, 35, 61, 0.52);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 28px rgba(9, 35, 61, 0.22);
+  transition: background var(--transition), box-shadow var(--transition), padding var(--transition), backdrop-filter var(--transition), border-color var(--transition);
+}
+
+.site-header.is-scrolled {
+  background: rgba(9, 35, 61, 0.9);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom-color: rgba(197, 154, 74, 0.2);
+  box-shadow: 0 8px 32px rgba(9, 35, 61, 0.35);
+  padding: 0.85rem 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+  transition: transform var(--transition);
+}
+
+.logo:hover {
+  transform: translateY(-1px);
+}
+
+.logo-mark-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem 0.55rem;
+  background: var(--white);
+  border: 1px solid rgba(197, 154, 74, 0.28);
+  border-radius: 10px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+  transition: box-shadow var(--transition), border-color var(--transition);
+}
+
+.logo:hover .logo-mark-wrap {
+  border-color: rgba(197, 154, 74, 0.5);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.24);
+}
+
+.logo-img {
+  display: block;
+  height: 60px;
+  width: auto;
+  max-width: 172px;
+  object-fit: contain;
+  transition: height var(--transition), max-width var(--transition);
+}
+
+.site-header.is-scrolled .logo-img {
+  height: 52px;
+  max-width: 150px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.nav-list a,
+.dropdown-trigger {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: var(--white);
+  white-space: nowrap;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.nav-list a:hover,
+.dropdown-trigger:hover,
+.nav-list a.is-active,
+.dropdown-trigger.is-active {
+  color: var(--gold);
+}
+
+.chevron {
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+  transition: transform var(--transition);
+}
+
+.has-dropdown.is-open .chevron { transform: rotate(180deg); }
+
+.has-dropdown { position: relative; }
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  min-width: 260px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 0.5rem 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+}
+
+.has-dropdown.is-open .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.65rem 1.25rem;
+  color: var(--text-dark);
+  font-size: 0.8rem;
+  white-space: normal;
+}
+
+.dropdown-menu a:hover { background: var(--grey-light); color: var(--navy); }
+
+.dropdown-all {
+  border-top: 1px solid var(--border);
+  margin-top: 0.35rem;
+  padding-top: 0.35rem;
+}
+
+.dropdown-all a { color: var(--gold); font-weight: 600; }
+
+.btn-header { flex-shrink: 0; }
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nav-toggle span {
+  width: 26px;
+  height: 2px;
+  background: var(--white);
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.nav-close,
+.nav-backdrop {
+  display: none;
+}
+
+.nav-close-icon {
+  display: block;
+  color: var(--white);
+}
+

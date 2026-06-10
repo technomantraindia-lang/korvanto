@@ -1,0 +1,485 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Korvanto - B2B exporter and supplier of industrial minerals for global industries.">
+  <title>Korvanto | Industrial Mineral Export &amp; Supply</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/shared/base.css">
+  <link rel="stylesheet" href="assets/css/shared/header.css">
+  <link rel="stylesheet" href="assets/css/shared/footer.css">
+  <link rel="stylesheet" href="assets/css/pages/home.css">
+  <link rel="stylesheet" href="assets/css/shared/responsive.css">
+  <link rel="stylesheet" href="assets/css/pages/home-responsive.css">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <main>
+    <!-- 1. Cinematic Hero -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-slider">
+        <div class="hero-slide is-active">
+          <img src="assets/images/hero/banner 2.jpg" alt="Cargo port and mineral terminal" width="1920" height="1080" onerror="this.src='https://images.unsplash.com/photo-1605744432504-acff8839c149?auto=format&fit=crop&w=1920&q=80'">
+        </div>
+        <div class="hero-slide">
+          <img src="assets/images/hero/banner2.JPG" alt="Export vessel at sea" width="1920" height="1080" onerror="this.src='https://images.unsplash.com/photo-1578575437130-527eed3eabec?auto=format&fit=crop&w=1920&q=80'">
+        </div>
+        <div class="hero-slide">
+          <img src="assets/images/hero/banner 3.jpg" alt="Bulk loading at industrial terminal" width="1920" height="1080" onerror="this.src='https://images.unsplash.com/photo-1494412570809-14035c37063e?auto=format&fit=crop&w=1920&q=80'">
+        </div>
+      </div>
+      <div class="hero-overlay">
+        <div class="container hero-content">
+          <div class="hero-text" data-parallax="6">
+            <p class="section-label">Global B2B Mineral Supply</p>
+            <h1>Supplying Industrial Minerals. Powering Global Industries.</h1>
+            <p class="hero-desc">Korvanto partners with manufacturers, foundries, ceramics producers and industrial buyers — delivering specification-focused mineral supply with export-ready packaging and documentation support.</p>
+            <div class="hero-actions">
+              <a href="products.html" class="btn btn-gold">Explore Products <span class="arrow">&rarr;</span></a>
+              <a href="request-quote.html" class="btn btn-outline">Request a Quote <span class="arrow">&rarr;</span></a>
+            </div>
+          </div>
+          <div class="hero-3d-wrap">
+            <div class="hero-float-card" data-parallax="14">
+              <span>Capability</span>
+              Export-Ready Mineral Supply
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-dots" role="tablist" aria-label="Hero slides">
+        <button class="hero-dot is-active" aria-selected="true" aria-label="Slide 1"></button>
+        <button class="hero-dot" aria-selected="false" aria-label="Slide 2"></button>
+        <button class="hero-dot" aria-selected="false" aria-label="Slide 3"></button>
+      </div>
+    </section>
+
+    <!-- 2. Editorial Brand -->
+    <section class="section editorial">
+      <div class="container">
+        <div class="editorial-grid reveal">
+          <div>
+            <p class="section-label">Who We Are</p>
+            <h2 class="section-title">Built on Quality.<br> Delivered with Trust.</h2>
+          </div>
+          <div class="editorial-support">
+            <p>Korvanto is structured for international B2B trade in industrial minerals — from bentonite and kaolin to calcined bauxite and refractory clays. Our process emphasises material consistency, transparent specifications and coordinated export dispatch.</p>
+          </div>
+        </div>
+        <p class="editorial-statement reveal reveal-delay-1">We align mineral grades, packaging formats and documentation with your production requirements — so your supply chain stays predictable across every shipment.</p>
+        <div class="editorial-visual reveal reveal-delay-2" data-scroll-parallax="0.05">
+          <img src="assets/images/brand/banner 1.jpg" alt="Panoramic mineral handling and stockyard operations" width="1400" height="600" onerror="this.src='https://images.unsplash.com/photo-1581094790903-327f43ad9d67?auto=format&fit=crop&w=1400&q=80'">
+          <div class="editorial-strip">
+            <div class="strip-item">Consistent Supply</div>
+            <div class="strip-item">Export Packaging</div>
+            <div class="strip-item">Global Trade</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Mineral Atlas — Product Showcase -->
+    <section class="section mineral-atlas" id="mineralAtlas" aria-label="Product catalogue">
+      <div class="atlas-bg-pattern" aria-hidden="true"></div>
+      <div class="container">
+        <div class="atlas-layout reveal">
+          <header class="atlas-intro">
+            <p class="atlas-eyebrow"><span class="atlas-line"></span> Supply Catalogue</p>
+            <h2 class="atlas-title">Seven Minerals.<br>One Export Partner.</h2>
+            <p class="atlas-lead">Explore Korvanto's core industrial lines — each supplied with export packaging, specification clarity and B2B dispatch coordination.</p>
+            <div class="atlas-meta">
+              <div class="atlas-counter" aria-live="polite">
+                <span class="atlas-counter-num" id="atlasCounter">01</span>
+                <span class="atlas-counter-sep">/</span>
+                <span class="atlas-counter-total">07</span>
+              </div>
+              <div class="atlas-arrows">
+                <button type="button" class="atlas-arrow" id="atlasPrev" aria-label="Previous product">&larr;</button>
+                <button type="button" class="atlas-arrow" id="atlasNext" aria-label="Next product">&rarr;</button>
+              </div>
+            </div>
+            <a href="products.html" class="btn btn-gold atlas-cta">Full Product Catalogue <span class="arrow">&rarr;</span></a>
+          </header>
+
+          <div class="atlas-stage-wrap">
+            <div class="atlas-stage" id="atlasStage">
+              <article class="atlas-panel is-active" data-index="0">
+                <a href="bentonite.html" class="atlas-panel-link">
+                  <div class="atlas-panel-media">
+                    <img src="assets/images/Product-Images/Bentonite.png" alt="Bentonite mineral supply">
+                  </div>
+                  <div class="atlas-panel-content">
+                    <span class="atlas-panel-index">01</span>
+                    <h3 class="atlas-panel-title">Bentonite</h3>
+                    <p class="atlas-panel-desc">Swelling clay for drilling fluids, foundry bonding, civil sealing and industrial binder systems.</p>
+                    <span class="atlas-panel-cta">View specification <span class="arrow">&rarr;</span></span>
+                  </div>
+                </a>
+              </article>
+              <article class="atlas-panel" data-index="1">
+                <a href="kaolin.html" class="atlas-panel-link">
+                  <div class="atlas-panel-media">
+                    <img src="assets/images/Product-Images/Kaolin-China-Clay.png" alt="Kaolin china clay">
+                  </div>
+                  <div class="atlas-panel-content">
+                    <span class="atlas-panel-index">02</span>
+                    <h3 class="atlas-panel-title">Kaolin / China Clay</h3>
+                    <p class="atlas-panel-desc">Bright white clay for ceramics, paper coating, polymers and precision industrial filler grades.</p>
+                    <span class="atlas-panel-cta">View specification <span class="arrow">&rarr;</span></span>
+                  </div>
+                </a>
+              </article>
+              <article class="atlas-panel" data-index="2">
+                <a href="ball-clay.html" class="atlas-panel-link">
+                  <div class="atlas-panel-media">
+                    <img src="assets/images/Product-Images/Ball-Clay.png" alt="Ball clay">
+                  </div>
+                  <div class="atlas-panel-content">
+                    <span class="atlas-panel-index">03</span>
+                    <h3 class="atlas-panel-title">Ball Clay</h3>
+                    <p class="atlas-panel-desc">Highly plastic clay that improves workability, green strength and surface quality in ceramic bodies.</p>
+                    <span class="atlas-panel-cta">View specification <span class="arrow">&rarr;</span></span>
+                  </div>
+                </a>
+              </article>
+              <article class="atlas-panel" data-index="3">
+                <a href="chamotte.html" class="atlas-panel-link">
+                  <div class="atlas-panel-media">
+                    <img src="assets/images/Product-Images/Chamotte-Calcined-Clay-Refractory-Clay.png" alt="Chamotte calcined clay">
+                  </div>
+                  <div class="atlas-panel-content">
+                    <span class="atlas-panel-index">04</span>
+                    <h3 class="atlas-panel-title">Chamotte / Calcined Clay</h3>
+                    <p class="atlas-panel-desc">Calcined fireclay grog for refractory bricks, monolithics and high-temperature kiln systems.</p>
+                    <span class="atlas-panel-cta">View specification <span class="arrow">&rarr;</span></span>
+                  </div>
+                </a>
+              </article>
+              <article class="atlas-panel" data-index="4">
+                <a href="calcined-bauxite.html" class="atlas-panel-link">
+                  <div class="atlas-panel-media">
+                    <img src="assets/images/Product-Images/Calcined-Bauxite.png" alt="Calcined bauxite">
+                  </div>
+                  <div class="atlas-panel-content">
+                    <span class="atlas-panel-index">05</span>
+                    <h3 class="atlas-panel-title">Calcined Bauxite</h3>
+                    <p class="atlas-panel-desc">High-alumina aggregate for refractory linings, abrasives and demanding thermal applications.</p>
+                    <span class="atlas-panel-cta">View specification <span class="arrow">&rarr;</span></span>
+                  </div>
+                </a>
+              </article>
+              <article class="atlas-panel" data-index="5">
+                <a href="laterite.html" class="atlas-panel-link">
+                  <div class="atlas-panel-media">
+                    <img src="assets/images/Product-Images/Laterite.png" alt="Laterite mineral">
+                  </div>
+                  <div class="atlas-panel-content">
+                    <span class="atlas-panel-index">06</span>
+                    <h3 class="atlas-panel-title">Laterite</h3>
+                    <p class="atlas-panel-desc">Iron-rich lateritic mineral for cement raw mix, construction fill and industrial material blends.</p>
+                    <span class="atlas-panel-cta">View specification <span class="arrow">&rarr;</span></span>
+                  </div>
+                </a>
+              </article>
+              <article class="atlas-panel" data-index="6">
+                <a href="coal-additive.html" class="atlas-panel-link">
+                  <div class="atlas-panel-media">
+                    <img src="assets/images/Product-Images/Coal-Additive-Lustrous-Coal.png" alt="Coal additive lustrous coal">
+                  </div>
+                  <div class="atlas-panel-content">
+                    <span class="atlas-panel-index">07</span>
+                    <h3 class="atlas-panel-title">Coal Additive / Lustrous Coal</h3>
+                    <p class="atlas-panel-desc">Carbonaceous additive for foundry facing sand, mould coatings and metallurgical blend systems.</p>
+                    <span class="atlas-panel-cta">View specification <span class="arrow">&rarr;</span></span>
+                  </div>
+                </a>
+              </article>
+            </div>
+            <div class="atlas-progress" aria-hidden="true"><span class="atlas-progress-fill" id="atlasProgress"></span></div>
+          </div>
+        </div>
+
+        <nav class="atlas-index reveal" aria-label="Select product">
+          <button type="button" class="atlas-index-item is-active" data-index="0"><span class="atlas-index-num">01</span><span class="atlas-index-name">Bentonite</span></button>
+          <button type="button" class="atlas-index-item" data-index="1"><span class="atlas-index-num">02</span><span class="atlas-index-name">Kaolin</span></button>
+          <button type="button" class="atlas-index-item" data-index="2"><span class="atlas-index-num">03</span><span class="atlas-index-name">Ball Clay</span></button>
+          <button type="button" class="atlas-index-item" data-index="3"><span class="atlas-index-num">04</span><span class="atlas-index-name">Chamotte</span></button>
+          <button type="button" class="atlas-index-item" data-index="4"><span class="atlas-index-num">05</span><span class="atlas-index-name">Bauxite</span></button>
+          <button type="button" class="atlas-index-item" data-index="5"><span class="atlas-index-num">06</span><span class="atlas-index-name">Laterite</span></button>
+          <button type="button" class="atlas-index-item" data-index="6"><span class="atlas-index-num">07</span><span class="atlas-index-name">Coal Add.</span></button>
+        </nav>
+      </div>
+    </section>
+
+    <!-- 4. Source to Shipment (scroll-pinned: 4 steps then next section) -->
+    <section class="journey-section" id="journeySection">
+      <div class="journey-scroll-track" id="journeyScrollTrack">
+        <div class="journey-pin" id="journeyPin">
+          <div class="container">
+            <div class="home-section-head">
+              <p class="section-label">Our Process</p>
+              <h2 class="section-title">From Source to Shipment</h2>
+            </div>
+            <div class="journey-inner">
+              <div class="journey-media">
+                <div class="journey-visual" id="journeyVisual">
+                  <img src="assets/images/process/stage1.png" alt="Raw mineral material selection" class="is-active" data-step="0">
+                  <img src="assets/images/process/stage2.png" alt="Laboratory quality testing" data-step="1">
+                  <img src="assets/images/process/stage3.png" alt="Export jumbo bag packaging" data-step="2">
+                  <img src="assets/images/process/stage4.png" alt="Port dispatch and global logistics" data-step="3">
+                </div>
+              </div>
+
+              <div class="journey-flow">
+                <div class="journey-rail" id="journeyRail" aria-hidden="true">
+                  <span class="journey-rail-track"></span>
+                  <span class="journey-rail-fill" id="journeyRailFill"></span>
+                  <span class="journey-rail-icon is-active" data-step="0" title="Material Selection">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                  </span>
+                  <span class="journey-rail-icon" data-step="1" title="Quality Review">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v7H9z"/><path d="M10 10v4"/><path d="M8 21h8"/><path d="M12 14v7"/><ellipse cx="12" cy="17" rx="4" ry="1"/></svg>
+                  </span>
+                  <span class="journey-rail-icon" data-step="2" title="Export Packaging">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16v12H4z"/><path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M12 12v4"/></svg>
+                  </span>
+                  <span class="journey-rail-icon" data-step="3" title="Global Dispatch">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18h18"/><path d="M6 18l2-8h8l2 8"/><path d="M8 10V6h8v4"/><circle cx="12" cy="6" r="1.5"/></svg>
+                  </span>
+                </div>
+
+                <div class="journey-steps" id="journeySteps">
+                  <article class="journey-step is-active" data-step="0">
+                    <p class="journey-num">Stage 01</p>
+                    <h3>Material Selection</h3>
+                    <p>Source-aligned mineral grades matched to your application — with lot consistency and pre-shipment sampling where required.</p>
+                  </article>
+                  <article class="journey-step" data-step="1">
+                    <p class="journey-num">Stage 02</p>
+                    <h3>Quality Review</h3>
+                    <p>Laboratory testing and specification verification against agreed parameters before packing approval.</p>
+                  </article>
+                  <article class="journey-step" data-step="2">
+                    <p class="journey-num">Stage 03</p>
+                    <h3>Export Packaging</h3>
+                    <p>Jumbo bags, bulk sacks or container loads — labelled, weighed and prepared for international handling.</p>
+                  </article>
+                  <article class="journey-step" data-step="3">
+                    <p class="journey-num">Stage 04</p>
+                    <h3>Global Dispatch</h3>
+                    <p>Coordinated port dispatch with export documentation — supporting your logistics and customs workflow.</p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Global Reach -->
+    <section class="section export-world">
+      <div class="container">
+        <div class="home-section-head reveal">
+          <p class="section-label">Global Reach</p>
+          <h2 class="section-title">Exporting Minerals Across the World</h2>
+          <p class="section-lead">Structured for cross-border B2B supply — with bulk packaging options, specification documentation and dispatch coordination aligned to your procurement workflow.</p>
+        </div>
+        <div class="export-layout">
+          <div class="world-map-block reveal">
+          <div class="world-map-wrap" id="worldMap">
+            <img
+              src="assets/images/export/world-map-equirect.jpg"
+              alt="Equirectangular world map showing continents and oceans"
+              class="world-map-base"
+              width="1000"
+              height="500"
+              decoding="async"
+              onerror="this.src='https://unpkg.com/three-globe@2.31.1/example/img/earth-blue-marble.jpg'">
+            <div class="world-map-tint" aria-hidden="true"></div>
+            <svg class="world-map-overlay" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="World map showing export routes from India">
+              <rect class="map-vignette" width="1000" height="500" rx="14"/>
+              <!-- Routes from India (equirectangular coordinates) -->
+              <g class="map-routes">
+                <g class="map-routes-shadow" aria-hidden="true">
+                  <path class="map-route-shadow" data-route="0" d="M714,189 Q600,140 486,111"/>
+                  <path class="map-route-shadow" data-route="1" d="M714,189 Q678,186 639,183"/>
+                  <path class="map-route-shadow" data-route="2" d="M714,189 Q746,200 778,211"/>
+                  <path class="map-route-shadow" data-route="3" d="M714,189 Q760,170 792,153"/>
+                  <path class="map-route-shadow" data-route="4" d="M714,189 Q810,165 883,150"/>
+                  <path class="map-route-shadow" data-route="5" d="M714,189 Q668,215 608,253"/>
+                  <path class="map-route-shadow" data-route="6" d="M714,189 Q500,185 278,172"/>
+                  <path class="map-route-shadow" data-route="7" d="M714,189 Q800,255 869,325"/>
+                </g>
+                <g class="map-routes-lines">
+                  <path class="map-route" data-route="0" d="M714,189 Q600,140 486,111"/>
+                  <path class="map-route" data-route="1" d="M714,189 Q678,186 639,183"/>
+                  <path class="map-route" data-route="2" d="M714,189 Q746,200 778,211"/>
+                  <path class="map-route" data-route="3" d="M714,189 Q760,170 792,153"/>
+                  <path class="map-route" data-route="4" d="M714,189 Q810,165 883,150"/>
+                  <path class="map-route" data-route="5" d="M714,189 Q668,215 608,253"/>
+                  <path class="map-route" data-route="6" d="M714,189 Q500,185 278,172"/>
+                  <path class="map-route" data-route="7" d="M714,189 Q800,255 869,325"/>
+                </g>
+              </g>
+              <g class="map-nodes">
+                <g class="map-node" data-route="0" data-label="Europe" tabindex="0">
+                  <circle class="node-hit" cx="486" cy="111" r="14"/>
+                  <circle class="node-dot" cx="486" cy="111" r="5"/>
+                </g>
+                <g class="map-node" data-route="1" data-label="Middle East" tabindex="0">
+                  <circle class="node-hit" cx="639" cy="183" r="14"/>
+                  <circle class="node-dot" cx="639" cy="183" r="5"/>
+                </g>
+                <g class="map-node" data-route="2" data-label="Southeast Asia" tabindex="0">
+                  <circle class="node-hit" cx="778" cy="211" r="14"/>
+                  <circle class="node-dot" cx="778" cy="211" r="5"/>
+                </g>
+                <g class="map-node" data-route="3" data-label="East Asia" tabindex="0">
+                  <circle class="node-hit" cx="792" cy="153" r="14"/>
+                  <circle class="node-dot" cx="792" cy="153" r="5"/>
+                </g>
+                <g class="map-node" data-route="4" data-label="Far East Asia" tabindex="0">
+                  <circle class="node-hit" cx="883" cy="150" r="14"/>
+                  <circle class="node-dot" cx="883" cy="150" r="5"/>
+                </g>
+                <g class="map-node" data-route="5" data-label="Africa" tabindex="0">
+                  <circle class="node-hit" cx="608" cy="253" r="14"/>
+                  <circle class="node-dot" cx="608" cy="253" r="5"/>
+                </g>
+                <g class="map-node" data-route="6" data-label="Americas" tabindex="0">
+                  <circle class="node-hit" cx="278" cy="172" r="14"/>
+                  <circle class="node-dot" cx="278" cy="172" r="5"/>
+                </g>
+                <g class="map-node" data-route="7" data-label="Oceania" tabindex="0">
+                  <circle class="node-hit" cx="869" cy="325" r="14"/>
+                  <circle class="node-dot" cx="869" cy="325" r="5"/>
+                </g>
+                <g class="map-node map-hub" data-label="India — Export Origin" tabindex="0">
+                  <circle class="hub-marker" cx="714" cy="189" r="6"/>
+                  <text class="hub-label" x="714" y="224" text-anchor="middle">INDIA</text>
+                </g>
+              </g>
+            </svg>
+            <div class="map-cursor" id="mapCursor" aria-hidden="true" hidden>
+              <span class="map-cursor-ring"></span>
+              <span class="map-cursor-core"></span>
+            </div>
+            <div class="map-tooltip" id="mapTooltip" role="tooltip" hidden></div>
+          </div>
+            <div class="map-ui">
+              <p class="map-stat"><span id="mapRouteCount">8</span> export corridors connected</p>
+              <p class="map-hint">Move across the map — the glow follows your cursor near each corridor</p>
+            </div>
+          </div>
+          <div class="export-chips">
+            <div class="export-chip reveal">
+              <h4>7 Core Product Lines</h4>
+              <p>Bentonite, kaolin, ball clay, chamotte, calcined bauxite, laterite and coal additive — supplied to industrial buyers worldwide.</p>
+            </div>
+            <div class="export-chip reveal reveal-delay-1">
+              <h4>Bulk Packaging Options</h4>
+              <p>Jumbo bags, bulk sacks and containerised loads — configured to your handling and port requirements.</p>
+            </div>
+            <div class="export-chip reveal reveal-delay-2">
+              <h4>B2B Export Focus</h4>
+              <p>Procurement-oriented service with specification sheets, packing lists and export documentation support.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Why Choose -->
+    <section class="section why-section" id="whySection">
+      <div class="container">
+        <header class="why-header home-section-head reveal">
+          <div class="why-header-main">
+            <p class="section-label">Our Advantage</p>
+            <h2 class="section-title">Why Global Buyers Choose Korvanto</h2>
+          </div>
+          <p class="why-header-lead">Structured B2B supply with specification clarity, export documentation and coordinated dispatch — built for long-term industrial partnerships.</p>
+        </header>
+
+        <div class="why-panels">
+          <a href="quality-assurance.html" class="why-panel reveal tilt-card">
+            <div class="why-panel-top">
+              <div class="why-panel-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg>
+              </div>
+              <span class="why-panel-num">01</span>
+            </div>
+            <div class="why-panel-body">
+              <h3>Specification-Focused Supply</h3>
+              <p>Mineral grades aligned to your technical requirements with transparent specification communication.</p>
+            </div>
+            <span class="why-panel-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+
+          <a href="export-packaging.html" class="why-panel reveal reveal-delay-1 tilt-card">
+            <div class="why-panel-top">
+              <div class="why-panel-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8M16 17H8M10 9H8"/></svg>
+              </div>
+              <span class="why-panel-num">02</span>
+            </div>
+            <div class="why-panel-body">
+              <h3>Export Documentation Support</h3>
+              <p>Packing lists, certificates and shipping documents prepared for international B2B trade.</p>
+            </div>
+            <span class="why-panel-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+
+          <a href="contact.html" class="why-panel reveal reveal-delay-2 tilt-card">
+            <div class="why-panel-top">
+              <div class="why-panel-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <span class="why-panel-num">03</span>
+            </div>
+            <div class="why-panel-body">
+              <h3>Responsive B2B Service</h3>
+              <p>Direct communication for enquiries, samples and recurring supply programmes.</p>
+            </div>
+            <span class="why-panel-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+
+          <a href="export-packaging.html" class="why-panel reveal reveal-delay-3 tilt-card">
+            <div class="why-panel-top">
+              <div class="why-panel-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M3 18h18"/><path d="M5 18l1-6h12l1 6"/><path d="M7 12V8h10v4"/><circle cx="12" cy="7" r="1.5"/></svg>
+              </div>
+              <span class="why-panel-num">04</span>
+            </div>
+            <div class="why-panel-body">
+              <h3>Reliable Dispatch Coordination</h3>
+              <p>Structured handover from packing completion to port dispatch and buyer notification.</p>
+            </div>
+            <span class="why-panel-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Final CTA -->
+    <section class="cta-banner">
+      <div class="cta-bg" data-scroll-parallax="0.06">
+        <img src="assets/images/cta/1.png" alt="Port vessel logistics background" onerror="this.src='https://images.unsplash.com/photo-1578575437130-527eed3eabec?auto=format&fit=crop&w=1920&q=80'">
+      </div>
+      <div class="container cta-content reveal">
+        <h2>Ready to Source Industrial Minerals?</h2>
+        <p>Share your product requirements, grades and destination — our team will respond with supply options and export packaging details.</p>
+        <a href="request-quote.html" class="btn btn-gold">Request a Quote <span class="arrow">&rarr;</span></a>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
