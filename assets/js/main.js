@@ -155,6 +155,7 @@
       'index.html': 'home',
       'about.html': 'about',
       'quality-assurance.html': 'quality',
+      'certifications.html': 'certifications',
       'export-packaging.html': 'export',
       'contact.html': 'contact',
       'request-quote.html': 'contact'
@@ -321,7 +322,7 @@
     });
   }
 
-  /* ——— Journey: pinned 4-step scroll, then next section ——— */
+  /* ——— Journey: pinned multi-step scroll, then next section ——— */
   function initJourney() {
     var section = $('#journeySection');
     var scrollTrack = $('#journeyScrollTrack');
@@ -562,7 +563,6 @@
     var routeShadows = $$('.map-route-shadow', wrap);
     var nodes = $$('.map-node:not(.map-hub)', wrap);
     var tooltip = $('#mapTooltip');
-    var countEl = $('#mapRouteCount');
     var cursor = $('#mapCursor');
     var hub = $('.map-hub', wrap);
     var hubCx = 714;
@@ -582,8 +582,6 @@
         el: node
       };
     });
-
-    if (countEl) countEl.textContent = String(nodes.length);
 
     function animatePath(path, i) {
       var len = path.getTotalLength();
@@ -854,6 +852,54 @@
     startAutoplay();
   }
 
+  var FOOTER_ASSET_VERSION = '8';
+
+  var FOOTER_MENU_HTML =
+    '<div class="footer-col">' +
+    '<h4>Products</h4>' +
+    '<ul>' +
+    '<li><a href="bentonite.html">Bentonite</a></li>' +
+    '<li><a href="kaolin.html">Kaolin (China Clay)</a></li>' +
+    '<li><a href="ball-clay.html">Ball Clay</a></li>' +
+    '<li><a href="chamotte.html">Chamotte / Calcined Clay</a></li>' +
+    '<li><a href="calcined-bauxite.html">Calcined Bauxite</a></li>' +
+    '<li><a href="laterite.html">Laterite</a></li>' +
+    '<li><a href="coal-additive.html">Coal Additive</a></li>' +
+    '</ul></div>' +
+    '<div class="footer-col">' +
+    '<h4>Company</h4>' +
+    '<ul>' +
+    '<li><a href="about.html">About Us</a></li>' +
+    '<li><a href="products.html">Products</a></li>' +
+    '<li><a href="quality-assurance.html">Quality Assurance</a></li>' +
+    '<li><a href="certifications.html">Certifications &amp; Registrations</a></li>' +
+    '<li><a href="export-packaging.html">Export &amp; Packaging</a></li>' +
+    '<li><a href="contact.html">Contact Us</a></li>' +
+    '<li><a href="request-quote.html">Request a Quote</a></li>' +
+    '</ul></div>' +
+    '<div class="footer-col footer-contact">' +
+    '<h4>Contact</h4>' +
+    '<ul class="contact-list">' +
+    '<li><span class="label">Email</span><a href="mailto:[your-email@company.com]">[your-email@company.com]</a></li>' +
+    '<li><span class="label">Phone</span><a href="tel:[your-phone]">[your-phone]</a></li>' +
+    '<li><span class="label">Address</span><span class="contact-value">[Your business address]</span></li>' +
+    '</ul></div>';
+
+  function ensureFooterMenus() {
+    var grid = $('.footer-grid');
+    if (!grid || grid.querySelector('.footer-col')) return;
+
+    var wrapper = grid.querySelector('.footer-links');
+    if (wrapper) {
+      wrapper.innerHTML = FOOTER_MENU_HTML;
+      fixRelativeLinks(wrapper);
+      return;
+    }
+
+    grid.insertAdjacentHTML('beforeend', FOOTER_MENU_HTML);
+    fixRelativeLinks(grid);
+  }
+
   /* ——— Footer year ——— */
   function initFooterYear() {
     var y = $('#footerYear');
@@ -861,33 +907,51 @@
   }
 
   /* ——— About page 3D scenes ——— */
-  function initAbout() {
-    if (!document.body.classList.contains('about-page')) return;
+  function bindScene3d(scene, layerSelector) {
+    var layer = $(layerSelector, scene);
+    if (!layer) return;
+    scene.addEventListener('mousemove', function (e) {
+      if (window.innerWidth < 992) return;
+      var r = scene.getBoundingClientRect();
+      var x = (e.clientX - r.left) / r.width - 0.5;
+      var y = (e.clientY - r.top) / r.height - 0.5;
+      layer.style.transform =
+        'rotateY(' + x * 10 + 'deg) rotateX(' + -y * 8 + 'deg) translateZ(16px)';
+    });
+    scene.addEventListener('mouseleave', function () {
+      layer.style.transform = '';
+    });
+  }
 
-    function bindAboutScene3d(scene, layerSelector) {
-      var layer = $(layerSelector, scene);
-      if (!layer) return;
+  function initPremiumScenes() {
+    $$('.premium-scene-3d').forEach(function (scene) {
+      bindScene3d(scene, '.premium-scene-layer');
+    });
+    $$('.about-scene-3d').forEach(function (scene) {
+      bindScene3d(scene, '.about-scene-layer');
+    });
+    $$('.about-vision-3d').forEach(function (scene) {
+      bindScene3d(scene, '.about-vision-layer');
+    });
+    $$('.premium-hero-float').forEach(function (scene) {
+      var badge = $('.premium-hero-badge', scene);
+      if (!badge) return;
       scene.addEventListener('mousemove', function (e) {
         if (window.innerWidth < 992) return;
         var r = scene.getBoundingClientRect();
         var x = (e.clientX - r.left) / r.width - 0.5;
         var y = (e.clientY - r.top) / r.height - 0.5;
-        layer.style.transform =
-          'rotateY(' + x * 10 + 'deg) rotateX(' + -y * 8 + 'deg) translateZ(16px)';
+        badge.style.transform =
+          'rotateY(' + x * 8 + 'deg) rotateX(' + -y * 6 + 'deg) translateZ(20px)';
       });
       scene.addEventListener('mouseleave', function () {
-        layer.style.transform = '';
+        badge.style.transform = '';
       });
-    }
-
-    $$('.about-scene-3d').forEach(function (scene) {
-      bindAboutScene3d(scene, '.about-scene-layer');
     });
+  }
 
-    $$('.about-vision-3d').forEach(function (scene) {
-      bindAboutScene3d(scene, '.about-vision-layer');
-    });
-
+  function initAbout() {
+    initPremiumScenes();
   }
 
   /* ——— Init ——— */
@@ -895,9 +959,14 @@
     loadPartial('header-placeholder', 'components/header.html', function () {
       initHeader();
     });
-    loadPartial('footer-placeholder', 'components/footer.html', function () {
-      initFooterYear();
-    });
+    loadPartial(
+      'footer-placeholder',
+      'components/footer.html?v=' + FOOTER_ASSET_VERSION,
+      function () {
+        ensureFooterMenus();
+        initFooterYear();
+      }
+    );
 
     initHeroSlider();
     initReveal();
@@ -910,5 +979,8 @@
     initWorldMap();
     initForms();
     initAbout();
+    if (!document.body.classList.contains('about-page')) {
+      initPremiumScenes();
+    }
   });
 })();

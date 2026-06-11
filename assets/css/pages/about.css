@@ -269,6 +269,19 @@
   gap: 1rem;
 }
 
+.about-vv-layout .p-visual-grid--2 {
+  gap: 1rem;
+  align-content: start;
+}
+
+.about-principles .p-stage-grid {
+  margin-top: clamp(2rem, 4vw, 2.75rem);
+}
+
+.about-why .p-visual-grid--3 {
+  margin-top: clamp(2rem, 4vw, 2.75rem);
+}
+
 .about-value-card {
   position: relative;
   display: flex;

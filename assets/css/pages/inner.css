@@ -1,8 +1,9 @@
 ﻿/* Korvanto — Inner pages: heroes, content, breadcrumb, stats */
 /* Page heroes */
 .page-hero {
-  padding-top: 140px;
+  padding-top: clamp(180px, 16vw, 220px);
   padding-bottom: clamp(60px, 10vw, 100px);
+  padding-inline: var(--site-gutter);
   background: var(--navy);
   color: var(--white);
   position: relative;
@@ -79,7 +80,10 @@
 /* Breadcrumb */
 .breadcrumb {
   font-size: 0.8rem;
+  margin-top: 0.5rem;
   margin-bottom: 1rem;
+  margin-inline: 0;
+  padding-inline: 0;
   color: rgba(255,255,255,0.6);
 }
 
@@ -201,11 +205,14 @@
   display: flex;
   align-items: center;
   overflow: hidden;
+  margin-bottom: 0;
+  background: var(--navy);
 }
 
 .cta-bg {
   position: absolute;
   inset: 0;
+  overflow: hidden;
 }
 
 .cta-bg img {
@@ -218,7 +225,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(9, 35, 61, 0.88);
+  background: rgba(9, 35, 61, 0.98);
 }
 
 .cta-content {
@@ -241,6 +248,10 @@
   line-height: 1.65;
 }
 
+.cta-tagline {
+  max-width: 62ch;
+}
+
 .page-hero::before {
   content: "";
   position: absolute;
@@ -253,4 +264,7 @@
 .page-hero .container {
   position: relative;
   z-index: 2;
+  width: 100%;
+  max-width: var(--site-max);
+  margin-inline: 0;
 }

@@ -13,6 +13,8 @@
   --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Inter', sans-serif;
   --container: min(1360px, 92vw);
+  --site-max: 1360px;
+  --site-gutter: max(4vw, calc((100% - min(var(--site-max), 92vw)) / 2));
   --section-pad: clamp(56px, 8vw, 110px);
   --radius: 12px;
   --radius-lg: 18px;
@@ -62,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container {
-  width: var(--container);
+  width: min(var(--site-max), calc(100% - 2 * var(--site-gutter)));
   margin-left: auto;
   margin-right: auto;
 }

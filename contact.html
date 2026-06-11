@@ -11,39 +11,55 @@
   <link rel="stylesheet" href="assets/css/shared/base.css">
   <link rel="stylesheet" href="assets/css/shared/header.css">
   <link rel="stylesheet" href="assets/css/shared/footer.css">
+  <link rel="stylesheet" href="assets/css/shared/premium-inner.css">
   <link rel="stylesheet" href="assets/css/pages/inner.css">
   <link rel="stylesheet" href="assets/css/pages/forms.css">
   <link rel="stylesheet" href="assets/css/shared/responsive.css">
 </head>
-<body>
+<body class="inner-premium">
   <div id="header-placeholder"></div>
   <main>
-    <section class="page-hero">
-      <div class="page-hero-visual" aria-hidden="true">
-        <img src="assets/images/contact/hero.jpg" alt="" width="1200" height="700">
-      </div>
-      <div class="container">
-        <nav class="breadcrumb"><a href="index.html">Home</a> / Contact Us</nav>
-        <p class="section-label">Get in Touch</p>
-        <h1>Contact Korvanto</h1>
-        <p class="page-hero-lead">Reach our team for product enquiries, specification discussions and export supply coordination. Replace placeholders below with your official contact details.</p>
+    <section class="page-hero page-hero--premium">
+      <div class="container premium-hero-layout">
+        <div>
+          <nav class="breadcrumb"><a href="index.html">Home</a> / Contact Us</nav>
+          <p class="section-label">Responsive B2B Service</p>
+          <h1>Contact Korvanto</h1>
+          <p class="page-hero-lead">Direct communication for enquiries, samples and recurring supply programmes. Share your product specifications, quantity requirements, and destination.</p>
+        </div>
+        <div class="premium-hero-float reveal">
+          <div class="premium-hero-glow" aria-hidden="true"></div>
+          <div class="premium-hero-badge">
+            <span>Get in Touch</span>
+            <strong>Export Supply Enquiries</strong>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section--mesh">
       <div class="container">
         <div class="contact-cards reveal">
-          <div class="contact-card"><h3>Email</h3><p><a href="mailto:[your-email@company.com]">[your-email@company.com]</a></p></div>
-          <div class="contact-card"><h3>Phone</h3><p><a href="tel:[your-phone]">[your-phone]</a></p></div>
-          <div class="contact-card"><h3>Address</h3><p>[Your business address]<br>[City, Country]</p></div>
+          <div class="p-contact-card tilt-card"><h3>Email</h3><p><a href="mailto:[your-email@company.com]">[your-email@company.com]</a></p></div>
+          <div class="p-contact-card tilt-card reveal-delay-1"><h3>Phone</h3><p><a href="tel:[your-phone]">[your-phone]</a></p></div>
+          <div class="p-contact-card tilt-card reveal-delay-2"><h3>Address</h3><p>[Your business address]<br>[City, Country]</p></div>
         </div>
         <div class="form-grid reveal">
-          <div class="prose">
-            <h2>Send a Message</h2>
-            <p>For formal supply proposals with product, grade and volume details, use our <a href="request-quote.html" style="color:var(--gold);font-weight:600;">Request a Quote</a> form.</p>
-            <p>Business hours: [Your business hours]</p>
+          <div>
+            <div class="premium-scene-3d" style="margin-bottom:2rem;">
+              <div class="premium-scene-glow" aria-hidden="true"></div>
+              <div class="premium-scene-layer premium-media-frame tilt-card">
+                <img src="assets/images/export/jumbo-bags.jpg" alt="Korvanto export operations team" onerror="this.src='https://images.unsplash.com/photo-1586528116311-ad8dd90c4fad?auto=format&fit=crop&w=800&q=80'">
+              </div>
+            </div>
+            <div class="prose">
+              <p class="section-label">Send a Message</p>
+              <h2>Discuss Your Mineral Requirements</h2>
+              <p>For formal supply proposals with product, grade, packaging preference and destination details, use our <a href="request-quote.html" style="color:var(--gold);font-weight:600;">Request a Quote</a> form.</p>
+              <p>Business hours: [Your business hours]</p>
+            </div>
           </div>
-          <form class="form-card" data-validate novalidate>
+          <form class="form-card p-form-shell" data-validate novalidate>
             <div class="form-success" hidden>Thank you. Your message has been received. We will respond to [your-email@company.com] enquiries promptly.</div>
             <div class="form-group"><label for="name">Full Name *</label><input type="text" id="name" name="name" required></div>
             <div class="form-group"><label for="company">Company *</label><input type="text" id="company" name="company" required></div>
@@ -58,9 +74,17 @@
         </div>
       </div>
     </section>
+
+    <section class="cta-banner">
+      <div class="cta-bg"><img src="assets/images/cta/1.png" alt="" onerror="this.src='https://images.unsplash.com/photo-1578575437130-527eed3eabec?auto=format&fit=crop&w=1920&q=80'"></div>
+      <div class="container cta-content reveal">
+        <h2>Ready to Source Industrial Minerals?</h2>
+        <p class="cta-tagline">Share your product specifications, quantity requirements, and destination.<br>We'll provide suitable grades, packaging options, and export supply details.</p>
+        <a href="request-quote.html" class="btn btn-gold">Request a Quote <span class="arrow">&rarr;</span></a>
+      </div>
+    </section>
   </main>
   <div id="footer-placeholder"></div>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
-

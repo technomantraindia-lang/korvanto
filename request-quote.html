@@ -11,39 +11,54 @@
   <link rel="stylesheet" href="assets/css/shared/base.css">
   <link rel="stylesheet" href="assets/css/shared/header.css">
   <link rel="stylesheet" href="assets/css/shared/footer.css">
+  <link rel="stylesheet" href="assets/css/shared/premium-inner.css">
   <link rel="stylesheet" href="assets/css/pages/inner.css">
   <link rel="stylesheet" href="assets/css/pages/forms.css">
   <link rel="stylesheet" href="assets/css/shared/responsive.css">
 </head>
-<body>
+<body class="inner-premium">
   <div id="header-placeholder"></div>
   <main>
-    <section class="page-hero page-hero--light">
-      <div class="container">
-        <nav class="breadcrumb"><a href="index.html">Home</a> / Request a Quote</nav>
-        <p class="section-label">Procurement</p>
-        <h1>Request a Quote</h1>
-        <p class="page-hero-lead">Submit your mineral requirements — product, grade, volume, packaging preference and destination — for a tailored B2B supply response.</p>
+    <section class="page-hero page-hero--premium page-hero--premium-light">
+      <div class="container premium-hero-layout">
+        <div>
+          <nav class="breadcrumb"><a href="index.html">Home</a> / Request a Quote</nav>
+          <p class="section-label">Global B2B Mineral Supply</p>
+          <h1>Request a Quote</h1>
+          <p class="page-hero-lead">Share your product specifications, quantity requirements, and destination. We'll provide suitable grades, packaging options, and export supply details.</p>
+        </div>
+        <div class="premium-hero-float reveal">
+          <div class="premium-hero-glow" aria-hidden="true"></div>
+          <div class="premium-hero-badge">
+            <span>Procurement</span>
+            <strong>Tailored Export Proposal</strong>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section form-section">
+    <section class="section form-section section--mesh">
       <div class="container form-grid reveal">
         <div>
           <div class="prose">
           <h2>What to Include</h2>
           <ul>
-            <li>Product name and required grade</li>
+            <li>Product name and required grade or specification</li>
             <li>Estimated volume per shipment or annual programme</li>
-            <li>Preferred packaging (jumbo bag, sacks, bulk)</li>
+            <li>Packaging preference — 25 kg bags, 50 kg bags, jumbo bags or containerized load</li>
             <li>Destination port or country</li>
-            <li>Target specification parameters if available</li>
+            <li>Target specification parameters and sample requirements if available</li>
           </ul>
           <p>Our team will respond to enquiries sent to <strong>[your-email@company.com]</strong>.</p>
           </div>
-          <img src="assets/images/quote/hero.jpg" alt="Industrial export operations" width="900" height="1100" style="margin-top:2rem;border-radius:var(--radius-lg);box-shadow:var(--shadow-soft);width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;">
+          <div class="premium-scene-3d" style="margin-top:2rem;">
+            <div class="premium-scene-glow" aria-hidden="true"></div>
+            <div class="premium-scene-layer premium-media-frame tilt-card">
+              <img src="assets/images/process/stage4.png" alt="Industrial export operations" style="aspect-ratio:4/5;object-fit:cover;">
+            </div>
+          </div>
         </div>
-        <form class="form-card" data-validate novalidate>
+        <form class="form-card p-form-shell" data-validate novalidate>
           <div class="form-success" hidden>Thank you. Your quote request has been submitted. Our export team will contact you shortly.</div>
           <div class="form-row">
             <div class="form-group"><label for="qname">Full Name *</label><input type="text" id="qname" name="name" required></div>
@@ -58,7 +73,7 @@
             <select id="product" name="product" required>
               <option value="">Select product</option>
               <option value="bentonite">Bentonite</option>
-              <option value="kaolin">Kaolin / China Clay</option>
+              <option value="kaolin">Kaolin (China Clay)</option>
               <option value="ball-clay">Ball Clay</option>
               <option value="chamotte">Chamotte / Calcined Clay</option>
               <option value="calcined-bauxite">Calcined Bauxite</option>

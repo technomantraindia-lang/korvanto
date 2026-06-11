@@ -6,7 +6,7 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 1.25rem 0;
+  padding: 1.25rem var(--site-gutter);
   background: rgba(9, 35, 61, 0.52);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -21,7 +21,13 @@
   -webkit-backdrop-filter: blur(18px);
   border-bottom-color: rgba(197, 154, 74, 0.2);
   box-shadow: 0 8px 32px rgba(9, 35, 61, 0.35);
-  padding: 0.85rem 0;
+  padding: 0.85rem var(--site-gutter);
+}
+
+.site-header .container {
+  width: 100%;
+  max-width: var(--site-max);
+  margin-inline: auto;
 }
 
 .header-inner {

@@ -41,6 +41,13 @@
   position: relative;
   z-index: 2;
   width: 100%;
+  padding-inline: var(--site-gutter);
+}
+
+.hero-overlay .container {
+  width: 100%;
+  max-width: var(--site-max);
+  margin-inline: 0;
 }
 
 .hero-content {
@@ -750,7 +757,8 @@
   left: 1rem;
   bottom: 1rem;
   z-index: 5;
-  max-width: 16rem;
+  max-width: none;
+  width: max-content;
   padding: 0.85rem 1rem;
   background: linear-gradient(135deg, rgba(9, 35, 61, 0.94) 0%, rgba(9, 35, 61, 0.82) 100%);
   border: 1px solid rgba(197, 154, 74, 0.35);
@@ -766,11 +774,7 @@
   font-weight: 600;
   color: var(--white);
   margin: 0 0 0.25rem;
-}
-
-.map-stat span {
-  color: var(--gold);
-  font-size: 1.1rem;
+  white-space: nowrap;
 }
 
 .map-hint {
@@ -838,7 +842,7 @@
 }
 
 .journey-scroll-track {
-  height: 450vh;
+  height: 520vh;
 }
 
 .journey-pin {
@@ -868,8 +872,17 @@
 
 .journey-section .section-title {
   max-width: none;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.65rem;
   font-size: clamp(1.65rem, 3vw, 2.25rem);
+}
+
+.journey-section-head .journey-tagline {
+  max-width: none;
+  margin: 0 0 1.5rem;
+  font-size: clamp(0.92rem, 1.35vw, 1.05rem);
+  line-height: 1.5;
+  color: var(--text-soft);
+  white-space: nowrap;
 }
 
 .journey-inner {
@@ -1097,7 +1110,7 @@
 
 .why-panels {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 1.25rem;
   align-items: stretch;
 }
@@ -1112,7 +1125,7 @@ a.why-panel {
   display: flex;
   flex-direction: column;
   height: 100%;
-  min-height: 280px;
+  min-height: 260px;
   padding: 1.75rem 1.5rem 1.5rem;
   background: var(--white);
   border: 1px solid var(--border);
@@ -1270,6 +1283,7 @@ a.why-panel {
 .why-panel.reveal.reveal-delay-1 { transition-delay: 0.12s, 0.12s, 0s, 0s; }
 .why-panel.reveal.reveal-delay-2 { transition-delay: 0.24s, 0.24s, 0s, 0s; }
 .why-panel.reveal.reveal-delay-3 { transition-delay: 0.36s, 0.36s, 0s, 0s; }
+.why-panel.reveal.reveal-delay-4 { transition-delay: 0.48s, 0.48s, 0s, 0s; }
 
 .why-header.reveal.is-visible {
   transition-duration: 0.9s;
@@ -1632,24 +1646,29 @@ a.why-panel {
   display: flex;
   align-items: center;
   overflow: hidden;
+  margin-bottom: 0;
+  background: var(--navy);
 }
 
 .cta-bg {
   position: absolute;
   inset: 0;
+  overflow: hidden;
 }
 
 .cta-bg img {
   width: 100%;
   height: 100%;
+  min-height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .cta-bg::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(9, 35, 61, 0.88);
+  background: rgba(9, 35, 61, 0.98);
 }
 
 .cta-content {
@@ -1665,7 +1684,14 @@ a.why-panel {
   margin-bottom: 1rem;
 }
 
-.cta-content p {
+.cta-tagline {
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 62ch;
+  margin: 0 auto 2rem;
+  line-height: 1.65;
+}
+
+.cta-content p:not(.cta-tagline) {
   color: rgba(255, 255, 255, 0.85);
   max-width: 48ch;
   margin: 0 auto 2rem;

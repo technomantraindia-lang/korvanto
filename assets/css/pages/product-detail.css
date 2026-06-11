@@ -1,35 +1,98 @@
 ﻿/* Korvanto — Product detail pages */
-/* Product detail */
 .product-hero-detail {
-  padding-top: 120px;
-  min-height: 420px;
-  background: var(--navy);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: end;
-  padding-bottom: 4rem;
+  padding-top: clamp(180px, 16vw, 220px);
+  padding-bottom: clamp(60px, 10vw, 100px);
+  padding-inline: var(--site-gutter);
+  min-height: clamp(440px, 55vh, 520px);
+  background: linear-gradient(135deg, var(--navy) 0%, #0a2a4a 55%, var(--navy-secondary) 100%);
   position: relative;
   overflow: hidden;
 }
 
+.product-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  width: 100%;
+  max-width: var(--site-max);
+  margin-inline: 0;
+}
+
+.product-hero-copy {
+  min-width: 0;
+  align-self: center;
+}
+
+.product-hero-detail::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, transparent 90%);
+  pointer-events: none;
+}
+
 .product-hero-detail .breadcrumb a { color: var(--gold); }
-.product-hero-detail .breadcrumb { color: rgba(255,255,255,0.6); }
+.product-hero-detail .breadcrumb {
+  color: rgba(255,255,255,0.6);
+  margin-inline: 0;
+  padding-inline: 0;
+}
 
 .product-hero-detail h1 { color: var(--white); font-size: clamp(1.75rem, 3vw, 2.5rem); }
 .product-hero-detail .lead { color: rgba(255,255,255,0.8); margin-top: 1rem; }
 
 .product-hero-layer {
   position: relative;
-  height: 320px;
-  perspective: 1000px;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: clamp(260px, 32vw, 360px);
+  perspective: 1100px;
+}
+
+.product-hero-layer.premium-scene-3d {
+  min-height: clamp(260px, 32vw, 360px);
+}
+
+.product-hero-layer .premium-scene-layer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .product-hero-layer img {
   border-radius: var(--radius-lg);
-  width: 100%;
-  height: 100%;
-  box-shadow: var(--shadow-soft);
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(197, 154, 74, 0.25);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.35);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.product-hero-detail:hover .product-hero-layer img {
+  transform: translateZ(12px) rotateY(-2deg);
+}
+
+.spec-table-wrap {
+  overflow-x: auto;
+  margin: 2rem 0;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border);
 }
 
 .spec-table-wrap { overflow-x: auto; margin: 2rem 0; }
@@ -78,6 +141,37 @@ table.spec-table {
 }
 
 .info-card p { font-size: 0.875rem; color: var(--text-soft); }
+
+.inner-premium .info-cards {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.inner-premium .tag {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), border-color var(--transition), background var(--transition);
+}
+
+.inner-premium .tag:hover {
+  transform: translateY(-3px);
+  border-color: rgba(197, 154, 74, 0.45);
+  background: var(--white);
+}
+
+.inner-premium .spec-table-wrap {
+  transition: box-shadow 0.45s ease, transform 0.45s ease;
+}
+
+.inner-premium .spec-table-wrap:hover {
+  box-shadow: var(--shadow-soft);
+  transform: translateY(-4px);
+}
+
+.inner-premium .product-hero-layer {
+  perspective: 1100px;
+}
+
+.inner-premium .product-hero-layer img {
+  transform-style: preserve-3d;
+}
 
 .tag-list {
   display: flex;

@@ -1,0 +1,167 @@
+/* Korvanto — Certifications & Registrations page */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.25rem, 2.5vw, 1.75rem);
+  margin-top: clamp(2rem, 4vw, 2.75rem);
+}
+
+.cert-card {
+  position: relative;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 3vw, 2rem);
+  box-shadow: var(--shadow-card);
+  border-top: 3px solid var(--gold);
+  isolation: isolate;
+  transform-style: preserve-3d;
+  transition: box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1), border-color var(--transition), transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cert-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--navy-secondary), var(--gold));
+  background-size: 300% 100%;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.cert-card:hover {
+  border-color: transparent;
+  box-shadow: 0 24px 56px rgba(9, 35, 61, 0.12);
+  transform: translateY(-10px);
+}
+
+.cert-card:hover::before {
+  opacity: 1;
+  animation: pi-border-flow 2.2s linear infinite;
+}
+
+.cert-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.cert-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3rem;
+  padding: 0.35rem 0.65rem;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--navy);
+  background: rgba(197, 154, 74, 0.18);
+  border: 1px solid rgba(197, 154, 74, 0.35);
+  border-radius: 6px;
+}
+
+.cert-status {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.cert-card h3 {
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+
+.cert-card > p {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--text-soft);
+  margin-bottom: 1rem;
+}
+
+.cert-points {
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+}
+
+.cert-points li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 0.45rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--text-soft);
+}
+
+.cert-points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.cert-meta {
+  margin: 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.82rem;
+  color: var(--text-soft);
+}
+
+.cert-meta-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.2rem;
+}
+
+.cert-commitment .prose h2 {
+  margin-top: 0;
+}
+
+.cert-note {
+  margin-top: 1.25rem;
+  padding: 1rem 1.15rem;
+  background: rgba(197, 154, 74, 0.1);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 8px 8px 0;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+@media (min-width: 769px) and (max-width: 1100px) {
+  .cert-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .cert-grid {
+    grid-template-columns: 1fr;
+    max-width: 36rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
