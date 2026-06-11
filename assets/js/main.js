@@ -38,7 +38,7 @@
             BASE +
             'index.html" class="logo" aria-label="Korvanto Home"><span class="logo-mark-wrap"><img src="' +
             BASE +
-            'assets/images/logo/Korvanto%20logo.png" alt="Korvanto LLP" class="logo-img" width="280" height="92"></span></a><p style="color:#fff;font-size:0.85rem;">Run via local server (e.g. npx serve) to load full navigation.</p></div></header>';
+            'assets/images/logo/Korvanto.png" alt="Korvanto LLP — Delivering Quality Globally" class="logo-img" width="280" height="92"></span></a><p style="color:#fff;font-size:0.85rem;">Run via local server (e.g. npx serve) to load full navigation.</p></div></header>';
         }
       });
   }
