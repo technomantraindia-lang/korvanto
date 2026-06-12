@@ -115,6 +115,19 @@
 
   .hero-desc {
     max-width: none;
+    margin-bottom: 1rem;
+  }
+
+  .hero-trust-strip {
+    width: max-content;
+    max-width: none;
+    gap: 0.55rem 0.75rem;
+    padding: 0.75rem 1.15rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-trust-item {
+    font-size: clamp(0.58rem, 1.4vw, 0.68rem);
   }
 
   .hero-3d-wrap {
@@ -276,7 +289,38 @@
 
   .hero-desc {
     font-size: 0.95rem;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-trust-strip {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    gap: 0.4rem 0.5rem;
+    margin-bottom: 1.15rem;
+    padding: 0.7rem 0.85rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    box-sizing: border-box;
+  }
+
+  .hero-trust-strip::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hero-trust-divider {
+    display: block;
+    flex: 0 0 auto;
+  }
+
+  .hero-trust-item {
+    font-size: 0.58rem;
+    letter-spacing: 0.04em;
+    flex: 0 0 auto;
   }
 
   .hero-actions {
@@ -358,8 +402,12 @@
 
   .atlas-index-item {
     flex: 0 0 auto;
-    min-width: 116px;
+    min-width: 128px;
     scroll-snap-align: start;
+  }
+
+  .atlas-index-name {
+    font-size: 0.68rem;
   }
 
   .journey-scroll-track {
@@ -488,6 +536,22 @@
   .cta-content .btn {
     width: 100%;
     max-width: 300px;
+  }
+
+  .cta-trust-strip {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    gap: 0.45rem 0.55rem;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.58rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cta-trust-strip::-webkit-scrollbar {
+    display: none;
   }
 
   .testimonials-section {
