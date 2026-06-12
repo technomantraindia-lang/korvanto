@@ -266,7 +266,16 @@
       });
     };
 
+    function resetParallax() {
+      if (window.innerWidth >= 992) return;
+      items.forEach(function (el) {
+        el.style.transform = '';
+      });
+    }
+
     window.addEventListener('mousemove', onMove, { passive: true });
+    window.addEventListener('resize', resetParallax);
+    resetParallax();
 
     var scrollItems = $$('[data-scroll-parallax]');
     if (!scrollItems.length) return;
@@ -307,6 +316,7 @@
 
   /* ——— Product card tilt ——— */
   function initCardTilt() {
+    if (window.matchMedia('(hover: none), (max-width: 768px)').matches) return;
     $$('.tilt-card').forEach(function (card) {
       card.addEventListener('mousemove', function (e) {
         var r = card.getBoundingClientRect();
@@ -852,7 +862,7 @@
     startAutoplay();
   }
 
-  var FOOTER_ASSET_VERSION = '8';
+  var FOOTER_ASSET_VERSION = '10';
 
   var FOOTER_MENU_HTML =
     '<div class="footer-col">' +

@@ -1,0 +1,449 @@
+/* Korvanto — Site-wide mobile optimization (desktop unchanged) */
+
+@media (max-width: 1024px) {
+  .premium-hero-layout {
+    gap: 1.75rem;
+  }
+
+  .premium-hero-float {
+    padding-top: 0.5rem;
+  }
+
+  .p-editorial {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .p-editorial .premium-scene-3d {
+    order: -1;
+  }
+
+  .content-block--2 {
+    gap: 2rem;
+  }
+
+  .form-grid {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-pad: clamp(44px, 11vw, 72px);
+    --site-gutter: max(1rem, 4vw);
+  }
+
+  html,
+  body {
+    overflow-x: clip;
+  }
+
+  main {
+    overflow-x: clip;
+    min-width: 0;
+  }
+
+  .section {
+    padding-top: var(--section-pad);
+    padding-bottom: var(--section-pad);
+  }
+
+  .container {
+    width: min(var(--site-max), calc(100% - 2 * var(--site-gutter)));
+    min-width: 0;
+  }
+
+  /* ——— Page heroes ——— */
+  .page-hero,
+  .product-hero-detail {
+    padding-top: calc(4.75rem + 76px);
+    padding-bottom: clamp(2.5rem, 8vw, 3.5rem);
+    min-width: 0;
+  }
+
+  .page-hero .container,
+  .product-hero-detail .product-hero-grid,
+  .premium-hero-layout {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .page-hero h1,
+  .product-hero-detail h1 {
+    font-size: clamp(1.45rem, 6.5vw, 2rem);
+    max-width: 100%;
+    overflow-wrap: break-word;
+    line-height: 1.2;
+  }
+
+  .page-hero-lead,
+  .product-hero-detail .lead {
+    max-width: 100%;
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .breadcrumb {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    word-break: break-word;
+  }
+
+  .premium-hero-badge {
+    padding: 1rem 1.15rem;
+  }
+
+  .premium-hero-badge strong {
+    font-size: 0.95rem;
+  }
+
+  /* ——— Section headers ——— */
+  .inner-section-head .section-title,
+  .section-title {
+    max-width: none;
+    font-size: clamp(1.35rem, 5.5vw, 1.85rem);
+  }
+
+  .inner-section-head .section-lead,
+  .section-lead {
+    max-width: none;
+    font-size: 1rem;
+  }
+
+  .inner-section-head--center .section-title,
+  .inner-section-head--center .section-lead {
+    max-width: none;
+  }
+
+  /* ——— CTA banners (all pages) ——— */
+  .cta-banner {
+    min-height: 0;
+  }
+
+  .cta-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: clamp(2.75rem, 9vw, 3.5rem) 0;
+    text-align: center;
+  }
+
+  .cta-content h2 {
+    font-size: clamp(1.35rem, 6vw, 1.85rem);
+    line-height: 1.25;
+    max-width: 100%;
+    padding-inline: 0.25rem;
+  }
+
+  .cta-tagline,
+  .cta-content > p:not(.cta-trust-strip) {
+    max-width: 100%;
+    font-size: 0.92rem;
+    margin-bottom: 1.35rem;
+    padding-inline: 0.15rem;
+  }
+
+  .cta-tagline br {
+    display: none;
+  }
+
+  .cta-content .btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .cta-trust-strip {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 100%;
+    gap: 0.45rem 0.55rem;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.58rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+
+  .cta-trust-strip::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cta-trust-strip > span:not(.cta-trust-bullet) {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  /* ——— Forms & contact ——— */
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .form-card,
+  .p-form-shell {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px;
+  }
+
+  .contact-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .p-contact-card {
+    padding: 1.25rem 1.15rem;
+  }
+
+  /* ——— Premium media blocks ——— */
+  .premium-scene-3d,
+  .premium-scene-layer,
+  .premium-media-frame,
+  .content-block-media {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .premium-media-frame img,
+  .p-stage-card-media img,
+  .about-scene-layer .media-frame img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: min(72vw, 340px);
+    object-fit: cover;
+  }
+
+  .product-hero-layer img {
+    object-fit: contain;
+    padding: 0.75rem;
+  }
+
+  .p-editorial-statement {
+    font-size: 1.05rem;
+    padding-left: 1rem;
+  }
+
+  .p-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .p-strip-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .p-strip-item:last-child {
+    border-bottom: none;
+  }
+
+  /* ——— Product listing ——— */
+  .product-list-card .body {
+    padding: 1.25rem 1.15rem 1.15rem;
+  }
+
+  .products-grid {
+    gap: 1.25rem;
+  }
+
+  /* ——— Inner why panels ——— */
+  .inner-premium .why-header {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .inner-premium .why-header-lead {
+    max-width: none;
+  }
+
+  .inner-premium .why-panel {
+    min-height: 0;
+    padding: 1.35rem 1.2rem;
+  }
+
+  .inner-premium .why-panel-body h3 {
+    min-height: 0;
+  }
+
+  /* ——— Prose & legal ——— */
+  .prose h2 {
+    font-size: clamp(1.2rem, 4.5vw, 1.5rem);
+  }
+
+  .inner-premium .legal-content {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .legal-content h2 {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+  }
+
+  /* ——— Footer ——— */
+  .site-footer {
+    padding-bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .legal-links {
+    gap: 0.65rem 1rem;
+  }
+
+  /* ——— Export world map ——— */
+  .world-map-wrap {
+    aspect-ratio: 16 / 10;
+    min-height: 180px;
+  }
+
+  .map-stat {
+    white-space: normal;
+    font-size: 0.8rem;
+  }
+
+  .hub-label {
+    font-size: 8px;
+  }
+
+  .export-chip {
+    padding: 1.1rem 1.15rem;
+  }
+
+  .export-chip h4 {
+    font-size: 0.88rem;
+  }
+
+  .export-chip p {
+    font-size: 0.85rem;
+  }
+
+  /* ——— About page journey (shared home styles) ——— */
+  .about-page .journey-scroll-track {
+    height: auto;
+  }
+
+  .about-page .journey-pin {
+    position: relative;
+    top: 0;
+    height: auto;
+    min-height: 0;
+    padding: var(--section-pad) 0;
+  }
+
+  .about-page .journey-rail {
+    display: none;
+  }
+
+  .about-page .journey-steps {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    min-height: 0;
+  }
+
+  .about-page .journey-step,
+  .about-page .journey-step.is-active,
+  .about-page .journey-step.is-passed {
+    position: relative;
+    inset: auto;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    padding: 1.1rem 1.15rem;
+    background: var(--grey-light);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+
+  .about-page .journey-step.is-active {
+    border-color: var(--gold);
+    background: var(--white);
+  }
+
+  .about-page .journey-step p {
+    max-width: none;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hero h1 br,
+  .product-hero-detail h1 br,
+  .premium-hero-layout h1 br {
+    display: none;
+  }
+
+  .page-hero h1,
+  .product-hero-detail h1 {
+    font-size: 1.35rem;
+  }
+
+  .form-card,
+  .p-form-shell {
+    padding: 1.25rem 1rem;
+  }
+
+  .cta-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .cta-trust-strip {
+    font-size: 0.54rem;
+    padding: 0.6rem 0.75rem;
+  }
+
+  .site-header {
+    padding: 0.85rem var(--site-gutter);
+  }
+
+  .site-header.is-scrolled {
+    padding: 0.65rem var(--site-gutter);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .tilt-card {
+    transform: none !important;
+  }
+
+  .product-list-card:hover,
+  .info-card:hover,
+  .inner-premium .why-panel:hover,
+  .why-panel:hover,
+  .export-chip:hover,
+  .p-contact-card:hover,
+  .p-card:hover,
+  .about-value-card:hover,
+  .about-principle-card:hover,
+  .testimonial-pick:hover {
+    transform: none !important;
+  }
+
+  .product-list-card:hover::before,
+  .inner-premium .why-panel:hover::before,
+  .why-panel:hover::before {
+    opacity: 0;
+    animation: none;
+  }
+
+  .product-list-card:hover .media img {
+    transform: none;
+  }
+}
