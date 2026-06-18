@@ -145,6 +145,26 @@
     margin: 0 0 0.5rem;
   }
   .has-dropdown.is-open .dropdown-menu { display: block; }
+  .has-mega .dropdown-menu.mega-menu {
+    min-width: 0;
+    max-width: none;
+    transform: none;
+  }
+  .mega-menu-inner {
+    grid-template-columns: 1fr;
+  }
+  .mega-col {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 0.85rem 0.75rem;
+  }
+  .mega-links-grid {
+    grid-template-columns: 1fr;
+  }
+  .mega-col a {
+    padding: 0.55rem 0;
+    font-size: 0.82rem;
+  }
   .btn-header { width: 100%; margin-top: 1rem; }
   .journey-scroll-track { height: auto; }
   .journey-pin {

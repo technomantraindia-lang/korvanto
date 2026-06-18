@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="assets/css/shared/responsive.css">
   <link rel="stylesheet" href="assets/css/shared/mobile.css">
 </head>
-<body class="inner-premium">
+<body class="inner-premium quote-page">
   <div id="header-placeholder"></div>
   <main>
     <section class="page-hero page-hero--premium page-hero--premium-light">
@@ -40,27 +40,27 @@
 
     <section class="section form-section section--mesh">
       <div class="container form-grid reveal">
-        <div>
+        <div class="quote-form-aside">
           <div class="prose">
           <h2>What to Include</h2>
           <ul>
             <li>Product name and required grade or specification</li>
             <li>Estimated volume per shipment or annual programme</li>
-            <li>Packaging preference � 25 kg bags, 50 kg bags, jumbo bags or containerized load</li>
+            <li>Packaging preference — 25 kg bags, 50 kg bags, jumbo bags or containerized load</li>
             <li>Destination port or country</li>
             <li>Target specification parameters and sample requirements if available</li>
           </ul>
-          <p>Our team will respond to enquiries sent to <strong>[your-email@company.com]</strong>.</p>
+          <p>Our team will respond to enquiries sent to <strong><a href="mailto:exports@korvanto.com">exports@korvanto.com</a></strong>.</p>
           </div>
-          <div class="premium-scene-3d" style="margin-top:2rem;">
+          <div class="premium-scene-3d quote-form-visual">
             <div class="premium-scene-glow" aria-hidden="true"></div>
             <div class="premium-scene-layer premium-media-frame tilt-card">
-              <img src="assets/images/process/stage4.png" alt="Industrial export operations" style="aspect-ratio:4/5;object-fit:cover;">
+              <img src="assets/images/process/stage4.png" alt="Industrial export operations">
             </div>
           </div>
         </div>
-        <form class="form-card p-form-shell" data-validate novalidate>
-          <div class="form-success" hidden>Thank you. Your quote request has been submitted. Our export team will contact you shortly.</div>
+        <form class="form-card p-form-shell" data-validate data-mailto="exports@korvanto.com" novalidate>
+          <div class="form-success" hidden>Your email app will open with your quote request addressed to exports@korvanto.com. Send the email from there to complete your submission.</div>
           <div class="form-row">
             <div class="form-group"><label for="qname">Full Name *</label><input type="text" id="qname" name="name" required></div>
             <div class="form-group"><label for="qcompany">Company *</label><input type="text" id="qcompany" name="company" required></div>
@@ -72,15 +72,42 @@
           <div class="form-group">
             <label for="product">Product *</label>
             <select id="product" name="product" required>
+              <!-- catalog:quote-options:start -->
               <option value="">Select product</option>
-              <option value="bentonite">Bentonite</option>
-              <option value="kaolin">Kaolin (China Clay)</option>
-              <option value="ball-clay">Ball Clay</option>
-              <option value="chamotte">Chamotte / Calcined Clay</option>
-              <option value="calcined-bauxite">Calcined Bauxite</option>
-              <option value="laterite">Laterite</option>
-              <option value="coal-additive">Coal Additive / Lustrous Coal</option>
+              <optgroup label="KORVANTO BENTO™">
+                <option value="korvanto-bento-drill">KORVANTO BENTO DRILL</option>
+                <option value="korvanto-bento-foundry">KORVANTO BENTO FOUNDRY</option>
+                <option value="korvanto-bento-iop">KORVANTO BENTO IOP</option>
+                <option value="korvanto-bento-civil">KORVANTO BENTO CIVIL</option>
+                <option value="korvanto-bento-feed">KORVANTO BENTO FEED</option>
+                <option value="korvanto-bento-fert">KORVANTO BENTO FERT</option>
+                <option value="korvanto-bento-litter">KORVANTO BENTO LITTER</option>
+                <option value="korvanto-bento-paper-deink">KORVANTO BENTO PAPER &amp; DEINK</option>
+                <option value="korvanto-bento-pharma">KORVANTO BENTO PHARMA</option>
+                <option value="korvanto-bento-cosmetic">KORVANTO BENTO COSMETIC</option>
+                <option value="korvanto-bento-desiccant">KORVANTO BENTO DESICCANT</option>
+                <option value="korvanto-bento-seal">KORVANTO BENTO SEAL</option>
+                <option value="korvanto-bento-food">KORVANTO BENTO FOOD</option>
+                <option value="korvanto-bento-pencil">KORVANTO BENTO PENCIL</option>
+                <option value="korvanto-bento-specialty">KORVANTO BENTO SPECIALTY</option>
+              </optgroup>
+              <optgroup label="KORVANTO KAO™">
+                <option value="korvanto-kao-crude">KORVANTO KAO CRUDE</option>
+                <option value="korvanto-kao-levigated-noodles">KORVANTO KAO LEVIGATED NOODLES</option>
+                <option value="korvanto-kao-levigated-lumps">KORVANTO KAO LEVIGATED LUMPS</option>
+                <option value="korvanto-kao-hydrous">KORVANTO KAO HYDROUS</option>
+                <option value="korvanto-kao-calcined">KORVANTO KAO CALCINED</option>
+                <option value="korvanto-kao-metakaolin">KORVANTO KAO METAKAOLIN</option>
+              </optgroup>
+              <optgroup label="Other Product Families">
+                <option value="korvanto-clay">KORVANTO CLAY BALL</option>
+                <option value="korvanto-lat">KORVANTO LAT</option>
+                <option value="korvanto-cham">KORVANTO CHAM</option>
+                <option value="korvanto-baux">KORVANTO BAUX</option>
+                <option value="korvanto-carbo">KORVANTO CARBO</option>
+              </optgroup>
               <option value="multiple">Multiple Products</option>
+<!-- catalog:quote-options:end -->
             </select>
           </div>
           <div class="form-row">

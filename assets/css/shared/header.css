@@ -128,6 +128,48 @@
 
 .has-dropdown { position: relative; }
 
+/* Hover bridge — keeps mega menu open while moving pointer from trigger to panel */
+@media (min-width: 769px) and (hover: hover) {
+  .has-dropdown::before {
+    content: "";
+    position: absolute;
+    left: -1rem;
+    right: -1rem;
+    top: 100%;
+    height: 14px;
+    z-index: 1;
+  }
+
+  .has-dropdown:hover,
+  .has-dropdown:focus-within {
+    z-index: 1002;
+  }
+
+  .has-dropdown:hover .dropdown-menu,
+  .has-dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+    z-index: 1001;
+  }
+
+  .has-mega:hover .dropdown-menu.mega-menu,
+  .has-mega:focus-within .dropdown-menu.mega-menu {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .has-dropdown:hover .chevron,
+  .has-dropdown:focus-within .chevron {
+    transform: rotate(180deg);
+  }
+
+  .has-dropdown:hover .dropdown-trigger,
+  .has-dropdown:focus-within .dropdown-trigger {
+    color: var(--gold);
+  }
+}
+
 .dropdown-menu {
   position: absolute;
   top: calc(100% + 12px);
@@ -169,6 +211,77 @@
 }
 
 .dropdown-all a { color: var(--gold); font-weight: 600; }
+
+/* Mega menu */
+.has-mega .dropdown-menu.mega-menu {
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  min-width: min(920px, calc(100vw - 2rem));
+  max-width: 920px;
+  padding: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.has-mega.is-open .dropdown-menu.mega-menu {
+  transform: translateX(-50%) translateY(0);
+}
+
+.mega-menu-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1fr;
+  gap: 0;
+}
+
+.mega-col {
+  padding: 1.15rem 1.25rem;
+  border-right: 1px solid var(--border);
+}
+
+.mega-col:last-child {
+  border-right: none;
+}
+
+.mega-label {
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.mega-col a {
+  display: block;
+  padding: 0.45rem 0;
+  color: var(--text-dark);
+  font-size: 0.76rem;
+  line-height: 1.35;
+  white-space: normal;
+}
+
+.mega-col a:hover {
+  color: var(--navy);
+  background: transparent;
+}
+
+.mega-links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 0.75rem;
+}
+
+.mega-all {
+  display: block;
+  margin-top: 0.75rem;
+  padding-top: 0.65rem !important;
+  border-top: 1px solid var(--border);
+  color: var(--gold) !important;
+  font-weight: 600 !important;
+}
 
 .btn-header { flex-shrink: 0; }
 

@@ -1786,15 +1786,15 @@ a.why-panel {
   line-height: 1.3;
 }
 
-.cta-trust-strip > span:not(.cta-trust-bullet) {
+.cta-trust-strip > span:not(.cta-trust-divider) {
   white-space: nowrap;
   flex: 0 0 auto;
 }
 
-.cta-trust-bullet {
-  color: var(--gold);
+.cta-trust-divider {
+  width: 1px;
+  height: 0.9rem;
+  background: rgba(255, 255, 255, 0.45);
   flex: 0 0 auto;
-  font-size: 0.85rem;
-  line-height: 1;
 }
 

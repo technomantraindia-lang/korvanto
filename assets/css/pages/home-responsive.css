@@ -592,7 +592,7 @@
     display: none;
   }
 
-  .cta-trust-strip > span:not(.cta-trust-bullet) {
+  .cta-trust-strip > span:not(.cta-trust-divider) {
     flex: 0 0 auto;
   }
 

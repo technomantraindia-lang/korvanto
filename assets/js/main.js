@@ -128,12 +128,30 @@
     }
 
     $$('.dropdown-trigger').forEach(function (btn) {
+      var parent = btn.closest('.has-dropdown');
+      if (!parent) return;
+
+      var mobileDropdown = window.matchMedia('(max-width: 768px), (hover: none)');
+
       btn.addEventListener('click', function (e) {
+        if (!mobileDropdown.matches) return;
         e.preventDefault();
-        var parent = btn.closest('.has-dropdown');
         var open = parent.classList.toggle('is-open');
-        btn.setAttribute('aria-expanded', open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
       });
+
+      if (window.matchMedia('(hover: hover)').matches) {
+        parent.addEventListener('mouseenter', function () {
+          if (mobileDropdown.matches) return;
+          parent.classList.add('is-open');
+          btn.setAttribute('aria-expanded', 'true');
+        });
+        parent.addEventListener('mouseleave', function () {
+          if (mobileDropdown.matches) return;
+          parent.classList.remove('is-open');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      }
     });
 
     document.addEventListener('click', function (e) {
@@ -155,8 +173,9 @@
       'index.html': 'home',
       'about.html': 'about',
       'quality-assurance.html': 'quality',
-      'certifications.html': 'certifications',
+      'certifications.html': 'quality',
       'export-packaging.html': 'export',
+      'global-supply.html': 'global',
       'contact.html': 'contact',
       'request-quote.html': 'contact'
     };
@@ -167,6 +186,8 @@
       });
     }
     if (
+      page === 'products.html' ||
+      page.indexOf('korvanto-') === 0 ||
       [
         'bentonite.html',
         'kaolin.html',
@@ -174,8 +195,7 @@
         'chamotte.html',
         'calcined-bauxite.html',
         'laterite.html',
-        'coal-additive.html',
-        'products.html'
+        'coal-additive.html'
       ].indexOf(page) !== -1
     ) {
       $$('.dropdown-trigger').forEach(function (b) {
@@ -738,6 +758,42 @@
   }
 
   /* ——— Form validation ——— */
+  function getFormFieldValue(field) {
+    if (field.tagName === 'SELECT') {
+      var opt = field.options[field.selectedIndex];
+      return opt && opt.value ? opt.text.replace(/\s+/g, ' ').trim() : '';
+    }
+    return (field.value || '').trim();
+  }
+
+  function buildMailtoLink(form) {
+    var to = form.getAttribute('data-mailto') || 'exports@korvanto.com';
+    var subjectField = form.querySelector('[name="subject"]');
+    var companyField = form.querySelector('[name="company"]');
+    var subject = form.getAttribute('data-mailto-subject');
+    if (!subject) {
+      if (subjectField && subjectField.value.trim()) {
+        subject = subjectField.value.trim();
+      } else if (companyField && companyField.value.trim()) {
+        subject = 'Korvanto Quote Request — ' + companyField.value.trim();
+      } else {
+        subject = 'Korvanto Website Enquiry';
+      }
+    }
+    var lines = [];
+    $$('input, textarea, select', form).forEach(function (field) {
+      if (field.type === 'submit' || field.type === 'hidden' || !field.name) return;
+      var val = getFormFieldValue(field);
+      if (!val) return;
+      var group = field.closest('.form-group');
+      var labelEl = group ? group.querySelector('label') : null;
+      var label = labelEl ? labelEl.textContent.replace(/\*/g, '').trim() : field.name;
+      lines.push(label + ': ' + val);
+    });
+    var body = lines.join('\r\n');
+    return 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  }
+
   function initForms() {
     $$('form[data-validate]').forEach(function (form) {
       form.addEventListener('submit', function (e) {
@@ -747,7 +803,7 @@
           var err = field.parentElement.querySelector('.field-error');
           if (err) err.remove();
           field.classList.remove('is-invalid');
-          if (!field.value.trim()) {
+          if (!getFormFieldValue(field)) {
             valid = false;
             field.classList.add('is-invalid');
             showError(field, 'This field is required.');
@@ -759,9 +815,15 @@
         });
         var success = $('.form-success', form);
         if (valid) {
+          var mailtoHref = form.getAttribute('data-mailto') ? buildMailtoLink(form) : null;
           if (success) {
             success.hidden = false;
-            form.reset();
+          }
+          if (mailtoHref) {
+            window.location.href = mailtoHref;
+          }
+          form.reset();
+          if (success) {
             setTimeout(function () {
               success.hidden = true;
             }, 8000);
@@ -868,7 +930,7 @@
     '<div class="footer-col">' +
     '<h4>Products</h4>' +
     '<ul>' +
-    '<li><a href="bentonite.html">Bentonite</a></li>' +
+    '<li><a href="korvanto-bento.html">Bentonite</a></li>' +
     '<li><a href="kaolin.html">Kaolin (China Clay)</a></li>' +
     '<li><a href="ball-clay.html">Ball Clay</a></li>' +
     '<li><a href="chamotte.html">Chamotte / Calcined Clay</a></li>' +
