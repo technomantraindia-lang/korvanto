@@ -169,7 +169,13 @@
           "Good Flowability and Compactability",
           "Enhanced Thermal Durability",
           "Effective Performance at Lower Addition Levels",
-          "Uniform Fine Powder Processing"
+          "Uniform Fine Powder Processing",
+          "Excellent Green Compression Strength",
+          "Superior Sand Bonding Characteristics",
+          "Instant Gel Formation",
+          "Improved Mold Stability",
+          "Reduced Casting Defects",
+          "Consistent Performance Across Production Cycles"
         ],
         "product_advantages": [
           "Produces strong and durable molds with excellent bonding properties",
@@ -187,10 +193,102 @@
         ],
         "key_features": [],
         "available_grades": [],
-        "packaging": [],
-        "short_website_description": []
+        "packaging": [
+          "25 kg Bags",
+          "50 kg Bags",
+          "Jumbo Bags (FIBC)",
+          "Palletized Loads",
+          "Containerized Shipments"
+        ],
+        "short_website_description": [],
+        "documentation": [
+          "Technical Data Sheet (TDS)",
+          "Certificate of Analysis (COA)",
+          "Sample Support",
+          "Third-Party Testing Available Upon Request"
+        ],
+        "custom_grade_note": "Custom foundry grades can be supplied according to casting type, sand system requirements, and foundry operating conditions."
       },
-      "grades": [],
+      "grades": [
+        {
+          "grade": "F-100",
+          "name": "KORVANTO BENTO FOUNDRY F-100",
+          "subtitle": "Standard Foundry Grade",
+          "specifications": [
+            {
+              "parameter": "Form",
+              "value": "Finely Divided Powder"
+            },
+            {
+              "parameter": "Free Swelling",
+              "value": "28–30 ml"
+            },
+            {
+              "parameter": "pH",
+              "value": "9.0–10.0"
+            },
+            {
+              "parameter": "Moisture",
+              "value": "12% Max"
+            },
+            {
+              "parameter": "Gelling Time",
+              "value": "Instant"
+            },
+            {
+              "parameter": "Gelling Index",
+              "value": "75–85%"
+            },
+            {
+              "parameter": "Methylene Blue Value",
+              "value": "390 ± 10"
+            },
+            {
+              "parameter": "Fineness",
+              "value": "85% Through 200 B.S. Sieve"
+            }
+          ]
+        },
+        {
+          "grade": "F-200",
+          "name": "KORVANTO BENTO FOUNDRY F-200",
+          "subtitle": "Premium Foundry Grade",
+          "specifications": [
+            {
+              "parameter": "Form",
+              "value": "Finely Divided Powder"
+            },
+            {
+              "parameter": "Free Swelling",
+              "value": "32 ml"
+            },
+            {
+              "parameter": "pH",
+              "value": "9.0–10.0"
+            },
+            {
+              "parameter": "Moisture",
+              "value": "12% Max"
+            },
+            {
+              "parameter": "Gelling Time",
+              "value": "Instant"
+            },
+            {
+              "parameter": "Gelling Index",
+              "value": "85–90%"
+            },
+            {
+              "parameter": "Methylene Blue Value",
+              "value": "390 ± 10"
+            },
+            {
+              "parameter": "Fineness",
+              "value": "85% Through 200 B.S. Sieve"
+            }
+          ]
+        }
+      ],
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-foundry.html"
     },
@@ -420,7 +518,13 @@
           "Superior Pellet Formation Properties",
           "Good Thermal Durability",
           "Low Consumption Requirement",
-          "Consistent Quality and Performance"
+          "Consistent Quality and Performance",
+          "Excellent Pellet Binding Performance",
+          "High Swelling Characteristics",
+          "Improved Green Pellet Strength",
+          "Consistent Moisture Retention",
+          "Enhanced Pellet Durability During Handling",
+          "Suitable for Iron Ore Pellet Manufacturing"
         ],
         "product_advantages": [
           "Delivers superior green, dry, and fired pellet strength",
@@ -436,10 +540,106 @@
         ],
         "key_features": [],
         "available_grades": [],
-        "packaging": [],
-        "short_website_description": []
+        "packaging": [
+          "25 kg Bags",
+          "50 kg Bags",
+          "Jumbo Bags (FIBC)",
+          "Palletized Loads",
+          "Containerized Shipments",
+          "Bulk Supply Options"
+        ],
+        "short_website_description": [],
+        "documentation": [
+          "Technical Data Sheet (TDS)",
+          "Certificate of Analysis (COA)",
+          "Sample Support",
+          "Third-Party Testing Available Upon Request"
+        ],
+        "custom_grade_note": "Custom pelletizing grades and tailored specifications can be supplied according to iron ore characteristics and pellet plant requirements."
       },
-      "grades": [],
+      "grades": [
+        {
+          "grade": "I-100",
+          "name": "KORVANTO BENTO IOP I-100",
+          "subtitle": "Standard Pelletizing Grade",
+          "specifications": [
+            {
+              "parameter": "Free Swelling",
+              "value": "28–30 ml"
+            },
+            {
+              "parameter": "Gelling Index",
+              "value": "60–70%"
+            },
+            {
+              "parameter": "Water Absorption",
+              "value": "550–650%"
+            },
+            {
+              "parameter": "pH",
+              "value": "9.0–9.5"
+            },
+            {
+              "parameter": "Methylene Blue Value",
+              "value": "350–375"
+            }
+          ]
+        },
+        {
+          "grade": "I-200",
+          "name": "KORVANTO BENTO IOP I-200",
+          "subtitle": "Enhanced Pelletizing Grade",
+          "specifications": [
+            {
+              "parameter": "Free Swelling",
+              "value": "30–32 ml"
+            },
+            {
+              "parameter": "Gelling Index",
+              "value": "70–80%"
+            },
+            {
+              "parameter": "Water Absorption",
+              "value": "650–750%"
+            },
+            {
+              "parameter": "pH",
+              "value": "9.0–10.0"
+            },
+            {
+              "parameter": "Methylene Blue Value",
+              "value": "375–390"
+            }
+          ]
+        },
+        {
+          "grade": "I-300",
+          "name": "KORVANTO BENTO IOP I-300",
+          "subtitle": "Premium Pelletizing Grade",
+          "specifications": [
+            {
+              "parameter": "Free Swelling",
+              "value": "32–35 ml"
+            },
+            {
+              "parameter": "Gelling Index",
+              "value": "80–90%"
+            },
+            {
+              "parameter": "Water Absorption",
+              "value": "750–850%"
+            },
+            {
+              "parameter": "pH",
+              "value": "9.5–10.5"
+            },
+            {
+              "parameter": "Methylene Blue Value",
+              "value": "390–450"
+            }
+          ]
+        }
+      ],
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-iop.html"
     },
@@ -478,7 +678,15 @@
           "Metro, Highway, Railway & Bridge Projects",
           "Geotechnical and Infrastructure Projects"
         ],
-        "product_features": [],
+        "product_features": [
+          "Excellent Borehole Stability",
+          "High Yield Performance",
+          "Low Filtration Loss",
+          "Rapid Slurry Formation",
+          "Good Suspension Characteristics",
+          "Effective Soil Sealing Properties",
+          "Suitable for Deep Foundation Projects"
+        ],
         "product_advantages": [],
         "key_features": [
           "High Yield Sodium Bentonite",
@@ -493,10 +701,119 @@
           "Easy Mixing and Slurry Preparation"
         ],
         "available_grades": [],
-        "packaging": [],
-        "short_website_description": []
+        "packaging": [
+          "25 kg Bags",
+          "50 kg Bags",
+          "Jumbo Bags (FIBC)",
+          "Palletized Loads",
+          "Containerized Shipments",
+          "Bulk Supply"
+        ],
+        "short_website_description": [],
+        "documentation": [
+          "Technical Data Sheet (TDS)",
+          "Certificate of Analysis (COA)",
+          "Sample Support",
+          "Third-Party Testing Available Upon Request"
+        ],
+        "custom_grade_note": "Custom civil engineering bentonite grades can be supplied according to project specifications, soil conditions, slurry requirements, and engineering standards."
       },
-      "grades": [],
+      "grades": [
+        {
+          "grade": "C-45",
+          "name": "KORVANTO BENTO CIVIL C-45",
+          "subtitle": "Premium Civil Engineering Grade",
+          "specifications": [
+            {
+              "parameter": "Marsh Cone Viscosity",
+              "value": "Min. 45 sec"
+            },
+            {
+              "parameter": "Filter Loss",
+              "value": "15–17 ml"
+            },
+            {
+              "parameter": "Barrel Yield",
+              "value": "110–140 bbl/ton"
+            },
+            {
+              "parameter": "Sand Content",
+              "value": "< 2%"
+            },
+            {
+              "parameter": "Moisture",
+              "value": "Max. 14%"
+            },
+            {
+              "parameter": "Particle Size (<200 Mesh)",
+              "value": "Min. 85%"
+            },
+            {
+              "parameter": "pH",
+              "value": "9.5–11.0"
+            },
+            {
+              "parameter": "Liquid Limit",
+              "value": "400–450"
+            },
+            {
+              "parameter": "Slurry Density",
+              "value": "1–1.20 gm/cc"
+            },
+            {
+              "parameter": "Montmorillonite Content",
+              "value": "Min. 75%"
+            }
+          ]
+        },
+        {
+          "grade": "C-33",
+          "name": "KORVANTO BENTO CIVIL C-33",
+          "subtitle": "Standard Civil Engineering Grade",
+          "specifications": [
+            {
+              "parameter": "Marsh Cone Viscosity",
+              "value": "Min. 33 sec"
+            },
+            {
+              "parameter": "Filter Loss",
+              "value": "Max. 20 ml"
+            },
+            {
+              "parameter": "Barrel Yield",
+              "value": "90–110 bbl/ton"
+            },
+            {
+              "parameter": "Sand Content",
+              "value": "< 2%"
+            },
+            {
+              "parameter": "Moisture",
+              "value": "Max. 14%"
+            },
+            {
+              "parameter": "Particle Size (<200 Mesh)",
+              "value": "Min. 80%"
+            },
+            {
+              "parameter": "pH",
+              "value": "9.5–11.0"
+            },
+            {
+              "parameter": "Liquid Limit",
+              "value": "300–375"
+            },
+            {
+              "parameter": "Slurry Density",
+              "value": "1–1.20 gm/cc"
+            },
+            {
+              "parameter": "Montmorillonite Content",
+              "value": "Min. 70%"
+            }
+          ]
+        }
+      ],
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-civil.html"
     },
@@ -537,7 +854,14 @@
           "Mycotoxin Management Programs",
           "Livestock Nutrition Applications"
         ],
-        "product_features": [],
+        "product_features": [
+          "High Montmorillonite Content",
+          "Good Binding Properties",
+          "Suitable for Feed Pellet Production",
+          "Consistent Quality Performance",
+          "Moisture Control Support",
+          "Fine and Uniform Particle Distribution"
+        ],
         "product_advantages": [
           "Acts as an effective natural mycotoxin binder",
           "Helps reduce the impact of aflatoxins and other feed contaminants",
@@ -563,10 +887,47 @@
           "Naturally Occurring Mineral Feed Additive"
         ],
         "available_grades": [],
-        "packaging": [],
-        "short_website_description": []
+        "packaging": [
+          "25 kg Bags",
+          "50 kg Bags",
+          "Jumbo Bags (FIBC)",
+          "Customized Packaging Available"
+        ],
+        "short_website_description": [],
+        "documentation": [
+          "Technical Data Sheet (TDS)",
+          "Certificate of Analysis (COA)",
+          "Sample Support",
+          "Third-Party Testing Available Upon Request"
+        ],
+        "custom_grade_note": "Custom feed-grade bentonite specifications can be supplied according to feed formulation and manufacturing requirements."
       },
-      "grades": [],
+      "grades": [
+        {
+          "grade": "FEED",
+          "name": "KORVANTO BENTO FEED",
+          "subtitle": "Animal Feed Grade Bentonite",
+          "specifications": [
+            {
+              "parameter": "pH",
+              "value": "8 – 10"
+            },
+            {
+              "parameter": "Moisture",
+              "value": "12 – 14%"
+            },
+            {
+              "parameter": "Loss on Ignition (LOI)",
+              "value": "10 – 12%"
+            },
+            {
+              "parameter": "Montmorillonite Content",
+              "value": "Above 70%"
+            }
+          ],
+          "spec_note": "Representative values for reference only."
+        }
+      ],
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-feed.html"
     },
@@ -607,7 +968,15 @@
           "Fertilizer Coating Applications",
           "Carrier for Micronutrients and Agricultural Inputs"
         ],
-        "product_features": [],
+        "product_features": [
+          "Excellent Fertilizer Binding Properties",
+          "High Swelling Capacity",
+          "Improved Granule Strength",
+          "Uniform Granulation Performance",
+          "Moisture Retention Capability",
+          "Better Storage Stability",
+          "Consistent Quality Control"
+        ],
         "product_advantages": [
           "Acts as an Effective Granulation Agent",
           "Improves Shelf Life and Storage Stability of Fertilizers",
@@ -630,10 +999,196 @@
           "Consistent Quality and Performance"
         ],
         "available_grades": [],
-        "packaging": [],
-        "short_website_description": []
+        "packaging": [
+          "25 kg Bags",
+          "50 kg Bags",
+          "Jumbo Bags (FIBC)",
+          "Palletized Loads",
+          "Containerized Shipments",
+          "Container Loads",
+          "Bulk Shipments"
+        ],
+        "short_website_description": [],
+        "documentation": [
+          "Technical Data Sheet (TDS)",
+          "Certificate of Analysis (COA)",
+          "Sample Support",
+          "Third-Party Testing Available Upon Request",
+          "Quality Verification Support"
+        ],
+        "custom_grade_note": "Custom fertilizer bentonite grades can be supplied according to fertilizer formulation, granulation process requirements, swelling characteristics, and customer specifications."
       },
-      "grades": [],
+      "grades": [
+        {
+          "grade": "AG-100",
+          "name": "KORVANTO BENTO FERT AG-100",
+          "subtitle": "Standard Fertilizer Grade",
+          "spec_sections": [
+            {
+              "title": "Physical Properties",
+              "specs": [
+                {
+                  "parameter": "Water Absorption (WH Method)",
+                  "value": "Min. 80%"
+                },
+                {
+                  "parameter": "Sand Content",
+                  "value": "Less than 5%"
+                },
+                {
+                  "parameter": "Moisture",
+                  "value": "Max. 14%"
+                },
+                {
+                  "parameter": "Particle Size (>200 BSS Mesh)",
+                  "value": "Min. 70%"
+                },
+                {
+                  "parameter": "pH",
+                  "value": "8.5 – 10"
+                },
+                {
+                  "parameter": "CEC",
+                  "value": "Min. 80 meq"
+                },
+                {
+                  "parameter": "Density",
+                  "value": "63 lbs/ft³"
+                }
+              ]
+            },
+            {
+              "title": "Typical Chemical Composition",
+              "specs": [
+                {
+                  "parameter": "LOI",
+                  "value": "8 – 10%"
+                },
+                {
+                  "parameter": "SiO₂",
+                  "value": "48 – 54%"
+                },
+                {
+                  "parameter": "Fe₂O₃",
+                  "value": "14 – 18%"
+                },
+                {
+                  "parameter": "Al₂O₃",
+                  "value": "14 – 17%"
+                },
+                {
+                  "parameter": "CaO",
+                  "value": "1.5 – 2.8%"
+                },
+                {
+                  "parameter": "MgO",
+                  "value": "2 – 3%"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "grade": "AG-200",
+          "name": "KORVANTO BENTO FERT AG-200",
+          "subtitle": "Granulation Grade",
+          "specifications": [
+            {
+              "parameter": "Barrel Yield",
+              "value": "Min. 75 bbl/ton"
+            },
+            {
+              "parameter": "Sand Content",
+              "value": "Less than 2%"
+            },
+            {
+              "parameter": "Moisture",
+              "value": "Max. 15%"
+            },
+            {
+              "parameter": "Particle Size (<200 Mesh)",
+              "value": "Min. 70%"
+            },
+            {
+              "parameter": "pH (5% Concentration)",
+              "value": "9 – 10.5"
+            },
+            {
+              "parameter": "MB Value",
+              "value": "Min. 380 mg/gm"
+            },
+            {
+              "parameter": "Density",
+              "value": "63 lbs/ft³"
+            }
+          ]
+        },
+        {
+          "grade": "AG-300",
+          "name": "KORVANTO BENTO FERT AG-300",
+          "subtitle": "Premium Granule Binder Grade",
+          "spec_sections": [
+            {
+              "title": "Physical Properties",
+              "specs": [
+                {
+                  "parameter": "Moisture",
+                  "value": "Max. 14%"
+                },
+                {
+                  "parameter": "pH",
+                  "value": "8 – 10"
+                },
+                {
+                  "parameter": "Base Exchange Capacity",
+                  "value": "Min. 80 meq"
+                },
+                {
+                  "parameter": "Swelling Value",
+                  "value": "25–27 ml/2gm"
+                },
+                {
+                  "parameter": "Particle Size (Passing 300 Mesh)",
+                  "value": "97% ±1"
+                }
+              ]
+            },
+            {
+              "title": "Typical Chemical Composition",
+              "specs": [
+                {
+                  "parameter": "LOI",
+                  "value": "8 – 10%"
+                },
+                {
+                  "parameter": "SiO₂",
+                  "value": "48 – 54%"
+                },
+                {
+                  "parameter": "Fe₂O₃",
+                  "value": "14 – 18%"
+                },
+                {
+                  "parameter": "Al₂O₃",
+                  "value": "14 – 17%"
+                },
+                {
+                  "parameter": "CaO",
+                  "value": "1.5 – 2.8%"
+                },
+                {
+                  "parameter": "MgO",
+                  "value": "2 – 3%"
+                },
+                {
+                  "parameter": "Na₂O",
+                  "value": "2.2 – 3%"
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-fert.html"
     },
@@ -693,10 +1248,79 @@
           "Available in Various Granule Sizes"
         ],
         "available_grades": [],
-        "packaging": [],
-        "short_website_description": []
+        "packaging": [
+          "25 kg Bags",
+          "50 kg Bags",
+          "Jumbo Bags (FIBC)",
+          "Palletized Loads",
+          "Containerized Shipments",
+          "Container Loads",
+          "Bulk Shipments"
+        ],
+        "short_website_description": [],
+        "documentation": [
+          "Technical Data Sheet (TDS)",
+          "Certificate of Analysis (COA)",
+          "Sample Support",
+          "Third-Party Testing Available Upon Request",
+          "Quality Verification Support",
+          "Independent Third-Party Testing Available Upon Request"
+        ],
+        "custom_grade_note": "Custom cat litter bentonite grades can be supplied based on granule size distribution, absorption capacity, clumping strength, color requirements, and private label manufacturing specifications."
       },
-      "grades": [],
+      "grades": [
+        {
+          "grade": "L-25",
+          "name": "KORVANTO BENTO LITTER L-25",
+          "subtitle": "Cat Litter Grade Bentonite Granules (0.5 – 2.5 mm)",
+          "specifications": [
+            {
+              "parameter": "Moisture",
+              "value": "8 – 13%"
+            },
+            {
+              "parameter": "pH Value",
+              "value": "Min. 8"
+            },
+            {
+              "parameter": "Cation Exchange Capacity (CEC)",
+              "value": "Min. 80 meq/100 gm"
+            },
+            {
+              "parameter": "Water Absorption (WH Method)",
+              "value": "Min. 110%"
+            },
+            {
+              "parameter": "Bulk Density",
+              "value": "0.8 – 1.0 g/cc"
+            },
+            {
+              "parameter": "Color",
+              "value": "Green / Gray to Buff"
+            },
+            {
+              "parameter": "Clump Weight",
+              "value": "Min. 20 gm/10 ml"
+            },
+            {
+              "parameter": "Clumping Strength",
+              "value": "Min. 2380 gm/10 ml"
+            },
+            {
+              "parameter": "Grain Size < 0.5 mm",
+              "value": "Max. 5%"
+            },
+            {
+              "parameter": "Grain Size > 2.5 mm",
+              "value": "Max. 2%"
+            },
+            {
+              "parameter": "Grain Size 0.5 – 2.5 mm",
+              "value": "Min. 93%"
+            }
+          ]
+        }
+      ],
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-litter.html"
     },
@@ -773,9 +1397,103 @@
         ],
         "available_grades": [],
         "packaging": [],
-        "short_website_description": []
+        "short_website_description": [],
+        "documentation": [
+          "Technical Data Sheet (TDS)",
+          "Certificate of Analysis (COA)",
+          "Sample Support",
+          "Third-Party Testing Available Upon Request"
+        ],
+        "custom_grade_note": "Custom paper-grade and de-inking bentonite can be manufactured according to particle size distribution, brightness, retention performance, and application requirements."
       },
-      "grades": [],
+      "grades": [
+        {
+          "grade": "PAPER-325",
+          "name": "KORVANTO BENTO PAPER-325",
+          "subtitle": "Paper Grade Bentonite Powder",
+          "specifications": [
+            {
+              "parameter": "Settled Solids",
+              "value": "3 – 5%"
+            },
+            {
+              "parameter": "Color",
+              "value": "Creamish Yellow"
+            },
+            {
+              "parameter": "Brightness",
+              "value": "40 – 45%"
+            },
+            {
+              "parameter": "pH",
+              "value": "8.5 – 10.5"
+            },
+            {
+              "parameter": "Cation Exchange Capacity",
+              "value": "90 – 100 meq"
+            },
+            {
+              "parameter": "Density",
+              "value": "0.9 – 1.1 g/cc"
+            },
+            {
+              "parameter": "Particle Size <45 Micron (Wet)",
+              "value": "0.5% Max"
+            },
+            {
+              "parameter": "Particle Size <20 Micron (Wet)",
+              "value": "1% Max"
+            },
+            {
+              "parameter": "Moisture",
+              "value": "8 – 12%"
+            },
+            {
+              "parameter": "Al₂O₃",
+              "value": "17 – 21%"
+            },
+            {
+              "parameter": "Fe₂O₃",
+              "value": "8 – 12%"
+            }
+          ]
+        },
+        {
+          "grade": "DEINK-100",
+          "name": "KORVANTO BENTO DEINK-100",
+          "subtitle": "De-Inking Grade Bentonite Powder",
+          "specifications": [
+            {
+              "parameter": "Marsh Funnel Viscosity @ 6% Bentonite",
+              "value": "38 sec Min"
+            },
+            {
+              "parameter": "pH Value",
+              "value": "9.4 – 10.5"
+            },
+            {
+              "parameter": "Cation Exchange Capacity",
+              "value": "90 – 100 meq"
+            },
+            {
+              "parameter": "Particle Size <45 Micron (Wet)",
+              "value": "2% Max"
+            },
+            {
+              "parameter": "Moisture",
+              "value": "8 – 12%"
+            },
+            {
+              "parameter": "Color",
+              "value": "Creamy Yellow"
+            },
+            {
+              "parameter": "Density",
+              "value": "0.9 – 1.10 g/cc"
+            }
+          ]
+        }
+      ],
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-paper-deink.html"
     },
@@ -837,9 +1555,74 @@
         ],
         "available_grades": [],
         "packaging": [],
-        "short_website_description": []
+        "short_website_description": [],
+        "documentation": [
+          "Technical Data Sheet (TDS)",
+          "Certificate of Analysis (COA)",
+          "Sample Support",
+          "Third-Party Testing Available Upon Request",
+          "Safety Data Sheet (SDS/MSDS)",
+          "Third-Party Testing Reports"
+        ],
+        "custom_grade_note": "Custom pharmaceutical-grade bentonite can be supplied according to customer specifications, purity requirements, particle size distribution, swelling characteristics, and regulatory needs."
       },
-      "grades": [],
+      "grades": [
+        {
+          "grade": "PHARMA-IP",
+          "name": "KORVANTO BENTO PHARMA-IP",
+          "subtitle": "Pharmaceutical Grade Bentonite Powder (IP Grade)",
+          "specifications": [
+            {
+              "parameter": "pH",
+              "value": "8.0 – 10.5"
+            },
+            {
+              "parameter": "Sedimentation",
+              "value": "2 ml"
+            },
+            {
+              "parameter": "Microbial Limit",
+              "value": "Free from E. coli (Complies)"
+            },
+            {
+              "parameter": "Solubility",
+              "value": "Insoluble in water, methanol, ether & acetone; very slightly soluble in hot & cold water"
+            },
+            {
+              "parameter": "Swelling",
+              "value": "8 – 12 ml"
+            },
+            {
+              "parameter": "Bulk Density",
+              "value": "0.8 – 1.0 g/cc"
+            },
+            {
+              "parameter": "Heavy Metals",
+              "value": "50 ppm Max"
+            },
+            {
+              "parameter": "Loss on Ignition @ 600°C",
+              "value": "8 – 10%"
+            },
+            {
+              "parameter": "Loss on Drying @ 110°C",
+              "value": "13% Max"
+            },
+            {
+              "parameter": "Coarse Particles >75 Micron (Wet Method)",
+              "value": "0.5% Max"
+            },
+            {
+              "parameter": "Color",
+              "value": "Very Fine Pale Buff"
+            },
+            {
+              "parameter": "Moisture",
+              "value": "9 – 13%"
+            }
+          ]
+        }
+      ],
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-pharma.html"
     },
@@ -914,10 +1697,60 @@
           "Consistent Quality and Performance"
         ],
         "available_grades": [],
-        "packaging": [],
-        "short_website_description": []
+        "packaging": [
+          "25 kg HDPE Bags",
+          "25 kg Kraft Paper Bags",
+          "Jumbo Bags Available",
+          "Private Label Packaging Available"
+        ],
+        "short_website_description": [],
+        "documentation": [
+          "Technical Data Sheet (TDS)",
+          "Certificate of Analysis (COA)",
+          "Sample Support",
+          "Third-Party Testing Available Upon Request",
+          "Safety Data Sheet (SDS/MSDS)",
+          "Third-Party Testing Reports Available"
+        ],
+        "custom_grade_note": "Custom cosmetic-grade bentonite can be supplied according to particle size requirements, montmorillonite content, moisture levels, adsorption performance, and end-use formulation requirements."
       },
-      "grades": [],
+      "grades": [
+        {
+          "grade": "COSMETIC-90",
+          "name": "KORVANTO BENTO COSMETIC-90",
+          "subtitle": "Cosmetic Grade Bentonite Powder",
+          "specifications": [
+            {
+              "parameter": "pH Value",
+              "value": "8.0 – 9.7"
+            },
+            {
+              "parameter": "Cation Exchange Capacity (CEC)",
+              "value": "90 meq"
+            },
+            {
+              "parameter": "Density",
+              "value": "0.8 – 1.0 g/cc"
+            },
+            {
+              "parameter": "Particle Size >45 Micron (Wet)",
+              "value": "1.5% Max"
+            },
+            {
+              "parameter": "Particle Size >20 Micron (Wet)",
+              "value": "2.0% Max"
+            },
+            {
+              "parameter": "Montmorillonite Content",
+              "value": "83% Min"
+            },
+            {
+              "parameter": "Moisture",
+              "value": "7 – 12%"
+            }
+          ]
+        }
+      ],
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-cosmetic.html"
     },
@@ -988,9 +1821,111 @@
         "packaging": [],
         "short_website_description": [
           "KORVANTO BENTO DESICCANT is a natural bentonite-based moisture adsorbent designed for packaging and storage applications. Its superior water vapor absorption and controlled granule size help protect products from humidity, corrosion, mold, and moisture-related damage during storage and transportation."
-        ]
+        ],
+        "documentation": [
+          "Technical Data Sheet (TDS)",
+          "Certificate of Analysis (COA)",
+          "Sample Support",
+          "Third-Party Testing Available Upon Request",
+          "Safety Data Sheet (SDS/MSDS)"
+        ],
+        "custom_grade_note": "Custom desiccant bentonite grades are available in various granule sizes, moisture absorption capacities, packaging formats, and application-specific requirements."
       },
-      "grades": [],
+      "grades": [
+        {
+          "grade": "DESICCANT-24",
+          "name": "KORVANTO BENTO DESICCANT-24",
+          "subtitle": "Desiccant Grade Bentonite Granules (2–4 mm)",
+          "specifications": [
+            {
+              "parameter": "Moisture",
+              "value": "6 – 7%"
+            },
+            {
+              "parameter": "Granule Size",
+              "value": "2 – 4 mm"
+            },
+            {
+              "parameter": "Particles < 2 mm",
+              "value": "5% Max"
+            },
+            {
+              "parameter": "Particles > 4 mm",
+              "value": "3% Max"
+            },
+            {
+              "parameter": "Main Fraction",
+              "value": "92%"
+            },
+            {
+              "parameter": "Packaging",
+              "value": "50 kg Bags"
+            }
+          ]
+        },
+        {
+          "grade": "DESICCANT-05",
+          "name": "KORVANTO BENTO DESICCANT-05",
+          "subtitle": "Desiccant Grade Bentonite Granules (0.5–2.5 mm)",
+          "specifications": [
+            {
+              "parameter": "Moisture",
+              "value": "6 – 7%"
+            },
+            {
+              "parameter": "Granule Size",
+              "value": "0.5 – 2.5 mm"
+            },
+            {
+              "parameter": "Particles < 0.5 mm",
+              "value": "5% Max"
+            },
+            {
+              "parameter": "Particles > 2.5 mm",
+              "value": "4% Max"
+            },
+            {
+              "parameter": "Main Fraction",
+              "value": "91%"
+            },
+            {
+              "parameter": "Packaging",
+              "value": "50 kg Bags"
+            }
+          ]
+        },
+        {
+          "grade": "DESICCANT-12",
+          "name": "KORVANTO BENTO DESICCANT-12",
+          "subtitle": "Desiccant Grade Bentonite Granules (1–2 mm)",
+          "specifications": [
+            {
+              "parameter": "Moisture",
+              "value": "6 – 7%"
+            },
+            {
+              "parameter": "Granule Size",
+              "value": "1 – 2 mm"
+            },
+            {
+              "parameter": "Particles < 1 mm",
+              "value": "5% Max"
+            },
+            {
+              "parameter": "Particles > 2 mm",
+              "value": "4% Max"
+            },
+            {
+              "parameter": "Main Fraction",
+              "value": "91%"
+            },
+            {
+              "parameter": "Packaging",
+              "value": "50 kg Bags"
+            }
+          ]
+        }
+      ],
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-desiccant.html"
     },
@@ -1055,12 +1990,100 @@
           "Available in Powder and Granular Forms"
         ],
         "available_grades": [],
-        "packaging": [],
+        "packaging": [
+          "25 kg Bags",
+          "50 kg Bags",
+          "Jumbo Bags (FIBC)",
+          "Palletized Loads",
+          "Containerized Shipments",
+          "Container Loads",
+          "Bulk Shipments"
+        ],
         "short_website_description": [
           "KORVANTO BENTO SEAL is a premium natural sodium bentonite designed for pond sealing and water containment applications. Its exceptional swelling and sealing properties create a durable low-permeability barrier that minimizes seepage and helps retain water in ponds, reservoirs, canals, and aquaculture systems."
-        ]
+        ],
+        "documentation": [
+          "Technical Data Sheet (TDS)",
+          "Certificate of Analysis (COA)",
+          "Sample Support",
+          "Third-Party Testing Available Upon Request",
+          "Quality Verification Support",
+          "Independent Third-Party Testing Available Upon Request"
+        ],
+        "custom_grade_note": "Custom pond sealant bentonite grades can be supplied based on swelling requirements, permeability specifications, particle size distribution, and project-specific performance requirements."
       },
-      "grades": [],
+      "grades": [
+        {
+          "grade": "SEAL-P",
+          "name": "KORVANTO BENTO SEAL-P",
+          "subtitle": "Pond Sealant Powder Grade",
+          "specifications": [
+            {
+              "parameter": "Water Content",
+              "value": "13%"
+            },
+            {
+              "parameter": "Specific Gravity",
+              "value": "1.0 – 1.20 gm/cc"
+            },
+            {
+              "parameter": "CEC",
+              "value": "70 – 75 meq/100 gm"
+            },
+            {
+              "parameter": "Expandability",
+              "value": "15 – 20 ml min"
+            },
+            {
+              "parameter": "Water Absorption Capacity",
+              "value": "250 – 350% (±50)"
+            },
+            {
+              "parameter": "Montmorillonite Content",
+              "value": "Min. 80%"
+            },
+            {
+              "parameter": "Particle Size (>200 BSS Mesh)",
+              "value": "70%"
+            }
+          ]
+        },
+        {
+          "grade": "SEAL-G",
+          "name": "KORVANTO BENTO SEAL-G",
+          "subtitle": "Pond Sealant Granular Grade",
+          "specifications": [
+            {
+              "parameter": "Water Content",
+              "value": "13%"
+            },
+            {
+              "parameter": "Specific Gravity",
+              "value": "1.0 – 1.20 gm/cc"
+            },
+            {
+              "parameter": "Granulation",
+              "value": "0 – 5 mm"
+            },
+            {
+              "parameter": "CEC",
+              "value": "70 – 75 meq/100 gm"
+            },
+            {
+              "parameter": "Expandability",
+              "value": "15 – 20 ml min"
+            },
+            {
+              "parameter": "Water Absorption Capacity",
+              "value": "250 – 350% (±50)"
+            },
+            {
+              "parameter": "Montmorillonite Content",
+              "value": "Min. 80%"
+            }
+          ]
+        }
+      ],
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-seal.html"
     },
@@ -1122,6 +2145,28 @@
         "packaging": [],
         "short_website_description": [
           "KORVANTO BENTO FOOD is a premium food-grade bentonite used for beverage clarification and purification applications. Its superior adsorption and clarification properties help remove proteins, suspended particles, and impurities, improving product clarity, stability, and processing efficiency in wine, juice, and food manufacturing industries."
+        ],
+        "typical_specs": [
+          {
+            "parameter": "Grade",
+            "value": "Food-grade bentonite"
+          },
+          {
+            "parameter": "Primary Use",
+            "value": "Beverage clarification & filtration"
+          },
+          {
+            "parameter": "Mineral",
+            "value": "Montmorillonite-rich clay"
+          },
+          {
+            "parameter": "Form",
+            "value": "Powder"
+          },
+          {
+            "parameter": "Documentation",
+            "value": "TDS & COA available on request"
+          }
         ]
       },
       "grades": [],
@@ -1151,7 +2196,13 @@
           "Carbon and Mineral Binder Applications",
           "Specialty Writing Instrument Components"
         ],
-        "product_features": [],
+        "product_features": [
+          "Excellent Binding Properties",
+          "Ultra-Fine Particle Size Distribution",
+          "Consistent Processing Performance",
+          "Suitable for Pencil Lead Formulations",
+          "High Purity Selected Bentonite"
+        ],
         "product_advantages": [
           "Provides Strong and Uniform Graphite Bonding",
           "Improves Pencil Lead Strength and Durability",
@@ -1184,13 +2235,55 @@
           "25 kg Bags",
           "50 kg Bags",
           "1 MT Jumbo Bags",
-          "Bulk Supply"
+          "Bulk Supply",
+          "Jumbo Bags (FIBC)",
+          "Customized Packaging Available"
         ],
         "short_website_description": [
           "KORVANTO BENTO PENCIL is a high-performance bentonite developed for pencil lead manufacturing. Its excellent binding, strength, and water absorption properties help produce durable, uniform pencil leads with reduced breakage and improved manufacturing efficiency."
-        ]
+        ],
+        "documentation": [
+          "Technical Data Sheet (TDS)",
+          "Certificate of Analysis (COA)",
+          "Sample Support",
+          "Third-Party Testing Available Upon Request"
+        ],
+        "custom_grade_note": "Custom grades and tailored specifications can be supplied based on pencil formulation requirements and customer specifications."
       },
-      "grades": [],
+      "grades": [
+        {
+          "grade": "PENCIL",
+          "name": "KORVANTO BENTO PENCIL",
+          "subtitle": "Pencil Grade Bentonite",
+          "specifications": [
+            {
+              "parameter": "Form",
+              "value": "Finely Divided Powder"
+            },
+            {
+              "parameter": "Free Swelling",
+              "value": "23–25 ml"
+            },
+            {
+              "parameter": "pH",
+              "value": "8.5–9.5"
+            },
+            {
+              "parameter": "Moisture",
+              "value": "12% Max"
+            },
+            {
+              "parameter": "Fineness",
+              "value": "99.95% Through 500 B.S. Sieve"
+            },
+            {
+              "parameter": "Bulk Density (20/25°C)",
+              "value": "0.800 g/cc"
+            }
+          ],
+          "spec_note": "Representative values for reference only."
+        }
+      ],
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-pencil.html"
     },
@@ -1270,6 +2363,28 @@
         ],
         "short_website_description": [
           "KORVANTO KAO CRUDE is a naturally occurring kaolin clay supplied in raw lump form for ceramic, paint, paper, plastic, and industrial applications. Its excellent plasticity, whiteness, and processing characteristics make it a versatile mineral for a wide range of manufacturing industries."
+        ],
+        "typical_specs": [
+          {
+            "parameter": "Mineral Type",
+            "value": "Natural kaolin (China clay)"
+          },
+          {
+            "parameter": "Form",
+            "value": "Raw lumps / crude clay"
+          },
+          {
+            "parameter": "Plasticity",
+            "value": "Good to excellent"
+          },
+          {
+            "parameter": "Whiteness",
+            "value": "Natural — varies by deposit"
+          },
+          {
+            "parameter": "Moisture",
+            "value": "As mined / as agreed"
+          }
         ]
       },
       "grades": [],
@@ -1336,7 +2451,29 @@
         ],
         "available_grades": [],
         "packaging": [],
-        "short_website_description": []
+        "short_website_description": [],
+        "typical_specs": [
+          {
+            "parameter": "Processing",
+            "value": "Water-washed / levigated"
+          },
+          {
+            "parameter": "Form",
+            "value": "Noodles"
+          },
+          {
+            "parameter": "Purity",
+            "value": "High — grit & iron reduced"
+          },
+          {
+            "parameter": "Plasticity",
+            "value": "Excellent"
+          },
+          {
+            "parameter": "Moisture",
+            "value": "Controlled"
+          }
+        ]
       },
       "grades": [],
       "family": "korvanto-kao",
@@ -1400,7 +2537,29 @@
         ],
         "available_grades": [],
         "packaging": [],
-        "short_website_description": []
+        "short_website_description": [],
+        "typical_specs": [
+          {
+            "parameter": "Processing",
+            "value": "Water-washed / levigated"
+          },
+          {
+            "parameter": "Form",
+            "value": "Lumps"
+          },
+          {
+            "parameter": "Purity",
+            "value": "High — coarse particles & iron reduced"
+          },
+          {
+            "parameter": "Whiteness",
+            "value": "Enhanced vs crude kaolin"
+          },
+          {
+            "parameter": "Moisture",
+            "value": "Controlled"
+          }
+        ]
       },
       "grades": [],
       "family": "korvanto-kao",
@@ -1486,6 +2645,28 @@
         "packaging": [],
         "short_website_description": [
           "KORVANTO KAO HYDROUS is a premium water-washed kaolin designed for paints, coatings, paper, plastics, rubber, inks, and specialty industrial applications. Its high brightness, fine particle size, and excellent dispersion properties enhance product performance, appearance, and processing efficiency."
+        ],
+        "typical_specs": [
+          {
+            "parameter": "Mineral Type",
+            "value": "Hydrous kaolin (kaolinite)"
+          },
+          {
+            "parameter": "Form",
+            "value": "Powder"
+          },
+          {
+            "parameter": "Brightness",
+            "value": "High"
+          },
+          {
+            "parameter": "Particle Size",
+            "value": "Fine, controlled distribution"
+          },
+          {
+            "parameter": "Moisture",
+            "value": "≤ 1.5% (typical for powder)"
+          }
         ]
       },
       "grades": [],
@@ -1576,6 +2757,28 @@
         "packaging": [],
         "short_website_description": [
           "KORVANTO KAO CALCINED is a thermally processed high-performance kaolin designed for paints, coatings, plastics, rubber, paper, wire & cable insulation, and specialty industrial applications. Its superior brightness, opacity, dispersibility, and insulation properties help improve product performance while optimizing formulation costs."
+        ],
+        "typical_specs": [
+          {
+            "parameter": "Mineral Type",
+            "value": "Calcined kaolin (anhydrous aluminum silicate)"
+          },
+          {
+            "parameter": "Form",
+            "value": "Powder"
+          },
+          {
+            "parameter": "Brightness",
+            "value": "High"
+          },
+          {
+            "parameter": "Opacity",
+            "value": "Enhanced vs hydrous kaolin"
+          },
+          {
+            "parameter": "Moisture",
+            "value": "Low — thermally processed"
+          }
         ]
       },
       "grades": [],
@@ -1667,6 +2870,28 @@
         "packaging": [],
         "short_website_description": [
           "KORVANTO KAO METAKAOLIN is a premium pozzolanic material produced from high-purity kaolin. It enhances the strength, durability, workability, and sustainability of concrete and cement systems while also serving as a high-performance functional filler in industrial applications."
+        ],
+        "typical_specs": [
+          {
+            "parameter": "Material Type",
+            "value": "Metakaolin (pozzolanic)"
+          },
+          {
+            "parameter": "Form",
+            "value": "Powder"
+          },
+          {
+            "parameter": "Reactivity",
+            "value": "High pozzolanic activity"
+          },
+          {
+            "parameter": "Particle Size",
+            "value": "Fine"
+          },
+          {
+            "parameter": "Application",
+            "value": "Cement, concrete, construction chemicals"
+          }
         ]
       },
       "grades": [],
@@ -1757,6 +2982,32 @@
         ],
         "short_website_description": [
           "KORVANTO CLAY BALL is a premium-grade ball clay designed for ceramic, sanitaryware, tile, porcelain, and refractory manufacturing. Its exceptional plasticity, binding strength, and workability help produce high-quality ceramic products with superior shaping, casting, and firing performance."
+        ],
+        "typical_specs": [
+          {
+            "parameter": "Primary Mineral",
+            "value": "Kaolinite with quartz & mica"
+          },
+          {
+            "parameter": "Plasticity",
+            "value": "High"
+          },
+          {
+            "parameter": "Particle Size",
+            "value": "Fine-grained"
+          },
+          {
+            "parameter": "Moisture",
+            "value": "As per export requirement"
+          },
+          {
+            "parameter": "Form",
+            "value": "Lumps / Powder / Processed clay"
+          },
+          {
+            "parameter": "Application",
+            "value": "Ceramic, sanitaryware, tile, porcelain, refractory"
+          }
         ]
       },
       "grades": [],
@@ -1833,6 +3084,32 @@
         ],
         "short_website_description": [
           "KORVANTO LAT is a high-quality lateritic mineral offering reliable performance in cement manufacturing, construction, road infrastructure, and environmental applications. Its natural durability, high iron content, and cost-effectiveness make it an ideal choice for large-scale industrial projects."
+        ],
+        "typical_specs": [
+          {
+            "parameter": "Fe₂O₃ Content",
+            "value": "15 – 45% (typical)"
+          },
+          {
+            "parameter": "Al₂O₃ Content",
+            "value": "10 – 30% (typical)"
+          },
+          {
+            "parameter": "SiO₂ Content",
+            "value": "5 – 25% (typical)"
+          },
+          {
+            "parameter": "Moisture",
+            "value": "≤ 8%"
+          },
+          {
+            "parameter": "Form",
+            "value": "Lumps / Crushed / Powder"
+          },
+          {
+            "parameter": "Particle Size",
+            "value": "Customized sizes available"
+          }
         ]
       },
       "grades": [],
@@ -1940,6 +3217,73 @@
         ],
         "short_website_description": [
           "KORVANTO CHAM is a premium refractory chamotte engineered for fire bricks, castables, refractory mortars, ceramics, and high-temperature industrial applications. Its excellent thermal stability, strength, and resistance to thermal shock ensure reliable performance in demanding operating environments."
+        ],
+        "typical_specs": [
+          {
+            "title": "KORVANTO CHAM LF42",
+            "specs": [
+              {
+                "parameter": "Al₂O₃ Content",
+                "value": "≥ 42%"
+              },
+              {
+                "parameter": "Application",
+                "value": "General refractory & ceramic applications"
+              }
+            ]
+          },
+          {
+            "title": "KORVANTO CHAM LF46",
+            "specs": [
+              {
+                "parameter": "Al₂O₃ Content",
+                "value": "≥ 46%"
+              },
+              {
+                "parameter": "Application",
+                "value": "Medium-duty refractory products"
+              }
+            ]
+          },
+          {
+            "title": "KORVANTO CHAM LF54",
+            "specs": [
+              {
+                "parameter": "Al₂O₃ Content",
+                "value": "≥ 54%"
+              },
+              {
+                "parameter": "Application",
+                "value": "High-temperature refractory applications"
+              }
+            ]
+          },
+          {
+            "title": "KORVANTO CHAM LF60",
+            "specs": [
+              {
+                "parameter": "Al₂O₃ Content",
+                "value": "≥ 60%"
+              },
+              {
+                "parameter": "Application",
+                "value": "High-alumina refractory & kiln applications"
+              }
+            ]
+          },
+          {
+            "title": "KORVANTO CHAM LF70",
+            "specs": [
+              {
+                "parameter": "Al₂O₃ Content",
+                "value": "≥ 70%"
+              },
+              {
+                "parameter": "Application",
+                "value": "Critical high-temperature refractory service"
+              }
+            ]
+          }
         ]
       },
       "grades": [
@@ -2089,6 +3433,47 @@
         "short_website_description": [
           "KORVANTO BAUX is a premium calcined bauxite range engineered for refractory, abrasive, welding, and high-temperature industrial applications. Available in CB80, CB82, and CB86 grades, it delivers exceptional thermal stability, mechanical strength, and long-term performance under demanding operating conditions.",
           "Grades Available: CB80 | CB82 | CB86"
+        ],
+        "typical_specs": [
+          {
+            "title": "KORVANTO BAUX CB80",
+            "specs": [
+              {
+                "parameter": "Al₂O₃ Content",
+                "value": "~80%"
+              },
+              {
+                "parameter": "Application",
+                "value": "High-duty fire bricks, castables, general refractory"
+              }
+            ]
+          },
+          {
+            "title": "KORVANTO BAUX CB82",
+            "specs": [
+              {
+                "parameter": "Al₂O₃ Content",
+                "value": "~82%"
+              },
+              {
+                "parameter": "Application",
+                "value": "Premium refractory bricks, kiln furniture, castables"
+              }
+            ]
+          },
+          {
+            "title": "KORVANTO BAUX CB86",
+            "specs": [
+              {
+                "parameter": "Al₂O₃ Content",
+                "value": "~86%"
+              },
+              {
+                "parameter": "Application",
+                "value": "Steel plants, cement kilns, glass furnaces"
+              }
+            ]
+          }
         ]
       },
       "grades": [
@@ -2292,7 +3677,14 @@
           "Oilfield Drilling Mud Systems",
           "Borehole Stabilization Applications"
         ],
-        "product_features": [],
+        "product_features": [
+          "High Swelling Capacity",
+          "Excellent Suspension Properties",
+          "Effective Filtration Control",
+          "Good Borehole Stability",
+          "Suitable for API & OCMA Requirements",
+          "Consistent Quality Performance"
+        ],
         "product_advantages": [
           "API 13A compliant performance for demanding drilling operations",
           "Develops high viscosity and strong gel strength",
@@ -2317,90 +3709,100 @@
         ],
         "key_features": [],
         "available_grades": [],
-        "packaging": [],
-        "short_website_description": []
+        "packaging": [
+          "25 kg Bags",
+          "50 kg Bags",
+          "Jumbo Bags (FIBC)",
+          "Palletized Loads",
+          "Containerized Shipments"
+        ],
+        "short_website_description": [],
+        "documentation": [
+          "Technical Data Sheet (TDS)",
+          "Certificate of Analysis (COA)",
+          "Sample Support",
+          "Third-Party Testing Available Upon Request"
+        ],
+        "quality_assurance": [
+          "Specification-Focused Sourcing",
+          "Quality Verification Support",
+          "Batch Consistency Monitoring",
+          "Third-Party Testing Available Upon Request"
+        ],
+        "custom_grade_note": "Custom grades and tailored specifications can be supplied based on drilling conditions and customer requirements."
       },
       "grades": [
         {
           "grade": "API",
           "name": "KORVANTO BENTO DRILL API",
-          "subtitle": "API 13A Grade Bentonite for Oil, Gas & Industrial Drilling",
-          "overview": [
-            "KORVANTO BENTO DRILL API is a high-performance sodium bentonite manufactured to meet API 13A specifications for drilling fluid applications. Processed from carefully selected bentonite deposits, it delivers excellent viscosity, gel strength, suspension characteristics, and fluid loss control required for demanding drilling operations.",
-            "When mixed with water, it forms a stable thixotropic drilling mud that helps maintain borehole stability, transports drill cuttings to the surface, cools and lubricates drilling equipment, and minimizes fluid loss into surrounding formations. Its consistent performance makes it suitable for both onshore and offshore drilling environments."
-          ],
-          "key_benefits": [
-            "API 13A compliant quality",
-            "High viscosity and yield",
-            "Excellent gel strength and suspension properties",
-            "Effective fluid loss control",
-            "Superior borehole stabilization",
-            "Efficient cuttings transportation",
-            "Enhanced drill bit cooling and lubrication",
-            "Consistent performance in challenging drilling conditions"
-          ],
-          "applications": [
-            "Oil & Gas Well Drilling",
-            "Onshore & Offshore Drilling Operations",
-            "Horizontal Directional Drilling (HDD)",
-            "Water Well Drilling",
-            "Geothermal Drilling",
-            "Mineral & Core Exploration",
-            "Foundation and Piling Projects",
-            "Drilling Mud Formulations"
-          ],
-          "product_advantages": [
-            "API 13A compliant performance for demanding drilling operations",
-            "Develops high viscosity and strong gel strength",
-            "Provides excellent borehole stabilization",
-            "Improves suspension and transportation of drill cuttings",
-            "Reduces fluid loss into permeable formations",
-            "Enhances drilling efficiency and penetration rates",
-            "Lubricates and cools drilling equipment",
-            "Suitable for onshore and offshore drilling environments",
-            "Delivers consistent mud properties and field performance",
-            "Helps minimize operational downtime and drilling costs"
+          "subtitle": "API Grade Bentonite",
+          "specifications": [
+            {
+              "parameter": "Viscometer Dial Reading @ 600 rpm",
+              "value": "Min. 30"
+            },
+            {
+              "parameter": "Yield Point / Plastic Viscosity Ratio",
+              "value": "Max. 3"
+            },
+            {
+              "parameter": "Filtrate Volume",
+              "value": "Max. 15 cm³"
+            },
+            {
+              "parameter": "Residue >75 Micron",
+              "value": "Max. 4.0%"
+            }
+          ]
+        },
+        {
+          "grade": "OCMA+",
+          "name": "KORVANTO BENTO DRILL OCMA+",
+          "subtitle": "OCMA Plus Grade Bentonite",
+          "specifications": [
+            {
+              "parameter": "Viscometer Dial Reading @ 600 rpm",
+              "value": "Min. 30"
+            },
+            {
+              "parameter": "Yield Point / Plastic Viscosity Ratio",
+              "value": "Max. 6"
+            },
+            {
+              "parameter": "Filtrate Volume",
+              "value": "Max. 16 cm³"
+            },
+            {
+              "parameter": "Residue >75 Micron",
+              "value": "Max. 2.5%"
+            }
           ]
         },
         {
           "grade": "OCMA",
           "name": "KORVANTO BENTO DRILL OCMA",
-          "subtitle": "OCMA Grade Bentonite for Drilling Fluid Systems",
-          "overview": [
-            "KORVANTO BENTO DRILL OCMA is a premium drilling-grade bentonite manufactured in accordance with OCMA (Oil Companies Materials Association) specifications. Designed for use in water-based drilling mud systems, it provides reliable rheological properties, good suspension characteristics, and effective borehole support for a wide range of drilling operations.",
-            "The product forms a stable drilling fluid that assists in transporting cuttings, sealing permeable formations, reducing fluid loss, and improving drilling efficiency. Its cost-effective performance makes it a preferred choice for water well, geotechnical, and industrial drilling applications."
-          ],
-          "key_benefits": [
-            "OCMA-compliant quality",
-            "Good viscosity and gel development",
-            "Effective cuttings suspension",
-            "Reliable borehole wall stabilization",
-            "Reduced fluid loss and seepage",
-            "Improved drilling efficiency",
-            "Good lubrication and cooling properties",
-            "Consistent quality and performance"
-          ],
-          "applications": [
-            "Water Well Drilling",
-            "Geotechnical Drilling",
-            "Foundation & Piling Works",
-            "Horizontal Directional Drilling (HDD)",
-            "Mineral Exploration",
-            "Civil Engineering Projects",
-            "Oilfield Drilling Mud Systems",
-            "Borehole Stabilization Applications"
-          ],
-          "product_advantages": [
-            "Manufactured to meet OCMA drilling fluid requirements",
-            "Provides reliable viscosity and suspension characteristics",
-            "Supports effective borehole wall stabilization",
-            "Improves cuttings removal and hole cleaning efficiency",
-            "Reduces seepage and fluid loss during drilling",
-            "Offers good lubrication and cooling performance",
-            "Suitable for water well, geotechnical, and industrial drilling",
-            "Easy slurry preparation and field application",
-            "Cost-effective solution for drilling fluid systems",
-            "Consistent quality for dependable drilling performance"
+          "subtitle": "OCMA Grade Bentonite",
+          "specifications": [
+            {
+              "parameter": "Viscometer Dial Reading @ 600 rpm",
+              "value": "Min. 30"
+            },
+            {
+              "parameter": "Yield Point / Plastic Viscosity Ratio",
+              "value": "Max. 8"
+            },
+            {
+              "parameter": "Filtrate Volume",
+              "value": "16–18 cm³"
+            },
+            {
+              "parameter": "Liquid Limit",
+              "value": "400–600"
+            },
+            {
+              "parameter": "Particle Size / Fineness",
+              "value": "85% through 200 B.S."
+            }
           ]
         }
       ]
@@ -2410,8 +3812,8 @@
       "name": "KORVANTO BENTO SPECIALTY",
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-specialty.html",
-      "page_type": "enquiry",
-      "subtitle": "Specialty bentonite solutions developed for custom industrial applications. Contact our export team to discuss your specification requirements.",
+      "page_type": "detail",
+      "subtitle": "Application-specific bentonite grades developed for adsorption, purification, filtration, environmental, agricultural, and industrial processes.",
       "hero_badge": "Custom Grades",
       "overview_panel": {
         "section_label": "Specialty Supply",
@@ -2430,9 +3832,108 @@
         "key_features": [],
         "available_grades": [],
         "packaging": [],
-        "short_website_description": []
+        "short_website_description": [],
+        "documentation": [
+          "Technical Data Sheet (TDS)",
+          "Certificate of Analysis (COA)",
+          "Sample Support",
+          "Third-Party Testing Available Upon Request",
+          "Safety Data Sheet (SDS/MSDS)"
+        ],
+        "custom_grade_note": "Custom grades can be developed based on swelling capacity, CEC value, montmorillonite content, particle size distribution, moisture content, pH range, adsorption capacity, and end-use application requirements.",
+        "typical_specs": [
+          {
+            "parameter": "Supply Type",
+            "value": "Custom / application-specific grades"
+          },
+          {
+            "parameter": "Specifications",
+            "value": "Developed to customer requirements"
+          },
+          {
+            "parameter": "Documentation",
+            "value": "TDS & COA available on request"
+          },
+          {
+            "parameter": "Support",
+            "value": "Specification-focused sourcing & export coordination"
+          }
+        ]
       },
-      "grades": []
+      "grades": [
+        {
+          "grade": "BLEACH",
+          "name": "KORVANTO BENTO BLEACH",
+          "subtitle": "Acid Activated Bleaching Earth",
+          "applications": [
+            "Edible Oil Refining",
+            "Vegetable Oil Purification",
+            "Wine Clarification",
+            "Beverage Filtration",
+            "Color Removal",
+            "Odor Removal"
+          ]
+        },
+        {
+          "grade": "DETOX",
+          "name": "KORVANTO BENTO DETOX",
+          "subtitle": "Water Treatment & Detoxification Grade",
+          "applications": [
+            "Water Purification",
+            "Wastewater Treatment",
+            "Industrial Effluent Treatment",
+            "Heavy Metal Adsorption",
+            "Environmental Remediation"
+          ]
+        },
+        {
+          "grade": "AGRO",
+          "name": "KORVANTO BENTO AGRO",
+          "subtitle": "Pesticide & Agrochemical Carrier Grade",
+          "applications": [
+            "Pesticide Formulations",
+            "Agrochemical Carriers",
+            "Crop Protection Products",
+            "Soil Conditioning"
+          ]
+        },
+        {
+          "grade": "CERA",
+          "name": "KORVANTO BENTO CERA",
+          "subtitle": "Ceramic Industry Grade",
+          "applications": [
+            "Ceramic Bodies",
+            "Tiles Manufacturing",
+            "Sanitaryware",
+            "Refractory Products",
+            "Ceramic Glazes"
+          ]
+        },
+        {
+          "grade": "WINE",
+          "name": "KORVANTO BENTO WINE",
+          "subtitle": "Wine Clarification Grade",
+          "applications": [
+            "Wine Stabilization",
+            "Clarification",
+            "Protein Removal",
+            "Beverage Processing"
+          ]
+        },
+        {
+          "grade": "CUSTOM",
+          "name": "KORVANTO BENTO CUSTOM",
+          "subtitle": "Customer-Specific Bentonite Solutions",
+          "applications": [
+            "Proprietary Industrial Formulations",
+            "Specialty Manufacturing Processes",
+            "Private Label Grades",
+            "Custom Particle Size Requirements",
+            "Custom Swelling Properties",
+            "Custom Chemical Composition"
+          ]
+        }
+      ]
     }
   ],
   "product_count": 28

@@ -154,24 +154,130 @@ def features_section(items):
     </section>"""
 
 
-def advantages_section(items):
-    items = filter_items(items)
-    if not items:
-        return ""
-    rows = ""
-    for i, item in enumerate(items, 1):
-        delay = f" reveal-delay-{min(i % 4, 3)}" if i % 4 else ""
-        rows += f"""<article class="pd-advantage-item tilt-card reveal{delay}">
-            <span class="pd-advantage-accent" aria-hidden="true"></span>
-            <span class="pd-advantage-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
-            </span>
-            <p>{esc(item)}</p>
-          </article>"""
-    return f"""<section class="section pd-section pd-section--mesh pd-advantages-section" id="pdAdvantages">
+def normalize_spec_row(item):
+    if not isinstance(item, dict):
+        return None
+    param = item.get("parameter") or item.get("property") or item.get("name")
+    value = item.get("value") or item.get("spec") or item.get("typical")
+    if param and value is not None:
+        return {"parameter": str(param), "value": str(value)}
+    return None
+
+
+def rows_from_spec_list(items):
+    return [row for row in (normalize_spec_row(item) for item in (items or [])) if row]
+
+
+def blocks_from_grade(grade):
+    grade_label = grade.get("name") or grade.get("grade") or "Grade"
+    subtitle = grade.get("subtitle") or grade.get("description") or ""
+    title = grade_label if not subtitle else f"{grade_label} — {subtitle}"
+
+    if grade.get("spec_sections"):
+        blocks = []
+        for section in grade["spec_sections"]:
+            rows = rows_from_spec_list(section.get("specs"))
+            if rows:
+                blocks.append({"title": section.get("title") or title, "specs": rows})
+        return blocks or None
+
+    rows = rows_from_spec_list(grade.get("specifications") or grade.get("specs"))
+    if not rows:
+        rows = []
+        if grade.get("alumina"):
+            rows.append({"parameter": "Al₂O₃ Content", "value": grade["alumina"]})
+        if grade.get("description"):
+            rows.append({"parameter": "Grade Type", "value": grade["description"]})
+        suitable = grade.get("suitable_for") or grade.get("developed_for") or []
+        if suitable:
+            rows.append({"parameter": "Suitable For", "value": "; ".join(suitable)})
+    if rows:
+        return [{"title": title, "specs": rows}]
+    return None
+
+
+def collect_typical_spec_blocks(product, data):
+    sections = product.get("sections") or {}
+    typical = sections.get("typical_specs")
+    if typical:
+        if isinstance(typical, list) and typical and isinstance(typical[0], dict) and typical[0].get("specs"):
+            blocks = []
+            for group in typical:
+                rows = rows_from_spec_list(group.get("specs"))
+                if rows:
+                    blocks.append({"title": group.get("title") or "Typical Specifications", "specs": rows})
+            return blocks
+        rows = rows_from_spec_list(typical)
+        if rows:
+            return [{"title": "Typical Specifications", "specs": rows}]
+
+    blocks = []
+    for grade in product.get("grades") or []:
+        if isinstance(grade, dict):
+            grade_blocks = blocks_from_grade(grade)
+            if grade_blocks:
+                blocks.extend(grade_blocks)
+    if blocks:
+        return blocks
+
+    drill_map = {
+        "korvanto-bento-drill-api": "API",
+        "korvanto-bento-drill-ocma": "OCMA",
+    }
+    tag = drill_map.get(product.get("slug"))
+    if tag and data:
+        parent = get_product(data, "korvanto-bento-drill")
+        if parent:
+            for grade in parent.get("grades") or []:
+                if isinstance(grade, dict) and grade.get("grade") == tag:
+                    grade_blocks = blocks_from_grade(grade)
+                    if grade_blocks:
+                        return grade_blocks
+    return []
+
+
+def render_spec_table(title, rows):
+    body = "".join(
+        f'<tr><th scope="row">{esc(row["parameter"])}</th><td>{esc(row["value"])}</td></tr>'
+        for row in rows
+    )
+    title_html = f'<h3 class="pd-spec-block-title">{esc(title)}</h3>' if title else ""
+    return f"""<div class="pd-spec-block reveal">
+        {title_html}
+        <div class="pd-spec-table-wrap tilt-card">
+          <table class="pd-spec-table">
+            <thead>
+              <tr><th scope="col">Parameter</th><th scope="col">Typical Value</th></tr>
+            </thead>
+            <tbody>{body}</tbody>
+          </table>
+        </div>
+      </div>"""
+
+
+def typical_specs_section(product, data):
+    sections = product.get("sections") or {}
+    blocks = collect_typical_spec_blocks(product, data)
+    if not blocks:
+        blocks = [
+            {
+                "title": "Typical Specifications",
+                "specs": [
+                    {
+                        "parameter": "Detailed Specifications",
+                        "value": "Available on request — contact our export team for TDS",
+                    }
+                ],
+            }
+        ]
+    tables = "".join(render_spec_table(block.get("title"), block["specs"]) for block in blocks)
+    note = sections.get("custom_grade_note") or sections.get("typical_specs_note")
+    note_html = f'<p class="pd-spec-note reveal">{esc(note)}</p>' if note else ""
+    return f"""<section class="section pd-section pd-section--white pd-specs-section" id="pdSpecs">
       <div class="container">
-        {section_header("Value Proposition", "Product Advantages")}
-        <div class="pd-advantages-grid reveal reveal-delay-1">{rows}</div>
+        {section_header("Technical Data", "Typical Specs")}
+        <div class="pd-spec-blocks reveal reveal-delay-1">{tables}</div>
+        {note_html}
       </div>
     </section>"""
 
@@ -200,6 +306,13 @@ def section_block(title, items, grid_class="pd-feature-grid"):
     </section>"""
 
 
+def family_context(product, data):
+    family = get_family(data, product.get("family", ""))
+    if not family:
+        return None, None, None, "assets/images/process/stage1.png"
+    return family["slug"], family["file"], family["name"], family["image"]
+
+
 def grade_cards_cham(product):
     grades = product.get("grades") or []
     if not grades:
@@ -214,6 +327,14 @@ def grade_cards_cham(product):
                 html_parts.append(
                     f'<article class="pd-grade-card tilt-card reveal"><span class="pd-grade-tag">{esc(name)}</span>'
                     f'<p class="pd-grade-size">{esc(size)}</p></article>'
+                )
+        elif isinstance(g, dict) and g.get("grades"):
+            for entry in g["grades"]:
+                if not isinstance(entry, dict):
+                    continue
+                name = entry.get("name", "")
+                html_parts.append(
+                    f'<article class="pd-grade-card tilt-card reveal"><span class="pd-grade-tag">{esc(name)}</span></article>'
                 )
     return f'<div class="pd-grade-grid">{"".join(html_parts)}</div>' if html_parts else ""
 
@@ -334,7 +455,7 @@ def packaging_section(items):
         <span class="pd-pack-orb pd-pack-orb--2"></span>
       </div>
       <div class="container">
-        {section_header("Export Supply", "Packaging")}
+        {section_header("Export Supply", "Packing Options")}
         {lead_html}
         <div class="pd-pack-grid reveal reveal-delay-1">{cards}</div>
       </div>
@@ -410,6 +531,21 @@ def overview_section(paragraphs, image, panel=None):
     </section>"""
 
 
+def request_section(name, slug=""):
+    return f"""<section class="section pd-request-section" id="pdRequest">
+      <div class="container">
+        <div class="pd-request-panel reveal tilt-card">
+          {section_header("Get Started", "Request TDS / Request Quote")}
+          <p class="pd-request-lead">Share your grade requirements, destination country and documentation needs. Our export team will provide a Technical Data Sheet, certificate support and a tailored quotation for {esc(name)}.</p>
+          <div class="pd-request-actions">
+            <a href="request-quote.html" class="btn btn-outline">Request TDS</a>
+            <a href="request-quote.html" class="btn btn-gold">Request Quote <span class="arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </section>"""
+
+
 def cta_block(name):
     return f"""<section class="cta-banner about-cta">
       <div class="cta-bg"><img src="assets/images/cta/1.png" alt="Export logistics"></div>
@@ -443,13 +579,6 @@ def get_product(data, slug):
     return None
 
 
-def family_context(product, data):
-    family = get_family(data, product.get("family", ""))
-    if not family:
-        return None, None, None, "assets/images/process/stage1.png"
-    return family["slug"], family["file"], family["name"], family["image"]
-
-
 def render_detail_page(product, data, outfile):
     _, fam_file, fam_label, image = family_context(product, data)
     s = product["sections"]
@@ -464,25 +593,12 @@ def render_detail_page(product, data, outfile):
         hero(product["name"], fam_label, product["name"], lead, image, fam_file, badge),
         overview_section(s.get("overview", []), image, product.get("overview_panel")),
         benefits_section(s.get("key_benefits") or s.get("key_features")),
+        typical_specs_section(product, data),
         applications_section(s.get("applications")),
-        features_section(s.get("product_features")),
-        advantages_section(s.get("product_advantages")),
         grade_section(product),
         packaging_section(s.get("packaging", [])),
     ]
-    short = filter_items(s.get("short_website_description", []))
-    if short:
-        parts.append(
-            f"""<section class="section pd-short-desc" id="pdSummary">
-      <div class="container reveal">
-        <div class="pd-short-panel tilt-card">
-          <p class="section-label">Website Description</p>
-          <p>{esc(short[0])}</p>
-        </div>
-      </div>
-    </section>"""
-        )
-    parts.append(cta_block(product["name"]))
+    parts.append(request_section(product["name"], product.get("slug", "")))
     parts.append("  </main>\n")
     parts.append(foot())
     (ROOT / outfile).write_text("\n".join(parts), encoding="utf-8")
