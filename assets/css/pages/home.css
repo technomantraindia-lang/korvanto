@@ -1778,7 +1778,10 @@ a.why-panel {
   list-style: none;
   margin: 1.5rem auto 0;
   padding: 0;
-  max-width: 22rem;
+  max-width: 52rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem 1.25rem;
   text-align: left;
 }
 
@@ -1793,7 +1796,7 @@ a.why-panel {
 }
 
 .cta-credentials li + li {
-  margin-top: 0.45rem;
+  margin-top: 0;
 }
 
 .cta-credentials li::before {
