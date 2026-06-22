@@ -3,11 +3,11 @@
     "families": [
       {
         "slug": "korvanto-bento",
-        "name": "KORVANTO BENTO™",
+        "name": "Korvanto Bentonite",
         "file": "korvanto-bento.html",
-        "image": "assets/images/Product-Images/Bentonite.png",
+        "image": "assets/images/families/korvanto-bento.jpg",
         "short": "Premium bentonite grades for drilling, foundry, civil, feed, fertilizer, litter, paper, pharma, cosmetic, desiccant, seal, food, pencil and specialty applications.",
-        "portfolio_meta": "15+ Grades",
+        "portfolio_meta": "Drilling · Foundry · Civil · Feed & More",
         "child_slugs": [
           "korvanto-bento-drill",
           "korvanto-bento-foundry",
@@ -28,11 +28,11 @@
       },
       {
         "slug": "korvanto-kao",
-        "name": "KORVANTO KAO™",
+        "name": "Korvanto Kaolin (China Clay)",
         "file": "korvanto-kao.html",
-        "image": "assets/images/Product-Images/Kaolin-China-Clay.png",
+        "image": "assets/images/families/korvanto-kao.jpg",
         "short": "Kaolin grades including crude, levigated noodles & lumps, hydrous, calcined and metakaolin for ceramics, paints, paper, plastics and construction.",
-        "portfolio_meta": "6 Product Lines",
+        "portfolio_meta": "Crude · Levigated · Hydrous · Calcined",
         "child_slugs": [
           "korvanto-kao-crude",
           "korvanto-kao-levigated-noodles",
@@ -44,58 +44,58 @@
       },
       {
         "slug": "korvanto-clay",
-        "name": "KORVANTO CLAY™",
+        "name": "Korvanto Ball Clay",
         "file": "korvanto-clay.html",
-        "image": "assets/images/Product-Images/Ball-Clay.png",
-        "short": "KORVANTO CLAY BALL — premium ball clay for ceramic, sanitaryware, tile, porcelain and refractory manufacturing.",
+        "image": "assets/images/families/korvanto-clay.jpg",
+        "short": "Premium ball clay for ceramic, sanitaryware, tile, porcelain and refractory manufacturing.",
         "portfolio_meta": "Ball Clay",
         "single": "korvanto-clay"
       },
       {
         "slug": "korvanto-lat",
-        "name": "KORVANTO LAT™",
+        "name": "Korvanto Laterite",
         "file": "korvanto-lat.html",
-        "image": "assets/images/Product-Images/Laterite.png",
+        "image": "assets/images/products/korvanto-lat.png",
         "short": "Iron and alumina-rich lateritic mineral for cement manufacturing, construction materials, road infrastructure and industrial applications.",
         "portfolio_meta": "Laterite",
         "single": "korvanto-lat"
       },
       {
         "slug": "korvanto-cham",
-        "name": "KORVANTO CHAM™",
+        "name": "Korvanto Chamotte",
         "file": "korvanto-cham.html",
-        "image": "assets/images/Product-Images/Chamotte-Calcined-Clay-Refractory-Clay.png",
+        "image": "assets/images/families/korvanto-cham.jpg",
         "short": "Calcined refractory chamotte — grades LF42, LF46, LF54, LF60, LF70 for fire bricks, castables and high-temperature applications.",
-        "portfolio_meta": "LF42–LF70",
+        "portfolio_meta": "LF42 · LF46 · LF54 · LF60 · LF70",
         "single": "korvanto-cham"
       },
       {
         "slug": "korvanto-baux",
-        "name": "KORVANTO BAUX™",
+        "name": "Korvanto Bauxite",
         "file": "korvanto-baux.html",
-        "image": "assets/images/Product-Images/Calcined-Bauxite.png",
+        "image": "assets/images/families/korvanto-baux.jpg",
         "short": "Calcined bauxite refractory aggregate — grades CB80, CB82, CB86 for refractory, abrasive and high-temperature industrial applications.",
-        "portfolio_meta": "CB80–CB86",
+        "portfolio_meta": "CB80 · CB82 · CB86",
         "single": "korvanto-baux"
       },
       {
         "slug": "korvanto-carbo",
-        "name": "KORVANTO CARBO™",
+        "name": "Korvanto Carbon",
         "file": "korvanto-carbo.html",
-        "image": "assets/images/Product-Images/Coal-Additive-Lustrous-Coal.png",
-        "short": "Lustrous carbon additive for green sand foundry — grades CA, LCA, HLCA, CS for improved casting surface finish and reduced defects.",
+        "image": "assets/images/families/korvanto-carbo.jpg",
+        "short": "Korvanto Carbon lustrous carbon additive for green sand foundry — grades CA, LCA, HLCA and CS.",
         "portfolio_meta": "CA · LCA · HLCA · CS",
         "single": "korvanto-carbo"
       }
     ],
     "portfolio_page": {
       "title": "Products | Korvanto",
-      "description": "Korvanto product portfolio — KORVANTO BENTO™, KAO™, CLAY™, LAT™, CHAM™, BAUX™, CARBO™ industrial mineral families for global B2B export.",
+      "description": "Korvanto product portfolio — Bentonite, Kaolin, Ball Clay, Laterite, Chamotte, Bauxite and Carbon industrial mineral families for global B2B export.",
       "hero_label": "Supply Catalogue",
       "hero_title": "Seven Product Families.<br>One Export Partner.",
       "hero_lead": "Explore Korvanto's branded industrial mineral families — each supplied with specification clarity, export packaging, documentation support and B2B dispatch coordination.",
       "section_label": "Industrial Mineral Portfolio",
-      "section_title": "KORVANTO™ Product Families",
+      "section_title": "Korvanto Product Families",
       "section_lead": "Premium industrial minerals and raw materials for international B2B buyers — specification-focused sourcing, export-ready packaging and coordinated shipment execution.",
       "stats": [
         {
@@ -111,7 +111,7 @@
           "label": "Export Ready"
         }
       ],
-      "hero_image": "assets/images/Product-Images/Bentonite.png",
+      "hero_image": "assets/images/Product-Images/Bentonite.jpg",
       "hero_badge": "Export Portfolio"
     },
     "quote_form": {
@@ -128,7 +128,7 @@
   "products": [
     {
       "slug": "korvanto-bento-foundry",
-      "name": "KORVANTO BENTO FOUNDRY",
+      "name": "Korvanto Bento Foundry",
       "subtitle": "High-Performance Bentonite for Foundry & Green Sand Casting",
       "sections": {
         "overview": [
@@ -290,11 +290,12 @@
         }
       ],
       "family": "korvanto-bento",
-      "page_file": "korvanto-bento-foundry.html"
+      "page_file": "korvanto-bento-foundry.html",
+      "image": "assets/images/products/korvanto-bento-foundry.jpg"
     },
     {
       "slug": "korvanto-bento-drill-api",
-      "name": "KORVANTO BENTO DRILL API",
+      "name": "Korvanto Bento Drilling API",
       "subtitle": "API 13A Grade Bentonite for Oil, Gas & Industrial Drilling",
       "sections": {
         "overview": [
@@ -384,11 +385,12 @@
       ],
       "family": "korvanto-bento",
       "page_file": null,
-      "page_type": "internal_grade"
+      "page_type": "internal_grade",
+      "image": "assets/images/products/korvanto-bento-drill-api.jpg"
     },
     {
       "slug": "korvanto-bento-drill-ocma",
-      "name": "KORVANTO BENTO DRILL OCMA",
+      "name": "Korvanto Bento Drilling OCMA",
       "subtitle": "OCMA Grade Bentonite for Drilling Fluid Systems",
       "sections": {
         "overview": [
@@ -478,11 +480,12 @@
       ],
       "family": "korvanto-bento",
       "page_file": null,
-      "page_type": "internal_grade"
+      "page_type": "internal_grade",
+      "image": "assets/images/products/korvanto-bento-drill-ocma.jpg"
     },
     {
       "slug": "korvanto-bento-iop",
-      "name": "KORVANTO BENTO IOP",
+      "name": "Korvanto Bento Iron Ore Palltetization",
       "subtitle": "Bentonite for Iron Ore Pelletization (IOP)",
       "sections": {
         "overview": [
@@ -641,11 +644,12 @@
         }
       ],
       "family": "korvanto-bento",
-      "page_file": "korvanto-bento-iop.html"
+      "page_file": "korvanto-bento-iop.html",
+      "image": "assets/images/products/korvanto-bento-iop.jpg"
     },
     {
       "slug": "korvanto-bento-civil",
-      "name": "KORVANTO BENTO CIVIL",
+      "name": "Korvanto Bento Civil",
       "subtitle": "High-Yield Bentonite for Piling, Diaphragm Walling, HDD & Civil Engineering Applications",
       "sections": {
         "overview": [
@@ -815,11 +819,12 @@
         }
       ],
       "family": "korvanto-bento",
-      "page_file": "korvanto-bento-civil.html"
+      "page_file": "korvanto-bento-civil.html",
+      "image": "assets/images/products/korvanto-bento-civil.jpg"
     },
     {
       "slug": "korvanto-bento-feed",
-      "name": "KORVANTO BENTO FEED",
+      "name": "Korvanto Bento Cattle Feed",
       "subtitle": "High-Purity Bentonite for Animal Feed & Mycotoxin Management",
       "sections": {
         "overview": [
@@ -929,11 +934,12 @@
         }
       ],
       "family": "korvanto-bento",
-      "page_file": "korvanto-bento-feed.html"
+      "page_file": "korvanto-bento-feed.html",
+      "image": "assets/images/products/korvanto-bento-feed.jpg"
     },
     {
       "slug": "korvanto-bento-fert",
-      "name": "KORVANTO BENTO FERT",
+      "name": "Korvanto Bento Fertilizer",
       "subtitle": "Bentonite for Fertilizer Manufacturing, Soil Conditioning & Agricultural Applications",
       "sections": {
         "overview": [
@@ -1190,11 +1196,12 @@
         }
       ],
       "family": "korvanto-bento",
-      "page_file": "korvanto-bento-fert.html"
+      "page_file": "korvanto-bento-fert.html",
+      "image": "assets/images/products/korvanto-bento-fert.jpg"
     },
     {
       "slug": "korvanto-bento-litter",
-      "name": "KORVANTO BENTO LITTER",
+      "name": "Korvanto Bento Cat Litter",
       "subtitle": "Premium Bentonite for Cat Litter Applications",
       "sections": {
         "overview": [
@@ -1322,11 +1329,12 @@
         }
       ],
       "family": "korvanto-bento",
-      "page_file": "korvanto-bento-litter.html"
+      "page_file": "korvanto-bento-litter.html",
+      "image": "assets/images/products/korvanto-bento-litter.jpg"
     },
     {
       "slug": "korvanto-bento-paper-deink",
-      "name": "KORVANTO BENTO PAPER & DEINK",
+      "name": "Korvanto Bento Paper & Deink",
       "subtitle": "Bentonite for Paper Manufacturing, Pulp Processing & Deinking Applications",
       "sections": {
         "overview": [
@@ -1495,11 +1503,12 @@
         }
       ],
       "family": "korvanto-bento",
-      "page_file": "korvanto-bento-paper-deink.html"
+      "page_file": "korvanto-bento-paper-deink.html",
+      "image": "assets/images/products/korvanto-bento-paper-deink.jpg"
     },
     {
       "slug": "korvanto-bento-pharma",
-      "name": "KORVANTO BENTO PHARMA",
+      "name": "Korvanto Bento Pharma",
       "subtitle": "High-Purity Bentonite for Pharmaceutical, Healthcare & Personal Care Applications",
       "sections": {
         "overview": [
@@ -1624,11 +1633,12 @@
         }
       ],
       "family": "korvanto-bento",
-      "page_file": "korvanto-bento-pharma.html"
+      "page_file": "korvanto-bento-pharma.html",
+      "image": "assets/images/products/korvanto-bento-pharma.jpg"
     },
     {
       "slug": "korvanto-bento-cosmetic",
-      "name": "KORVANTO BENTO COSMETIC",
+      "name": "Korvanto Bento Cosmetic",
       "subtitle": "High-Purity Bentonite for Cosmetics, Personal Care & Beauty Applications",
       "sections": {
         "overview": [
@@ -1752,11 +1762,12 @@
         }
       ],
       "family": "korvanto-bento",
-      "page_file": "korvanto-bento-cosmetic.html"
+      "page_file": "korvanto-bento-cosmetic.html",
+      "image": "assets/images/products/korvanto-bento-cosmetic.jpg"
     },
     {
       "slug": "korvanto-bento-desiccant",
-      "name": "KORVANTO BENTO DESICCANT",
+      "name": "Korvanto Bento Desiccant",
       "subtitle": "High-Absorption Bentonite Granules for Moisture Control & Packaging Protection",
       "sections": {
         "overview": [
@@ -1927,11 +1938,12 @@
         }
       ],
       "family": "korvanto-bento",
-      "page_file": "korvanto-bento-desiccant.html"
+      "page_file": "korvanto-bento-desiccant.html",
+      "image": "assets/images/products/korvanto-bento-desiccant.jpg"
     },
     {
       "slug": "korvanto-bento-seal",
-      "name": "KORVANTO BENTO SEAL",
+      "name": "Korvanto Bento Pond Seal",
       "subtitle": "Bentonite for Pond Sealing, Water Retention & Seepage Control",
       "sections": {
         "overview": [
@@ -2085,11 +2097,12 @@
         }
       ],
       "family": "korvanto-bento",
-      "page_file": "korvanto-bento-seal.html"
+      "page_file": "korvanto-bento-seal.html",
+      "image": "assets/images/products/korvanto-bento-seal.jpg"
     },
     {
       "slug": "korvanto-bento-food",
-      "name": "KORVANTO BENTO FOOD",
+      "name": "Korvanto Bento Food",
       "subtitle": "Food & Beverage Grade Bentonite for Wine Clarification, Beverage Purification & Processing Applications",
       "sections": {
         "overview": [
@@ -2171,11 +2184,12 @@
       },
       "grades": [],
       "family": "korvanto-bento",
-      "page_file": "korvanto-bento-food.html"
+      "page_file": "korvanto-bento-food.html",
+      "image": "assets/images/products/korvanto-bento-food.jpg"
     },
     {
       "slug": "korvanto-bento-pencil",
-      "name": "KORVANTO BENTO PENCIL",
+      "name": "Korvanto Bento Pencil",
       "subtitle": "Bentonite for Pencil Lead Manufacturing & Graphite Bonding Applications",
       "sections": {
         "overview": [
@@ -2285,11 +2299,12 @@
         }
       ],
       "family": "korvanto-bento",
-      "page_file": "korvanto-bento-pencil.html"
+      "page_file": "korvanto-bento-pencil.html",
+      "image": "assets/images/products/korvanto-bento-pencil.jpg"
     },
     {
       "slug": "korvanto-kao-crude",
-      "name": "KORVANTO KAO CRUDE",
+      "name": "Korvanto Crude Kaolin",
       "subtitle": "Crude Kaolin (China Clay) for Ceramic, Paint, Paper, Plastic & Industrial Applications",
       "sections": {
         "overview": [
@@ -2389,11 +2404,12 @@
       },
       "grades": [],
       "family": "korvanto-kao",
-      "page_file": "korvanto-kao-crude.html"
+      "page_file": "korvanto-kao-crude.html",
+      "image": "assets/images/products/korvanto-kao-crude.jpg"
     },
     {
       "slug": "korvanto-kao-levigated-noodles",
-      "name": "KORVANTO KAO LEVIGATED NOODLES",
+      "name": "Korvanto Levigated Kaolin Noodles",
       "subtitle": "High-Purity Levigated Kaolin Noodles for Ceramic, Sanitaryware & Tile Applications",
       "sections": {
         "overview": [
@@ -2477,11 +2493,12 @@
       },
       "grades": [],
       "family": "korvanto-kao",
-      "page_file": "korvanto-kao-levigated-noodles.html"
+      "page_file": "korvanto-kao-levigated-noodles.html",
+      "image": "assets/images/products/korvanto-kao-levigated-noodles.jpg"
     },
     {
       "slug": "korvanto-kao-levigated-lumps",
-      "name": "KORVANTO KAO LEVIGATED LUMPS",
+      "name": "Korvanto Levigated Kaolin Lumps",
       "subtitle": "Water-Washed Levigated Kaolin Lumps for Ceramic & Industrial Processing",
       "sections": {
         "overview": [
@@ -2563,11 +2580,12 @@
       },
       "grades": [],
       "family": "korvanto-kao",
-      "page_file": "korvanto-kao-levigated-lumps.html"
+      "page_file": "korvanto-kao-levigated-lumps.html",
+      "image": "assets/images/products/korvanto-kao-levigated-lumps.jpg"
     },
     {
       "slug": "korvanto-kao-hydrous",
-      "name": "KORVANTO KAO HYDROUS",
+      "name": "Korvanto Hydrous Kaolin",
       "subtitle": "Hydrous Kaolin Powder for Paint, Paper, Plastic, Rubber, Ink & Industrial Applications",
       "sections": {
         "overview": [
@@ -2671,11 +2689,12 @@
       },
       "grades": [],
       "family": "korvanto-kao",
-      "page_file": "korvanto-kao-hydrous.html"
+      "page_file": "korvanto-kao-hydrous.html",
+      "image": "assets/images/products/korvanto-kao-hydrous.jpg"
     },
     {
       "slug": "korvanto-kao-calcined",
-      "name": "KORVANTO KAO CALCINED",
+      "name": "Korvanto Calcined Kaolin",
       "subtitle": "Calcined Kaolin for Paints, Plastics, Rubber, Paper, Wire & Cable Insulation Applications",
       "sections": {
         "overview": [
@@ -2783,11 +2802,12 @@
       },
       "grades": [],
       "family": "korvanto-kao",
-      "page_file": "korvanto-kao-calcined.html"
+      "page_file": "korvanto-kao-calcined.html",
+      "image": "assets/images/products/korvanto-kao-calcined.jpg"
     },
     {
       "slug": "korvanto-kao-metakaolin",
-      "name": "KORVANTO KAO METAKAOLIN",
+      "name": "Korvanto Meta Kaolin",
       "subtitle": "High-Reactivity Metakaolin for Concrete, Cement, Construction Chemicals & Industrial Applications",
       "sections": {
         "overview": [
@@ -2896,11 +2916,12 @@
       },
       "grades": [],
       "family": "korvanto-kao",
-      "page_file": "korvanto-kao-metakaolin.html"
+      "page_file": "korvanto-kao-metakaolin.html",
+      "image": "assets/images/products/korvanto-kao-metakaolin.jpg"
     },
     {
       "slug": "korvanto-clay",
-      "name": "KORVANTO CLAY BALL",
+      "name": "Korvanto Ball Clay",
       "subtitle": "Premium Ball Clay for Ceramics, Sanitaryware, Tiles & Refractory Applications",
       "sections": {
         "overview": [
@@ -3012,11 +3033,12 @@
       },
       "grades": [],
       "family": "korvanto-clay",
-      "page_file": "korvanto-clay.html"
+      "page_file": "korvanto-clay.html",
+      "image": "assets/images/products/korvanto-clay.jpg"
     },
     {
       "slug": "korvanto-lat",
-      "name": "KORVANTO LAT",
+      "name": "Korvanto Laterite",
       "subtitle": "Laterite for Cement, Construction & Infrastructure Applications",
       "sections": {
         "overview": [
@@ -3114,11 +3136,12 @@
       },
       "grades": [],
       "family": "korvanto-lat",
-      "page_file": "korvanto-lat.html"
+      "page_file": "korvanto-lat.html",
+      "image": "assets/images/products/korvanto-lat.png"
     },
     {
       "slug": "korvanto-cham",
-      "name": "KORVANTO CHAM",
+      "name": "Korvanto Chamotte",
       "subtitle": "Chamotte (Refractory Clay) for Refractory, Ceramic & High-Temperature Applications",
       "sections": {
         "overview": [
@@ -3319,11 +3342,12 @@
         }
       ],
       "family": "korvanto-cham",
-      "page_file": "korvanto-cham.html"
+      "page_file": "korvanto-cham.html",
+      "image": "assets/images/products/korvanto-cham.jpg"
     },
     {
       "slug": "korvanto-baux",
-      "name": "KORVANTO BAUX",
+      "name": "Korvanto Bauxite",
       "subtitle": "Calcined Bauxite for Refractory, Abrasive & High-Temperature Industrial Applications",
       "sections": {
         "overview": [
@@ -3489,11 +3513,12 @@
         }
       ],
       "family": "korvanto-baux",
-      "page_file": "korvanto-baux.html"
+      "page_file": "korvanto-baux.html",
+      "image": "assets/images/products/korvanto-baux.jpg"
     },
     {
       "slug": "korvanto-carbo",
-      "name": "KORVANTO CARBO",
+      "name": "Korvanto Carbon",
       "subtitle": "Lustrous Carbon Additive for Green Sand Foundry Applications",
       "sections": {
         "overview": [
@@ -3629,11 +3654,12 @@
         }
       ],
       "family": "korvanto-carbo",
-      "page_file": "korvanto-carbo.html"
+      "page_file": "korvanto-carbo.html",
+      "image": "assets/images/products/korvanto-carbo.jpg"
     },
     {
       "slug": "korvanto-bento-drill",
-      "name": "KORVANTO BENTO DRILL",
+      "name": "Korvanto Bento Drilling",
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-drill.html",
       "page_type": "aggregate",
@@ -3805,11 +3831,12 @@
             }
           ]
         }
-      ]
+      ],
+      "image": "assets/images/products/korvanto-bento-drill.jpg"
     },
     {
       "slug": "korvanto-bento-specialty",
-      "name": "KORVANTO BENTO SPECIALTY",
+      "name": "Korvanto Bento Specialty",
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-specialty.html",
       "page_type": "detail",
@@ -3933,7 +3960,8 @@
             "Custom Chemical Composition"
           ]
         }
-      ]
+      ],
+      "image": "assets/images/products/korvanto-bento-specialty.jpg"
     }
   ],
   "product_count": 28

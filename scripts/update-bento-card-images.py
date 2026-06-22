@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Download title-matched images for KORVANTO BENTO product cards."""
+"""Sync application-matched images for Korvanto Bento product cards and detail pages."""
 from __future__ import annotations
 
 import json
+import shutil
 import ssl
 import time
 import urllib.request
@@ -10,24 +11,27 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "assets/js/products-data.json"
+PRODUCTS_DIR = ROOT / "assets/images/products"
 
-# Wikimedia Commons — each image chosen for the product title / application
-BENTO_PRODUCT_IMAGES = {
-    "korvanto-bento-drill": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Mud_tank_and_shakers_during_groundwater_well_drilling.jpg/1280px-Mud_tank_and_shakers_during_groundwater_well_drilling.jpg",
-    "korvanto-bento-foundry": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/In-stream_inoculation_addition_while_molten_cast_iron_is_poured_to_a_green_sand_mold_in_a_foundry_in_Bangladesh.jpg/1280px-In-stream_inoculation_addition_while_molten_cast_iron_is_poured_to_a_green_sand_mold_in_a_foundry_in_Bangladesh.jpg",
-    "korvanto-bento-iop": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Iron_ore_pellets_from_Kiruna.jpg/1280px-Iron_ore_pellets_from_Kiruna.jpg",
-    "korvanto-bento-civil": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Universal_hdd.jpg",
-    "korvanto-bento-feed": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Bentonite_clay_to_make_slurry.JPG/1280px-Bentonite_clay_to_make_slurry.JPG",
-    "korvanto-bento-fert": "https://upload.wikimedia.org/wikipedia/commons/5/54/Sulphur_bentonite_pastilles.jpg",
-    "korvanto-bento-litter": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Bentonite_bianca_uso_lettiera_per_gatti.jpg/1280px-Bentonite_bianca_uso_lettiera_per_gatti.jpg",
-    "korvanto-bento-paper-deink": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/AV_Nackawic_pulp_and_paper_mill.jpg/1280px-AV_Nackawic_pulp_and_paper_mill.jpg",
-    "korvanto-bento-pharma": "https://upload.wikimedia.org/wikipedia/commons/5/53/Hydrated_bentonite.jpg",
-    "korvanto-bento-cosmetic": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Beloon1.jpg",
-    "korvanto-bento-desiccant": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Volcanic_Tuff_of_Green_River_Formation_in_Wyoming.jpg/1280px-Volcanic_Tuff_of_Green_River_Formation_in_Wyoming.jpg",
-    "korvanto-bento-seal": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/A_local_lake_was_bentonite_mine_pit.JPG/1280px-A_local_lake_was_bentonite_mine_pit.JPG",
-    "korvanto-bento-food": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Creating_a_bentonite_slurry_for_fining_after_wine_pressing.jpg/1280px-Creating_a_bentonite_slurry_for_fining_after_wine_pressing.jpg",
-    "korvanto-bento-pencil": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Graphite-233436.jpg",
-    "korvanto-bento-specialty": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Bentonite_Hills_%283723677310%29.jpg/1280px-Bentonite_Hills_%283723677310%29.jpg",
+# Prefer curated grade images; fall back to Wikimedia for strong application visuals.
+BENTO_IMAGE_SOURCES: dict[str, str] = {
+    "korvanto-bento-drill": "url:https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Mud_tank_and_shakers_during_groundwater_well_drilling.jpg/1280px-Mud_tank_and_shakers_during_groundwater_well_drilling.jpg",
+    "korvanto-bento-drill-api": "assets/images/grades/korvanto-bento-drill-api/api.jpg",
+    "korvanto-bento-drill-ocma": "assets/images/grades/korvanto-bento-drill-ocma/ocma.jpg",
+    "korvanto-bento-foundry": "url:https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/In-stream_inoculation_addition_while_molten_cast_iron_is_poured_to_a_green_sand_mold_in_a_foundry_in_Bangladesh.jpg/1280px-In-stream_inoculation_addition_while_molten_cast_iron_is_poured_to_a_green_sand_mold_in_a_foundry_in_Bangladesh.jpg",
+    "korvanto-bento-iop": "url:https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Iron_ore_pellets_from_Kiruna.jpg/1280px-Iron_ore_pellets_from_Kiruna.jpg",
+    "korvanto-bento-civil": "url:https://upload.wikimedia.org/wikipedia/commons/d/d1/Universal_hdd.jpg",
+    "korvanto-bento-feed": "assets/images/grades/korvanto-bento-feed/feed.jpg",
+    "korvanto-bento-fert": "assets/images/grades/korvanto-bento-fert/ag-300.jpg",
+    "korvanto-bento-litter": "assets/images/grades/korvanto-bento-litter/l-25.jpg",
+    "korvanto-bento-paper-deink": "assets/images/grades/korvanto-bento-paper-deink/deink-100.jpg",
+    "korvanto-bento-pharma": "assets/images/grades/korvanto-bento-pharma/pharma-ip.jpg",
+    "korvanto-bento-cosmetic": "assets/images/grades/korvanto-bento-cosmetic/cosmetic-90.jpg",
+    "korvanto-bento-desiccant": "assets/images/grades/korvanto-bento-desiccant/desiccant-24.jpg",
+    "korvanto-bento-seal": "assets/images/grades/korvanto-bento-seal/seal-p.jpg",
+    "korvanto-bento-food": "assets/images/grades/korvanto-bento-specialty/wine.jpg",
+    "korvanto-bento-pencil": "assets/images/grades/korvanto-bento-pencil/pencil.jpg",
+    "korvanto-bento-specialty": "assets/images/grades/korvanto-bento-specialty/custom.jpg",
 }
 
 
@@ -57,22 +61,40 @@ def download(url: str, dest: Path) -> bool:
     return False
 
 
+def copy_local(source_rel: str, dest: Path) -> bool:
+    source = ROOT / source_rel
+    if not source.is_file():
+        print(f"  missing source: {source_rel}")
+        return False
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(source, dest)
+    print(f"  copied {source_rel} -> {dest.relative_to(ROOT)}")
+    return True
+
+
+def sync_image(slug: str, source: str, dest: Path) -> bool:
+    if source.startswith("url:"):
+        return download(source[4:], dest)
+    return copy_local(source, dest)
+
+
 def main() -> None:
     data = json.loads(DATA_PATH.read_text(encoding="utf-8"))
     ok = 0
-    for slug, url in BENTO_PRODUCT_IMAGES.items():
+
+    for slug, source in BENTO_IMAGE_SOURCES.items():
         rel = f"assets/images/products/{slug}.jpg"
         dest = ROOT / rel
-        if download(url, dest):
+        if sync_image(slug, source, dest):
             ok += 1
             for product in data.get("products", []):
                 if product.get("slug") == slug:
                     product["image"] = rel
                     break
-        time.sleep(3)
+        time.sleep(1)
 
     DATA_PATH.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Updated {ok}/{len(BENTO_PRODUCT_IMAGES)} BENTO product images in products-data.json")
+    print(f"Updated {ok}/{len(BENTO_IMAGE_SOURCES)} BENTO product images in products-data.json")
 
 
 if __name__ == "__main__":

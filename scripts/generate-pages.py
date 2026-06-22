@@ -2,10 +2,12 @@
 """Generate Korvanto product family and detail HTML pages from products-data.json."""
 import html
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "assets" / "js" / "products-data.json"
+GRADES_IMAGE_DIR = ROOT / "assets" / "images" / "grades"
 HEADER_PATH = ROOT / "components" / "header.html"
 QUOTE_PATH = ROOT / "request-quote.html"
 PRODUCTS_PAGE_PATH = ROOT / "products.html"
@@ -306,11 +308,66 @@ def section_block(title, items, grid_class="pd-feature-grid"):
     </section>"""
 
 
+def product_image(product, fallback="assets/images/process/stage1.png"):
+    return product.get("image") or fallback
+
+
+def grade_tokens(grade_obj):
+    tokens = set()
+    if not isinstance(grade_obj, dict):
+        return tokens
+    for field in ("grade", "name", "title"):
+        val = (grade_obj.get(field) or "").strip()
+        if not val:
+            continue
+        lowered = val.lower()
+        tokens.add(lowered)
+        for part in re.findall(r"[a-z0-9]+(?:-[0-9]+)?", lowered):
+            tokens.add(part)
+        for part in re.findall(
+            r"(?:lf|cb|ag|api|ocma|pharma|cosmetic|desiccant|seal|paper|deink|feed|pencil|custom|wine|bleach|agro|detox|cera)\d*",
+            lowered,
+        ):
+            tokens.add(part)
+        for pattern in (r"f-\d+", r"i-\d+", r"c-\d+", r"l-\d+"):
+            if match := re.search(pattern, lowered):
+                tokens.add(match.group())
+    return tokens
+
+
+def resolve_grade_image(product_slug, grade_obj):
+    grade_dir = GRADES_IMAGE_DIR / product_slug
+    if not grade_dir.is_dir():
+        return None
+    tokens = grade_tokens(grade_obj)
+    best = None
+    best_score = 0
+    for path in grade_dir.iterdir():
+        if path.suffix.lower() not in {".jpg", ".jpeg", ".png"}:
+            continue
+        stem = path.stem.lower()
+        score = sum(len(token) for token in tokens if token in stem)
+        if score > best_score:
+            best_score = score
+            best = path
+    if best and best_score > 0:
+        return f"assets/images/grades/{product_slug}/{best.name}".replace("\\", "/")
+    return None
+
+
+def grade_media_html(image_rel, alt):
+    if not image_rel:
+        return ""
+    return (
+        f'<div class="pd-grade-media"><img src="{esc(image_rel)}" alt="{esc(alt)}" loading="lazy"></div>'
+    )
+
+
 def family_context(product, data):
     family = get_family(data, product.get("family", ""))
     if not family:
-        return None, None, None, "assets/images/process/stage1.png"
-    return family["slug"], family["file"], family["name"], family["image"]
+        return None, None, None, product_image(product)
+    return family["slug"], family["file"], family["name"], product_image(product, family["image"])
 
 
 def grade_cards_cham(product):
@@ -318,14 +375,17 @@ def grade_cards_cham(product):
     if not grades:
         items = filter_items(product["sections"].get("available_grades", []))
         return list_cards(items, "pd-grade-grid") if items else ""
+    slug = product["slug"]
     html_parts = []
     for g in grades:
         if isinstance(g, dict) and g.get("entries"):
             for entry in g["entries"]:
                 name = entry.get("name", "")
                 size = entry.get("particle_size", "")
+                media = grade_media_html(resolve_grade_image(slug, entry), name)
                 html_parts.append(
-                    f'<article class="pd-grade-card tilt-card reveal"><span class="pd-grade-tag">{esc(name)}</span>'
+                    f'<article class="pd-grade-card tilt-card reveal">{media}'
+                    f'<span class="pd-grade-tag">{esc(name)}</span>'
                     f'<p class="pd-grade-size">{esc(size)}</p></article>'
                 )
         elif isinstance(g, dict) and g.get("grades"):
@@ -333,13 +393,16 @@ def grade_cards_cham(product):
                 if not isinstance(entry, dict):
                     continue
                 name = entry.get("name", "")
+                media = grade_media_html(resolve_grade_image(slug, entry), name)
                 html_parts.append(
-                    f'<article class="pd-grade-card tilt-card reveal"><span class="pd-grade-tag">{esc(name)}</span></article>'
+                    f'<article class="pd-grade-card tilt-card reveal">{media}'
+                    f'<span class="pd-grade-tag">{esc(name)}</span></article>'
                 )
     return f'<div class="pd-grade-grid">{"".join(html_parts)}</div>' if html_parts else ""
 
 
 def grade_cards_baux(product):
+    slug = product["slug"]
     blocks = []
     for g in product.get("grades") or []:
         if not isinstance(g, dict):
@@ -350,8 +413,10 @@ def grade_cards_baux(product):
         benefits = g.get("key_benefits") or []
         suit_html = "".join(f"<li>{esc(s)}</li>" for s in suitable)
         ben_html = "".join(f"<li>{esc(b)}</li>" for b in benefits)
+        media = grade_media_html(resolve_grade_image(slug, g), name)
         blocks.append(
             f"""<article class="pd-grade-card pd-grade-card--wide tilt-card reveal">
+              {media}
               <span class="pd-grade-tag">{esc(name)}</span>
               {f'<p class="pd-grade-size">{esc(alumina)}</p>' if alumina else ''}
               {f'<h4>Suitable for</h4><ul>{suit_html}</ul>' if suitable else ''}
@@ -362,6 +427,7 @@ def grade_cards_baux(product):
 
 
 def grade_cards_carbo(product):
+    slug = product["slug"]
     blocks = []
     for g in product.get("grades") or []:
         if not isinstance(g, dict):
@@ -371,8 +437,10 @@ def grade_cards_carbo(product):
         suitable = g.get("suitable_for") or g.get("developed_for") or []
         desc = g.get("description", "")
         suit_html = "".join(f"<li>{esc(s)}</li>" for s in suitable)
+        media = grade_media_html(resolve_grade_image(slug, g), title or name)
         blocks.append(
             f"""<article class="pd-grade-card tilt-card reveal">
+              {media}
               <span class="pd-grade-tag">{esc(name)}</span>
               <h3>{esc(title)}</h3>
               {f'<p>{esc(desc)}</p>' if desc else ''}
@@ -383,6 +451,7 @@ def grade_cards_carbo(product):
 
 
 def grade_cards_drill(product):
+    slug = product["slug"]
     blocks = []
     for g in product.get("grades") or []:
         if not isinstance(g, dict):
@@ -392,8 +461,10 @@ def grade_cards_drill(product):
         subtitle = g.get("subtitle", "")
         overview = g.get("overview") or []
         ov_html = "".join(f"<p>{esc(p)}</p>" for p in overview)
+        media = grade_media_html(resolve_grade_image(slug, g), name)
         blocks.append(
             f"""<article class="pd-grade-card pd-grade-card--wide tilt-card reveal">
+              {media}
               <span class="pd-grade-tag">{esc(tag)}</span>
               <h3>{esc(name)}</h3>
               {f'<p class="pd-drill-sub">{esc(subtitle)}</p>' if subtitle else ''}
@@ -401,6 +472,34 @@ def grade_cards_drill(product):
             </article>"""
         )
     return f'<div class="pd-grade-grid pd-grade-grid--pair">{"".join(blocks)}</div>' if blocks else ""
+
+
+def grade_cards_grades_array(product):
+    slug = product["slug"]
+    blocks = []
+    for g in product.get("grades") or []:
+        if isinstance(g, dict) and g.get("grades"):
+            for entry in g["grades"]:
+                if isinstance(entry, dict):
+                    tag = entry.get("name") or entry.get("grade") or "Grade"
+                    media = grade_media_html(resolve_grade_image(slug, entry), tag)
+                    blocks.append(
+                        f'<article class="pd-grade-card tilt-card reveal">{media}'
+                        f'<span class="pd-grade-tag">{esc(tag)}</span></article>'
+                    )
+            continue
+        if not isinstance(g, dict) or g.get("entries"):
+            continue
+        tag = g.get("grade") or g.get("name") or "Grade"
+        subtitle = g.get("subtitle") or g.get("alumina") or g.get("description") or ""
+        media = grade_media_html(resolve_grade_image(slug, g), tag)
+        subtitle_html = f'<p class="pd-grade-size">{esc(subtitle)}</p>' if subtitle else ""
+        blocks.append(
+            f'<article class="pd-grade-card tilt-card reveal">{media}'
+            f'<span class="pd-grade-tag">{esc(tag)}</span>'
+            f"{subtitle_html}</article>"
+        )
+    return f'<div class="pd-grade-grid">{"".join(blocks)}</div>' if blocks else ""
 
 
 def grade_section(product):
@@ -413,6 +512,8 @@ def grade_section(product):
         grid = grade_cards_baux(product)
     elif slug == "korvanto-carbo":
         grid = grade_cards_carbo(product)
+    elif product.get("grades"):
+        grid = grade_cards_grades_array(product)
     else:
         grid = list_cards(product["sections"].get("available_grades", []), "pd-grade-grid")
     if not grid:
@@ -628,10 +729,12 @@ def generate_family_page(family, data):
         href = product.get("page_file") or f"{child_slug}.html"
         title = product.get("name", child_slug)
         sub = product.get("card_summary") or product.get("subtitle") or ""
+        img = product.get("image") or family.get("image", "")
         delay = f" reveal-delay-{min(i % 4, 3)}" if i % 4 else ""
         cards += f"""<article class="pf-card tilt-card reveal{delay}">
           <span class="pf-card-index">{i:02d}</span>
           <span class="pf-card-shine" aria-hidden="true"></span>
+          <div class="pf-card-media"><img src="{esc(img)}" alt="{esc(title)}" loading="lazy"></div>
           <h3>{esc(title)}</h3>
           <p>{esc(sub)}</p>
           <a href="{esc(href)}" class="btn btn-gold btn-sm">Explore Product <span class="arrow">&rarr;</span></a>

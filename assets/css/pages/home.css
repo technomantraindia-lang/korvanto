@@ -260,12 +260,12 @@
 }
 
 .strip-item::before {
-  content: '';
+  content: '✔';
   display: block;
-  width: 32px;
-  height: 2px;
-  background: var(--gold);
-  margin: 0 auto 0.65rem;
+  margin: 0 auto 0.45rem;
+  color: var(--gold);
+  font-size: 0.95rem;
+  line-height: 1;
 }
 
 /* Mineral Atlas â€” premium product showcase */
@@ -614,6 +614,19 @@
 
 .export-world .section-title { color: var(--white); max-width: none; }
 .export-world .section-lead { color: rgba(255, 255, 255, 0.75); }
+
+.export-regions-tagline {
+  position: relative;
+  margin: 0.85rem auto 1.1rem;
+  padding-left: 1rem;
+  max-width: 42ch;
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--white);
+  border-left: 3px solid var(--gold);
+}
 
 .export-layout {
   display: grid;
@@ -1761,40 +1774,34 @@ a.why-panel {
   margin-bottom: 0;
 }
 
-.cta-trust-strip {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
-  gap: 0.65rem 0.85rem;
-  margin: 1.25rem 0 0;
-  padding: 0.75rem 1.35rem;
-  width: max-content;
-  max-width: 100%;
-  box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: var(--radius-md);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+.cta-credentials {
+  list-style: none;
+  margin: 1.5rem auto 0;
+  padding: 0;
+  max-width: 22rem;
+  text-align: left;
+}
+
+.cta-credentials li {
+  position: relative;
+  padding-left: 1.35rem;
   font-family: var(--font-heading);
-  font-size: clamp(0.62rem, 1.1vw, 0.72rem);
+  font-size: clamp(0.82rem, 1.4vw, 0.92rem);
   font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  line-height: 1.5;
   color: var(--white);
-  line-height: 1.3;
 }
 
-.cta-trust-strip > span:not(.cta-trust-divider) {
-  white-space: nowrap;
-  flex: 0 0 auto;
+.cta-credentials li + li {
+  margin-top: 0.45rem;
 }
 
-.cta-trust-divider {
-  width: 1px;
-  height: 0.9rem;
-  background: rgba(255, 255, 255, 0.45);
-  flex: 0 0 auto;
+.cta-credentials li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--gold);
+  font-size: 0.85rem;
 }
 

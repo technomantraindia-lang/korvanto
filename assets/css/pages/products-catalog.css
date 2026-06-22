@@ -69,26 +69,41 @@
   position: relative;
   min-height: 280px;
   perspective: 1100px;
+  display: flex;
+  flex-direction: column;
 }
 
-.pd-overview-visual .premium-media-frame {
+.pd-overview-visual .premium-scene-layer {
+  flex: 1;
   height: 100%;
   min-height: 280px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-  background: linear-gradient(165deg, rgba(9, 35, 61, 0.04) 0%, rgba(197, 154, 74, 0.06) 100%);
+  flex-direction: column;
+  animation: pdSceneFloat 9s ease-in-out infinite;
+}
+
+.pd-overview-visual .premium-media-frame {
+  flex: 1;
+  height: 100%;
+  min-height: 280px;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  background: var(--white);
   border: 1px solid rgba(9, 35, 61, 0.08);
   border-radius: var(--radius-lg);
   box-shadow: 0 20px 56px rgba(9, 35, 61, 0.08);
 }
 
-.pd-overview-visual img {
-  max-width: 100%;
-  max-height: 260px;
+.pd-overview-visual .premium-media-frame img {
+  flex: 1;
+  width: 100%;
+  min-height: 260px;
+  max-height: none;
   object-fit: cover;
   border-radius: var(--radius);
+  display: block;
 }
 
 .pd-grade-media {
@@ -193,10 +208,6 @@
 /* 3D scene float on overview */
 .pd-overview-visual.premium-scene-3d .premium-scene-glow {
   animation: pdGlowPulse 7s ease-in-out infinite;
-}
-
-.pd-overview-visual .premium-scene-layer {
-  animation: pdSceneFloat 9s ease-in-out infinite;
 }
 
 .pd-overview-visual:hover .premium-scene-layer {
@@ -1634,6 +1645,15 @@
   .pf-grid,
   .products-family-grid {
     grid-template-columns: 1fr;
+  }
+
+  .pd-overview-visual .premium-media-frame,
+  .pd-overview-visual .premium-media-frame img {
+    min-height: 240px;
+  }
+
+  .pd-overview-visual .premium-media-frame img {
+    min-height: 220px;
   }
 
   .product-page .product-hero-actions {
