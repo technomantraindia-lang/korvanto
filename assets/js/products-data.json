@@ -5,7 +5,7 @@
         "slug": "korvanto-bento",
         "name": "Korvanto Bentonite",
         "file": "korvanto-bento.html",
-        "image": "assets/images/families/korvanto-bento.jpg",
+        "image": "assets/images/families/bentonite main.png",
         "short": "Premium bentonite grades for drilling, foundry, civil, feed, fertilizer, litter, paper, pharma, cosmetic, desiccant, seal, food, pencil and specialty applications.",
         "portfolio_meta": "Drilling · Foundry · Civil · Feed & More",
         "child_slugs": [
@@ -30,7 +30,7 @@
         "slug": "korvanto-kao",
         "name": "Korvanto Kaolin (China Clay)",
         "file": "korvanto-kao.html",
-        "image": "assets/images/families/korvanto-kao.jpg",
+        "image": "assets/images/families/main kaolin china clay.png",
         "short": "Kaolin grades including crude, levigated noodles & lumps, hydrous, calcined and metakaolin for ceramics, paints, paper, plastics and construction.",
         "portfolio_meta": "Crude · Levigated · Hydrous · Calcined",
         "child_slugs": [
@@ -46,7 +46,7 @@
         "slug": "korvanto-clay",
         "name": "Korvanto Ball Clay",
         "file": "korvanto-clay.html",
-        "image": "assets/images/families/korvanto-clay.jpg",
+        "image": "assets/images/families/ball clay home.png",
         "short": "Premium ball clay for ceramic, sanitaryware, tile, porcelain and refractory manufacturing.",
         "portfolio_meta": "Ball Clay",
         "single": "korvanto-clay"
@@ -55,7 +55,7 @@
         "slug": "korvanto-lat",
         "name": "Korvanto Laterite",
         "file": "korvanto-lat.html",
-        "image": "assets/images/products/korvanto-lat.png",
+        "image": "assets/images/families/laterite home.png",
         "short": "Iron and alumina-rich lateritic mineral for cement manufacturing, construction materials, road infrastructure and industrial applications.",
         "portfolio_meta": "Laterite",
         "single": "korvanto-lat"
@@ -64,7 +64,7 @@
         "slug": "korvanto-cham",
         "name": "Korvanto Chamotte",
         "file": "korvanto-cham.html",
-        "image": "assets/images/families/korvanto-cham.jpg",
+        "image": "assets/images/families/chamotte home.png",
         "short": "Calcined refractory chamotte — grades LF42, LF46, LF54, LF60, LF70 for fire bricks, castables and high-temperature applications.",
         "portfolio_meta": "LF42 · LF46 · LF54 · LF60 · LF70",
         "single": "korvanto-cham"
@@ -73,7 +73,7 @@
         "slug": "korvanto-baux",
         "name": "Korvanto Bauxite",
         "file": "korvanto-baux.html",
-        "image": "assets/images/families/korvanto-baux.jpg",
+        "image": "assets/images/families/bauxite home.png",
         "short": "Calcined bauxite refractory aggregate — grades CB80, CB82, CB86 for refractory, abrasive and high-temperature industrial applications.",
         "portfolio_meta": "CB80 · CB82 · CB86",
         "single": "korvanto-baux"
@@ -82,7 +82,7 @@
         "slug": "korvanto-carbo",
         "name": "Korvanto Carbon",
         "file": "korvanto-carbo.html",
-        "image": "assets/images/families/korvanto-carbo.jpg",
+        "image": "assets/images/families/col additivie home.png",
         "short": "Korvanto Carbon lustrous carbon additive for green sand foundry — grades CA, LCA, HLCA and CS.",
         "portfolio_meta": "CA · LCA · HLCA · CS",
         "single": "korvanto-carbo"
@@ -108,11 +108,10 @@
         },
         {
           "value": "B2B",
-          "label": "Export Ready"
+          "label": "Global Supply"
         }
       ],
-      "hero_image": "assets/images/Product-Images/Bentonite.jpg",
-      "hero_badge": "Export Portfolio"
+      "hero_image": "assets/images/families/bentonite main.png"
     },
     "quote_form": {
       "other_group_label": "Other Product Families",
@@ -214,6 +213,7 @@
           "grade": "F-100",
           "name": "KORVANTO BENTO FOUNDRY F-100",
           "subtitle": "Standard Foundry Grade",
+          "image": "assets/images/products/foundry/grade.png",
           "specifications": [
             {
               "parameter": "Form",
@@ -253,6 +253,7 @@
           "grade": "F-200",
           "name": "KORVANTO BENTO FOUNDRY F-200",
           "subtitle": "Premium Foundry Grade",
+          "image": "assets/images/products/foundry/grade 2.png",
           "specifications": [
             {
               "parameter": "Form",
@@ -291,7 +292,9 @@
       ],
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-foundry.html",
-      "image": "assets/images/products/korvanto-bento-foundry.jpg"
+      "image": "assets/images/products/foundry/bento foundry.png",
+      "hero_image": "assets/images/products/foundry/bento foundry 3.png",
+      "overview_image": "assets/images/products/foundry/bento foundry 2.png"
     },
     {
       "slug": "korvanto-bento-drill-api",
@@ -565,6 +568,7 @@
           "grade": "I-100",
           "name": "KORVANTO BENTO IOP I-100",
           "subtitle": "Standard Pelletizing Grade",
+          "image": "assets/images/products/iron ore palltetization/grade 1.png",
           "specifications": [
             {
               "parameter": "Free Swelling",
@@ -592,6 +596,7 @@
           "grade": "I-200",
           "name": "KORVANTO BENTO IOP I-200",
           "subtitle": "Enhanced Pelletizing Grade",
+          "image": "assets/images/products/iron ore palltetization/grade 2.png",
           "specifications": [
             {
               "parameter": "Free Swelling",
@@ -619,6 +624,7 @@
           "grade": "I-300",
           "name": "KORVANTO BENTO IOP I-300",
           "subtitle": "Premium Pelletizing Grade",
+          "image": "assets/images/products/iron ore palltetization/grade 3.png",
           "specifications": [
             {
               "parameter": "Free Swelling",
@@ -645,7 +651,9 @@
       ],
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-iop.html",
-      "image": "assets/images/products/korvanto-bento-iop.jpg"
+      "image": "assets/images/products/iron ore palltetization/ChatGPT Image Jun 25, 2026, 02_17_49 PM (1).png",
+      "hero_image": "assets/images/products/iron ore palltetization/ChatGPT Image Jun 25, 2026, 02_17_50 PM (3).png",
+      "overview_image": "assets/images/products/iron ore palltetization/ChatGPT Image Jun 25, 2026, 02_17_49 PM (2).png"
     },
     {
       "slug": "korvanto-bento-civil",
@@ -727,6 +735,7 @@
           "grade": "C-45",
           "name": "KORVANTO BENTO CIVIL C-45",
           "subtitle": "Premium Civil Engineering Grade",
+          "image": "assets/images/products/Bento Civil/grade.png",
           "specifications": [
             {
               "parameter": "Marsh Cone Viscosity",
@@ -774,6 +783,7 @@
           "grade": "C-33",
           "name": "KORVANTO BENTO CIVIL C-33",
           "subtitle": "Standard Civil Engineering Grade",
+          "image": "assets/images/products/Bento Civil/grade 2.png",
           "specifications": [
             {
               "parameter": "Marsh Cone Viscosity",
@@ -820,7 +830,9 @@
       ],
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-civil.html",
-      "image": "assets/images/products/korvanto-bento-civil.jpg"
+      "image": "assets/images/products/Bento Civil/civil.png",
+      "hero_image": "assets/images/products/Bento Civil/civil 3.png",
+      "overview_image": "assets/images/products/Bento Civil/civil 2.png"
     },
     {
       "slug": "korvanto-bento-feed",
@@ -912,6 +924,7 @@
           "grade": "FEED",
           "name": "KORVANTO BENTO FEED",
           "subtitle": "Animal Feed Grade Bentonite",
+          "image": "assets/images/products/bento cattle feed/grade.png",
           "specifications": [
             {
               "parameter": "pH",
@@ -935,7 +948,9 @@
       ],
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-feed.html",
-      "image": "assets/images/products/korvanto-bento-feed.jpg"
+      "image": "assets/images/products/bento cattle feed/bento Cattle Feed.png",
+      "hero_image": "assets/images/products/bento cattle feed/bento Cattle Feed 3.png",
+      "overview_image": "assets/images/products/bento cattle feed/bento Cattle Feed 2.png"
     },
     {
       "slug": "korvanto-bento-fert",
@@ -1029,6 +1044,7 @@
           "grade": "AG-100",
           "name": "KORVANTO BENTO FERT AG-100",
           "subtitle": "Standard Fertilizer Grade",
+          "image": "assets/images/products/fertilizer/bento fertilizer grade.png",
           "spec_sections": [
             {
               "title": "Physical Properties",
@@ -1098,6 +1114,7 @@
           "grade": "AG-200",
           "name": "KORVANTO BENTO FERT AG-200",
           "subtitle": "Granulation Grade",
+          "image": "assets/images/products/fertilizer/bento fertilizer grade 2.png",
           "specifications": [
             {
               "parameter": "Barrel Yield",
@@ -1133,6 +1150,7 @@
           "grade": "AG-300",
           "name": "KORVANTO BENTO FERT AG-300",
           "subtitle": "Premium Granule Binder Grade",
+          "image": "assets/images/products/fertilizer/bento fertilizer grade 3.png",
           "spec_sections": [
             {
               "title": "Physical Properties",
@@ -1197,7 +1215,9 @@
       ],
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-fert.html",
-      "image": "assets/images/products/korvanto-bento-fert.jpg"
+      "image": "assets/images/products/fertilizer/bento fertilizer.png",
+      "hero_image": "assets/images/products/fertilizer/bento fertilizer 3.png",
+      "overview_image": "assets/images/products/fertilizer/bento fertilizer 2.png"
     },
     {
       "slug": "korvanto-bento-litter",
@@ -1280,6 +1300,7 @@
           "grade": "L-25",
           "name": "KORVANTO BENTO LITTER L-25",
           "subtitle": "Cat Litter Grade Bentonite Granules (0.5 – 2.5 mm)",
+          "image": "assets/images/products/bento cat litter/cat litter grade.png",
           "specifications": [
             {
               "parameter": "Moisture",
@@ -1330,7 +1351,9 @@
       ],
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-litter.html",
-      "image": "assets/images/products/korvanto-bento-litter.jpg"
+      "image": "assets/images/products/bento cat litter/cat litter.png",
+      "hero_image": "assets/images/products/bento cat litter/cat litter 3.png",
+      "overview_image": "assets/images/products/bento cat litter/cat litter 2.png"
     },
     {
       "slug": "korvanto-bento-paper-deink",
@@ -1419,6 +1442,7 @@
           "grade": "PAPER-325",
           "name": "KORVANTO BENTO PAPER-325",
           "subtitle": "Paper Grade Bentonite Powder",
+          "image": "assets/images/products/bento paper & deik/bento paper grade.png",
           "specifications": [
             {
               "parameter": "Settled Solids",
@@ -1470,6 +1494,7 @@
           "grade": "DEINK-100",
           "name": "KORVANTO BENTO DEINK-100",
           "subtitle": "De-Inking Grade Bentonite Powder",
+          "image": "assets/images/products/bento paper & deik/bento paper grade 2.png",
           "specifications": [
             {
               "parameter": "Marsh Funnel Viscosity @ 6% Bentonite",
@@ -1504,7 +1529,9 @@
       ],
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-paper-deink.html",
-      "image": "assets/images/products/korvanto-bento-paper-deink.jpg"
+      "image": "assets/images/products/bento paper & deik/bento paper.png",
+      "hero_image": "assets/images/products/bento paper & deik/bento paper 3.png",
+      "overview_image": "assets/images/products/bento paper & deik/bento paper 2.png"
     },
     {
       "slug": "korvanto-bento-pharma",
@@ -1580,6 +1607,7 @@
           "grade": "PHARMA-IP",
           "name": "KORVANTO BENTO PHARMA-IP",
           "subtitle": "Pharmaceutical Grade Bentonite Powder (IP Grade)",
+          "image": "assets/images/products/bento pharmaceutical/bento pharmaceutical grade.png",
           "specifications": [
             {
               "parameter": "pH",
@@ -1634,7 +1662,9 @@
       ],
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-pharma.html",
-      "image": "assets/images/products/korvanto-bento-pharma.jpg"
+      "image": "assets/images/products/bento pharmaceutical/bento pharmaceutical.png",
+      "hero_image": "assets/images/products/bento pharmaceutical/bento pharmaceutical 3.png",
+      "overview_image": "assets/images/products/bento pharmaceutical/bento pharmaceutical 2.png"
     },
     {
       "slug": "korvanto-bento-cosmetic",
@@ -1729,6 +1759,7 @@
           "grade": "COSMETIC-90",
           "name": "KORVANTO BENTO COSMETIC-90",
           "subtitle": "Cosmetic Grade Bentonite Powder",
+          "image": "assets/images/products/bento cosmetic/bento cosmetic grade.png",
           "specifications": [
             {
               "parameter": "pH Value",
@@ -1763,7 +1794,9 @@
       ],
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-cosmetic.html",
-      "image": "assets/images/products/korvanto-bento-cosmetic.jpg"
+      "image": "assets/images/products/bento cosmetic/bento cosmetic.png",
+      "hero_image": "assets/images/products/bento cosmetic/bento cosmetic 3.png",
+      "overview_image": "assets/images/products/bento cosmetic/bento cosmetic 2.png"
     },
     {
       "slug": "korvanto-bento-desiccant",
@@ -1847,6 +1880,7 @@
           "grade": "DESICCANT-24",
           "name": "KORVANTO BENTO DESICCANT-24",
           "subtitle": "Desiccant Grade Bentonite Granules (2–4 mm)",
+          "image": "assets/images/products/Bento Desiccant/Bento Desiccant grade.png",
           "specifications": [
             {
               "parameter": "Moisture",
@@ -1878,6 +1912,7 @@
           "grade": "DESICCANT-05",
           "name": "KORVANTO BENTO DESICCANT-05",
           "subtitle": "Desiccant Grade Bentonite Granules (0.5–2.5 mm)",
+          "image": "assets/images/products/Bento Desiccant/Bento Desiccant grade 2.png",
           "specifications": [
             {
               "parameter": "Moisture",
@@ -1909,6 +1944,7 @@
           "grade": "DESICCANT-12",
           "name": "KORVANTO BENTO DESICCANT-12",
           "subtitle": "Desiccant Grade Bentonite Granules (1–2 mm)",
+          "image": "assets/images/products/Bento Desiccant/Bento Desiccant grade 3.png",
           "specifications": [
             {
               "parameter": "Moisture",
@@ -1939,7 +1975,9 @@
       ],
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-desiccant.html",
-      "image": "assets/images/products/korvanto-bento-desiccant.jpg"
+      "image": "assets/images/products/Bento Desiccant/Bento Desiccant.png",
+      "hero_image": "assets/images/products/Bento Desiccant/Bento Desiccant 3.png",
+      "overview_image": "assets/images/products/Bento Desiccant/Bento Desiccant 2.png"
     },
     {
       "slug": "korvanto-bento-seal",
@@ -2029,6 +2067,7 @@
           "grade": "SEAL-P",
           "name": "KORVANTO BENTO SEAL-P",
           "subtitle": "Pond Sealant Powder Grade",
+          "image": "assets/images/products/bento pond seal/bento pond seal frade.png",
           "specifications": [
             {
               "parameter": "Water Content",
@@ -2064,6 +2103,7 @@
           "grade": "SEAL-G",
           "name": "KORVANTO BENTO SEAL-G",
           "subtitle": "Pond Sealant Granular Grade",
+          "image": "assets/images/products/bento pond seal/bento pond seal grade 2.png",
           "specifications": [
             {
               "parameter": "Water Content",
@@ -2098,7 +2138,9 @@
       ],
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-seal.html",
-      "image": "assets/images/products/korvanto-bento-seal.jpg"
+      "image": "assets/images/products/bento pond seal/bento pond seal.png",
+      "hero_image": "assets/images/products/bento pond seal/bento pond seal 3.png",
+      "overview_image": "assets/images/products/bento pond seal/bento pond seal 2.png"
     },
     {
       "slug": "korvanto-bento-food",
@@ -2185,7 +2227,9 @@
       "grades": [],
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-food.html",
-      "image": "assets/images/products/korvanto-bento-food.jpg"
+      "image": "assets/images/products/bento food/bento food.png",
+      "hero_image": "assets/images/products/bento food/bento food 3.png",
+      "overview_image": "assets/images/products/bento food/bento food 2.png"
     },
     {
       "slug": "korvanto-bento-pencil",
@@ -2248,7 +2292,7 @@
           "Fine Powder Grade",
           "25 kg Bags",
           "50 kg Bags",
-          "1 MT Jumbo Bags",
+          "1 Jumbo Bags",
           "Bulk Supply",
           "Jumbo Bags (FIBC)",
           "Customized Packaging Available"
@@ -2269,6 +2313,7 @@
           "grade": "PENCIL",
           "name": "KORVANTO BENTO PENCIL",
           "subtitle": "Pencil Grade Bentonite",
+          "image": "assets/images/products/bento pencil/bento pencil grade.png",
           "specifications": [
             {
               "parameter": "Form",
@@ -2300,7 +2345,9 @@
       ],
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-pencil.html",
-      "image": "assets/images/products/korvanto-bento-pencil.jpg"
+      "image": "assets/images/products/bento pencil/bento pencil.png",
+      "hero_image": "assets/images/products/bento pencil/bento pencil 3.png",
+      "overview_image": "assets/images/products/bento pencil/bento pencil 2.png"
     },
     {
       "slug": "korvanto-kao-crude",
@@ -2373,7 +2420,7 @@
           "Dried Lump Form",
           "25 kg Bags",
           "50 kg Bags",
-          "1 MT Jumbo Bags",
+          "1 Jumbo Bags",
           "Bulk Supply"
         ],
         "short_website_description": [
@@ -2381,31 +2428,203 @@
         ],
         "typical_specs": [
           {
-            "parameter": "Mineral Type",
-            "value": "Natural kaolin (China clay)"
+            "title": "Product Identification Specifications",
+            "specs": [
+              {
+                "parameter": "Product Name",
+                "value": "KORVANTO KAO CRUDE"
+              },
+              {
+                "parameter": "Product Description",
+                "value": "Crude Kaolin (China Clay) for Ceramic, Paint, Paper, Plastic & Industrial Applications"
+              },
+              {
+                "parameter": "Mineral Type",
+                "value": "Naturally occurring kaolin clay (China Clay)"
+              },
+              {
+                "parameter": "Primary Composition",
+                "value": "Hydrated aluminum silicate"
+              },
+              {
+                "parameter": "Processing State",
+                "value": "Raw, unprocessed — selectively mined"
+              },
+              {
+                "parameter": "Supply Form",
+                "value": "Dried lump form"
+              },
+              {
+                "parameter": "Further Processing Suitability",
+                "value": "Grinding, levigation, calcination, or direct industrial use"
+              }
+            ]
           },
           {
-            "parameter": "Form",
-            "value": "Raw lumps / crude clay"
+            "title": "Physical & Mineral Specifications",
+            "specs": [
+              {
+                "parameter": "Naturally Occurring Kaolin Clay",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "High Alumina and Silica Content",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Good Natural Whiteness",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Excellent Plasticity",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Fine Particle Structure",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Low Abrasiveness",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Good Dispersion Characteristics",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Consistent Mineral Composition",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Suitable for Further Beneficiation and Processing",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Available in Dried Lump Form",
+                "value": "Physical specification — confirmed"
+              }
+            ]
           },
           {
-            "parameter": "Plasticity",
-            "value": "Good to excellent"
+            "title": "Performance Specifications",
+            "specs": [
+              {
+                "parameter": "Improves Plasticity in Ceramic Bodies",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Enhances Surface Finish and Product Quality",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Provides Good Green and Fired Strength",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Acts as an Effective Functional Filler",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Improves Brightness and Opacity in Paint and Paper Applications",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Enhances Processing Efficiency in Rubber and Plastics",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Suitable for Multiple Industrial Applications",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Cost-Effective Industrial Mineral Solution",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Easy to Process into Various Kaolin Derivatives",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Reliable and Consistent Quality",
+                "value": "Performance specification — confirmed"
+              }
+            ]
           },
           {
-            "parameter": "Whiteness",
-            "value": "Natural — varies by deposit"
+            "title": "Packaging Specifications",
+            "specs": [
+              {
+                "parameter": "Dried Lump Form",
+                "value": "Available"
+              },
+              {
+                "parameter": "25 kg Bags",
+                "value": "Available"
+              },
+              {
+                "parameter": "50 kg Bags",
+                "value": "Available"
+              },
+              {
+                "parameter": "1 Jumbo Bags",
+                "value": "Available"
+              },
+              {
+                "parameter": "Bulk Supply",
+                "value": "Available"
+              }
+            ]
           },
           {
-            "parameter": "Moisture",
-            "value": "As mined / as agreed"
+            "title": "Documentation Specifications",
+            "specs": [
+              {
+                "parameter": "Technical Data Sheet (TDS)",
+                "value": "Available"
+              },
+              {
+                "parameter": "Certificate of Analysis (COA)",
+                "value": "Available"
+              },
+              {
+                "parameter": "Sample Support",
+                "value": "Available"
+              },
+              {
+                "parameter": "Quality Verification Support",
+                "value": "Available"
+              },
+              {
+                "parameter": "Third-Party Testing",
+                "value": "Available upon request"
+              }
+            ]
+          },
+          {
+            "title": "Quality Assurance Specifications",
+            "specs": [
+              {
+                "parameter": "Specification-Focused Sourcing",
+                "value": "Confirmed"
+              },
+              {
+                "parameter": "Quality Verification Support",
+                "value": "Confirmed"
+              },
+              {
+                "parameter": "Batch Consistency Monitoring",
+                "value": "Confirmed"
+              }
+            ]
           }
-        ]
+        ],
+        "typical_specs_note": "Representative values for reference only. Detailed specifications are available on request — contact our export team for Technical Data Sheet (TDS) and Certificate of Analysis (COA).",
+        "custom_grade_note": "Representative values for reference only. Detailed specifications are available on request — contact our export team for Technical Data Sheet (TDS) and Certificate of Analysis (COA). Custom kaolin grades and tailored specifications can be supplied according to application requirements, processing needs, and customer specifications."
       },
       "grades": [],
       "family": "korvanto-kao",
       "page_file": "korvanto-kao-crude.html",
-      "image": "assets/images/products/korvanto-kao-crude.jpg"
+      "image": "assets/images/Product-Images/crud Kaolin.png"
     },
     {
       "slug": "korvanto-kao-levigated-noodles",
@@ -2466,35 +2685,215 @@
           "Controlled Quality Processing"
         ],
         "available_grades": [],
-        "packaging": [],
+        "packaging": [
+          "Available in:",
+          "25 kg Bags",
+          "50 kg Bags",
+          "1 Jumbo Bags (FIBC)",
+          "Palletized Loads",
+          "Container Loads",
+          "Bulk Shipments"
+        ],
         "short_website_description": [],
         "typical_specs": [
           {
-            "parameter": "Processing",
-            "value": "Water-washed / levigated"
+            "title": "Product Identification Specifications",
+            "specs": [
+              {
+                "parameter": "Product Name",
+                "value": "KORVANTO KAO LEVIGATED NOODLES"
+              },
+              {
+                "parameter": "Product Description",
+                "value": "High-Purity Levigated Kaolin Noodles for Ceramic, Sanitaryware & Tile Applications"
+              },
+              {
+                "parameter": "Processing",
+                "value": "Controlled levigation — water-washed and refined"
+              },
+              {
+                "parameter": "Supply Form",
+                "value": "Noodle form with controlled moisture content"
+              },
+              {
+                "parameter": "Impurity Removal",
+                "value": "Grit, iron-bearing impurities, and unwanted minerals removed"
+              },
+              {
+                "parameter": "Intended Use",
+                "value": "Ceramic bodies, sanitaryware, vitrified tiles, porcelain, tableware, refractory"
+              }
+            ]
           },
           {
-            "parameter": "Form",
-            "value": "Noodles"
+            "title": "Physical & Mineral Specifications",
+            "specs": [
+              {
+                "parameter": "High Purity Water-Washed Kaolin",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Excellent Whiteness",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Low Iron Content",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Grit-Free Composition",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "High Plasticity",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Fine Particle Distribution",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Uniform Moisture Content",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Excellent Workability",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Consistent Chemical Composition",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Controlled Quality Processing",
+                "value": "Physical specification — confirmed"
+              }
+            ]
           },
           {
-            "parameter": "Purity",
-            "value": "High — grit & iron reduced"
+            "title": "Performance Specifications",
+            "specs": [
+              {
+                "parameter": "Improves Ceramic Body Plasticity",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Enhances Green Strength and Workability",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Produces Smooth Surface Finish",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Supports White and Clean Firing Characteristics",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Reduces Manufacturing Defects and Rejections",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Ensures Consistent Product Quality",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Easy Blending in Ceramic Formulations",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Improves Molding and Shaping Performance",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Suitable for High-End Ceramic Products",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Reliable Batch-to-Batch Consistency",
+                "value": "Performance specification — confirmed"
+              }
+            ]
           },
           {
-            "parameter": "Plasticity",
-            "value": "Excellent"
+            "title": "Packaging Specifications",
+            "specs": [
+              {
+                "parameter": "25 kg Bags",
+                "value": "Available"
+              },
+              {
+                "parameter": "50 kg Bags",
+                "value": "Available"
+              },
+              {
+                "parameter": "1 Jumbo Bags (FIBC)",
+                "value": "Available"
+              },
+              {
+                "parameter": "Palletized Loads",
+                "value": "Available"
+              },
+              {
+                "parameter": "Container Loads",
+                "value": "Available"
+              },
+              {
+                "parameter": "Bulk Shipments",
+                "value": "Available"
+              }
+            ]
           },
           {
-            "parameter": "Moisture",
-            "value": "Controlled"
+            "title": "Documentation Specifications",
+            "specs": [
+              {
+                "parameter": "Technical Data Sheet (TDS)",
+                "value": "Available"
+              },
+              {
+                "parameter": "Certificate of Analysis (COA)",
+                "value": "Available"
+              },
+              {
+                "parameter": "Sample Support",
+                "value": "Available"
+              },
+              {
+                "parameter": "Quality Verification Support",
+                "value": "Available"
+              },
+              {
+                "parameter": "Third-Party Testing",
+                "value": "Available upon request"
+              }
+            ]
+          },
+          {
+            "title": "Quality Assurance Specifications",
+            "specs": [
+              {
+                "parameter": "Specification-Focused Sourcing",
+                "value": "Confirmed"
+              },
+              {
+                "parameter": "Quality Verification Support",
+                "value": "Confirmed"
+              },
+              {
+                "parameter": "Batch Consistency Monitoring",
+                "value": "Confirmed"
+              }
+            ]
           }
-        ]
+        ],
+        "typical_specs_note": "Representative values for reference only. Detailed specifications are available on request — contact our export team for Technical Data Sheet (TDS) and Certificate of Analysis (COA).",
+        "custom_grade_note": "Representative values for reference only. Detailed specifications are available on request — contact our export team for Technical Data Sheet (TDS) and Certificate of Analysis (COA). Custom kaolin grades and tailored specifications can be supplied according to application requirements, processing needs, and customer specifications."
       },
       "grades": [],
       "family": "korvanto-kao",
       "page_file": "korvanto-kao-levigated-noodles.html",
-      "image": "assets/images/products/korvanto-kao-levigated-noodles.jpg"
+      "image": "assets/images/Product-Images/Levigated Kaolin Noodles.png"
     },
     {
       "slug": "korvanto-kao-levigated-lumps",
@@ -2553,35 +2952,211 @@
           "Suitable for Further Processing"
         ],
         "available_grades": [],
-        "packaging": [],
+        "packaging": [
+          "Available in:",
+          "25 kg Bags",
+          "50 kg Bags",
+          "1 Jumbo Bags (FIBC)",
+          "Palletized Loads",
+          "Container Loads",
+          "Bulk Shipments"
+        ],
         "short_website_description": [],
         "typical_specs": [
           {
-            "parameter": "Processing",
-            "value": "Water-washed / levigated"
+            "title": "Product Identification Specifications",
+            "specs": [
+              {
+                "parameter": "Product Name",
+                "value": "KORVANTO KAO LEVIGATED LUMPS"
+              },
+              {
+                "parameter": "Product Description",
+                "value": "Water-Washed Levigated Kaolin Lumps for Ceramic & Industrial Processing"
+              },
+              {
+                "parameter": "Processing",
+                "value": "Advanced levigation — water-refined"
+              },
+              {
+                "parameter": "Supply Form",
+                "value": "Lump form for grinding, milling, or industrial processing"
+              },
+              {
+                "parameter": "Impurity Removal",
+                "value": "Coarse particles, iron impurities, and unwanted minerals removed"
+              }
+            ]
           },
           {
-            "parameter": "Form",
-            "value": "Lumps"
+            "title": "Physical & Mineral Specifications",
+            "specs": [
+              {
+                "parameter": "Water-Washed and Refined Kaolin",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "High Whiteness",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Low Iron and Titanium Content",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Controlled Moisture Content",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Excellent Dispersion Characteristics",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Fine and Uniform Mineralogy",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Low Grit Content",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Consistent Particle Characteristics",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "High Purity Mineral Composition",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Suitable for Further Processing",
+                "value": "Physical specification — confirmed"
+              }
+            ]
           },
           {
-            "parameter": "Purity",
-            "value": "High — coarse particles & iron reduced"
+            "title": "Performance Specifications",
+            "specs": [
+              {
+                "parameter": "Improves Product Brightness and Appearance",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Enhances Ceramic Body Performance",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Provides Consistent Raw Material Quality",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Supports Efficient Grinding and Milling",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Improves Dispersion in Industrial Formulations",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Reduces Processing Variability",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Suitable for Multiple Industrial Applications",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Reliable Supply for Bulk Processing Operations",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Cost-Effective Industrial Mineral Solution",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Consistent Batch-to-Batch Performance",
+                "value": "Performance specification — confirmed"
+              }
+            ]
           },
           {
-            "parameter": "Whiteness",
-            "value": "Enhanced vs crude kaolin"
+            "title": "Packaging Specifications",
+            "specs": [
+              {
+                "parameter": "25 kg Bags",
+                "value": "Available"
+              },
+              {
+                "parameter": "50 kg Bags",
+                "value": "Available"
+              },
+              {
+                "parameter": "1 Jumbo Bags (FIBC)",
+                "value": "Available"
+              },
+              {
+                "parameter": "Palletized Loads",
+                "value": "Available"
+              },
+              {
+                "parameter": "Container Loads",
+                "value": "Available"
+              },
+              {
+                "parameter": "Bulk Shipments",
+                "value": "Available"
+              }
+            ]
           },
           {
-            "parameter": "Moisture",
-            "value": "Controlled"
+            "title": "Documentation Specifications",
+            "specs": [
+              {
+                "parameter": "Technical Data Sheet (TDS)",
+                "value": "Available"
+              },
+              {
+                "parameter": "Certificate of Analysis (COA)",
+                "value": "Available"
+              },
+              {
+                "parameter": "Sample Support",
+                "value": "Available"
+              },
+              {
+                "parameter": "Quality Verification Support",
+                "value": "Available"
+              },
+              {
+                "parameter": "Third-Party Testing",
+                "value": "Available upon request"
+              }
+            ]
+          },
+          {
+            "title": "Quality Assurance Specifications",
+            "specs": [
+              {
+                "parameter": "Specification-Focused Sourcing",
+                "value": "Confirmed"
+              },
+              {
+                "parameter": "Quality Verification Support",
+                "value": "Confirmed"
+              },
+              {
+                "parameter": "Batch Consistency Monitoring",
+                "value": "Confirmed"
+              }
+            ]
           }
-        ]
+        ],
+        "typical_specs_note": "Representative values for reference only. Detailed specifications are available on request — contact our export team for Technical Data Sheet (TDS) and Certificate of Analysis (COA).",
+        "custom_grade_note": "Representative values for reference only. Detailed specifications are available on request — contact our export team for Technical Data Sheet (TDS) and Certificate of Analysis (COA). Custom kaolin grades and tailored specifications can be supplied according to application requirements, processing needs, and customer specifications."
       },
       "grades": [],
       "family": "korvanto-kao",
       "page_file": "korvanto-kao-levigated-lumps.html",
-      "image": "assets/images/products/korvanto-kao-levigated-lumps.jpg"
+      "image": "assets/images/Product-Images/Kaolin Lumps.png"
     },
     {
       "slug": "korvanto-kao-hydrous",
@@ -2660,37 +3235,225 @@
           "Excellent Compatibility with Industrial Formulations"
         ],
         "available_grades": [],
-        "packaging": [],
+        "packaging": [
+          "Available in:",
+          "25 kg Bags",
+          "50 kg Bags",
+          "1 Jumbo Bags (FIBC)",
+          "Palletized Loads",
+          "Container Loads",
+          "Bulk Shipments"
+        ],
         "short_website_description": [
           "KORVANTO KAO HYDROUS is a premium water-washed kaolin designed for paints, coatings, paper, plastics, rubber, inks, and specialty industrial applications. Its high brightness, fine particle size, and excellent dispersion properties enhance product performance, appearance, and processing efficiency."
         ],
         "typical_specs": [
           {
-            "parameter": "Mineral Type",
-            "value": "Hydrous kaolin (kaolinite)"
+            "title": "Product Identification Specifications",
+            "specs": [
+              {
+                "parameter": "Product Name",
+                "value": "KORVANTO KAO HYDROUS"
+              },
+              {
+                "parameter": "Product Description",
+                "value": "Hydrous Kaolin Powder for Paint, Paper, Plastic, Rubber, Ink & Industrial Applications"
+              },
+              {
+                "parameter": "Mineral Type",
+                "value": "Naturally hydrated kaolinite"
+              },
+              {
+                "parameter": "Crystal Structure",
+                "value": "Retains original crystalline structure"
+              },
+              {
+                "parameter": "Supply Form",
+                "value": "Powder"
+              },
+              {
+                "parameter": "Processing",
+                "value": "Premium water-washed from carefully selected deposits"
+              },
+              {
+                "parameter": "Quality Control",
+                "value": "Manufactured under strict quality controls"
+              },
+              {
+                "parameter": "Functional Role",
+                "value": "Functional filler, extender, and performance additive"
+              }
+            ]
           },
           {
-            "parameter": "Form",
-            "value": "Powder"
+            "title": "Physical & Mineral Specifications",
+            "specs": [
+              {
+                "parameter": "High Purity Water-Washed Kaolin",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Excellent Brightness and Whiteness",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Fine Particle Size Distribution",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "High Dispersion Characteristics",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Low Abrasiveness",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Low Bulk Density",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Chemically Inert Composition",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Smooth Lamellar Particle Structure",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Consistent Mineralogy and Quality",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Excellent Compatibility with Industrial Formulations",
+                "value": "Physical specification — confirmed"
+              }
+            ]
           },
           {
-            "parameter": "Brightness",
-            "value": "High"
+            "title": "Performance Specifications",
+            "specs": [
+              {
+                "parameter": "Improves Opacity and Brightness in Coatings and Paper",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Enhances Gloss and Surface Smoothness",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Acts as an Effective Functional Filler and Extender",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Improves Printability and Ink Performance",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Enhances Mechanical Properties of Rubber and Plastics",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Reduces Formulation Costs Through Efficient Pigment Extension",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Provides Excellent Dispersion and Processing Characteristics",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Improves Product Consistency and Surface Finish",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Suitable for Multiple Industrial Applications",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Reliable Batch-to-Batch Performance",
+                "value": "Performance specification — confirmed"
+              }
+            ]
           },
           {
-            "parameter": "Particle Size",
-            "value": "Fine, controlled distribution"
+            "title": "Packaging Specifications",
+            "specs": [
+              {
+                "parameter": "25 kg Bags",
+                "value": "Available"
+              },
+              {
+                "parameter": "50 kg Bags",
+                "value": "Available"
+              },
+              {
+                "parameter": "1 Jumbo Bags (FIBC)",
+                "value": "Available"
+              },
+              {
+                "parameter": "Palletized Loads",
+                "value": "Available"
+              },
+              {
+                "parameter": "Container Loads",
+                "value": "Available"
+              },
+              {
+                "parameter": "Bulk Shipments",
+                "value": "Available"
+              }
+            ]
           },
           {
-            "parameter": "Moisture",
-            "value": "≤ 1.5% (typical for powder)"
+            "title": "Documentation Specifications",
+            "specs": [
+              {
+                "parameter": "Technical Data Sheet (TDS)",
+                "value": "Available"
+              },
+              {
+                "parameter": "Certificate of Analysis (COA)",
+                "value": "Available"
+              },
+              {
+                "parameter": "Sample Support",
+                "value": "Available"
+              },
+              {
+                "parameter": "Quality Verification Support",
+                "value": "Available"
+              },
+              {
+                "parameter": "Third-Party Testing",
+                "value": "Available upon request"
+              }
+            ]
+          },
+          {
+            "title": "Quality Assurance Specifications",
+            "specs": [
+              {
+                "parameter": "Specification-Focused Sourcing",
+                "value": "Confirmed"
+              },
+              {
+                "parameter": "Quality Verification Support",
+                "value": "Confirmed"
+              },
+              {
+                "parameter": "Batch Consistency Monitoring",
+                "value": "Confirmed"
+              }
+            ]
           }
-        ]
+        ],
+        "typical_specs_note": "Representative values for reference only. Detailed specifications are available on request — contact our export team for Technical Data Sheet (TDS) and Certificate of Analysis (COA).",
+        "custom_grade_note": "Representative values for reference only. Detailed specifications are available on request — contact our export team for Technical Data Sheet (TDS) and Certificate of Analysis (COA). Custom kaolin grades and tailored specifications can be supplied according to application requirements, processing needs, and customer specifications."
       },
       "grades": [],
       "family": "korvanto-kao",
       "page_file": "korvanto-kao-hydrous.html",
-      "image": "assets/images/products/korvanto-kao-hydrous.jpg"
+      "image": "assets/images/Product-Images/Hydrous Kaolin.png"
     },
     {
       "slug": "korvanto-kao-calcined",
@@ -2773,37 +3536,229 @@
           "Consistent Quality and Purity"
         ],
         "available_grades": [],
-        "packaging": [],
+        "packaging": [
+          "Available in:",
+          "25 kg Bags",
+          "50 kg Bags",
+          "1 Jumbo Bags (FIBC)",
+          "Palletized Loads",
+          "Container Loads",
+          "Bulk Shipments"
+        ],
         "short_website_description": [
           "KORVANTO KAO CALCINED is a thermally processed high-performance kaolin designed for paints, coatings, plastics, rubber, paper, wire & cable insulation, and specialty industrial applications. Its superior brightness, opacity, dispersibility, and insulation properties help improve product performance while optimizing formulation costs."
         ],
         "typical_specs": [
           {
-            "parameter": "Mineral Type",
-            "value": "Calcined kaolin (anhydrous aluminum silicate)"
+            "title": "Product Identification Specifications",
+            "specs": [
+              {
+                "parameter": "Product Name",
+                "value": "KORVANTO KAO CALCINED"
+              },
+              {
+                "parameter": "Product Description",
+                "value": "Calcined Kaolin for Paints, Plastics, Rubber, Paper, Wire & Cable Insulation Applications"
+              },
+              {
+                "parameter": "Mineral Type",
+                "value": "Anhydrous aluminum silicate"
+              },
+              {
+                "parameter": "Processing",
+                "value": "Controlled calcination of high-purity kaolin"
+              },
+              {
+                "parameter": "Supply Form",
+                "value": "Powder"
+              },
+              {
+                "parameter": "Calcination Effect",
+                "value": "Removes chemically bound water; modifies kaolin crystal structure"
+              },
+              {
+                "parameter": "Functional Role",
+                "value": "High-performance extender, filler, reinforcing agent, and pigment substitute"
+              }
+            ]
           },
           {
-            "parameter": "Form",
-            "value": "Powder"
+            "title": "Physical & Mineral Specifications",
+            "specs": [
+              {
+                "parameter": "High Brightness and Whiteness",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Anhydrous Calcined Structure",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Excellent Opacity and Hiding Power",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Low Moisture Content",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "High Thermal Stability",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Superior Electrical Insulation Properties",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Low Specific Gravity",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Excellent Dispersibility",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Controlled Particle Size Distribution",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Chemically Inert Composition",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Low Oil Absorption",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Consistent Quality and Purity",
+                "value": "Physical specification — confirmed"
+              }
+            ]
           },
           {
-            "parameter": "Brightness",
-            "value": "High"
+            "title": "Performance Specifications",
+            "specs": [
+              {
+                "parameter": "Improves Brightness and Opacity in Coatings and Paper",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Enhances Hiding Power and Surface Finish",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Acts as an Effective Titanium Dioxide (TiO₂) Extender",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Improves Mechanical Properties of Plastics and Rubber",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Provides Excellent Electrical Insulation Performance",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Improves Heat Resistance and Thermal Stability",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Enhances Printability and Surface Smoothness",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Supports Cost Optimization in Industrial Formulations",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Improves Processing Efficiency and Product Consistency",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Suitable for High-Performance Technical Applications",
+                "value": "Performance specification — confirmed"
+              }
+            ]
           },
           {
-            "parameter": "Opacity",
-            "value": "Enhanced vs hydrous kaolin"
+            "title": "Packaging Specifications",
+            "specs": [
+              {
+                "parameter": "25 kg Bags",
+                "value": "Available"
+              },
+              {
+                "parameter": "50 kg Bags",
+                "value": "Available"
+              },
+              {
+                "parameter": "1 Jumbo Bags (FIBC)",
+                "value": "Available"
+              },
+              {
+                "parameter": "Palletized Loads",
+                "value": "Available"
+              },
+              {
+                "parameter": "Container Loads",
+                "value": "Available"
+              },
+              {
+                "parameter": "Bulk Shipments",
+                "value": "Available"
+              }
+            ]
           },
           {
-            "parameter": "Moisture",
-            "value": "Low — thermally processed"
+            "title": "Documentation Specifications",
+            "specs": [
+              {
+                "parameter": "Technical Data Sheet (TDS)",
+                "value": "Available"
+              },
+              {
+                "parameter": "Certificate of Analysis (COA)",
+                "value": "Available"
+              },
+              {
+                "parameter": "Sample Support",
+                "value": "Available"
+              },
+              {
+                "parameter": "Quality Verification Support",
+                "value": "Available"
+              },
+              {
+                "parameter": "Third-Party Testing",
+                "value": "Available upon request"
+              }
+            ]
+          },
+          {
+            "title": "Quality Assurance Specifications",
+            "specs": [
+              {
+                "parameter": "Specification-Focused Sourcing",
+                "value": "Confirmed"
+              },
+              {
+                "parameter": "Quality Verification Support",
+                "value": "Confirmed"
+              },
+              {
+                "parameter": "Batch Consistency Monitoring",
+                "value": "Confirmed"
+              }
+            ]
           }
-        ]
+        ],
+        "typical_specs_note": "Representative values for reference only. Detailed specifications are available on request — contact our export team for Technical Data Sheet (TDS) and Certificate of Analysis (COA).",
+        "custom_grade_note": "Representative values for reference only. Detailed specifications are available on request — contact our export team for Technical Data Sheet (TDS) and Certificate of Analysis (COA). Custom kaolin grades and tailored specifications can be supplied according to application requirements, processing needs, and customer specifications."
       },
       "grades": [],
       "family": "korvanto-kao",
       "page_file": "korvanto-kao-calcined.html",
-      "image": "assets/images/products/korvanto-kao-calcined.jpg"
+      "image": "assets/images/Product-Images/Calcined Kaolin.png"
     },
     {
       "slug": "korvanto-kao-metakaolin",
@@ -2887,37 +3842,251 @@
           "Controlled Calcination Process"
         ],
         "available_grades": [],
-        "packaging": [],
+        "packaging": [
+          "Available in:",
+          "25 kg Bags",
+          "50 kg Bags",
+          "1 Jumbo Bags (FIBC)",
+          "Palletized Loads",
+          "Container Loads",
+          "Bulk Shipments"
+        ],
         "short_website_description": [
           "KORVANTO KAO METAKAOLIN is a premium pozzolanic material produced from high-purity kaolin. It enhances the strength, durability, workability, and sustainability of concrete and cement systems while also serving as a high-performance functional filler in industrial applications."
         ],
         "typical_specs": [
           {
-            "parameter": "Material Type",
-            "value": "Metakaolin (pozzolanic)"
+            "title": "Product Identification Specifications",
+            "specs": [
+              {
+                "parameter": "Product Name",
+                "value": "KORVANTO KAO METAKAOLIN"
+              },
+              {
+                "parameter": "Product Description",
+                "value": "High-Reactivity Metakaolin for Concrete, Cement, Construction Chemicals & Industrial Applications"
+              },
+              {
+                "parameter": "Material Type",
+                "value": "Highly reactive pozzolanic metakaolin"
+              },
+              {
+                "parameter": "Source Material",
+                "value": "Controlled calcination of high-purity kaolin clay"
+              },
+              {
+                "parameter": "Structure",
+                "value": "Amorphous aluminosilicate with exceptional reactivity"
+              },
+              {
+                "parameter": "Supply Form",
+                "value": "Powder"
+              },
+              {
+                "parameter": "Supplementary Cementitious Material",
+                "value": "Reacts with calcium hydroxide during cement hydration"
+              }
+            ]
           },
           {
-            "parameter": "Form",
-            "value": "Powder"
+            "title": "Physical & Mineral Specifications",
+            "specs": [
+              {
+                "parameter": "High Pozzolanic Reactivity",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "High Alumina and Silica Content",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Fine Particle Size Distribution",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Excellent Whiteness",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Amorphous Aluminosilicate Structure",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Low Impurity Levels",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "High Surface Area",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Excellent Dispersion Characteristics",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Consistent Chemical Composition",
+                "value": "Physical specification — confirmed"
+              },
+              {
+                "parameter": "Controlled Calcination Process",
+                "value": "Physical specification — confirmed"
+              }
+            ]
           },
           {
-            "parameter": "Reactivity",
-            "value": "High pozzolanic activity"
+            "title": "Construction Performance Specifications",
+            "specs": [
+              {
+                "parameter": "Increases Compressive and Flexural Strength",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Reduces Concrete Porosity and Permeability",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Enhances Durability and Service Life",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Improves Resistance to Sulfate and Chemical Attack",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Reduces Efflorescence",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Improves Workability and Surface Finish",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Enhances Bond Strength in Cementitious Systems",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Improves Long-Term Structural Performance",
+                "value": "Performance specification — confirmed"
+              }
+            ]
           },
           {
-            "parameter": "Particle Size",
-            "value": "Fine"
+            "title": "Sustainability Specifications",
+            "specs": [
+              {
+                "parameter": "Reduces Portland Cement Consumption",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Helps Lower Carbon Footprint of Concrete",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Supports Sustainable Construction Practices",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Contributes to Green Building Solutions",
+                "value": "Performance specification — confirmed"
+              }
+            ]
           },
           {
-            "parameter": "Application",
-            "value": "Cement, concrete, construction chemicals"
+            "title": "Industrial Performance Specifications",
+            "specs": [
+              {
+                "parameter": "Improves Whiteness and Opacity in Pigments and Coatings",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Enhances Reinforcement in Rubber and Polymer Systems",
+                "value": "Performance specification — confirmed"
+              },
+              {
+                "parameter": "Provides Excellent Thermal and Electrical Performance in Specialty Applications",
+                "value": "Performance specification — confirmed"
+              }
+            ]
+          },
+          {
+            "title": "Packaging Specifications",
+            "specs": [
+              {
+                "parameter": "25 kg Bags",
+                "value": "Available"
+              },
+              {
+                "parameter": "50 kg Bags",
+                "value": "Available"
+              },
+              {
+                "parameter": "1 Jumbo Bags (FIBC)",
+                "value": "Available"
+              },
+              {
+                "parameter": "Palletized Loads",
+                "value": "Available"
+              },
+              {
+                "parameter": "Container Loads",
+                "value": "Available"
+              },
+              {
+                "parameter": "Bulk Shipments",
+                "value": "Available"
+              }
+            ]
+          },
+          {
+            "title": "Documentation Specifications",
+            "specs": [
+              {
+                "parameter": "Technical Data Sheet (TDS)",
+                "value": "Available"
+              },
+              {
+                "parameter": "Certificate of Analysis (COA)",
+                "value": "Available"
+              },
+              {
+                "parameter": "Sample Support",
+                "value": "Available"
+              },
+              {
+                "parameter": "Quality Verification Support",
+                "value": "Available"
+              },
+              {
+                "parameter": "Third-Party Testing",
+                "value": "Available upon request"
+              }
+            ]
+          },
+          {
+            "title": "Quality Assurance Specifications",
+            "specs": [
+              {
+                "parameter": "Specification-Focused Sourcing",
+                "value": "Confirmed"
+              },
+              {
+                "parameter": "Quality Verification Support",
+                "value": "Confirmed"
+              },
+              {
+                "parameter": "Batch Consistency Monitoring",
+                "value": "Confirmed"
+              }
+            ]
           }
-        ]
+        ],
+        "typical_specs_note": "Representative values for reference only. Detailed specifications are available on request — contact our export team for Technical Data Sheet (TDS) and Certificate of Analysis (COA).",
+        "custom_grade_note": "Representative values for reference only. Detailed specifications are available on request — contact our export team for Technical Data Sheet (TDS) and Certificate of Analysis (COA). Custom kaolin grades and tailored specifications can be supplied according to application requirements, processing needs, and customer specifications."
       },
       "grades": [],
       "family": "korvanto-kao",
       "page_file": "korvanto-kao-metakaolin.html",
-      "image": "assets/images/products/korvanto-kao-metakaolin.jpg"
+      "image": "assets/images/Product-Images/Meta Kaolin.png"
     },
     {
       "slug": "korvanto-clay",
@@ -3034,7 +4203,7 @@
       "grades": [],
       "family": "korvanto-clay",
       "page_file": "korvanto-clay.html",
-      "image": "assets/images/products/korvanto-clay.jpg"
+      "image": "assets/images/families/ball clay home.png"
     },
     {
       "slug": "korvanto-lat",
@@ -3137,7 +4306,7 @@
       "grades": [],
       "family": "korvanto-lat",
       "page_file": "korvanto-lat.html",
-      "image": "assets/images/products/korvanto-lat.png"
+      "image": "assets/images/families/laterite home.png"
     },
     {
       "slug": "korvanto-cham",
@@ -3235,7 +4404,7 @@
           "Customized Sizing",
           "25 kg Bags",
           "50 kg Bags",
-          "1 MT Jumbo Bags",
+          "1 Jumbo Bags",
           "Bulk Supply"
         ],
         "short_website_description": [
@@ -3314,19 +4483,24 @@
           "category": "Refractory Chamotte",
           "grades": [
             {
-              "name": "KORVANTO CHAM LF42"
+              "name": "KORVANTO CHAM LF42",
+              "image": "assets/images/families/chamotte home.png"
             },
             {
-              "name": "KORVANTO CHAM LF46"
+              "name": "KORVANTO CHAM LF46",
+              "image": "assets/images/families/chamotte home.png"
             },
             {
-              "name": "KORVANTO CHAM LF54"
+              "name": "KORVANTO CHAM LF54",
+              "image": "assets/images/families/chamotte home.png"
             },
             {
-              "name": "KORVANTO CHAM LF60"
+              "name": "KORVANTO CHAM LF60",
+              "image": "assets/images/families/chamotte home.png"
             },
             {
-              "name": "KORVANTO CHAM LF70"
+              "name": "KORVANTO CHAM LF70",
+              "image": "assets/images/families/chamotte home.png"
             }
           ],
           "particle_sizes": [
@@ -3343,7 +4517,7 @@
       ],
       "family": "korvanto-cham",
       "page_file": "korvanto-cham.html",
-      "image": "assets/images/products/korvanto-cham.jpg"
+      "image": "assets/images/families/chamotte home.png"
     },
     {
       "slug": "korvanto-baux",
@@ -3451,7 +4625,7 @@
           "Customized Particle Sizes",
           "25 kg Bags",
           "50 kg Bags",
-          "1 MT Jumbo Bags",
+          "1 Jumbo Bags",
           "Bulk Supply"
         ],
         "short_website_description": [
@@ -3503,18 +4677,54 @@
       "grades": [
         {
           "grade": "KORVANTO BAUX CB80",
+          "image": "assets/images/families/bauxite home.png",
           "alumina": "Al₂O₃ ~80%",
           "suitable_for": [
             "High-Duty Fire Bricks",
             "Refractory Castables",
             "General Refractory Applications"
           ],
-          "key_benefits": []
+          "key_benefits": [
+            "Good Thermal Shock Resistance",
+            "High Temperature Stability",
+            "Cost-Effective Performance"
+          ]
+        },
+        {
+          "grade": "KORVANTO BAUX CB82",
+          "image": "assets/images/families/bauxite home.png",
+          "alumina": "Al₂O₃ ~82%",
+          "suitable_for": [
+            "Premium Refractory Bricks",
+            "Kiln Furniture",
+            "High-Strength Castables"
+          ],
+          "key_benefits": [
+            "Enhanced Alumina Content",
+            "Lower Impurity Levels",
+            "Superior Refractory Performance"
+          ]
+        },
+        {
+          "grade": "KORVANTO BAUX CB86",
+          "image": "assets/images/families/bauxite home.png",
+          "alumina": "Al₂O₃ ~86%",
+          "suitable_for": [
+            "Steel Plants",
+            "Cement Kilns",
+            "Glass Furnaces",
+            "Critical High-Temperature Applications"
+          ],
+          "key_benefits": [
+            "Maximum Refractoriness",
+            "Excellent Thermal Stability",
+            "Ultra-High Alumina Performance"
+          ]
         }
       ],
       "family": "korvanto-baux",
       "page_file": "korvanto-baux.html",
-      "image": "assets/images/products/korvanto-baux.jpg"
+      "image": "assets/images/families/bauxite home.png"
     },
     {
       "slug": "korvanto-carbo",
@@ -3613,6 +4823,7 @@
       "grades": [
         {
           "grade": "KORVANTO CARBO CA",
+          "image": "assets/images/grades/korvanto-carbo/korvanto-carbo-ca.jpg",
           "description": "Standard Lustrous Carbon Additive",
           "suitable_for": [
             "General Purpose Foundries",
@@ -3623,6 +4834,7 @@
         },
         {
           "grade": "KORVANTO CARBO LCA",
+          "image": "assets/images/grades/korvanto-carbo/korvanto-carbo-lca.png",
           "description": "Low Ash Lustrous Carbon Additive",
           "suitable_for": [
             "High-Quality Surface Finish Requirements",
@@ -3633,6 +4845,7 @@
         },
         {
           "grade": "KORVANTO CARBO HLCA",
+          "image": "assets/images/grades/korvanto-carbo/korvanto-carbo-hlca.jpg",
           "description": "High Performance Low Ash Lustrous Carbon Additive",
           "suitable_for": [
             "Premium Foundry Applications",
@@ -3643,6 +4856,7 @@
         },
         {
           "grade": "KORVANTO CARBO CS",
+          "image": "assets/images/grades/korvanto-carbo/korvanto-carbo-cs.png",
           "description": "Customized Foundry Carbon Solutions",
           "suitable_for": [],
           "developed_according_to": [
@@ -3655,7 +4869,8 @@
       ],
       "family": "korvanto-carbo",
       "page_file": "korvanto-carbo.html",
-      "image": "assets/images/products/korvanto-carbo.jpg"
+      "image": "assets/images/Product-Images/Coal Additive banner.png",
+      "overview_image": "assets/images/Product-Images/Coal Additive product.png"
     },
     {
       "slug": "korvanto-bento-drill",
@@ -3762,6 +4977,7 @@
           "grade": "API",
           "name": "KORVANTO BENTO DRILL API",
           "subtitle": "API Grade Bentonite",
+          "image": "assets/images/products/bento drilling/bento drilling.png",
           "specifications": [
             {
               "parameter": "Viscometer Dial Reading @ 600 rpm",
@@ -3785,6 +5001,7 @@
           "grade": "OCMA+",
           "name": "KORVANTO BENTO DRILL OCMA+",
           "subtitle": "OCMA Plus Grade Bentonite",
+          "image": "assets/images/products/bento drilling/bento drilling 2.png",
           "specifications": [
             {
               "parameter": "Viscometer Dial Reading @ 600 rpm",
@@ -3808,6 +5025,7 @@
           "grade": "OCMA",
           "name": "KORVANTO BENTO DRILL OCMA",
           "subtitle": "OCMA Grade Bentonite",
+          "image": "assets/images/products/bento drilling/bento drilling 3.png",
           "specifications": [
             {
               "parameter": "Viscometer Dial Reading @ 600 rpm",
@@ -3832,7 +5050,8 @@
           ]
         }
       ],
-      "image": "assets/images/products/korvanto-bento-drill.jpg"
+      "image": "assets/images/products/bento drilling/bento drilling 4.png",
+      "overview_image": "assets/images/products/bento drilling/bento drilling.png"
     },
     {
       "slug": "korvanto-bento-specialty",
@@ -3892,6 +5111,7 @@
           "grade": "BLEACH",
           "name": "KORVANTO BENTO BLEACH",
           "subtitle": "Acid Activated Bleaching Earth",
+          "image": "assets/images/products/bento specialty/bento specialty grade.png",
           "applications": [
             "Edible Oil Refining",
             "Vegetable Oil Purification",
@@ -3905,6 +5125,7 @@
           "grade": "DETOX",
           "name": "KORVANTO BENTO DETOX",
           "subtitle": "Water Treatment & Detoxification Grade",
+          "image": "assets/images/products/bento specialty/bento specialty grade 2.png",
           "applications": [
             "Water Purification",
             "Wastewater Treatment",
@@ -3917,6 +5138,7 @@
           "grade": "AGRO",
           "name": "KORVANTO BENTO AGRO",
           "subtitle": "Pesticide & Agrochemical Carrier Grade",
+          "image": "assets/images/products/bento specialty/bento specialty grade 3.png",
           "applications": [
             "Pesticide Formulations",
             "Agrochemical Carriers",
@@ -3928,6 +5150,7 @@
           "grade": "CERA",
           "name": "KORVANTO BENTO CERA",
           "subtitle": "Ceramic Industry Grade",
+          "image": "assets/images/products/bento specialty/bento specialty grade 4.png",
           "applications": [
             "Ceramic Bodies",
             "Tiles Manufacturing",
@@ -3940,6 +5163,7 @@
           "grade": "WINE",
           "name": "KORVANTO BENTO WINE",
           "subtitle": "Wine Clarification Grade",
+          "image": "assets/images/products/bento specialty/bento specialty grade 5.png",
           "applications": [
             "Wine Stabilization",
             "Clarification",
@@ -3951,6 +5175,7 @@
           "grade": "CUSTOM",
           "name": "KORVANTO BENTO CUSTOM",
           "subtitle": "Customer-Specific Bentonite Solutions",
+          "image": "assets/images/products/bento specialty/bento specialty grade 6.png",
           "applications": [
             "Proprietary Industrial Formulations",
             "Specialty Manufacturing Processes",
@@ -3961,7 +5186,9 @@
           ]
         }
       ],
-      "image": "assets/images/products/korvanto-bento-specialty.jpg"
+      "image": "assets/images/products/bento specialty/bento specialty.png",
+      "hero_image": "assets/images/products/bento specialty/bento specialty 3.png",
+      "overview_image": "assets/images/products/bento specialty/bento specialty 2.png"
     }
   ],
   "product_count": 28

@@ -358,6 +358,23 @@
   margin-bottom: 1.75rem;
 }
 
+.about-hero-inner .credentials-strip {
+  margin-top: 0.25rem;
+}
+
+.about-industry-copy .credentials-strip {
+  margin-top: 1.25rem;
+}
+
+.about-portfolio .credentials-strip {
+  max-width: 52rem;
+}
+
+.about-global-panel .credentials-strip {
+  max-width: 52rem;
+  margin-top: 1.5rem;
+}
+
 .about-hero-cred-strip,
 .about-cred-strip {
   display: flex;

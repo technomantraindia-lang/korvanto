@@ -101,6 +101,8 @@ GRADE_APPLICATION: dict[str, str] = {
     "korvanto-cham/korvanto-cham-lf60.jpg": PRODUCT_APPLICATION["korvanto-cham"],
     "korvanto-cham/korvanto-cham-lf70.jpg": PRODUCT_APPLICATION["korvanto-cham"],
     "korvanto-baux/korvanto-baux-cb80.jpg": PRODUCT_APPLICATION["korvanto-baux"],
+    "korvanto-baux/korvanto-baux-cb82.jpg": f"{W}/thumb/7/72/China_clay_spoil_heaps_in_the_eighties_-_geograph.org.uk_-_1512218.jpg/1280px-China_clay_spoil_heaps_in_the_eighties_-_geograph.org.uk_-_1512218.jpg",
+    "korvanto-baux/korvanto-baux-cb86.jpg": f"{W}/4/4d/Fire_brick.jpg",
     "korvanto-carbo/korvanto-carbo-ca.jpg": PRODUCT_APPLICATION["korvanto-carbo"],
     "korvanto-carbo/korvanto-carbo-lca.jpg": PRODUCT_APPLICATION["korvanto-carbo"],
     "korvanto-carbo/korvanto-carbo-hlca.jpg": PRODUCT_APPLICATION["korvanto-carbo"],

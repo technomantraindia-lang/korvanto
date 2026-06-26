@@ -154,6 +154,8 @@
     box-sizing: border-box;
   }
 
+  .credentials-strip,
+  .hero-trust-strip,
   .cta-credentials {
     max-width: 100%;
     margin-top: 1.25rem;
@@ -161,6 +163,8 @@
     gap: 0.45rem 0.65rem;
   }
 
+  .credentials-strip li,
+  .hero-trust-strip li,
   .cta-credentials li {
     font-size: 0.8rem;
   }

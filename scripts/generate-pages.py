@@ -36,6 +36,14 @@ def esc(text):
     return html.escape(str(text or ""))
 
 
+def mega_menu_child_label(name):
+    """Drop redundant Korvanto prefix — family column header already shows the brand."""
+    label = str(name or "").strip()
+    if label.lower().startswith("korvanto "):
+        label = label[9:].strip()
+    return label
+
+
 def head(title, description):
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -249,7 +257,7 @@ def render_spec_table(title, rows):
         <div class="pd-spec-table-wrap tilt-card">
           <table class="pd-spec-table">
             <thead>
-              <tr><th scope="col">Parameter</th><th scope="col">Typical Value</th></tr>
+              <tr><th scope="col">Parameter</th><th scope="col">Representative Value</th></tr>
             </thead>
             <tbody>{body}</tbody>
           </table>
@@ -277,7 +285,7 @@ def typical_specs_section(product, data):
     note_html = f'<p class="pd-spec-note reveal">{esc(note)}</p>' if note else ""
     return f"""<section class="section pd-section pd-section--white pd-specs-section" id="pdSpecs">
       <div class="container">
-        {section_header("Technical Data", "Typical Specs")}
+        {section_header("Technical Data", "Typical Specifications")}
         <div class="pd-spec-blocks reveal reveal-delay-1">{tables}</div>
         {note_html}
       </div>
@@ -312,6 +320,23 @@ def product_image(product, fallback="assets/images/process/stage1.png"):
     return product.get("image") or fallback
 
 
+def grade_code(grade_obj):
+    if not isinstance(grade_obj, dict):
+        return ""
+    for field in ("grade", "name", "title"):
+        val = (grade_obj.get(field) or "").strip().lower()
+        if not val:
+            continue
+        if match := re.search(
+            r"\b(hlca|lca|cb\d{2}|lf\d{2}|f-\d+|i-\d+|c-\d+|l-\d+|"
+            r"api|ocma\+?|pharma-ip|cosmetic-90|desiccant-\d+|seal-[pg]|"
+            r"paper-325|deink-100|feed|pencil|ag-\d+|bleach|detox|agro|cera|wine|custom|ca|cs)\b",
+            val,
+        ):
+            return match.group(1)
+    return ""
+
+
 def grade_tokens(grade_obj):
     tokens = set()
     if not isinstance(grade_obj, dict):
@@ -336,9 +361,23 @@ def grade_tokens(grade_obj):
 
 
 def resolve_grade_image(product_slug, grade_obj):
+    if isinstance(grade_obj, dict):
+        explicit = grade_obj.get("image")
+        if explicit:
+            return str(explicit).replace("\\", "/")
     grade_dir = GRADES_IMAGE_DIR / product_slug
     if not grade_dir.is_dir():
         return None
+
+    code = grade_code(grade_obj)
+    if code:
+        code_pattern = re.compile(rf"(?:^|-){re.escape(code)}(?:$|[-.])")
+        for path in sorted(grade_dir.iterdir()):
+            if path.suffix.lower() not in {".jpg", ".jpeg", ".png"}:
+                continue
+            if code_pattern.search(path.stem.lower()):
+                return f"assets/images/grades/{product_slug}/{path.name}".replace("\\", "/")
+
     tokens = grade_tokens(grade_obj)
     best = None
     best_score = 0
@@ -471,7 +510,7 @@ def grade_cards_drill(product):
               {ov_html}
             </article>"""
         )
-    return f'<div class="pd-grade-grid pd-grade-grid--pair">{"".join(blocks)}</div>' if blocks else ""
+    return f'<div class="pd-grade-grid pd-grade-grid--triple">{"".join(blocks)}</div>' if blocks else ""
 
 
 def grade_cards_grades_array(product):
@@ -682,6 +721,8 @@ def get_product(data, slug):
 
 def render_detail_page(product, data, outfile):
     _, fam_file, fam_label, image = family_context(product, data)
+    hero_image = product.get("hero_image") or image
+    overview_image = product.get("overview_image") or image
     s = product["sections"]
     lead = product.get("subtitle") or ""
     if not lead and s.get("overview"):
@@ -691,8 +732,8 @@ def render_detail_page(product, data, outfile):
     parts = [
         head(product["name"], lead or product["name"]),
         '  <div id="header-placeholder"></div>\n  <main>',
-        hero(product["name"], fam_label, product["name"], lead, image, fam_file, badge),
-        overview_section(s.get("overview", []), image, product.get("overview_panel")),
+        hero(product["name"], fam_label, product["name"], lead, hero_image, fam_file, badge),
+        overview_section(s.get("overview", []), overview_image, product.get("overview_panel")),
         benefits_section(s.get("key_benefits") or s.get("key_features")),
         typical_specs_section(product, data),
         applications_section(s.get("applications")),
@@ -757,9 +798,59 @@ def generate_family_page(family, data):
     print(f"Wrote {family['file']}")
 
 
+def portfolio_hero_slider_html(families):
+    """Main products-page banner only — uses family card images; does not affect product detail pages."""
+    slides = []
+    metas = []
+    captions = []
+    dots = []
+    total = len(families)
+    for i, family in enumerate(families):
+        active = " is-active" if i == 0 else ""
+        aria = "true" if i == 0 else "false"
+        slides.append(
+            f'<div class="products-hero-slide{active}">'
+            f'<div class="products-hero-stage">'
+            f'<img src="{esc(family["image"])}" alt="{esc(family["name"])}">'
+            f"</div></div>"
+        )
+        metas.append(
+            f'<span class="products-hero-meta{active}">{esc(family.get("portfolio_meta", ""))}</span>'
+        )
+        captions.append(
+            f'<p class="products-hero-caption{active}">{esc(family["name"])}</p>'
+        )
+        dots.append(
+            f'<button type="button" class="products-hero-dot{active}" role="tab" '
+            f'aria-selected="{aria}" aria-label="{esc(family["name"])}"></button>'
+        )
+    return f"""<div class="products-hero-showcase">
+            <div class="products-hero-media">
+              <div class="products-hero-slider" aria-label="Korvanto product families">
+                {"".join(slides)}
+              </div>
+            </div>
+            <div class="products-hero-footer">
+              <div class="products-hero-meta-track" aria-live="polite">
+                {"".join(metas)}
+              </div>
+              <div class="products-hero-caption-track" aria-live="polite">
+                {"".join(captions)}
+              </div>
+              <div class="products-hero-controls">
+                <div class="products-hero-dots" role="tablist" aria-label="Product family slides">
+                  {"".join(dots)}
+                </div>
+                <span class="products-hero-counter" aria-hidden="true"><span class="is-current">01</span><span class="products-hero-counter-sep">/</span>{total:02d}</span>
+              </div>
+            </div>
+          </div>"""
+
+
 def generate_portfolio_page(data):
     page = data.get("catalog", {}).get("portfolio_page", {})
     families = get_families(data)
+    hero_slider = portfolio_hero_slider_html(families)
     cards = ""
     for i, family in enumerate(families, 1):
         delay = f" reveal-delay-{min(i % 4, 3)}" if i % 4 else ""
@@ -824,8 +915,7 @@ def generate_portfolio_page(data):
         </div>
         <div class="products-portfolio-visual reveal reveal-delay-1">
           <div class="products-portfolio-frame tilt-card">
-            <img src="{esc(page.get('hero_image', ''))}" alt="Korvanto industrial minerals portfolio">
-            <span class="pd-hero-badge-float">{esc(page.get('hero_badge', 'Export Portfolio'))}</span>
+            {hero_slider}
           </div>
         </div>
       </div>
@@ -871,7 +961,7 @@ def render_mega_menu(data):
         if not slugs:
             continue
         links = "".join(
-            f'                  <a href="{esc(get_product(data, slug).get("page_file") or f"{slug}.html")}">{esc(get_product(data, slug)["name"])}</a>\n'
+            f'                  <a href="{esc(get_product(data, slug).get("page_file") or f"{slug}.html")}">{esc(mega_menu_child_label(get_product(data, slug)["name"]))}</a>\n'
             for slug in slugs
             if get_product(data, slug)
         )

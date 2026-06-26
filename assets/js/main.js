@@ -245,6 +245,59 @@
     start();
   }
 
+  function initPortfolioHeroSlider() {
+    var slider = $('.products-hero-slider');
+    if (!slider) return;
+    var root = slider.closest('.products-hero-showcase') || slider.parentElement;
+    var slides = $$('.products-hero-slide', slider);
+    var dots = $$('.products-hero-dot', root);
+    var captions = $$('.products-hero-caption', root);
+    var metas = $$('.products-hero-meta', root);
+    var counter = $('.products-hero-counter .is-current', root);
+    var current = 0;
+    var interval = 5000;
+    var timer;
+
+    function goTo(i) {
+      current = (i + slides.length) % slides.length;
+      slides.forEach(function (s, idx) {
+        s.classList.toggle('is-active', idx === current);
+      });
+      captions.forEach(function (c, idx) {
+        c.classList.toggle('is-active', idx === current);
+      });
+      metas.forEach(function (m, idx) {
+        m.classList.toggle('is-active', idx === current);
+      });
+      dots.forEach(function (d, idx) {
+        d.classList.toggle('is-active', idx === current);
+        d.setAttribute('aria-selected', idx === current);
+      });
+      if (counter) {
+        counter.textContent = String(current + 1).padStart(2, '0');
+      }
+    }
+
+    function next() {
+      goTo(current + 1);
+    }
+
+    function start() {
+      clearInterval(timer);
+      timer = setInterval(next, interval);
+    }
+
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () {
+        goTo(i);
+        start();
+      });
+    });
+
+    goTo(0);
+    start();
+  }
+
   /* ——— Scroll reveal ——— */
   function initReveal() {
     var els = $$('.reveal');
@@ -924,7 +977,7 @@
     startAutoplay();
   }
 
-  var FOOTER_ASSET_VERSION = '10';
+  var FOOTER_ASSET_VERSION = '11';
 
   var FOOTER_MENU_HTML =
     '<div class="footer-col">' +
@@ -1026,6 +1079,275 @@
     initPremiumScenes();
   }
 
+  /* ——— Floating contact hub ——— */
+  function loadLiveChatBot(callback) {
+    if (window.KorvantoLiveChat) {
+      callback();
+      return;
+    }
+    var script = document.createElement('script');
+    script.src = BASE + 'assets/js/live-chat-bot.js';
+    script.onload = callback;
+    script.onerror = function () {
+      console.warn('Korvanto live chat bot failed to load');
+      callback();
+    };
+    document.head.appendChild(script);
+  }
+
+  function initFloatingContact() {
+    if (document.getElementById('floatContact')) return;
+
+    var email = 'exports@korvanto.com';
+    var phoneDisplay = '+91 90540 07999';
+    var phoneTel = '+919054007999';
+    var whatsapp = 'https://wa.me/919054007999';
+
+    var chatIcon =
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2m0 14H5.17L4 17.17V4h16z"/></svg>';
+    var waIcon =
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>';
+    var mailIcon =
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m0 4-8 5L4 8V6l8 5 8-5z"/></svg>';
+    var phoneIcon =
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"/></svg>';
+    var callbackIcon =
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 0 0-1.02.24l-2.2 2.2a15.07 15.07 0 0 1-6.59-6.59l2.2-2.21a1 1 0 0 0 .24-1.02A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1M16 4h2v2h-2zm4 0h2v2h-2zm-8 0h2v2h-2zm4 4h2v2h-2zm4 0h2v2h-2z"/></svg>';
+
+    var wrap = document.createElement('div');
+    wrap.className = 'float-contact';
+    wrap.id = 'floatContact';
+    wrap.setAttribute('aria-label', 'Quick contact options');
+    wrap.innerHTML =
+      '<a href="' +
+      BASE +
+      'request-quote.html" class="float-quote-tab">Get Instant Quote</a>' +
+      '<div class="float-live-chat" id="floatLiveChat" role="dialog" aria-label="Live chat with Korvanto" aria-hidden="true">' +
+      '<div class="float-live-chat-header">' +
+      '<div><div class="float-live-chat-title">Live Chat</div><div class="float-live-chat-subtitle">Riya · Export Support</div></div>' +
+      '<button type="button" class="float-live-chat-close" id="floatLiveChatClose" aria-label="Close chat">' +
+      '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>' +
+      '</button></div>' +
+      '<div class="float-live-chat-messages" id="floatLiveChatMessages"></div>' +
+      '<div class="float-live-chat-quick" id="floatLiveChatQuick">' +
+      '<button type="button" data-chat-quick="What products do you supply?">Products</button>' +
+      '<button type="button" data-chat-quick="I need a quote">Get Quote</button>' +
+      '<button type="button" data-chat-quick="What documents do you provide?">Documents</button>' +
+      '<button type="button" data-chat-quick="Contact details">Contact</button>' +
+      '</div>' +
+      '<form class="float-live-chat-form" id="floatLiveChatForm">' +
+      '<input type="text" id="floatLiveChatInput" placeholder="Type your message…" autocomplete="off" aria-label="Chat message">' +
+      '<button type="submit">Send</button></form></div>' +
+      '<div class="float-contact-panel" id="floatContactPanel" role="dialog" aria-label="Contact options" aria-hidden="true">' +
+      '<ul class="float-contact-list">' +
+      '<li><button type="button" class="float-contact-link" id="floatContactChatBtn">' +
+      '<span class="float-contact-icon float-contact-icon--chat">' +
+      chatIcon +
+      '</span><span class="float-contact-text"><span class="float-contact-label">Live Chat</span></span></button></li>' +
+      '<li><a href="' +
+      whatsapp +
+      '" class="float-contact-link" target="_blank" rel="noopener noreferrer">' +
+      '<span class="float-contact-icon float-contact-icon--whatsapp">' +
+      waIcon +
+      '</span><span class="float-contact-text"><span class="float-contact-label">WhatsApp</span></span></a></li>' +
+      '<li><a href="mailto:' +
+      email +
+      '" class="float-contact-link">' +
+      '<span class="float-contact-icon float-contact-icon--email">' +
+      mailIcon +
+      '</span><span class="float-contact-text"><span class="float-contact-label">Email Us</span><span class="float-contact-meta">' +
+      email +
+      '</span></span></a></li>' +
+      '<li><a href="tel:' +
+      phoneTel +
+      '" class="float-contact-link">' +
+      '<span class="float-contact-icon float-contact-icon--call">' +
+      phoneIcon +
+      '</span><span class="float-contact-text"><span class="float-contact-label">Call Now</span><span class="float-contact-meta">' +
+      phoneDisplay +
+      '</span></span></a></li>' +
+      '<li><button type="button" class="float-contact-link" id="floatContactCallbackBtn">' +
+      '<span class="float-contact-icon float-contact-icon--callback">' +
+      callbackIcon +
+      '</span><span class="float-contact-text"><span class="float-contact-label">Callback request</span></span></button></li>' +
+      '</ul></div>' +
+      '<button type="button" class="float-contact-toggle" id="floatContactToggle" aria-expanded="false" aria-label="Open contact menu">' +
+      '<svg class="float-contact-toggle-icon--open" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2m0 14H5.17L4 17.17V4h16z"/></svg>' +
+      '<svg class="float-contact-toggle-icon--close" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>' +
+      '</button>';
+
+    var callbackModal = document.createElement('div');
+    callbackModal.className = 'float-callback-modal';
+    callbackModal.id = 'floatCallbackModal';
+    callbackModal.setAttribute('aria-hidden', 'true');
+    callbackModal.innerHTML =
+      '<div class="float-callback-dialog" role="document">' +
+      '<h3>Request a Callback</h3>' +
+      '<p>Share your number and we will call you back during business hours (Mon–Sat, 9:30 AM – 6:30 PM IST).</p>' +
+      '<form id="floatCallbackForm">' +
+      '<div class="float-callback-field"><label for="floatCallbackName">Name *</label><input type="text" id="floatCallbackName" name="name" required autocomplete="name"></div>' +
+      '<div class="float-callback-field"><label for="floatCallbackPhone">Phone *</label><input type="tel" id="floatCallbackPhone" name="phone" required autocomplete="tel"></div>' +
+      '<div class="float-callback-field"><label for="floatCallbackNote">Preferred time / product</label><textarea id="floatCallbackNote" name="note" rows="3"></textarea></div>' +
+      '<div class="float-callback-actions">' +
+      '<button type="button" class="float-callback-cancel" id="floatCallbackCancel">Cancel</button>' +
+      '<button type="submit" class="float-callback-submit">Submit Request</button>' +
+      '</div></form></div>';
+
+    document.body.appendChild(wrap);
+    document.body.appendChild(callbackModal);
+
+    var toggle = document.getElementById('floatContactToggle');
+    var panel = document.getElementById('floatContactPanel');
+    var liveChat = document.getElementById('floatLiveChat');
+    var liveChatClose = document.getElementById('floatLiveChatClose');
+    var liveChatMessages = document.getElementById('floatLiveChatMessages');
+    var liveChatForm = document.getElementById('floatLiveChatForm');
+    var liveChatInput = document.getElementById('floatLiveChatInput');
+    var liveChatQuick = document.getElementById('floatLiveChatQuick');
+    var chatBtn = document.getElementById('floatContactChatBtn');
+    var callbackBtn = document.getElementById('floatContactCallbackBtn');
+    var callbackCancel = document.getElementById('floatCallbackCancel');
+    var callbackForm = document.getElementById('floatCallbackForm');
+
+    var chatBot = null;
+    var chatStarted = false;
+    var chatBusy = false;
+
+    function setMenuOpen(open) {
+      toggle.classList.toggle('is-open', open);
+      panel.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close contact menu' : 'Open contact menu');
+      panel.setAttribute('aria-hidden', open ? 'false' : 'true');
+      if (open) setChatOpen(false);
+    }
+
+    function setChatOpen(open) {
+      liveChat.classList.toggle('is-open', open);
+      liveChat.setAttribute('aria-hidden', open ? 'false' : 'true');
+      if (open) {
+        setMenuOpen(false);
+        if (!chatStarted && chatBot) {
+          chatStarted = true;
+          appendChatMessage(chatBot.welcome(), 'agent');
+        }
+        setTimeout(function () {
+          liveChatInput.focus();
+        }, 280);
+      }
+    }
+
+    function setCallbackOpen(open) {
+      callbackModal.classList.toggle('is-open', open);
+      callbackModal.setAttribute('aria-hidden', open ? 'false' : 'true');
+      if (open) setMenuOpen(false);
+    }
+
+    function scrollChatToBottom() {
+      liveChatMessages.scrollTop = liveChatMessages.scrollHeight;
+    }
+
+    function appendChatMessage(text, type) {
+      var msg = document.createElement('div');
+      msg.className = 'float-live-chat-msg float-live-chat-msg--' + type;
+      msg.textContent = text;
+      liveChatMessages.appendChild(msg);
+      scrollChatToBottom();
+      return msg;
+    }
+
+    function removeTypingIndicator(node) {
+      if (node && node.parentNode) node.parentNode.removeChild(node);
+    }
+
+    function sendChatMessage(text) {
+      var trimmed = (text || '').trim();
+      if (!trimmed || chatBusy) return;
+      appendChatMessage(trimmed, 'user');
+      liveChatInput.value = '';
+
+      if (!chatBot) {
+        appendChatMessage('Chat is loading — please email ' + email + ' or call ' + phoneDisplay + '.', 'agent');
+        return;
+      }
+
+      chatBusy = true;
+      var typing = appendChatMessage(chatBot.typingLabel(), 'typing');
+
+      setTimeout(function () {
+        removeTypingIndicator(typing);
+        appendChatMessage(chatBot.reply(trimmed), 'agent');
+        chatBusy = false;
+      }, 600 + Math.random() * 500);
+    }
+
+    loadLiveChatBot(function () {
+      if (window.KorvantoLiveChat) {
+        chatBot = window.KorvantoLiveChat();
+      }
+    });
+
+    toggle.addEventListener('click', function () {
+      setMenuOpen(!panel.classList.contains('is-open'));
+    });
+
+    chatBtn.addEventListener('click', function () {
+      setChatOpen(true);
+    });
+
+    liveChatClose.addEventListener('click', function () {
+      setChatOpen(false);
+    });
+
+    liveChatForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      sendChatMessage(liveChatInput.value);
+    });
+
+    liveChatQuick.addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-chat-quick]');
+      if (!btn) return;
+      sendChatMessage(btn.getAttribute('data-chat-quick'));
+    });
+
+    callbackBtn.addEventListener('click', function () {
+      setCallbackOpen(true);
+    });
+
+    callbackCancel.addEventListener('click', function () {
+      setCallbackOpen(false);
+    });
+
+    callbackModal.addEventListener('click', function (e) {
+      if (e.target === callbackModal) setCallbackOpen(false);
+    });
+
+    callbackForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = document.getElementById('floatCallbackName').value.trim();
+      var phone = document.getElementById('floatCallbackPhone').value.trim();
+      var note = document.getElementById('floatCallbackNote').value.trim();
+      var body =
+        'Callback request from Korvanto website\r\n\r\n' +
+        'Name: ' +
+        name +
+        '\r\nPhone: ' +
+        phone;
+      if (note) body += '\r\nNote: ' + note;
+      window.location.href =
+        'mailto:' + email + '?subject=' + encodeURIComponent('Callback Request — ' + name) + '&body=' + encodeURIComponent(body);
+      setCallbackOpen(false);
+      callbackForm.reset();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      if (callbackModal.classList.contains('is-open')) setCallbackOpen(false);
+      else if (liveChat.classList.contains('is-open')) setChatOpen(false);
+      else if (panel.classList.contains('is-open')) setMenuOpen(false);
+    });
+  }
+
   /* ——— Init ——— */
   document.addEventListener('DOMContentLoaded', function () {
     loadPartial('header-placeholder', 'components/header.html', function () {
@@ -1037,10 +1359,12 @@
       function () {
         ensureFooterMenus();
         initFooterYear();
+        initFloatingContact();
       }
     );
 
     initHeroSlider();
+    initPortfolioHeroSlider();
     initReveal();
     initParallax();
     initHeroCard();

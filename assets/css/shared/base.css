@@ -1,5 +1,7 @@
 ﻿/* Korvanto — Base: variables, layout, buttons, reveal */
 /* Korvanto â€” Premium 3D B2B Industrial Mineral Export */
+@import url('credentials-strip.css');
+@import url('floating-contact.css');
 
 :root {
   --navy: #09233D;
@@ -175,4 +177,3 @@ a.btn {
 .reveal-delay-1 { transition-delay: 0.1s; }
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
-
