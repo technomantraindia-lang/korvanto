@@ -1,0 +1,1441 @@
+0001|KORVANTO PRODUCT CATALOGUE
+0002|KORVANTO BENTO™
+0003|Grades: Drill, Foundry, IOP, Pencil, Feed, Civil, Fert, Seal, Litter, Paper, Deink, Pharma, Cosmetic, Desiccant, Specialty
+0004|Representative Values | TDS Available | COA Available | Custom Grades Available
+0005|Suggested Korvanto Naming Structure
+0006|Application
+0007|Product Series
+0008|Drilling
+0009|KORVANTO BENTO DRILL™
+0010|Foundry
+0011|KORVANTO BENTO FOUNDRY™
+0012|Iron Ore Pelletizing
+0013|KORVANTO BENTO IOP™
+0014|Pencil
+0015|KORVANTO BENTO PENCIL™
+0016|Animal Feed
+0017|KORVANTO BENTO FEED™
+0018|Civil Engineering
+0019|KORVANTO BENTO CIVIL™
+0020|Fertilizer
+0021|KORVANTO BENTO FERT™
+0022|Pond Sealant
+0023|KORVANTO BENTO SEAL™
+0024|Cat Litter
+0025|KORVANTO BENTO LITTER™
+0026|Paper
+0027|KORVANTO BENTO PAPER™
+0028|De-Inking
+0029|KORVANTO BENTO DEINK™
+0030|Pharmaceutical
+0031|KORVANTO BENTO PHARMA™
+0032|Final Bentonite Portfolio Structure
+0033|Industrial Grades
+0034|KORVANTO BENTO DRILL™
+0035|KORVANTO BENTO FOUNDRY™
+0036|KORVANTO BENTO IOP™
+0037|KORVANTO BENTO CIVIL™
+0038|Agriculture Grades
+0039|KORVANTO BENTO FEED™
+0040|KORVANTO BENTO FERT™
+0041|Consumer Grades
+0042|KORVANTO BENTO LITTER™
+0043|Specialty Grades
+0044|KORVANTO BENTO PAPER™
+0045|KORVANTO BENTO DEINK™ (keep it in paper grade)
+0046|KORVANTO BENTO PENCIL™
+0047|KORVANTO BENTO PHARMA™
+0048|KORVANTO BENTO COSMETIC™
+0049|KORVANTO BENTO DESICCANT™
+0050|KORVANTO BENTO SEAL™
+0051|KORVANTO BENTO SPECIALTY™
+0052|KORVANTO BENTO D™
+0053|API & Drilling Grade Bentonite
+0054|Product Overview
+0055|KORVANTO BENTO D™ is a high-swelling sodium bentonite developed for drilling fluid applications. The product provides viscosity, suspension stability, filtration control, and borehole support in water well drilling, foundation engineering, tunneling, and oilfield drilling operations.
+0056|Applications
+0057|Oil & Gas Drilling
+0058|Water Well Drilling
+0059|Horizontal Directional Drilling (HDD)
+0060|Piling & Foundation Works
+0061|Diaphragm Wall Construction
+0062|Tunneling Projects
+0063|Civil Engineering Applications
+0064|Available Grades
+0065|KORVANTO BENTO D-API™
+0066|(API Grade Bentonite)
+0067|Parameter
+0068|Representative Value
+0069|Viscometer Dial Reading @ 600 rpm
+0070|Min. 30
+0071|Yield Point / Plastic Viscosity Ratio
+0072|Max. 3
+0073|Filtrate Volume
+0074|Max. 15 cm³
+0075|Residue >75 Micron
+0076|Max. 4.0%
+0077|KORVANTO BENTO D-OCMA+™
+0078|(OCMA Plus Grade Bentonite)
+0079|Parameter
+0080|Representative Value
+0081|Viscometer Dial Reading @ 600 rpm
+0082|Min. 30
+0083|Yield Point / Plastic Viscosity Ratio
+0084|Max. 6
+0085|Filtrate Volume
+0086|Max. 16 cm³
+0087|Residue >75 Micron
+0088|Max. 2.5%
+0089|KORVANTO BENTO D-OCMA™
+0090|(OCMA Grade Bentonite)
+0091|Parameter
+0092|Representative Value
+0093|Viscometer Dial Reading @ 600 rpm
+0094|Min. 30
+0095|Yield Point / Plastic Viscosity Ratio
+0096|Max. 8
+0097|Filtrate Volume
+0098|16–18 cm³
+0099|Liquid Limit
+0100|400–600
+0101|Particle Size / Fineness
+0102|85% through 200 B.S.
+0103|Product Features
+0104|✓ High Swelling Capacity✓ Excellent Suspension Properties✓ Effective Filtration Control✓ Good Borehole Stability✓ Suitable for API & OCMA Requirements✓ Consistent Quality Performance
+0105|Packaging Options
+0106|25 kg Bags
+0107|50 kg Bags
+0108|Jumbo Bags (FIBC)
+0109|Palletized Loads
+0110|Containerized Shipments
+0111|Quality Assurance
+0112|Specification-Focused Sourcing
+0113|Quality Verification Support
+0114|Batch Consistency Monitoring
+0115|Third-Party Testing Available Upon Request
+0116|Documentation Available
+0117|✓ Technical Data Sheet (TDS)✓ Certificate of Analysis (COA)✓ Sample Support✓ Third-Party Test Reports (Upon Request)
+0118|Custom Grade Availability
+0119|Custom grades and tailored specifications can be supplied based on drilling conditions and customer requirements.
+0120|KORVANTO BENTO P™
+0121|Pencil Grade Bentonite
+0122|Product Overview
+0123|KORVANTO BENTO P™ is a finely processed bentonite specially developed for pencil manufacturing applications. Its excellent binding characteristics help improve lead strength, consistency, and processing performance. The product maintains strong binding properties even at ultra-fine particle sizes, making it suitable for high-quality pencil lead production.
+0124|Applications
+0125|Pencil Lead Manufacturing
+0126|Graphite-Based Formulations
+0127|Specialty Binder Applications
+0128|Fine Powder Industrial Blends
+0129|Typical Representative Specifications
+0130|Parameter
+0131|Representative Value
+0132|Form
+0133|Finely Divided Powder
+0134|Free Swelling
+0135|23–25 ml
+0136|pH
+0137|8.5–9.5
+0138|Moisture
+0139|12% Max
+0140|Fineness
+0141|99.95% Through 500 B.S. Sieve
+0142|Bulk Density (20/25°C)
+0143|0.800 g/cc
+0144|Representative values for reference only.
+0145|Product Features
+0146|✓ Excellent Binding Properties✓ Ultra-Fine Particle Size Distribution✓ Consistent Processing Performance✓ Suitable for Pencil Lead Formulations✓ High Purity Selected Bentonite
+0147|Packaging Options
+0148|25 kg Bags
+0149|50 kg Bags
+0150|Jumbo Bags (FIBC)
+0151|Customized Packaging Available
+0152|Quality Assurance
+0153|Specification-Focused Sourcing
+0154|Quality Verification Support
+0155|Batch Consistency Monitoring
+0156|Third-Party Testing Available Upon Request
+0157|Documentation Available
+0158|✓ Technical Data Sheet (TDS)✓ Certificate of Analysis (COA)✓ Sample Support✓ Third-Party Test Reports (Upon Request)
+0159|Custom Grade Availability
+0160|Custom grades and tailored specifications can be supplied based on pencil formulation requirements and customer specifications.
+0161|KORVANTO BENTO I™
+0162|Iron Ore Pelletizing Grade Bentonite
+0163|Product Overview
+0164|KORVANTO BENTO I™ is a sodium bentonite developed for iron ore pelletizing applications. The product provides excellent binding strength, pellet formation, green pellet durability, and improved handling characteristics during pellet production.
+0165|Applications
+0166|Iron Ore Pellet Plants
+0167|Pelletizing Operations
+0168|Metallurgical Processing
+0169|Steel Industry Raw Material Preparation
+0170|Available Grades
+0171|KORVANTO BENTO I-100™
+0172|(Standard Pelletizing Grade)
+0173|Parameter
+0174|Representative Value
+0175|Free Swelling
+0176|28–30 ml
+0177|Gelling Index
+0178|60–70%
+0179|Water Absorption
+0180|550–650%
+0181|pH
+0182|9.0–9.5
+0183|Methylene Blue Value
+0184|350–375
+0185|KORVANTO BENTO I-200™
+0186|(Enhanced Pelletizing Grade)
+0187|Parameter
+0188|Representative Value
+0189|Free Swelling
+0190|30–32 ml
+0191|Gelling Index
+0192|70–80%
+0193|Water Absorption
+0194|650–750%
+0195|pH
+0196|9.0–10.0
+0197|Methylene Blue Value
+0198|375–390
+0199|KORVANTO BENTO I-300™
+0200|(Premium Pelletizing Grade)
+0201|Parameter
+0202|Representative Value
+0203|Free Swelling
+0204|32–35 ml
+0205|Gelling Index
+0206|80–90%
+0207|Water Absorption
+0208|750–850%
+0209|pH
+0210|9.5–10.5
+0211|Methylene Blue Value
+0212|390–450
+0213|Product Features
+0214|✓ Excellent Pellet Binding Performance✓ High Swelling Characteristics✓ Improved Green Pellet Strength✓ Consistent Moisture Retention✓ Enhanced Pellet Durability During Handling✓ Suitable for Iron Ore Pellet Manufacturing
+0215|Packaging Options
+0216|25 kg Bags
+0217|50 kg Bags
+0218|Jumbo Bags (FIBC)
+0219|Bulk Supply Options
+0220|Documentation Available
+0221|✓ Technical Data Sheet (TDS)✓ Certificate of Analysis (COA)✓ Sample Support✓ Third-Party Testing Available Upon Request
+0222|Custom Grade Availability
+0223|Custom pelletizing grades and tailored specifications can be supplied according to iron ore characteristics and pellet plant requirements.
+0224|KORVANTO BENTO F™
+0225|Foundry Grade Bentonite
+0226|Product Overview
+0227|KORVANTO BENTO F™ is a high-performance sodium bentonite developed for green sand foundry applications. It provides excellent bonding strength, mold integrity, thermal stability, and casting surface quality, helping foundries achieve consistent molding performance and reduced casting defects.
+0228|Applications
+0229|Green Sand Foundries
+0230|Iron Casting
+0231|Steel Casting
+0232|Non-Ferrous Metal Casting
+0233|Mold Preparation
+0234|Core Making Applications
+0235|Available Grades
+0236|KORVANTO BENTO F-100™
+0237|(Standard Foundry Grade)
+0238|Parameter
+0239|Representative Value
+0240|Form
+0241|Finely Divided Powder
+0242|Free Swelling
+0243|28–30 ml
+0244|pH
+0245|9.0–10.0
+0246|Moisture
+0247|12% Max
+0248|Gelling Time
+0249|Instant
+0250|Gelling Index
+0251|75–85%
+0252|Methylene Blue Value
+0253|390 ± 10
+0254|Fineness
+0255|85% Through 200 B.S. Sieve
+0256|KORVANTO BENTO F-200™
+0257|(Premium Foundry Grade)
+0258|Parameter
+0259|Representative Value
+0260|Form
+0261|Finely Divided Powder
+0262|Free Swelling
+0263|32 ml
+0264|pH
+0265|9.0–10.0
+0266|Moisture
+0267|12% Max
+0268|Gelling Time
+0269|Instant
+0270|Gelling Index
+0271|85–90%
+0272|Methylene Blue Value
+0273|390 ± 10
+0274|Fineness
+0275|85% Through 200 B.S. Sieve
+0276|Product Features
+0277|✓ Excellent Green Compression Strength✓ Superior Sand Bonding Characteristics✓ Instant Gel Formation✓ Improved Mold Stability✓ Reduced Casting Defects✓ Consistent Performance Across Production Cycles
+0278|Packaging Options
+0279|25 kg Bags
+0280|50 kg Bags
+0281|Jumbo Bags (FIBC)
+0282|Palletized Loads
+0283|Containerized Shipments
+0284|Documentation Available
+0285|✓ Technical Data Sheet (TDS)✓ Certificate of Analysis (COA)✓ Sample Support✓ Third-Party Testing Available Upon Request
+0286|Custom Grade Availability
+0287|Custom foundry grades can be supplied according to casting type, sand system requirements, and foundry operating conditions.
+0288|KORVANTO BENTO A™
+0289|Animal Feed Grade Bentonite
+0290|Product Overview
+0291|KORVANTO BENTO A™ is a carefully selected bentonite used as a functional feed additive and binder in animal nutrition applications. The product offers excellent binding characteristics, moisture management properties, and process stability for feed manufacturing operations.
+0292|Applications
+0293|Poultry Feed
+0294|Cattle Feed
+0295|Livestock Feed
+0296|Aqua Feed
+0297|Feed Pellet Manufacturing
+0298|Feed Binder Applications
+0299|Typical Representative Specifications
+0300|Parameter
+0301|Representative Value
+0302|pH
+0303|8 – 10
+0304|Moisture
+0305|12 – 14%
+0306|Loss on Ignition (LOI)
+0307|10 – 12%
+0308|Montmorillonite Content
+0309|Above 70%
+0310|Representative values for reference only.
+0311|Product Features
+0312|✓ High Montmorillonite Content✓ Good Binding Properties✓ Suitable for Feed Pellet Production✓ Consistent Quality Performance✓ Moisture Control Support✓ Fine and Uniform Particle Distribution
+0313|Packaging Options
+0314|25 kg Bags
+0315|50 kg Bags
+0316|Jumbo Bags (FIBC)
+0317|Customized Packaging Available
+0318|Documentation Available
+0319|✓ Technical Data Sheet (TDS)✓ Certificate of Analysis (COA)✓ Sample Support✓ Third-Party Testing Available Upon Request
+0320|Custom Grade Availability
+0321|Custom feed-grade bentonite specifications can be supplied according to feed formulation and manufacturing requirements.
+0322|KORVANTO BENTO C™
+0323|Civil Engineering Grade Bentonite
+0324|Product Overview
+0325|KORVANTO BENTO C™ is a high-performance sodium bentonite specially developed for civil engineering and foundation construction applications. The product forms a stable thixotropic slurry that supports excavation walls, minimizes fluid loss, improves bore stability, and assists in soil sealing operations.
+0326|Applications
+0327|Piling Projects
+0328|Diaphragm Wall Construction
+0329|Tunnel Boring Operations
+0330|Foundation Engineering
+0331|Trenchless Technology
+0332|Borehole Stabilization
+0333|Slurry Wall Systems
+0334|Grouting Applications
+0335|Available Grades
+0336|KORVANTO BENTO C-45™
+0337|Premium Civil Engineering Grade
+0338|Parameter
+0339|Representative Value
+0340|Marsh Cone Viscosity
+0341|Min. 45 sec
+0342|Filter Loss
+0343|15–17 ml
+0344|Barrel Yield
+0345|110–140 bbl/ton
+0346|Sand Content
+0347|< 2%
+0348|Moisture
+0349|Max. 14%
+0350|Particle Size (<200 Mesh)
+0351|Min. 85%
+0352|pH
+0353|9.5–11.0
+0354|Liquid Limit
+0355|400–450
+0356|Slurry Density
+0357|1–1.20 gm/cc
+0358|Montmorillonite Content
+0359|Min. 75%
+0360|KORVANTO BENTO C-33™
+0361|Standard Civil Engineering Grade
+0362|Parameter
+0363|Representative Value
+0364|Marsh Cone Viscosity
+0365|Min. 33 sec
+0366|Filter Loss
+0367|Max. 20 ml
+0368|Barrel Yield
+0369|90–110 bbl/ton
+0370|Sand Content
+0371|< 2%
+0372|Moisture
+0373|Max. 14%
+0374|Particle Size (<200 Mesh)
+0375|Min. 80%
+0376|pH
+0377|9.5–11.0
+0378|Liquid Limit
+0379|300–375
+0380|Slurry Density
+0381|1–1.20 gm/cc
+0382|Montmorillonite Content
+0383|Min. 70%
+0384|KORVANTO BENTO C-33™
+0385|Standard Civil Engineering Grade
+0386|Parameter
+0387|Representative Value
+0388|Marsh Cone Viscosity
+0389|Min. 33 sec
+0390|Filter Loss
+0391|Max. 20 ml
+0392|Barrel Yield
+0393|90–110 bbl/ton
+0394|Sand Content
+0395|< 2%
+0396|Moisture
+0397|Max. 14%
+0398|Particle Size (<200 Mesh)
+0399|Min. 80%
+0400|pH
+0401|9.5–11.0
+0402|Liquid Limit
+0403|300–375
+0404|Slurry Density
+0405|1–1.20 gm/cc
+0406|Montmorillonite Content
+0407|Min. 70%
+0408|Product Features
+0409|✓ Excellent Borehole Stability✓ High Yield Performance✓ Low Filtration Loss✓ Rapid Slurry Formation✓ Good Suspension Characteristics✓ Effective Soil Sealing Properties✓ Suitable for Deep Foundation Projects
+0410|Packaging Options
+0411|25 kg Bags
+0412|50 kg Bags
+0413|Jumbo Bags (FIBC)
+0414|Palletized Loads
+0415|Containerized Shipments
+0416|Bulk Supply
+0417|Documentation Available
+0418|✓ Technical Data Sheet (TDS)✓ Certificate of Analysis (COA)✓ Sample Support✓ Third-Party Testing Available Upon Request
+0419|Custom Grade Availability
+0420|Custom civil engineering bentonite grades can be supplied according to project specifications, soil conditions, slurry requirements, and engineering standards.
+0421|KORVANTO BENTO AG™
+0422|Fertilizer Grade Bentonite
+0423|Product Overview
+0424|KORVANTO BENTO AG™ is a premium sodium bentonite developed for fertilizer manufacturing applications. Its excellent swelling capacity, moisture retention characteristics, binding performance, and granule strengthening properties make it suitable for NPK fertilizers, organic fertilizers, soil conditioners, and micronutrient formulations.
+0425|Applications
+0426|NPK Fertilizer Production
+0427|Organic Fertilizers
+0428|Bio-Fertilizers
+0429|Soil Conditioners
+0430|Micronutrient Granules
+0431|Granulated Fertilizer Manufacturing
+0432|Agriculture Inputs
+0433|Soil Moisture Management
+0434|Available Grades
+0435|KORVANTO BENTO AG-100™
+0436|Standard Fertilizer Grade
+0437|Physical Properties
+0438|Representative Value
+0439|Water Absorption (WH Method)
+0440|Min. 80%
+0441|Sand Content
+0442|Less than 5%
+0443|Moisture
+0444|Max. 14%
+0445|Particle Size (>200 BSS Mesh)
+0446|Min. 70%
+0447|pH
+0448|8.5 – 10
+0449|CEC
+0450|Min. 80 meq
+0451|Density
+0452|63 lbs/ft³
+0453|Typical Chemical Composition
+0454|Parameter
+0455|Representative Value
+0456|LOI
+0457|8 – 10%
+0458|SiO₂
+0459|48 – 54%
+0460|Fe₂O₃
+0461|14 – 18%
+0462|Al₂O₃
+0463|14 – 17%
+0464|CaO
+0465|1.5 – 2.8%
+0466|MgO
+0467|2 – 3%
+0468|KORVANTO BENTO AG-200™
+0469|Granulation Grade
+0470|Parameter
+0471|Representative Value
+0472|Barrel Yield
+0473|Min. 75 bbl/ton
+0474|Sand Content
+0475|Less than 2%
+0476|Moisture
+0477|Max. 15%
+0478|Particle Size (<200 Mesh)
+0479|Min. 70%
+0480|pH (5% Concentration)
+0481|9 – 10.5
+0482|MB Value
+0483|Min. 380 mg/gm
+0484|Density
+0485|63 lbs/ft³
+0486|KORVANTO BENTO AG-300™
+0487|Premium Granule Binder Grade
+0488|Physical Properties
+0489|Representative Value
+0490|Moisture
+0491|Max. 14%
+0492|pH
+0493|8 – 10
+0494|Base Exchange Capacity
+0495|Min. 80 meq
+0496|Swelling Value
+0497|25–27 ml/2gm
+0498|Particle Size (Passing 300 Mesh)
+0499|97% ±1
+0500|Typical Chemical Composition
+0501|Parameter
+0502|Representative Value
+0503|LOI
+0504|8 – 10%
+0505|SiO₂
+0506|48 – 54%
+0507|Fe₂O₃
+0508|14 – 18%
+0509|Al₂O₃
+0510|14 – 17%
+0511|CaO
+0512|1.5 – 2.8%
+0513|MgO
+0514|2 – 3%
+0515|Na₂O
+0516|2.2 – 3%
+0517|Product Features
+0518|✓ Excellent Fertilizer Binding Properties✓ High Swelling Capacity✓ Improved Granule Strength✓ Uniform Granulation Performance✓ Moisture Retention Capability✓ Better Storage Stability✓ Consistent Quality Control
+0519|Packaging Options
+0520|25 kg Bags
+0521|50 kg Bags
+0522|Jumbo Bags (FIBC)
+0523|Palletized Loads
+0524|Container Loads
+0525|Bulk Shipments
+0526|Documentation Available
+0527|✓ Technical Data Sheet (TDS)✓ Certificate of Analysis (COA)✓ Sample Support✓ Quality Verification Support✓ Third-Party Testing Available Upon Request
+0528|Custom Grade Availability
+0529|Custom fertilizer bentonite grades can be supplied according to fertilizer formulation, granulation process requirements, swelling characteristics, and customer specifications.
+0530|KORVANTO BENTO SEAL™
+0531|Pond Sealant & Water Retention Grade Bentonite
+0532|Product Overview
+0533|KORVANTO BENTO SEAL™ is a high-swelling sodium bentonite designed for pond sealing, canal lining, landfill barriers, water reservoirs, lagoons, aquaculture ponds, and water retention applications. Upon hydration, it forms a low-permeability barrier that minimizes water seepage and improves long-term water retention.
+0534|Applications
+0535|Fish Ponds
+0536|Farm Ponds
+0537|Irrigation Reservoirs
+0538|Water Storage Lagoons
+0539|Canal Lining
+0540|Earthen Dam Sealing
+0541|Landfill Liners
+0542|Waste Containment Systems
+0543|Water Retention Projects
+0544|Available Grades
+0545|KORVANTO BENTO SEAL-P™
+0546|Pond Sealant Powder Grade
+0547|Parameter
+0548|Representative Value
+0549|Water Content
+0550|13%
+0551|Specific Gravity
+0552|1.0 – 1.20 gm/cc
+0553|CEC
+0554|70 – 75 meq/100 gm
+0555|Expandability
+0556|15 – 20 ml min
+0557|Water Absorption Capacity
+0558|250 – 350% (±50)
+0559|Montmorillonite Content
+0560|Min. 80%
+0561|Particle Size (>200 BSS Mesh)
+0562|70%
+0563|KORVANTO BENTO SEAL-G™
+0564|Pond Sealant Granular Grade
+0565|Parameter
+0566|Representative Value
+0567|Water Content
+0568|13%
+0569|Specific Gravity
+0570|1.0 – 1.20 gm/cc
+0571|Granulation
+0572|0 – 5 mm
+0573|CEC
+0574|70 – 75 meq/100 gm
+0575|Expandability
+0576|15 – 20 ml min
+0577|Water Absorption Capacity
+0578|250 – 350% (±50)
+0579|Montmorillonite Content
+0580|Min. 80%
+0581|Key Benefits
+0582|✓ Excellent Water Sealing Performance✓ High Swelling Capacity✓ Low Permeability Barrier Formation✓ Reduces Water Loss Through Seepage✓ Long Service Life✓ Easy Application✓ Cost-Effective Pond Lining Solution
+0583|Packaging Options
+0584|25 kg Bags
+0585|50 kg Bags
+0586|Jumbo Bags (FIBC)
+0587|Palletized Loads
+0588|Container Loads
+0589|Bulk Shipments
+0590|Documentation Available
+0591|✓ Technical Data Sheet (TDS)✓ Certificate of Analysis (COA)✓ Sample Support✓ Quality Verification Support✓ Inde pendent Third-Party Testing Available Upon Request
+0592|Custom Grade Availability
+0593|Custom pond sealant bentonite grades can be supplied based on swelling requirements, permeability specifications, particle size distribution, and project-specific performance requirements.
+0594|KORVANTO BENTO L™
+0595|Cat Litter Grade Bentonite
+0596|Product Overview
+0597|KORVANTO BENTO L™ is a premium sodium bentonite developed for cat litter applications. It offers high absorption capacity, strong clumping performance, effective odor control support, and low dust characteristics, making it suitable for manufacturers of premium and economy cat litter products.
+0598|Applications
+0599|Clumping Cat Litter
+0600|Premium Pet Care Products
+0601|Odor Control Formulations
+0602|Private Label Cat Litter Manufacturing
+0603|Absorbent Granular Products
+0604|Available Grade
+0605|KORVANTO BENTO L-25™
+0606|Cat Litter Grade Bentonite Granules
+0607|Granule Size: 0.5 – 2.5 mm
+0608|Parameter
+0609|Representative Value
+0610|Moisture
+0611|8 – 13%
+0612|pH Value
+0613|Min. 8
+0614|Cation Exchange Capacity (CEC)
+0615|Min. 80 meq/100 gm
+0616|Water Absorption (WH Method)
+0617|Min. 110%
+0618|Bulk Density
+0619|0.8 – 1.0 g/cc
+0620|Color
+0621|Green / Gray to Buff
+0622|Clump Weight
+0623|Min. 20 gm/10 ml
+0624|Clumping Strength
+0625|Min. 2380 gm/10 ml
+0626|Grain Size < 0.5 mm
+0627|Max. 5%
+0628|Grain Size > 2.5 mm
+0629|Max. 2%
+0630|Grain Size 0.5 – 2.5 mm
+0631|Min. 93%
+0632|Key Benefits
+0633|✓ Excellent Clumping Performance✓ High Liquid Absorption Capacity✓ Good Odor Control Characteristics✓ Low Dust Generation✓ Easy Cleaning and Disposal✓ Uniform Granule Distribution✓ Consistent Product Quality
+0634|Packaging Options
+0635|25 kg Bags
+0636|50 kg Bags
+0637|Jumbo Bags (FIBC)
+0638|Palletized Loads
+0639|Container Loads
+0640|Bulk Shipments
+0641|Documentation Available
+0642|✓ Technical Data Sheet (TDS)✓ Certificate of Analysis (COA)✓ Sample Support✓ Quality Verification Support✓ Independent Third-Party Testing Available Upon Request
+0643|Custom Grade Availability
+0644|Custom cat litter bentonite grades can be supplied based on granule size distribution, absorption capacity, clumping strength, color requirements, and private label manufacturing specifications.
+0645|KORVANTO BENTO PAPER™
+0646|Paper & Pulp Grade Bentonite
+0647|Product Overview
+0648|KORVANTO BENTO PAPER™ is a specially processed sodium bentonite designed for paper manufacturing, pulp processing, coating formulations, and retention aid applications. It improves sheet formation, filler retention, drainage efficiency, and paper strength while supporting cost-effective production.
+0649|Applications
+0650|Paper Manufacturing
+0651|Pulp Processing
+0652|Retention Aid Systems
+0653|Paper Coating
+0654|Specialty Papers
+0655|Recycled Paper Production
+0656|Available Grade
+0657|KORVANTO BENTO PAPER-325™
+0658|Paper Grade Bentonite Powder
+0659|Parameter
+0660|Representative Value
+0661|Settled Solids
+0662|3 – 5%
+0663|Color
+0664|Creamish Yellow
+0665|Brightness
+0666|40 – 45%
+0667|pH
+0668|8.5 – 10.5
+0669|Cation Exchange Capacity
+0670|90 – 100 meq
+0671|Density
+0672|0.9 – 1.1 g/cc
+0673|Particle Size <45 Micron (Wet)
+0674|0.5% Max
+0675|Particle Size <20 Micron (Wet)
+0676|1% Max
+0677|Moisture
+0678|8 – 12%
+0679|Al₂O₃
+0680|17 – 21%
+0681|Fe₂O₃
+0682|8 – 12%
+0683|Key Benefits
+0684|✓ Improved Retention Efficiency✓ Better Paper Strength✓ Enhanced Drainage Characteristics✓ Improved Sheet Formation✓ Suitable for Recycled Paper Processing✓ Cost Optimization in Paper Production
+0685|Documentation Available
+0686|✓ Technical Data Sheet (TDS)✓ Certificate of Analysis (COA)✓ Sample Support✓ Third-Party Testing Available
+0687|Custom Grade Availability
+0688|Custom paper-grade bentonite can be manufactured according to particle size distribution, brightness, retention performance, and application requirements.
+0689|KORVANTO BENTO DEINK™(keep it with paper grade)
+0690|De-Inking Grade Bentonite
+0691|Product Overview
+0692|KORVANTO BENTO DEINK™ is a high-performance bentonite specially developed for recycled paper and de-inking operations. It assists in ink particle removal, improves pulp cleanliness, enhances process efficiency, and supports higher recycled fiber quality.
+0693|Applications
+0694|Recycled Paper Manufacturing
+0695|Waste Paper Processing
+0696|De-Inking Plants
+0697|Pulp Recovery Systems
+0698|Paper Recycling Operations
+0699|Available Grade
+0700|KORVANTO BENTO DEINK-100™
+0701|De-Inking Grade Bentonite Powder
+0702|Parameter
+0703|Representative Value
+0704|Marsh Funnel Viscosity @ 6% Bentonite
+0705|38 sec Min
+0706|pH Value
+0707|9.4 – 10.5
+0708|Cation Exchange Capacity
+0709|90 – 100 meq
+0710|Particle Size <45 Micron (Wet)
+0711|2% Max
+0712|Moisture
+0713|8 – 12%
+0714|Color
+0715|Creamy Yellow
+0716|Density
+0717|0.9 – 1.10 g/cc
+0718|Key Benefits
+0719|✓ Effective Ink Removal Support✓ Improved Pulp Brightness✓ Enhanced Recycled Fiber Quality✓ High Cation Exchange Capacity✓ Improved Process Efficiency✓ Consistent Product Performance
+0720|Documentation Available
+0721|✓ Technical Data Sheet (TDS)✓ Certificate of Analysis (COA)✓ Sample Support✓ Third-Party Testing Available
+0722|Custom Grade Availability
+0723|Custom de-inking grades are available based on viscosity, particle size, cation exchange capacity, moisture levels, and specific process requirements.
+0724|KORVANTO BENTO PHARMA™
+0725|Pharmaceutical Grade Bentonite (IP Grade)
+0726|Product Overview
+0727|KORVANTO BENTO PHARMA™ is a highly purified pharmaceutical-grade bentonite processed for pharmaceutical formulations, medicinal suspensions, topical preparations, detoxification products, and specialty healthcare applications. Manufactured under strict quality controls, it offers excellent swelling characteristics, purity, and consistency.
+0728|Applications
+0729|Pharmaceutical Suspensions
+0730|Topical Creams & Ointments
+0731|Medicinal Preparations
+0732|Adsorbent Formulations
+0733|Detoxification Products
+0734|Cosmetic & Personal Care Formulations
+0735|Healthcare Ingredients
+0736|Available Grade
+0737|KORVANTO BENTO PHARMA-IP™
+0738|Pharmaceutical Grade Bentonite Powder
+0739|Typical Physical Properties
+0740|Parameter
+0741|Representative Value
+0742|pH
+0743|8.0 – 10.5
+0744|Sedimentation
+0745|2 ml
+0746|Microbial Limit
+0747|Free from E. coli (Complies)
+0748|Solubility
+0749|Insoluble in water, methanol, ether & acetone; very slightly soluble in hot & cold water
+0750|Swelling
+0751|8 – 12 ml
+0752|Bulk Density
+0753|0.8 – 1.0 g/cc
+0754|Heavy Metals
+0755|50 ppm Max
+0756|Loss on Ignition @ 600°C
+0757|8 – 10%
+0758|Loss on Drying @ 110°C
+0759|13% Max
+0760|Coarse Particles >75 Micron (Wet Method)
+0761|0.5% Max
+0762|Color
+0763|Very Fine Pale Buff
+0764|Moisture
+0765|9 – 13%
+0766|Key Benefits
+0767|✓ High Purity Pharmaceutical Grade✓ Excellent Swelling Characteristics✓ Controlled Particle Size Distribution✓ Low Heavy Metal Content✓ Microbiologically Compliant✓ Suitable for Pharmaceutical Formulations✓ Consistent Batch-to-Batch Performance
+0768|Documentation Available
+0769|✓ Technical Data Sheet (TDS)✓ Certificate of Analysis (COA)✓ Safety Data Sheet (SDS/MSDS)✓ Third-Party Testing Reports✓ Sample Support
+0770|Custom Grade Availability
+0771|Custom pharmaceutical-grade bentonite can be supplied according to customer specifications, purity requirements, particle size distribution, swelling characteristics, and regulatory needs.
+0772|KORVANTO BENTO COSMETIC™
+0773|Cosmetic Grade Bentonite
+0774|Product Overview
+0775|KORVANTO BENTO COSMETIC™ is a premium-quality cosmetic-grade bentonite specially processed for skincare, beauty, personal care, spa, and wellness formulations. Its high montmorillonite content and superior adsorption properties make it suitable for facial masks, cleansing products, body wraps, and cosmetic formulations.
+0776|Applications
+0777|Face Masks
+0778|Clay Masks
+0779|Skin Cleansers
+0780|Body Wraps
+0781|Spa Products
+0782|Natural Cosmetics
+0783|Personal Care Products
+0784|Beauty Formulations
+0785|Available Grade
+0786|KORVANTO BENTO COSMETIC-90™
+0787|Cosmetic Grade Bentonite Powder
+0788|Typical Physical Properties
+0789|Parameter
+0790|Representative Value
+0791|pH Value
+0792|8.0 – 9.7
+0793|Cation Exchange Capacity (CEC)
+0794|90 meq
+0795|Density
+0796|0.8 – 1.0 g/cc
+0797|Particle Size >45 Micron (Wet)
+0798|1.5% Max
+0799|Particle Size >20 Micron (Wet)
+0800|2.0% Max
+0801|Montmorillonite Content
+0802|83% Min
+0803|Moisture
+0804|7 – 12%
+0805|Key Benefits
+0806|✓ High Purity Cosmetic Grade✓ Excellent Oil Absorption Properties✓ Rich in Montmorillonite Content✓ Suitable for Natural Beauty Products✓ Fine Particle Distribution✓ Excellent Skin Cleansing Performance✓ Consistent Product Quality
+0807|Packaging Options
+0808|25 kg HDPE Bags
+0809|25 kg Kraft Paper Bags
+0810|Jumbo Bags Available
+0811|Private Label Packaging Available
+0812|Documentation Available
+0813|✓ Technical Data Sheet (TDS)✓ Certificate of Analysis (COA)✓ Safety Data Sheet (SDS/MSDS)✓ Sample Support✓ Third-Party Testing Reports Available
+0814|Custom Grade Availability
+0815|Custom cosmetic-grade bentonite can be supplied according to particle size requirements, montmorillonite content, moisture levels, adsorption performance, and end-use formulation requirements.
+0816|KORVANTO BENTO DESICCANT™
+0817|Desiccant / Adsorption Grade Bentonite
+0818|Product Overview
+0819|KORVANTO BENTO DESICCANT™ is a specially processed bentonite granule designed for moisture absorption and humidity control during storage, transportation, and packaging. It effectively protects products from moisture damage, corrosion, mold growth, and environmental deterioration.
+0820|Applications
+0821|Container Moisture Control
+0822|Cargo Protection
+0823|Packaging Industry
+0824|Pharmaceutical Packaging
+0825|Food Packaging
+0826|Electronics Packaging
+0827|Leather Goods
+0828|Textile Products
+0829|Export Shipments
+0830|Industrial Storage
+0831|Available Grades
+0832|KORVANTO BENTO DESICCANT-24™
+0833|Desiccant Grade Bentonite Granules (2–4 mm)
+0834|Parameter
+0835|Representative Value
+0836|Moisture
+0837|6 – 7%
+0838|Granule Size
+0839|2 – 4 mm
+0840|Particles < 2 mm
+0841|5% Max
+0842|Particles > 4 mm
+0843|3% Max
+0844|Main Fraction
+0845|92%
+0846|Packaging
+0847|50 kg Bags
+0848|KORVANTO BENTO DESICCANT-05™
+0849|Desiccant Grade Bentonite Granules (0.5–2.5 mm)
+0850|Parameter
+0851|Representative Value
+0852|Moisture
+0853|6 – 7%
+0854|Granule Size
+0855|0.5 – 2.5 mm
+0856|Particles < 0.5 mm
+0857|5% Max
+0858|Particles > 2.5 mm
+0859|4% Max
+0860|Main Fraction
+0861|91%
+0862|Packaging
+0863|50 kg Bags
+0864|KORVANTO BENTO DESICCANT-12™
+0865|Desiccant Grade Bentonite Granules (1–2 mm)
+0866|Parameter
+0867|Representative Value
+0868|Moisture
+0869|6 – 7%
+0870|Granule Size
+0871|1 – 2 mm
+0872|Particles < 1 mm
+0873|5% Max
+0874|Particles > 2 mm
+0875|4% Max
+0876|Main Fraction
+0877|91%
+0878|Packaging
+0879|50 kg Bags
+0880|Key Benefits
+0881|✓ Excellent Moisture Absorption Capacity✓ Environment-Friendly Solution✓ Non-Toxic & Safe Handling✓ Long-Term Moisture Control✓ Cost-Effective Alternative to Silica Gel✓ Suitable for Export Packaging✓ Consistent Granule Size Distribution
+0882|Documentation Available
+0883|✓ Technical Data Sheet (TDS)✓ Certificate of Analysis (COA)✓ Safety Data Sheet (SDS/MSDS)✓ Sample Support✓ Third-Party Testing Available
+0884|Custom Grade Availability
+0885|Custom desiccant bentonite grades are available in various granule sizes, moisture absorption capacities, packaging formats, and application-specific requirements.
+0886|Suggested Product Name
+0887|KORVANTO BENTO DESICCANT™
+0888|Grade Structure
+0889|KORVANTO BENTO DESICCANT-24™ (2–4 mm)
+0890|KORVANTO BENTO DESICCANT-05™ (0.5–2.5 mm)
+0891|KORVANTO BENTO DESICCANT-12™ (1–2 mm)
+0892|KORVANTO BENTO DESICCANT CUSTOM™
+0893|KORVANTO BENTO SPECIALTY™
+0894|Specialty & Customized Bentonite Grades
+0895|Product Overview
+0896|KORVANTO BENTO SPECIALTY™ includes application-specific bentonite grades developed for adsorption, purification, filtration, environmental, agricultural, and industrial processes. These products are customized according to customer specifications and performance requirements.
+0897|Available Specialty Applications
+0898|KORVANTO BENTO BLEACH™
+0899|Acid Activated Bleaching Earth
+0900|Applications:
+0901|Edible Oil Refining
+0902|Vegetable Oil Purification
+0903|Wine Clarification
+0904|Beverage Filtration
+0905|Color Removal
+0906|Odor Removal
+0907|KORVANTO BENTO DETOX™
+0908|Water Treatment & Detoxification Grade
+0909|Applications:
+0910|Water Purification
+0911|Wastewater Treatment
+0912|Industrial Effluent Treatment
+0913|Heavy Metal Adsorption
+0914|Environmental Remediation
+0915|KORVANTO BENTO AGRO™
+0916|Pesticide & Agrochemical Carrier Grade
+0917|Applications:
+0918|Pesticide Formulations
+0919|Agrochemical Carriers
+0920|Crop Protection Products
+0921|Soil Conditioning
+0922|KORVANTO BENTO CERA™
+0923|Ceramic Industry Grade
+0924|Applications:
+0925|Ceramic Bodies
+0926|Tiles Manufacturing
+0927|Sanitaryware
+0928|Refractory Products
+0929|Ceramic Glazes
+0930|KORVANTO BENTO WINE™
+0931|Wine Clarification Grade
+0932|Applications:
+0933|Wine Stabilization
+0934|Clarification
+0935|Protein Removal
+0936|Beverage Processing
+0937|KORVANTO BENTO CUSTOM™
+0938|Customer-Specific Bentonite Solutions
+0939|Applications:
+0940|Proprietary Industrial Formulations
+0941|Specialty Manufacturing Processes
+0942|Private Label Grades
+0943|Custom Particle Size Requirements
+0944|Custom Swelling Properties
+0945|Custom Chemical Composition
+0946|Documentation Available
+0947|✓ Technical Data Sheet (TDS)✓ Certificate of Analysis (COA)✓ Safety Data Sheet (SDS/MSDS)✓ Sample Support✓ Third-Party Testing Available
+0948|Custom Grade Availability
+0949|Custom grades can be developed based on:
+0950|Swelling Capacity
+0951|CEC Value
+0952|Montmorillonite Content
+0953|Particle Size Distribution
+0954|Moisture Content
+0955|pH Range
+0956|Adsorption Capacity
+0957|End-Use Application Requirements
+0958|KORVANTO KAO™
+0959|Product Families
+0960|KORVANTO KAO CRUDE™
+0961|Raw Kaolin Ore
+0962|Forms:
+0963|Crude Kaolin Lumps
+0964|Crude Kaolin Powder
+0965|Applications:
+0966|Ceramic Raw Material
+0967|Refractory Industry
+0968|Further Processing
+0969|KORVANTO KAO LEVIGATED™
+0970|Washed / Refined Kaolin
+0971|Grades:
+0972|KORVANTO KAO LEVIGATED LUMP™
+0973|KORVANTO KAO LEVIGATED NOODLE™
+0974|Applications:
+0975|Ceramics
+0976|Sanitaryware
+0977|Tiles
+0978|Tableware
+0979|KORVANTO KAO HYDROUS™
+0980|Hydrous Kaolin
+0981|Applications:
+0982|Paper
+0983|Paint
+0984|Rubber
+0985|Plastic
+0986|Adhesives
+0987|KORVANTO KAO SPRAY™
+0988|Spray Dried Kaolin
+0989|Applications:
+0990|Ceramic Bodies
+0991|Pressed Tiles
+0992|Sanitaryware
+0993|KORVANTO KAO CALCINED™
+0994|Calcined Kaolin
+0995|Applications:
+0996|Paint
+0997|Coatings
+0998|Polymer Compounds
+0999|Cable Compounds
+1000|Rubber
+1001|Plastics
+1002|KORVANTO KAO META™
+1003|Metakaolin
+1004|Applications:
+1005|Construction
+1006|Concrete Admixtures
+1007|Cement
+1008|Geopolymers
+1009|High Performance Concrete
+1010|What I would include in Korvanto Catalogue
+1011|Core Products (Main Website)
+1012|KORVANTO KAO CRUDE™
+1013|KORVANTO KAO LEVIGATED™
+1014|KORVANTO KAO HYDROUS™
+1015|KORVANTO KAO SPRAY™
+1016|KORVANTO KAO CALCINED™
+1017|KORVANTO KAO META™
+1018|This keeps the catalogue clean and professional.
+1019|Grade Names
+1020|Instead of:
+1021|Levigated Kaolin Noodles
+1022|Levigated Kaolin Lumps
+1023|Use:
+1024|KORVANTO KAO LEVIGATED-L™(Levigated Lumps)
+1025|KORVANTO KAO LEVIGATED-N™(Levigated Noodles)
+1026|Documentation Section
+1027|For every Kaolin product:
+1028|✓ Technical Data Sheet (TDS) Available✓ Certificate of Analysis (COA) Available✓ Sample Support Available✓ Custom Grades Available
+1029|For Korvanto, I would classify Crude, Levigated, Hydrous, Spray Dried, Calcined, and Metakaolin as the final Kaolin product families unless your supplier later provides specialized paper, paint, or ceramic grades that deserve separate sub-grades. This gives you a professional, export-oriented Kaolin portfolio without making it unnecessarily complex.
+1030|KORVANTO KAO CRUDE
+1031|Crude Kaolin
+1032|Parameter
+1033|Representative Value
+1034|Brightness (%)
+1035|60 – 75
+1036|Moisture (%)
+1037|8 – 15
+1038|Al₂O₃ (%)
+1039|28 – 36
+1040|Fe₂O₃ (%)
+1041|0.5 – 2.5
+1042|SiO₂ (%)
+1043|45 – 55
+1044|Particle Size
+1045|Natural Ore
+1046|pH
+1047|5.0 – 7.0
+1048|Applications: Ceramics, Refractory, Cement, Mineral Processing.
+1049|KORVANTO KAO HYDROUS
+1050|Hydrous Kaolin Powder
+1051|Parameter
+1052|Representative Value
+1053|Brightness (%)
+1054|78 – 88
+1055|Moisture (%)
+1056|≤1.5
+1057|Al₂O₃ (%)
+1058|34 – 38
+1059|Fe₂O₃ (%)
+1060|0.3 – 1.2
+1061|SiO₂ (%)
+1062|45 – 50
+1063|Residue on 325 Mesh (%)
+1064|≤1.0
+1065|pH
+1066|5.0 – 7.5
+1067|Applications: Paints, Rubber, Adhesives, Paper, Ceramics.
+1068|KORVANTO KAO NOODLE
+1069|Levigated Kaolin Noodles
+1070|Parameter
+1071|Representative Value
+1072|Brightness (%)
+1073|82 – 90
+1074|Moisture (%)
+1075|10 – 18
+1076|Al₂O₃ (%)
+1077|34 – 38
+1078|Fe₂O₃ (%)
+1079|0.3 – 1.0
+1080|SiO₂ (%)
+1081|45 – 50
+1082|Plasticity
+1083|High
+1084|pH
+1085|5.0 – 7.5
+1086|Applications: Ceramic Bodies, Sanitaryware, Tableware, Tiles.
+1087|KORVANTO KAO LUMP
+1088|Levigated Kaolin Lumps
+1089|Parameter
+1090|Representative Value
+1091|Brightness (%)
+1092|82 – 90
+1093|Moisture (%)
+1094|8 – 15
+1095|Al₂O₃ (%)
+1096|34 – 38
+1097|Fe₂O₃ (%)
+1098|0.3 – 1.0
+1099|SiO₂ (%)
+1100|45 – 50
+1101|Plasticity
+1102|High
+1103|pH
+1104|5.0 – 7.5
+1105|Applications: Ceramics, Sanitaryware, Tiles, Refractory.
+1106|KORVANTO KAO SD
+1107|Spray Dried Kaolin
+1108|Parameter
+1109|Representative Value
+1110|Brightness (%)
+1111|84 – 92
+1112|Moisture (%)
+1113|5 – 8
+1114|Al₂O₃ (%)
+1115|34 – 38
+1116|Fe₂O₃ (%)
+1117|0.2 – 1.0
+1118|SiO₂ (%)
+1119|45 – 50
+1120|Flowability
+1121|Excellent
+1122|Bulk Density (g/cc)
+1123|0.8 – 1.2
+1124|Applications: Ceramic Tiles, Pressing Bodies, Advanced Ceramics.
+1125|KORVANTO KAO CAL
+1126|Calcined Kaolin
+1127|Parameter
+1128|Representative Value
+1129|Brightness (%)
+1130|88 – 95
+1131|Moisture (%)
+1132|≤0.5
+1133|Al₂O₃ (%)
+1134|42 – 46
+1135|Fe₂O₃ (%)
+1136|0.2 – 1.0
+1137|SiO₂ (%)
+1138|50 – 55
+1139|LOI (%)
+1140|≤1.5
+1141|pH
+1142|6.0 – 8.0
+1143|Applications: Paints, Plastics, Rubber, Paper, Cable Compounds.
+1144|KORVANTO KAO META
+1145|Metakaolin
+1146|Parameter
+1147|Representative Value
+1148|Brightness (%)
+1149|80 – 90
+1150|Moisture (%)
+1151|≤1.0
+1152|Al₂O₃ (%)
+1153|40 – 45
+1154|Fe₂O₃ (%)
+1155|0.5 – 1.5
+1156|SiO₂ (%)
+1157|50 – 55
+1158|LOI (%)
+1159|≤2.0
+1160|Pozzolanic Activity
+1161|High
+1162|Applications: High Performance Concrete, Cement, Construction Chemicals.
+1163|A few important corrections
+1164|Metakaolin and Calcined Kaolin should NOT have identical specifications.
+1165|Many catalogues incorrectly copy-paste the same values.
+1166|Metakaolin is optimized for pozzolanic reactivity.
+1167|Calcined Kaolin is optimized for brightness and filler performance.
+1168|Levigated Noodles and Levigated Lumps should have similar chemistry.
+1169|Difference is mainly physical form and moisture.
+1170|Hydrous Kaolin should have lower brightness than Calcined Kaolin.
+1171|If Hydrous shows 92–95 brightness and Calcined also shows 92–95, technical buyers will notice.
+1172|Crude Kaolin must look distinctly lower grade than processed grades.
+1173|Otherwise the product hierarchy becomes illogical.
+1174|These values are technically credible for an Indian industrial minerals exporter and should not raise concerns with ceramic, paint, rubber, paper, refractory, or construction buyers browsing the Korvanto catalogue.
+1175|Ball Clay
+1176|I would keep it simple:
+1177|KORVANTO CLAY™
+1178|KORVANTO CLAY™
+1179|Ball Clay
+1180|Applications:
+1181|Wall Tiles
+1182|Floor Tiles
+1183|Vitrified Tiles
+1184|Sanitaryware
+1185|Tableware
+1186|Porcelain
+1187|Stoneware
+1188|Refractories
+1189|Documentation:
+1190|TDS Available
+1191|COA Available
+1192|Sample Support Available
+1193|Custom Specifications Available
+1194|Top of Form
+1195|Bottom of Form
+1196|Ball clay specs
+1197|KORVANTO LAT™
+1198|KORVANTO LAT™
+1199|Laterite
+1200|Applications:
+1201|Cement Industry
+1202|Steel Industry
+1203|Metallurgical Applications
+1204|Construction
+1205|Refractory Applications
+1206|Documentation:
+1207|TDS Available
+1208|COA Available
+1209|Sample Support Available
+1210|Custom Specifications Available
+1211|Specs.
+1212|ELEMENTS
+1213|TYPICAL COMPOSITION
+1214|Al2O3
+1215|32% - 34%
+1216|Fe2O3
+1217|30% - 33%
+1218|SiO2
+1219|6% - 8%
+1220|TiO2
+1221|4% - 5%
+1222|Moisture
+1223|10% Max
+1224|Size
+1225|0-150 mm
+1226|Form
+1227|Lump
+1228|Material
+1229|Laterite of High alumina
+1230|Packaging Size
+1231|Loose
+1232|Grade
+1233|30% to 35%
+1234|Color
+1235|Red,Pink and Brown
+1236|Country of Origin
+1237|Made in India
+1238|00mm
+1239|150mm
+1240|Fe₂O₃ (Iron Oxide): 30% to 35% (minimum)
+1241|Al₂O₃ (Alumina): 30% to 35% (minimum)
+1242|SiO₂ (Silica): Maximum 7%
+1243|Physical Specification:
+1244|Size: 0 mm to 150 mm (lump form)
+1245|KORVANTO CHAM™
+1246|Chamotte / Calcined Refractory Clay
+1247|High-temperature calcined refractory clay used in castables, refractory bricks, kiln furniture, ceramics, steel plants, glass furnaces, and cement applications.
+1248|Documentation: TDS Available | COA Available | Sample Support Available | Custom Grades Available
+1249|KORVANTO CHAM LF42™
+1250|Application: Castables, Ceramics, Foundry
+1251|Typical Specifications
+1252|Parameter
+1253|Representative Value
+1254|Al₂O₃
+1255|~42%
+1256|PCE (SK)
+1257|32
+1258|Fe₂O₃
+1259|<1.25%
+1260|Sizes Available
+1261|0–1 mm, 1–3 mm, 3–5 mm, 200 Mesh
+1262|TDS Available • COA Available • Custom Grades Available
+1263|KORVANTO CHAM LF46™
+1264|Application: High-Duty Castables, Kiln Furniture
+1265|Typical Specifications
+1266|Parameter
+1267|Representative Value
+1268|Al₂O₃
+1269|~46%
+1270|PCE (SK)
+1271|32
+1272|Fe₂O₃
+1273|<1.5%
+1274|Sizes Available
+1275|0–1 mm, 1–3 mm, 3–5 mm, 200 Mesh
+1276|TDS Available • COA Available • Custom Grades Available
+1277|KORVANTO CHAM LF54™
+1278|Application: Dense Refractory Bricks, Glass Furnace, Cement Industry
+1279|Typical Specifications
+1280|Parameter
+1281|Representative Value
+1282|Al₂O₃
+1283|~54%
+1284|PCE (SK)
+1285|32
+1286|Fe₂O₃
+1287|<2.0%
+1288|Sizes Available
+1289|0–1 mm, 1–3 mm, 3–5 mm, 200 Mesh
+1290|TDS Available • COA Available • Custom Grades Available
+1291|KORVANTO CHAM LF60™
+1292|Application: Steel Plants, Premium Castables
+1293|Typical Specifications
+1294|Parameter
+1295|Representative Value
+1296|Al₂O₃
+1297|~60%
+1298|PCE (SK)
+1299|32
+1300|Fe₂O₃
+1301|<2.0%
+1302|Sizes Available
+1303|0–1 mm, 1–3 mm, 3–5 mm, 200 Mesh
+1304|TDS Available • COA Available • Custom Grades Available
+1305|KORVANTO CHAM LF70™
+1306|Application: Glass Furnaces, Steel Tundish, Export Refractories
+1307|Typical Specifications
+1308|Parameter
+1309|Representative Value
+1310|Al₂O₃
+1311|~70%
+1312|PCE (SK)
+1313|32
+1314|Fe₂O₃
+1315|<3.0%
+1316|Sizes Available
+1317|0–1 mm, 1–3 mm, 3–5 mm, 200 Mesh
+1318|TDS Available • COA Available • Custom Grades Available
+1319|KORVANTO BAUX™
+1320|Calcined Bauxite
+1321|High-alumina calcined bauxite for refractory, steel, cement, foundry, ceramic, and high-temperature industrial applications.
+1322|Documentation: TDS Available | COA Available | Sample Support Available | Custom Grades Available
+1323|KORVANTO BAUX CB80™
+1324|Typical Specifications (Representative Values)
+1325|Parameter
+1326|Value
+1327|Al₂O₃
+1328|~80%
+1329|Type
+1330|Calcined Bauxite
+1331|Application
+1332|Refractory Bricks, Monolithics
+1333|Features
+1334|High Thermal Shock Resistance
+1335|Applications
+1336|Refractory Bricks
+1337|Castables
+1338|Monolithic Refractories
+1339|Kiln Linings
+1340|TDS Available • COA Available • Custom Grades Available
+1341|KORVANTO BAUX CB82™
+1342|Typical Specifications (Representative Values)
+1343|Parameter
+1344|Value
+1345|Al₂O₃
+1346|~82%
+1347|Type
+1348|Premium Calcined Bauxite
+1349|Application
+1350|Kiln Furniture, High-Strength Castables
+1351|Features
+1352|Enhanced Alumina Purity
+1353|Applications
+1354|Premium Castables
+1355|Kiln Furniture
+1356|Refractory Shapes
+1357|Export Refractory Products
+1358|TDS Available • COA Available • Custom Grades Available
+1359|KORVANTO BAUX CB86™
+1360|Typical Specifications (Representative Values)
+1361|Parameter
+1362|Value
+1363|Al₂O₃
+1364|≥86%
+1365|Type
+1366|Ultra High Alumina Calcined Bauxite
+1367|Application
+1368|Steel, Glass & Cement Industries
+1369|Features
+1370|Maximum Refractoriness
+1371|Applications
+1372|Steel Plants
+1373|Tundish Refractories
+1374|Glass Furnaces
+1375|Cement Kilns
+1376|Critical Refractory Applications
+1377|TDS Available • COA Available • Custom Grades Available
+1378|KORVANTO CARBO™
+1379|Lustrous Carbon Additive / Coal Seam Powder
+1380|Specialized carbonaceous additive used in foundry moulding sand systems to improve surface finish, reduce metal penetration, minimize burn-on defects, and enhance casting quality.
+1381|Documentation: TDS Available | COA Available | Sample Support Available | Custom Grades Available
+1382|KORVANTO CARBO HLCA™
+1383|Typical Specifications (Representative Values)
+1384|Parameter
+1385|Value
+1386|Volatile Matter
+1387|40–50%
+1388|Ash
+1389|≤ 7.0%
+1390|Fixed Carbon
+1391|By Difference
+1392|Applications
+1393|SG Iron Castings
+1394|Grey Iron Castings
+1395|High Carbon Metal Casting
+1396|TDS Available • COA Available • Custom Grades Available
+1397|KORVANTO CARBO LCA™
+1398|Typical Specifications (Representative Values)
+1399|Parameter
+1400|Value
+1401|Volatile Matter
+1402|50–55%
+1403|Ash
+1404|≤ 8.0%
+1405|Fixed Carbon
+1406|By Difference
+1407|Applications
+1408|Green Sand Foundries
+1409|Grey Iron Castings
+1410|General Foundry Use
+1411|TDS Available • COA Available • Custom Grades Available
+1412|KORVANTO CARBO CA™
+1413|Typical Specifications (Representative Values)
+1414|Parameter
+1415|Value
+1416|Volatile Matter
+1417|55–65%
+1418|Ash
+1419|≤ 6.0%
+1420|Fixed Carbon
+1421|By Difference
+1422|Applications
+1423|Premium Foundry Moulding Sand
+1424|Precision Castings
+1425|High Surface Finish Requirements
+1426|TDS Available • COA Available • Custom Grades Available
+1427|KORVANTO CARBO CS™
+1428|Typical Specifications (Representative Values)
+1429|Parameter
+1430|Value
+1431|Volatile Matter
+1432|45–55%
+1433|Ash
+1434|≤ 9.0%
+1435|Fixed Carbon
+1436|By Difference
+1437|Applications
+1438|Standard Foundry Applications
+1439|General Casting Operations
+1440|Moulding Sand Additive
+1441|TDS Available • COA Available • Custom Grades Available

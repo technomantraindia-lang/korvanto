@@ -565,6 +565,65 @@ def grade_section(product):
     </section>"""
 
 
+def forms_section(items, lead=None):
+    items = filter_items(items)
+    if not items:
+        return ""
+    cards = ""
+    form_icons = {
+        "powder": '<path d="M6 3h12v4H6z"/><path d="M8 7v14h8V7"/><path d="M10 11h4"/>',
+        "noodle": '<path d="M4 8c4-2 8-2 12 0s8 2 12 0"/><path d="M4 12c4 2 8 2 12 0s8-2 12 0"/><path d="M4 16c4 2 8 2 12 0s8-2 12 0"/>',
+        "filter": '<path d="M4 5h16l-6 7v6l-4 2v-8z"/>',
+        "lump": '<path d="M8 4l8 4-8 4-8-4z"/><path d="M4 12l8 4 8-4"/><path d="M4 16l8 4 8-4"/>',
+        "granular": '<circle cx="7" cy="8" r="2"/><circle cx="17" cy="8" r="2"/><circle cx="12" cy="16" r="2"/>',
+        "custom": '<path d="M12 3v18"/><path d="M5 8h14"/><path d="M7 16h10"/>',
+    }
+
+    def icon_paths(label):
+        lowered = label.lower()
+        if "noodle" in lowered:
+            return form_icons["noodle"]
+        if "filter" in lowered or "cake" in lowered:
+            return form_icons["filter"]
+        if "lump" in lowered or "crushed" in lowered:
+            return form_icons["lump"]
+        if "granular" in lowered or "particle" in lowered or "sizing" in lowered:
+            return form_icons["granular"]
+        if "powder" in lowered:
+            return form_icons["powder"]
+        return form_icons["custom"]
+
+    lead_text = lead or (
+        "Supplied in multiple industrial forms to match your processing and application requirements."
+    )
+
+    for i, item in enumerate(items, 1):
+        delay = f" reveal-delay-{min(i % 4, 3)}" if i % 4 else ""
+        cards += f"""<article class="pd-form-card tilt-card reveal{delay}">
+            <span class="pd-form-index">{i:02d}</span>
+            <span class="pd-form-card-shine" aria-hidden="true"></span>
+            <span class="pd-form-glow" aria-hidden="true"></span>
+            <div class="pd-form-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                {icon_paths(item)}
+              </svg>
+            </div>
+            <span class="pd-form-label">{esc(item)}</span>
+          </article>"""
+    return f"""<section class="section pd-section pd-forms-section" id="pdForms">
+      <div class="pd-forms-deco" aria-hidden="true">
+        <span class="pd-forms-orb pd-forms-orb--1"></span>
+        <span class="pd-forms-orb pd-forms-orb--2"></span>
+        <span class="pd-forms-mesh" aria-hidden="true"></span>
+      </div>
+      <div class="container">
+        {section_header("Supply Formats", "Available Forms")}
+        <p class="pd-forms-lead reveal">{esc(lead_text)}</p>
+        <div class="pd-forms-grid reveal reveal-delay-1">{cards}</div>
+      </div>
+    </section>"""
+
+
 def packaging_section(items):
     items = filter_items(items)
     if not items:
@@ -738,6 +797,7 @@ def render_detail_page(product, data, outfile):
         typical_specs_section(product, data),
         applications_section(s.get("applications")),
         grade_section(product),
+        forms_section(s.get("available_forms", []), s.get("available_forms_lead")),
         packaging_section(s.get("packaging", [])),
     ]
     parts.append(request_section(product["name"], product.get("slug", "")))
