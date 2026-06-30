@@ -4489,7 +4489,7 @@
       "grades": [
         {
           "grade": "KORVANTO CARBO CA",
-          "image": "assets/images/grades/korvanto-carbo/korvanto-carbo-cs.png",
+          "image": "assets/images/grades/korvanto-carbo/korvanto-carbo-ca.jpg",
           "description": "Standard Lustrous Carbon Additive",
           "suitable_for": [
             "General Purpose Foundries",
@@ -4509,7 +4509,7 @@
         },
         {
           "grade": "KORVANTO CARBO HLCA",
-          "image": "assets/images/grades/korvanto-carbo/korvanto-carbo-cs.png",
+          "image": "assets/images/grades/korvanto-carbo/korvanto-carbo-hlca.jpg",
           "description": "High Performance Low Ash Lustrous Carbon Additive",
           "suitable_for": [
             "Premium Foundry Applications",
@@ -4519,7 +4519,7 @@
         },
         {
           "grade": "KORVANTO CARBO CS",
-          "image": "assets/images/grades/korvanto-carbo/korvanto-carbo-lca.png",
+          "image": "assets/images/grades/korvanto-carbo/korvanto-carbo-cs.png",
           "description": "Customized Foundry Carbon Solutions"
         }
       ],
