@@ -65,7 +65,7 @@
         "slug": "korvanto-cham",
         "name": "Korvanto Chamotte",
         "file": "korvanto-cham.html",
-        "image": "assets/images/families/chamotte home.png",
+        "image": "assets/images/Product-Images/chamotte.png",
         "short": "Calcined refractory chamotte — grades LF42, LF46, LF54, LF60, LF70 for fire bricks, castables and high-temperature applications.",
         "portfolio_meta": "LF42 · LF46 · LF54 · LF60 · LF70",
         "single": "korvanto-cham"
@@ -2779,7 +2779,7 @@
       "grades": [],
       "family": "korvanto-kao",
       "page_file": "korvanto-kao-levigated-lumps.html",
-      "image": "assets/images/Product-Images/Kaolin Lumps.png"
+      "image": "assets/images/Product-Images/Levigated Kaolin Lumps.png"
     },
     {
       "slug": "korvanto-kao-hydrous",
@@ -3081,7 +3081,7 @@
       "grades": [],
       "family": "korvanto-kao",
       "page_file": "korvanto-kao-spray.html",
-      "image": "assets/images/Product-Images/Hydrous Kaolin.png"
+      "image": "assets/images/Product-Images/Spray Dried Kaolin.png"
     },
     {
       "slug": "korvanto-kao-calcined",
@@ -3972,23 +3972,23 @@
           "grades": [
             {
               "name": "KORVANTO CHAM LF42",
-              "image": "assets/images/families/chamotte home.png"
+              "image": "assets/images/Product-Images/chamotte grade.png"
             },
             {
               "name": "KORVANTO CHAM LF46",
-              "image": "assets/images/families/chamotte home.png"
+              "image": "assets/images/Product-Images/chamotte grade 2.png"
             },
             {
               "name": "KORVANTO CHAM LF54",
-              "image": "assets/images/families/chamotte home.png"
+              "image": "assets/images/Product-Images/chamotte grade 3.png"
             },
             {
               "name": "KORVANTO CHAM LF60",
-              "image": "assets/images/families/chamotte home.png"
+              "image": "assets/images/Product-Images/chamotte grade 4.png"
             },
             {
               "name": "KORVANTO CHAM LF70",
-              "image": "assets/images/families/chamotte home.png"
+              "image": "assets/images/Product-Images/chamotte grade 5.png"
             }
           ],
           "particle_sizes": [
@@ -4005,7 +4005,7 @@
       ],
       "family": "korvanto-cham",
       "page_file": "korvanto-cham.html",
-      "image": "assets/images/families/chamotte home.png"
+      "image": "assets/images/Product-Images/chamotte.png"
     },
     {
       "slug": "korvanto-baux",
@@ -4489,7 +4489,7 @@
       "grades": [
         {
           "grade": "KORVANTO CARBO CA",
-          "image": "assets/images/grades/korvanto-carbo/korvanto-carbo-ca.jpg",
+          "image": "assets/images/grades/korvanto-carbo/korvanto-carbo-cs.png",
           "description": "Standard Lustrous Carbon Additive",
           "suitable_for": [
             "General Purpose Foundries",
@@ -4509,7 +4509,7 @@
         },
         {
           "grade": "KORVANTO CARBO HLCA",
-          "image": "assets/images/grades/korvanto-carbo/korvanto-carbo-hlca.jpg",
+          "image": "assets/images/grades/korvanto-carbo/korvanto-carbo-cs.png",
           "description": "High Performance Low Ash Lustrous Carbon Additive",
           "suitable_for": [
             "Premium Foundry Applications",
@@ -4519,7 +4519,7 @@
         },
         {
           "grade": "KORVANTO CARBO CS",
-          "image": "assets/images/grades/korvanto-carbo/korvanto-carbo-cs.png",
+          "image": "assets/images/grades/korvanto-carbo/korvanto-carbo-lca.png",
           "description": "Customized Foundry Carbon Solutions"
         }
       ],
