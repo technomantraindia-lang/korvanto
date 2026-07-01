@@ -489,7 +489,7 @@
     },
     {
       "slug": "korvanto-bento-iop",
-      "name": "Korvanto Bento Iron Ore Palltetization",
+      "name": "Korvanto Bento Iron Ore Pelletization",
       "subtitle": "Bentonite for Iron Ore Pelletization (IOP)",
       "sections": {
         "overview": [
@@ -4489,7 +4489,7 @@
       "grades": [
         {
           "grade": "KORVANTO CARBO CA",
-          "image": "assets/images/grades/korvanto-carbo/korvanto-carbo-ca.jpg",
+          "image": "assets/images/grades/korvanto-carbo/coal additive grade.png",
           "description": "Standard Lustrous Carbon Additive",
           "suitable_for": [
             "General Purpose Foundries",
@@ -4499,7 +4499,7 @@
         },
         {
           "grade": "KORVANTO CARBO LCA",
-          "image": "assets/images/grades/korvanto-carbo/korvanto-carbo-lca.png",
+          "image": "assets/images/grades/korvanto-carbo/coal additive grade 2.png",
           "description": "Low Ash Lustrous Carbon Additive",
           "suitable_for": [
             "High-Quality Surface Finish Requirements",
@@ -4509,7 +4509,7 @@
         },
         {
           "grade": "KORVANTO CARBO HLCA",
-          "image": "assets/images/grades/korvanto-carbo/korvanto-carbo-hlca.jpg",
+          "image": "assets/images/grades/korvanto-carbo/coal additive grade  3.png",
           "description": "High Performance Low Ash Lustrous Carbon Additive",
           "suitable_for": [
             "Premium Foundry Applications",
@@ -4519,7 +4519,7 @@
         },
         {
           "grade": "KORVANTO CARBO CS",
-          "image": "assets/images/grades/korvanto-carbo/korvanto-carbo-cs.png",
+          "image": "assets/images/grades/korvanto-carbo/coal additive grade 4.png",
           "description": "Customized Foundry Carbon Solutions"
         }
       ],

@@ -222,7 +222,7 @@
   line-height: 1;
 }
 
-/* Mineral Atlas â€” premium product showcase */
+/* Mineral Atlas - premium product showcase */
 .mineral-atlas {
   background: var(--navy);
   color: var(--white);
@@ -864,7 +864,7 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* Journey â€” pinned viewport, 4 scroll steps, then release */
+/* Journey - pinned viewport, 4 scroll steps, then release */
 .journey-section {
   background: var(--white);
   position: relative;
@@ -1086,7 +1086,7 @@
   margin-bottom: 0.45rem;
 }
 
-/* Why choose â€” premium interactive panels */
+/* Why choose - premium interactive panels */
 .why-section {
   background: var(--grey-light);
   position: relative;
