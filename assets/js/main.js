@@ -1114,6 +1114,9 @@
     var callbackIcon =
       '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 0 0-1.02.24l-2.2 2.2a15.07 15.07 0 0 1-6.59-6.59l2.2-2.21a1 1 0 0 0 .24-1.02A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1M16 4h2v2h-2zm4 0h2v2h-2zm-8 0h2v2h-2zm4 4h2v2h-2zm4 0h2v2h-2z"/></svg>';
 
+    var quoteIcon =
+      '<span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><path d="M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z"/><path d="M9 12h6"/><path d="M9 16h4"/></svg></span>';
+
     var wrap = document.createElement('div');
     wrap.className = 'float-contact';
     wrap.id = 'floatContact';
@@ -1121,7 +1124,9 @@
     wrap.innerHTML =
       '<a href="' +
       BASE +
-      'request-quote.html" class="float-quote-tab">Get Instant Quote</a>' +
+      'request-quote.html" class="float-quote-tab"><span class="float-quote-tab-inner">' +
+      quoteIcon +
+      'Get Instant Quote</span></a>' +
       '<div class="float-live-chat" id="floatLiveChat" role="dialog" aria-label="Live chat with Korvanto" aria-hidden="true">' +
       '<div class="float-live-chat-header">' +
       '<div><div class="float-live-chat-title">Live Chat</div><div class="float-live-chat-subtitle">Riya · Export Support</div></div>' +
@@ -1139,25 +1144,23 @@
       '<input type="text" id="floatLiveChatInput" placeholder="Type your message…" autocomplete="off" aria-label="Chat message">' +
       '<button type="submit">Send</button></form></div>' +
       '<div class="float-contact-panel" id="floatContactPanel" role="dialog" aria-label="Contact options" aria-hidden="true">' +
-      '<ul class="float-contact-list">' +
-      '<li><button type="button" class="float-contact-link" id="floatContactChatBtn">' +
-      '<span class="float-contact-icon float-contact-icon--chat">' +
-      chatIcon +
-      '</span><span class="float-contact-text"><span class="float-contact-label">Live Chat</span></span></button></li>' +
+      '<ul class="float-contact-list" id="floatContactList">' +
       '<li><a href="' +
       whatsapp +
       '" class="float-contact-link" target="_blank" rel="noopener noreferrer">' +
       '<span class="float-contact-icon float-contact-icon--whatsapp">' +
       waIcon +
       '</span><span class="float-contact-text"><span class="float-contact-label">WhatsApp</span></span></a></li>' +
-      '<li><a href="mailto:' +
-      email +
-      '" class="float-contact-link">' +
+      '<li><a href="' +
+      BASE +
+      'contact.html" class="float-contact-link">' +
       '<span class="float-contact-icon float-contact-icon--email">' +
       mailIcon +
-      '</span><span class="float-contact-text"><span class="float-contact-label">Email Us</span><span class="float-contact-meta">' +
-      email +
-      '</span></span></a></li>' +
+      '</span><span class="float-contact-text"><span class="float-contact-label">Send an inquiry</span></span></a></li>' +
+      '<li><button type="button" class="float-contact-link" id="floatContactCallbackBtn">' +
+      '<span class="float-contact-icon float-contact-icon--callback">' +
+      callbackIcon +
+      '</span><span class="float-contact-text"><span class="float-contact-label">Schedule a call</span></span></button></li>' +
       '<li><a href="tel:' +
       phoneTel +
       '" class="float-contact-link">' +
@@ -1166,10 +1169,6 @@
       '</span><span class="float-contact-text"><span class="float-contact-label">Call Now</span><span class="float-contact-meta">' +
       phoneDisplay +
       '</span></span></a></li>' +
-      '<li><button type="button" class="float-contact-link" id="floatContactCallbackBtn">' +
-      '<span class="float-contact-icon float-contact-icon--callback">' +
-      callbackIcon +
-      '</span><span class="float-contact-text"><span class="float-contact-label">Callback request</span></span></button></li>' +
       '</ul></div>' +
       '<button type="button" class="float-contact-toggle" id="floatContactToggle" aria-expanded="false" aria-label="Open contact menu">' +
       '<svg class="float-contact-toggle-icon--open" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2m0 14H5.17L4 17.17V4h16z"/></svg>' +
@@ -1182,7 +1181,7 @@
     callbackModal.setAttribute('aria-hidden', 'true');
     callbackModal.innerHTML =
       '<div class="float-callback-dialog" role="document">' +
-      '<h3>Request a Callback</h3>' +
+      '<h3>Schedule a Call</h3>' +
       '<p>Share your number and we will call you back during business hours (Mon–Sat, 9:30 AM – 6:30 PM IST).</p>' +
       '<form id="floatCallbackForm">' +
       '<div class="float-callback-field"><label for="floatCallbackName">Name *</label><input type="text" id="floatCallbackName" name="name" required autocomplete="name"></div>' +
@@ -1190,7 +1189,7 @@
       '<div class="float-callback-field"><label for="floatCallbackNote">Preferred time / product</label><textarea id="floatCallbackNote" name="note" rows="3"></textarea></div>' +
       '<div class="float-callback-actions">' +
       '<button type="button" class="float-callback-cancel" id="floatCallbackCancel">Cancel</button>' +
-      '<button type="submit" class="float-callback-submit">Submit Request</button>' +
+      '<button type="submit" class="float-callback-submit">Schedule Call</button>' +
       '</div></form></div>';
 
     document.body.appendChild(wrap);
@@ -1204,7 +1203,7 @@
     var liveChatForm = document.getElementById('floatLiveChatForm');
     var liveChatInput = document.getElementById('floatLiveChatInput');
     var liveChatQuick = document.getElementById('floatLiveChatQuick');
-    var chatBtn = document.getElementById('floatContactChatBtn');
+    var contactList = document.getElementById('floatContactList');
     var callbackBtn = document.getElementById('floatContactCallbackBtn');
     var callbackCancel = document.getElementById('floatCallbackCancel');
     var callbackForm = document.getElementById('floatCallbackForm');
@@ -1281,18 +1280,29 @@
       }, 600 + Math.random() * 500);
     }
 
+    function appendLiveChatOption() {
+      if (!contactList || document.getElementById('floatContactChatBtn')) return;
+      var li = document.createElement('li');
+      li.innerHTML =
+        '<button type="button" class="float-contact-link" id="floatContactChatBtn">' +
+        '<span class="float-contact-icon float-contact-icon--chat">' +
+        chatIcon +
+        '</span><span class="float-contact-text"><span class="float-contact-label">Live Chat</span></span></button>';
+      contactList.appendChild(li);
+      li.querySelector('#floatContactChatBtn').addEventListener('click', function () {
+        setChatOpen(true);
+      });
+    }
+
     loadLiveChatBot(function () {
       if (window.KorvantoLiveChat) {
         chatBot = window.KorvantoLiveChat();
+        appendLiveChatOption();
       }
     });
 
     toggle.addEventListener('click', function () {
       setMenuOpen(!panel.classList.contains('is-open'));
-    });
-
-    chatBtn.addEventListener('click', function () {
-      setChatOpen(true);
     });
 
     liveChatClose.addEventListener('click', function () {
@@ -1328,14 +1338,14 @@
       var phone = document.getElementById('floatCallbackPhone').value.trim();
       var note = document.getElementById('floatCallbackNote').value.trim();
       var body =
-        'Callback request from Korvanto website\r\n\r\n' +
+        'Schedule a call request from Korvanto website\r\n\r\n' +
         'Name: ' +
         name +
         '\r\nPhone: ' +
         phone;
       if (note) body += '\r\nNote: ' + note;
       window.location.href =
-        'mailto:' + email + '?subject=' + encodeURIComponent('Callback Request — ' + name) + '&body=' + encodeURIComponent(body);
+        'mailto:' + email + '?subject=' + encodeURIComponent('Schedule a Call — ' + name) + '&body=' + encodeURIComponent(body);
       setCallbackOpen(false);
       callbackForm.reset();
     });

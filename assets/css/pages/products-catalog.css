@@ -558,8 +558,17 @@
   border-bottom: none;
 }
 
+.pd-spec-table-note {
+  margin: 1rem 0 0;
+  padding-left: 1rem;
+  border-left: 3px solid rgba(6, 26, 46, 0.12);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--text-soft);
+}
+
 .pd-spec-note {
-  margin: 1.25rem 0 0;
+  margin: 1.75rem 0 0;
   font-size: 0.88rem;
   line-height: 1.6;
   color: var(--text-soft);
@@ -1000,6 +1009,57 @@
 .pd-grade-grid--triple .pd-grade-card p {
   font-size: 0.9rem;
   line-height: 1.6;
+}
+
+.pd-grades-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+  gap: clamp(1.25rem, 3vw, 2rem);
+  align-items: start;
+}
+
+.pd-grades-cards {
+  min-width: 0;
+}
+
+.pd-grade-use-table-wrap {
+  background: #f4f6f8;
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.35rem;
+  border: 1px solid rgba(9, 35, 61, 0.06);
+}
+
+.pd-grade-use-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.pd-grade-use-table thead th {
+  text-align: left;
+  font-weight: 700;
+  color: var(--navy);
+  padding: 0 0 0.75rem;
+  border-bottom: 1px solid rgba(9, 35, 61, 0.14);
+}
+
+.pd-grade-use-table tbody td {
+  padding: 0.7rem 0;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(9, 35, 61, 0.07);
+}
+
+.pd-grade-use-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.pd-grade-use-code {
+  width: 34%;
+  padding-right: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  white-space: nowrap;
 }
 
 .pd-grade-card {
@@ -1519,6 +1579,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1.5rem;
+  position: relative;
+  z-index: 1;
 }
 
 .products-family-card {
@@ -1617,6 +1679,139 @@
   background: rgba(197, 154, 74, 0.12);
   border: 1px solid rgba(197, 154, 74, 0.28);
   border-radius: 999px;
+}
+
+.products-search {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.products-search-bar {
+  position: relative;
+  z-index: 50;
+  padding: 0 0 2.5rem;
+  margin-top: -2.75rem;
+  overflow: visible;
+}
+
+.products-search-bar .container {
+  position: relative;
+  z-index: 51;
+}
+
+.products-search-bar .products-search {
+  padding: 1.35rem 1.5rem 1.5rem;
+  background: var(--white);
+  border: 1px solid rgba(9, 35, 61, 0.08);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 18px 48px rgba(9, 35, 61, 0.14);
+}
+
+.products-search-label {
+  display: block;
+  margin-bottom: 0.65rem;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+.products-search-field {
+  position: relative;
+  z-index: 52;
+}
+
+.products-search-input {
+  width: 100%;
+  padding: 0.95rem 1.15rem;
+  font-size: 1rem;
+  color: var(--navy);
+  background: var(--white);
+  border: 1px solid rgba(9, 35, 61, 0.12);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.products-search-input:focus {
+  outline: none;
+  border-color: rgba(197, 154, 74, 0.65);
+  box-shadow: 0 0 0 3px rgba(197, 154, 74, 0.15);
+}
+
+.product-search-results {
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  left: 0;
+  right: 0;
+  z-index: 200;
+  max-height: 360px;
+  overflow-y: auto;
+  background: var(--white);
+  border: 1px solid rgba(9, 35, 61, 0.1);
+  border-radius: var(--radius-md);
+  box-shadow: 0 18px 48px rgba(9, 35, 61, 0.18);
+}
+
+.product-search-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.85rem 1rem;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(9, 35, 61, 0.06);
+  transition: background 0.15s ease;
+}
+
+.product-search-item:last-child {
+  border-bottom: 0;
+}
+
+.product-search-item:hover,
+.product-search-item.is-active {
+  background: rgba(197, 154, 74, 0.08);
+}
+
+.product-search-item-label {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.product-search-item-meta {
+  font-size: 0.78rem;
+  color: var(--text-soft);
+}
+
+.product-search-empty {
+  margin: 0;
+  padding: 1rem;
+  font-size: 0.88rem;
+  color: var(--text-soft);
+}
+
+[id^="grade-"] {
+  scroll-margin-top: 7rem;
+}
+
+.product-page .section--mesh {
+  overflow: visible;
+}
+
+@media (max-width: 767px) {
+  .products-search-bar {
+    margin-top: -1.25rem;
+    padding-bottom: 1.75rem;
+  }
+
+  .products-search-bar .products-search {
+    padding: 1.1rem 1rem 1.2rem;
+  }
 }
 
 /* ——— Related products ——— */
@@ -2054,6 +2249,7 @@
   .pd-grade-grid,
   .pd-grade-grid--pair,
   .pd-grade-grid--triple,
+  .pd-grades-layout,
   .pf-grid,
   .products-family-grid {
     grid-template-columns: 1fr;

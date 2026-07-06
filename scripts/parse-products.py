@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 import json
+import sys
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -380,18 +383,18 @@ def attach_grades(product: Dict) -> None:
 
 
 def merge_product_sections(products: List[Dict], key: str) -> List[str]:
-    seen = set()
+    from content_dedupe import applications_are_similar, benefits_are_similar
+
     merged: List[str] = []
+    similar = applications_are_similar if key == "applications" else benefits_are_similar
     for product in products:
         for item in product.get("sections", {}).get(key, []) or []:
             if not item or item.startswith("Website Category Description"):
                 continue
             if item.endswith(" is widely used in:"):
                 continue
-            norm = item.lower()
-            if norm in seen:
+            if any(similar(item, kept) for kept in merged):
                 continue
-            seen.add(norm)
             merged.append(item)
     return merged
 

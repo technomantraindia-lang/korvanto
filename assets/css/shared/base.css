@@ -124,6 +124,18 @@ a.btn {
   transition: transform var(--transition);
 }
 
+.btn-icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
 .btn:hover .arrow { transform: translateX(4px); }
 
 .btn-gold {

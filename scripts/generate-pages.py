@@ -3,7 +3,16 @@
 import html
 import json
 import re
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from content_dedupe import (
+    benefits_are_similar,
+    dedupe_applications,
+    dedupe_benefits,
+    filter_items,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "assets" / "js" / "products-data.json"
@@ -11,6 +20,7 @@ GRADES_IMAGE_DIR = ROOT / "assets" / "images" / "grades"
 HEADER_PATH = ROOT / "components" / "header.html"
 QUOTE_PATH = ROOT / "request-quote.html"
 PRODUCTS_PAGE_PATH = ROOT / "products.html"
+SEARCH_INDEX_PATH = ROOT / "assets" / "js" / "product-search-index.json"
 MEGA_MENU_START = "<!-- catalog:mega-menu:start -->"
 MEGA_MENU_END = "<!-- catalog:mega-menu:end -->"
 QUOTE_OPTIONS_START = "<!-- catalog:quote-options:start -->"
@@ -76,23 +86,61 @@ def foot():
 </html>"""
 
 
-SKIP_EXACT = {
-    "Website Category Description (for KORVANTO BENTO DRILL)",
-}
+SPEC_SECTION_TITLE = "Representative Technical Specifications"
+SPEC_TABLE_NOTE = (
+    "Representative values shown above. Full Technical Data Sheet (TDS), "
+    "Certificate of Analysis (COA), and additional documentation are available upon request."
+)
+
+STANDARD_PACKAGING_OPTIONS = [
+    "25 kg Bags",
+    "50 kg Bags",
+    "Jumbo Bags (FIBC)",
+    "Palletized Loads",
+    "Containerized Shipping",
+    "Bulk Shipments",
+    "Custom Packing Available",
+]
+
+BTN_ICON_QUOTE = (
+    '<span class="btn-icon" aria-hidden="true">'
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" '
+    'stroke-linecap="round" stroke-linejoin="round">'
+    '<path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/>'
+    '<path d="M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z"/>'
+    '<path d="M9 12h6"/><path d="M9 16h4"/>'
+    "</svg></span>"
+)
+
+BTN_ICON_DOC = (
+    '<span class="btn-icon" aria-hidden="true">'
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" '
+    'stroke-linecap="round" stroke-linejoin="round">'
+    '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>'
+    '<path d="M14 2v6h6"/><path d="M9 15l2 2 4-4"/>'
+    "</svg></span>"
+)
+
+SHARED_KEY_BENEFITS = [
+    "API / OCMA compliant",
+    "High Yield",
+    "Excellent Gel Strength",
+    "Low Fluid Loss",
+    "Borehole Stabilization",
+    "Efficient Cuttings Suspension",
+    "Easy Mixing",
+    "Thermal Stability",
+    "Consistent Batch Quality",
+]
 
 
-def filter_items(items):
-    skip_prefixes = ("Website Category Description", "Bottom of Form")
-    out = []
-    for item in items or []:
-        if item in SKIP_EXACT:
+def merge_compulsory_benefits(items):
+    merged = dedupe_benefits(items)
+    for shared in SHARED_KEY_BENEFITS:
+        if any(benefits_are_similar(shared, kept) for kept in merged):
             continue
-        if any(item.startswith(p) for p in skip_prefixes):
-            continue
-        if item.endswith(" is widely used in:"):
-            continue
-        out.append(item)
-    return out
+        merged.append(shared)
+    return merged
 
 
 def filter_overview_paragraphs(items):
@@ -107,8 +155,8 @@ def section_header(label, title, centered=True):
         </header>"""
 
 
-def benefits_section(items):
-    items = filter_items(items)
+def benefits_section(items=None):
+    items = merge_compulsory_benefits(items)
     if not items:
         return ""
     cards = ""
@@ -127,7 +175,7 @@ def benefits_section(items):
 
 
 def applications_section(items):
-    items = filter_items(items)
+    items = dedupe_applications(items)
     if not items:
         return ""
     chips = ""
@@ -215,11 +263,11 @@ def collect_typical_spec_blocks(product, data):
             for group in typical:
                 rows = rows_from_spec_list(group.get("specs"))
                 if rows:
-                    blocks.append({"title": group.get("title") or "Typical Specifications", "specs": rows})
+                    blocks.append({"title": group.get("title") or SPEC_SECTION_TITLE, "specs": rows})
             return blocks
         rows = rows_from_spec_list(typical)
         if rows:
-            return [{"title": "Typical Specifications", "specs": rows}]
+            return [{"title": SPEC_SECTION_TITLE, "specs": rows}]
 
     blocks = []
     for grade in product.get("grades") or []:
@@ -246,6 +294,153 @@ def collect_typical_spec_blocks(product, data):
     return []
 
 
+def grade_anchor_id(grade_code=None, name=""):
+    raw = (grade_code or name or "").strip()
+    if not raw:
+        return None
+    cleaned = re.sub(r"[™\u2122]", "", raw).strip()
+    code_match = re.search(
+        r"\b(F-\d+(?:\.\d+)?|I-\d+|C-\d+|AG-\d+|L-\d+|LF\d+|CB\d+|"
+        r"PHARMA-IP|PAPER-325|DEINK-100|COSMETIC-90|DESICCANT-\d+|"
+        r"SEAL-[PG]|API|OCMA|CA|LCA|HLCA|CS)\b",
+        cleaned,
+        re.I,
+    )
+    if code_match:
+        slug = re.sub(r"[^a-z0-9]+", "-", code_match.group(1).lower()).strip("-")
+        return f"grade-{slug}" if slug else None
+    tokens = cleaned.split()
+    token = tokens[-1] if tokens else cleaned
+    if re.match(r"^[A-Za-z0-9][A-Za-z0-9\-./]*$", token):
+        slug = re.sub(r"[^a-z0-9]+", "-", token.lower()).strip("-")
+    else:
+        slug = re.sub(r"[^a-z0-9]+", "-", cleaned.lower()).strip("-")
+    return f"grade-{slug}" if slug else None
+
+
+def grade_id_attr(grade_code=None, name=""):
+    anchor = grade_anchor_id(grade_code, name)
+    return f' id="{esc(anchor)}"' if anchor else ""
+
+
+def is_grade_spec_title(title):
+    if not title:
+        return False
+    upper = title.upper()
+    return "KORVANTO" in upper and (
+        "™" in title or re.search(r"\b(LF|CB|F-|C-|I-|AG-|L-|CA|LCA|HLCA|CS)\b", upper)
+    )
+
+
+def search_keywords(*parts):
+    tokens = set()
+    for part in parts:
+        if not part:
+            continue
+        text = str(part).lower()
+        tokens.add(text)
+        for piece in re.split(r"[^a-z0-9]+", text):
+            if len(piece) >= 2:
+                tokens.add(piece)
+    return sorted(tokens)
+
+
+def build_product_search_index(data):
+    entries = []
+    seen = set()
+
+    def add(label, url, kind, family_name="", keywords=None):
+        label = (label or "").strip()
+        url = (url or "").strip()
+        if not label or not url:
+            return
+        key = (label.lower(), url.lower())
+        if key in seen:
+            return
+        seen.add(key)
+        entries.append(
+            {
+                "label": label,
+                "url": url,
+                "type": kind,
+                "family": family_name,
+                "keywords": search_keywords(label, family_name, *(keywords or [])),
+            }
+        )
+
+    for family in get_families(data):
+        add(
+            family["name"],
+            family["file"],
+            "family",
+            family["name"],
+            [family["slug"], family.get("portfolio_meta", ""), family.get("short", "")],
+        )
+
+    for product in data.get("products", []):
+        page = product.get("page_file")
+        if not page:
+            continue
+        family = get_family(data, product.get("family", ""))
+        family_name = family["name"] if family else ""
+        add(
+            product["name"],
+            page,
+            "product",
+            family_name,
+            [product["slug"], product.get("subtitle", "")],
+        )
+
+        for grade in product.get("grades") or []:
+            if isinstance(grade, dict) and grade.get("grades"):
+                for entry in grade["grades"]:
+                    if not isinstance(entry, dict):
+                        continue
+                    grade_code = entry.get("grade") or entry.get("name", "")
+                    grade_name = entry.get("name") or grade_code
+                    anchor = grade_anchor_id(grade_code, grade_name)
+                    if not anchor:
+                        continue
+                    add(
+                        grade_name,
+                        f"{page}#{anchor}",
+                        "grade",
+                        family_name,
+                        [grade_code, grade_name],
+                    )
+                continue
+            if not isinstance(grade, dict):
+                continue
+            grade_code = grade.get("grade") or ""
+            grade_name = grade.get("name") or grade_code or grade.get("title", "")
+            if not grade_name and not grade_code:
+                continue
+            anchor = grade_anchor_id(grade_code, grade_name)
+            if not anchor:
+                continue
+            label = grade_name or grade_code
+            add(label, f"{page}#{anchor}", "grade", family_name, [grade_code, grade_name, grade.get("description", ""), grade.get("subtitle", "")])
+
+        for block in (product.get("sections") or {}).get("typical_specs") or []:
+            title = block.get("title", "")
+            if not is_grade_spec_title(title):
+                continue
+            anchor = grade_anchor_id(name=title)
+            if not anchor:
+                continue
+            clean_title = re.sub(r"[™\u2122]", "", title).strip()
+            add(clean_title, f"{page}#{anchor}", "grade", family_name, [title, clean_title])
+
+    entries.sort(key=lambda item: (item["type"] != "family", item["family"], item["label"]))
+    return entries
+
+
+def write_product_search_index(data):
+    index = build_product_search_index(data)
+    SEARCH_INDEX_PATH.write_text(json.dumps(index, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"Wrote product search index ({len(index)} entries)")
+
+
 def render_spec_table(title, rows):
     body = "".join(
         f'<tr><th scope="row">{esc(row["parameter"])}</th><td>{esc(row["value"])}</td></tr>'
@@ -262,6 +457,7 @@ def render_spec_table(title, rows):
             <tbody>{body}</tbody>
           </table>
         </div>
+        <p class="pd-spec-table-note">{esc(SPEC_TABLE_NOTE)}</p>
       </div>"""
 
 
@@ -271,7 +467,7 @@ def typical_specs_section(product, data):
     if not blocks:
         blocks = [
             {
-                "title": "Typical Specifications",
+                "title": SPEC_SECTION_TITLE,
                 "specs": [
                     {
                         "parameter": "Detailed Specifications",
@@ -281,13 +477,16 @@ def typical_specs_section(product, data):
             }
         ]
     tables = "".join(render_spec_table(block.get("title"), block["specs"]) for block in blocks)
-    note = sections.get("custom_grade_note") or sections.get("typical_specs_note")
-    note_html = f'<p class="pd-spec-note reveal">{esc(note)}</p>' if note else ""
+    custom_note = sections.get("custom_grade_note")
+    custom_note_html = (
+        f'<p class="pd-spec-note pd-spec-custom-note reveal">{esc(custom_note)}</p>'
+        if custom_note else ""
+    )
     return f"""<section class="section pd-section pd-section--white pd-specs-section" id="pdSpecs">
       <div class="container">
-        {section_header("Technical Data", "Typical Specifications")}
+        {section_header("Technical Data", SPEC_SECTION_TITLE)}
         <div class="pd-spec-blocks reveal reveal-delay-1">{tables}</div>
-        {note_html}
+        {custom_note_html}
       </div>
     </section>"""
 
@@ -423,7 +622,7 @@ def grade_cards_cham(product):
                 size = entry.get("particle_size", "")
                 media = grade_media_html(resolve_grade_image(slug, entry), name)
                 html_parts.append(
-                    f'<article class="pd-grade-card tilt-card reveal">{media}'
+                    f'<article class="pd-grade-card tilt-card reveal"{grade_id_attr(name=name)}>{media}'
                     f'<span class="pd-grade-tag">{esc(name)}</span>'
                     f'<p class="pd-grade-size">{esc(size)}</p></article>'
                 )
@@ -434,7 +633,7 @@ def grade_cards_cham(product):
                 name = entry.get("name", "")
                 media = grade_media_html(resolve_grade_image(slug, entry), name)
                 html_parts.append(
-                    f'<article class="pd-grade-card tilt-card reveal">{media}'
+                    f'<article class="pd-grade-card tilt-card reveal"{grade_id_attr(name=name)}>{media}'
                     f'<span class="pd-grade-tag">{esc(name)}</span></article>'
                 )
     return f'<div class="pd-grade-grid">{"".join(html_parts)}</div>' if html_parts else ""
@@ -454,7 +653,7 @@ def grade_cards_baux(product):
         ben_html = "".join(f"<li>{esc(b)}</li>" for b in benefits)
         media = grade_media_html(resolve_grade_image(slug, g), name)
         blocks.append(
-            f"""<article class="pd-grade-card pd-grade-card--wide tilt-card reveal">
+            f"""<article class="pd-grade-card pd-grade-card--wide tilt-card reveal"{grade_id_attr(grade_code=name, name=name)}>
               {media}
               <span class="pd-grade-tag">{esc(name)}</span>
               {f'<p class="pd-grade-size">{esc(alumina)}</p>' if alumina else ''}
@@ -478,7 +677,7 @@ def grade_cards_carbo(product):
         suit_html = "".join(f"<li>{esc(s)}</li>" for s in suitable)
         media = grade_media_html(resolve_grade_image(slug, g), title or name)
         blocks.append(
-            f"""<article class="pd-grade-card tilt-card reveal">
+            f"""<article class="pd-grade-card tilt-card reveal"{grade_id_attr(grade_code=name, name=name)}>
               {media}
               <span class="pd-grade-tag">{esc(name)}</span>
               <h3>{esc(title)}</h3>
@@ -502,7 +701,7 @@ def grade_cards_drill(product):
         ov_html = "".join(f"<p>{esc(p)}</p>" for p in overview)
         media = grade_media_html(resolve_grade_image(slug, g), name)
         blocks.append(
-            f"""<article class="pd-grade-card pd-grade-card--wide tilt-card reveal">
+            f"""<article class="pd-grade-card pd-grade-card--wide tilt-card reveal"{grade_id_attr(grade_code=tag, name=name)}>
               {media}
               <span class="pd-grade-tag">{esc(tag)}</span>
               <h3>{esc(name)}</h3>
@@ -523,7 +722,7 @@ def grade_cards_grades_array(product):
                     tag = entry.get("name") or entry.get("grade") or "Grade"
                     media = grade_media_html(resolve_grade_image(slug, entry), tag)
                     blocks.append(
-                        f'<article class="pd-grade-card tilt-card reveal">{media}'
+                        f'<article class="pd-grade-card tilt-card reveal"{grade_id_attr(grade_code=tag, name=tag)}>{media}'
                         f'<span class="pd-grade-tag">{esc(tag)}</span></article>'
                     )
             continue
@@ -533,12 +732,152 @@ def grade_cards_grades_array(product):
         subtitle = g.get("subtitle") or g.get("alumina") or g.get("description") or ""
         media = grade_media_html(resolve_grade_image(slug, g), tag)
         subtitle_html = f'<p class="pd-grade-size">{esc(subtitle)}</p>' if subtitle else ""
+        grade_name = g.get("name") or tag
         blocks.append(
-            f'<article class="pd-grade-card tilt-card reveal">{media}'
+            f'<article class="pd-grade-card tilt-card reveal"{grade_id_attr(grade_code=tag, name=grade_name)}>{media}'
             f'<span class="pd-grade-tag">{esc(tag)}</span>'
             f"{subtitle_html}</article>"
         )
     return f'<div class="pd-grade-grid">{"".join(blocks)}</div>' if blocks else ""
+
+
+def short_grade_label(name):
+    if not name:
+        return "Grade"
+    cleaned = re.sub(r"[™\u2122]", "", str(name)).strip()
+    patterns = [
+        r"\bOCMA\+",
+        r"\b(?:F|I|C|L|AG)-\d+\b",
+        r"\bLF\d+\b",
+        r"\bCB\d+\b",
+        r"\bPHARMA-IP\b",
+        r"\bPAPER-325\b",
+        r"\bDEINK-100\b",
+        r"\bCOSMETIC-90\b",
+        r"\bDESICCANT-\d+\b",
+        r"\bSEAL-[PG]\b",
+        r"\bAPI\b",
+        r"\bOCMA\b",
+        r"\b(?:CA|LCA|HLCA|CS)\b",
+        r"\bPENCIL\b",
+        r"\bFEED\b",
+        r"\bBLEACH\b",
+        r"\bDETOX\b",
+        r"\bAGRO\b",
+        r"\bCERA\b",
+        r"\bWINE\b",
+        r"\bCUSTOM\b",
+    ]
+    for pattern in patterns:
+        if match := re.search(pattern, cleaned, re.I):
+            label = match.group(0).upper()
+            return label.replace("OCMA+", "OCMA+")
+    tokens = cleaned.split()
+    return tokens[-1] if tokens else cleaned
+
+
+def typical_spec_application_map(product):
+    mapping = {}
+    for block in product.get("sections", {}).get("typical_specs") or []:
+        title = block.get("title", "")
+        code = short_grade_label(title)
+        for spec in block.get("specs") or []:
+            if (spec.get("parameter") or "").strip().lower() == "application":
+                mapping[code.upper()] = spec["value"]
+    return mapping
+
+
+def grade_recommended_use(grade_obj, entry=None, product=None):
+    g = entry or grade_obj
+    if g.get("recommended_use"):
+        return g["recommended_use"]
+
+    if product:
+        app_map = typical_spec_application_map(product)
+        code = short_grade_label(g.get("grade") or g.get("name", ""))
+        if app_map.get(code.upper()):
+            return app_map[code.upper()]
+
+    apps = g.get("applications") or []
+    if apps:
+        return "; ".join(apps[:3])
+
+    if g.get("subtitle"):
+        return g["subtitle"]
+    if g.get("description"):
+        return g["description"]
+
+    suitable = g.get("suitable_for") or g.get("developed_for") or []
+    if suitable:
+        return "; ".join(suitable[:2]) if len(suitable) > 1 else suitable[0]
+    if g.get("particle_size"):
+        return g["particle_size"]
+    if g.get("alumina"):
+        return f"{g['alumina']} alumina content"
+    return "Contact our export team for grade guidance"
+
+
+def collect_grade_table_rows(product):
+    rows = []
+    app_map = typical_spec_application_map(product)
+
+    for g in product.get("grades") or []:
+        if isinstance(g, dict) and g.get("entries"):
+            for entry in g["entries"]:
+                name = entry.get("name", "")
+                code = short_grade_label(name)
+                use = app_map.get(code.upper()) or grade_recommended_use(g, entry, product)
+                rows.append({"grade": code, "use": use})
+            continue
+
+        if isinstance(g, dict) and g.get("grades"):
+            for entry in g["grades"]:
+                if not isinstance(entry, dict):
+                    continue
+                name = entry.get("name") or entry.get("grade") or "Grade"
+                code = short_grade_label(name)
+                use = app_map.get(code.upper()) or grade_recommended_use(g, entry, product)
+                rows.append({"grade": code, "use": use})
+            continue
+
+        if not isinstance(g, dict):
+            continue
+
+        code = short_grade_label(g.get("grade") or g.get("name") or "Grade")
+        use = app_map.get(code.upper()) or grade_recommended_use(g, product=product)
+        rows.append({"grade": code, "use": use})
+
+    if not rows:
+        for item in filter_items(product.get("sections", {}).get("available_grades", [])):
+            code = short_grade_label(item)
+            if code.lower() in {"particle", "sizes", "custom", "refractory", "chamotte"}:
+                continue
+            if re.match(r"^\d", code):
+                continue
+            rows.append({
+                "grade": code,
+                "use": app_map.get(code.upper()) or "Contact our export team for grade guidance",
+            })
+
+    return rows
+
+
+def render_grade_use_table(rows):
+    if not rows:
+        return ""
+    body = "".join(
+        f'<tr><td class="pd-grade-use-code">{esc(row["grade"])}</td>'
+        f'<td>{esc(row["use"])}</td></tr>'
+        for row in rows
+    )
+    return f"""<aside class="pd-grade-use-table-wrap reveal reveal-delay-2" aria-label="Grade recommended uses">
+        <table class="pd-grade-use-table">
+          <thead>
+            <tr><th scope="col">Grade</th><th scope="col">Recommended Use</th></tr>
+          </thead>
+          <tbody>{body}</tbody>
+        </table>
+      </aside>"""
 
 
 def grade_section(product):
@@ -557,10 +896,14 @@ def grade_section(product):
         grid = list_cards(product["sections"].get("available_grades", []), "pd-grade-grid")
     if not grid:
         return ""
+    use_table = render_grade_use_table(collect_grade_table_rows(product))
     return f"""<section class="section pd-section pd-section--mesh" id="pdGrades">
       <div class="container">
         {section_header("Grades", "Available Grades")}
-        <div class="reveal reveal-delay-1">{grid}</div>
+        <div class="pd-grades-layout reveal reveal-delay-1">
+          <div class="pd-grades-cards">{grid}</div>
+          {use_table}
+        </div>
       </div>
     </section>"""
 
@@ -624,14 +967,8 @@ def forms_section(items, lead=None):
     </section>"""
 
 
-def packaging_section(items):
-    items = filter_items(items)
-    if not items:
-        return ""
-    lead = ""
-    if items and items[0].rstrip(":").strip().lower() == "available in":
-        lead = items[0] if items[0].endswith(":") else f"{items[0]}:"
-        items = items[1:]
+def packaging_section(items=None):
+    items = STANDARD_PACKAGING_OPTIONS
     cards = ""
     for i, item in enumerate(items, 1):
         delay = f" reveal-delay-{min(i % 4, 3)}" if i % 4 else ""
@@ -647,7 +984,6 @@ def packaging_section(items):
             </div>
             <span class="pd-pack-label">{esc(item)}</span>
           </article>"""
-    lead_html = f'<p class="pd-pack-lead reveal">{esc(lead)}</p>' if lead else ""
     return f"""<section class="section pd-section pd-pack-section" id="pdPackaging">
       <div class="pd-pack-deco" aria-hidden="true">
         <span class="pd-pack-orb pd-pack-orb--1"></span>
@@ -655,7 +991,6 @@ def packaging_section(items):
       </div>
       <div class="container">
         {section_header("Export Supply", "Packing Options")}
-        {lead_html}
         <div class="pd-pack-grid reveal reveal-delay-1">{cards}</div>
       </div>
     </section>"""
@@ -680,8 +1015,8 @@ def hero(breadcrumb_tail, label, h1, lead, image, family_file=None, badge_text="
           <h1>{esc(h1)}</h1>
           <p class="lead">{esc(lead)}</p>
           <div class="product-hero-actions">
-            <a href="request-quote.html" class="btn btn-gold">Request a Quote <span class="arrow">&rarr;</span></a>
-            <a href="quality-assurance.html" class="btn btn-outline">Quality &amp; Documentation</a>
+            <a href="request-quote.html" class="btn btn-gold">{BTN_ICON_QUOTE}<span>Request a Quote</span> <span class="arrow">&rarr;</span></a>
+            <a href="quality-assurance.html" class="btn btn-outline">{BTN_ICON_DOC}<span>Quality &amp; Documentation</span></a>
           </div>
         </div>
         <div class="product-hero-visual reveal reveal-delay-1">
@@ -749,7 +1084,7 @@ def cta_block(name):
     return f"""<section class="cta-banner about-cta">
       <div class="cta-bg"><img src="assets/images/cta/1.png" alt="Export logistics"></div>
       <div class="container cta-content reveal">
-        <h2>Looking for a Reliable Industrial Mineral Supply Partner?</h2>
+        <h2>Looking for a reliable mineral export partner ?</h2>
         <p class="cta-tagline">Share your specifications, application requirements and destination country.<br>Our team will recommend suitable grades, packaging options and export solutions for {esc(name)}.</p>
         <a href="request-quote.html" class="btn btn-gold">Request a Quote <span class="arrow">&rarr;</span></a>
       </div>
@@ -914,9 +1249,7 @@ def generate_portfolio_page(data):
     cards = ""
     for i, family in enumerate(families, 1):
         delay = f" reveal-delay-{min(i % 4, 3)}" if i % 4 else ""
-        btn = "View Grades" if family.get("single") and family["slug"] in {"korvanto-cham", "korvanto-baux", "korvanto-carbo"} else (
-            "View Product" if family.get("single") else "Explore Products"
-        )
+        btn = "Explore grades"
         cards += f"""<article class="products-family-card tilt-card reveal{delay}">
             <a href="{esc(family['file'])}" class="media"><img src="{esc(family['image'])}" alt="{esc(family['name'])}"></a>
             <div class="body">
@@ -981,6 +1314,18 @@ def generate_portfolio_page(data):
       </div>
     </section>
 
+    <section class="products-search-bar" aria-label="Product search">
+      <div class="container">
+        <div class="products-search" id="productSearch">
+          <label class="products-search-label" for="productSearchInput">Search products &amp; grades</label>
+          <div class="products-search-field">
+            <input type="search" id="productSearchInput" class="products-search-input" placeholder="Search by product, family, or grade code (e.g. LF42, Hydrous Kaolin, F-100)..." autocomplete="off" aria-controls="productSearchResults" aria-expanded="false" aria-autocomplete="list">
+            <div class="product-search-results" id="productSearchResults" role="listbox" hidden></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section section--mesh">
       <div class="container">
         <header class="inner-section-head inner-section-head--center reveal">
@@ -995,7 +1340,7 @@ def generate_portfolio_page(data):
     <section class="cta-banner">
       <div class="cta-bg"><img src="assets/images/cta/1.png" alt="Export logistics"></div>
       <div class="container cta-content reveal">
-        <h2>Looking for a Reliable Industrial Mineral Supply Partner?</h2>
+        <h2>Looking for a reliable mineral export partner ?</h2>
         <p class="cta-tagline">Share your specifications, application requirements and destination country.<br>Our team will recommend suitable grades, packaging options and export solutions.</p>
         <a href="request-quote.html" class="btn btn-gold">Request a Quote <span class="arrow">&rarr;</span></a>
       </div>
@@ -1003,6 +1348,7 @@ def generate_portfolio_page(data):
   </main>
   <div id="footer-placeholder"></div>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/product-search.js"></script>
 </body>
 </html>"""
     PRODUCTS_PAGE_PATH.write_text(content, encoding="utf-8")
@@ -1107,6 +1453,7 @@ def main():
         generate_family_page(family, data)
 
     generate_portfolio_page(data)
+    write_product_search_index(data)
     patch_file_section(HEADER_PATH, MEGA_MENU_START, MEGA_MENU_END, render_mega_menu(data))
     print("Updated components/header.html mega menu")
     patch_file_section(QUOTE_PATH, QUOTE_OPTIONS_START, QUOTE_OPTIONS_END, generate_quote_options(data))

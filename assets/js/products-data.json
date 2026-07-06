@@ -489,8 +489,8 @@
     },
     {
       "slug": "korvanto-bento-iop",
-      "name": "Korvanto Bento Iron Ore Pelletization",
-      "subtitle": "Bentonite for Iron Ore Pelletization (IOP)",
+      "name": "Korvanto Bento Iron Ore Palletizing",
+      "subtitle": "Premium Bentonite for Iron Ore Palletizing",
       "sections": {
         "overview": [
           "KORVANTO BENTO IOP is a premium-grade bentonite specially developed for iron ore pelletization applications. Produced from carefully selected bentonite deposits and processed to deliver consistent performance, it acts as an effective binder in the conversion of iron ore fines into strong, uniform pellets for blast furnace and direct reduction iron (DRI) processes.",
@@ -569,6 +569,7 @@
           "grade": "I-100",
           "name": "KORVANTO BENTO IOP I-100",
           "subtitle": "Standard Pelletizing Grade",
+          "recommended_use": "Standard pellet plants",
           "image": "assets/images/products/iron ore palltetization/grade 1.png",
           "specifications": [
             {
@@ -597,6 +598,7 @@
           "grade": "I-200",
           "name": "KORVANTO BENTO IOP I-200",
           "subtitle": "Enhanced Pelletizing Grade",
+          "recommended_use": "Higher green strength requirements",
           "image": "assets/images/products/iron ore palltetization/grade 2.png",
           "specifications": [
             {
@@ -625,6 +627,7 @@
           "grade": "I-300",
           "name": "KORVANTO BENTO IOP I-300",
           "subtitle": "Premium Pelletizing Grade",
+          "recommended_use": "Premium pellet quality and lower binder consumption",
           "image": "assets/images/products/iron ore palltetization/grade 3.png",
           "specifications": [
             {
@@ -837,8 +840,8 @@
     },
     {
       "slug": "korvanto-bento-feed",
-      "name": "Korvanto Bento Cattle Feed",
-      "subtitle": "High-Purity Bentonite for Animal Feed & Mycotoxin Management",
+      "name": "Korvanto Bento Animal Feed",
+      "subtitle": "High Purity Animal Feed, Pellet Binding & Mycotoxin Control",
       "sections": {
         "overview": [
           "KORVANTO BENTO FEED is a high-purity bentonite specially processed for use in livestock, poultry, aquaculture, and animal nutrition applications. With excellent adsorption capacity, high cation exchange properties, and natural binding characteristics, it functions as an effective mycotoxin binder, pellet binder, and anti-caking agent in animal feed formulations.",
@@ -928,20 +931,36 @@
           "image": "assets/images/products/bento cattle feed/grade.png",
           "specifications": [
             {
-              "parameter": "pH",
-              "value": "8 – 10"
+              "parameter": "Free Swelling Volume",
+              "value": "18–22 ml"
             },
             {
               "parameter": "Moisture",
-              "value": "12 – 14%"
+              "value": "10–12%"
             },
             {
-              "parameter": "Loss on Ignition (LOI)",
-              "value": "10 – 12%"
+              "parameter": "pH (2% Slurry)",
+              "value": "8.5–9.5"
             },
             {
               "parameter": "Montmorillonite Content",
-              "value": "Above 70%"
+              "value": "90–95%"
+            },
+            {
+              "parameter": "Methylene Blue Value",
+              "value": "350–390 mg/g"
+            },
+            {
+              "parameter": "Bulk Density",
+              "value": "0.95–1.10 g/cc"
+            },
+            {
+              "parameter": "Particle Size",
+              "value": "90% through 200 Mesh"
+            },
+            {
+              "parameter": "Loss on Ignition",
+              "value": "10–12%"
             }
           ],
           "spec_note": "Representative values for reference only."
@@ -2463,7 +2482,7 @@
             ]
           },
           {
-            "title": "Typical Specifications",
+            "title": "Representative Technical Specifications",
             "specs": [
               {
                 "parameter": "Brightness (%)",
@@ -2607,7 +2626,7 @@
             ]
           },
           {
-            "title": "Typical Specifications",
+            "title": "Representative Technical Specifications",
             "specs": [
               {
                 "parameter": "Brightness (%)",
@@ -2741,7 +2760,7 @@
             ]
           },
           {
-            "title": "Typical Specifications",
+            "title": "Representative Technical Specifications",
             "specs": [
               {
                 "parameter": "Brightness (%)",
@@ -2908,7 +2927,7 @@
             ]
           },
           {
-            "title": "Typical Specifications",
+            "title": "Representative Technical Specifications",
             "specs": [
               {
                 "parameter": "Brightness (%)",
@@ -3043,7 +3062,7 @@
             ]
           },
           {
-            "title": "Typical Specifications",
+            "title": "Representative Technical Specifications",
             "specs": [
               {
                 "parameter": "Brightness (%)",
@@ -3209,7 +3228,7 @@
             ]
           },
           {
-            "title": "Typical Specifications",
+            "title": "Representative Technical Specifications",
             "specs": [
               {
                 "parameter": "Brightness (%)",
@@ -3377,7 +3396,7 @@
             ]
           },
           {
-            "title": "Typical Specifications",
+            "title": "Representative Technical Specifications",
             "specs": [
               {
                 "parameter": "Brightness (%)",
@@ -4021,24 +4040,10 @@
           "Good Thermal Shock Resistance",
           "High Temperature Stability",
           "Cost-Effective Performance",
-          "KORVANTO BAUX CB82",
-          "Al₂O₃ ~82%",
-          "Suitable for:",
-          "Premium Refractory Bricks",
-          "Kiln Furniture",
-          "High-Strength Castables",
           "Enhanced Alumina Content",
           "Lower Impurity Levels",
           "Superior Refractory Performance",
-          "KORVANTO BAUX CB86",
-          "Al₂O₃ ~86%",
-          "Suitable for:",
-          "Steel Plants",
-          "Cement Kilns",
-          "Glass Furnaces",
-          "Critical High-Temperature Applications",
           "Maximum Refractoriness",
-          "Excellent Thermal Stability",
           "Ultra-High Alumina Performance"
         ],
         "applications": [
@@ -4541,22 +4546,15 @@
           "KORVANTO BENTO DRILL is a range of high-quality drilling-grade bentonite products developed for oil & gas, water well, HDD, geothermal, piling, and geotechnical drilling applications. Available in API and OCMA grades, these products provide excellent viscosity, gel strength, borehole stability, fluid loss control, and cuttings suspension for efficient drilling operations worldwide."
         ],
         "key_benefits": [
-          "API 13A compliant quality",
-          "High viscosity and yield",
-          "Excellent gel strength and suspension properties",
-          "Effective fluid loss control",
-          "Superior borehole stabilization",
-          "Efficient cuttings transportation",
-          "Enhanced drill bit cooling and lubrication",
-          "Consistent performance in challenging drilling conditions",
-          "OCMA-compliant quality",
-          "Good viscosity and gel development",
-          "Effective cuttings suspension",
-          "Reliable borehole wall stabilization",
-          "Reduced fluid loss and seepage",
-          "Improved drilling efficiency",
-          "Good lubrication and cooling properties",
-          "Consistent quality and performance"
+          "API / OCMA compliant",
+          "High Yield",
+          "Excellent Gel Strength",
+          "Low Fluid Loss",
+          "Borehole Stabilization",
+          "Efficient Cuttings Suspension",
+          "Easy Mixing",
+          "Thermal Stability",
+          "Consistent Batch Quality"
         ],
         "applications": [
           "Oil & Gas Well Drilling",
@@ -4568,8 +4566,6 @@
           "Foundation and Piling Projects",
           "Drilling Mud Formulations",
           "Geotechnical Drilling",
-          "Foundation & Piling Works",
-          "Mineral Exploration",
           "Civil Engineering Projects",
           "Oilfield Drilling Mud Systems",
           "Borehole Stabilization Applications"
