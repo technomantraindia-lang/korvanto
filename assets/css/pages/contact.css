@@ -376,6 +376,14 @@
   box-shadow: 0 14px 40px rgba(9, 35, 61, 0.07);
 }
 
+.contact-form-note {
+  margin: 0;
+  font-size: 0.9rem;
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--text-soft);
+}
+
 .contact-page .p-form-shell button[type="submit"] {
   margin-top: auto;
 }

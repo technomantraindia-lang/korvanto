@@ -1,12 +1,15 @@
-﻿/* Korvanto — Homepage sections */
+/* Korvanto — Homepage sections */
 /* Hero */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
   display: flex;
-  align-items: flex-end;
-  padding-bottom: clamp(80px, 12vh, 140px);
-  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: calc(var(--site-header-clearance) + env(safe-area-inset-top, 0px));
+  padding-bottom: clamp(4.5rem, 10vh, 7rem);
+  overflow-x: clip;
   background: var(--navy);
 }
 
@@ -42,6 +45,9 @@
   z-index: 2;
   width: 100%;
   max-width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
   padding-inline: var(--site-gutter);
   box-sizing: border-box;
   overflow-x: clip;
@@ -57,10 +63,11 @@
 .hero-content {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 3rem;
-  align-items: end;
+  gap: clamp(1.5rem, 3vw, 3rem);
+  align-items: center;
   width: 100%;
   min-width: 0;
+  padding-block: clamp(0.75rem, 2vh, 1.5rem);
 }
 
 .hero-text {
@@ -72,17 +79,19 @@
 .hero-text .section-label { margin-bottom: 1.25rem; }
 
 .hero h1 {
-  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-size: clamp(1.85rem, 4.2vw, 3.25rem);
+  line-height: 1.15;
   color: var(--white);
   margin-bottom: 1.25rem;
-  max-width: 16ch;
+  max-width: 22ch;
 }
 
 .hero-desc {
   color: rgba(255, 255, 255, 0.85);
-  font-size: 1.05rem;
+  font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+  line-height: 1.6;
   margin-bottom: 1.25rem;
-  max-width: 48ch;
+  max-width: 52ch;
   overflow-wrap: break-word;
 }
 

@@ -8,6 +8,10 @@
         "image": "assets/images/families/bentonite main.png",
         "short": "Premium bentonite grades for drilling, foundry, civil, feed, fertilizer, litter, paper, pharma, cosmetic, desiccant, seal, food, pencil and specialty applications.",
         "portfolio_meta": "Drilling · Foundry · Civil · Feed & More",
+        "overview": [
+          "Korvanto supplies a comprehensive range of sodium and calcium bentonite products for drilling, foundry, civil engineering, iron ore pelletization, agriculture, paper, pharmaceuticals, cosmetics, environmental applications and specialty industries.",
+          "Available in customized grades with export-ready packaging, consistent quality and technical documentation."
+        ],
         "child_slugs": [
           "korvanto-bento-drill",
           "korvanto-bento-foundry",
@@ -24,6 +28,62 @@
           "korvanto-bento-food",
           "korvanto-bento-pencil",
           "korvanto-bento-specialty"
+        ],
+        "product_guide_title": "Bentonite Grades at a Glance",
+        "product_guide_columns": [
+          {"header": "Grade", "key": "grade", "scope": "row"},
+          {"header": "Industry", "key": "industry"},
+          {"header": "Key Property", "key": "key_property"}
+        ],
+        "product_guide": [
+          {
+            "grade": "Drilling",
+            "industry": "Oil & Gas",
+            "key_property": "High Yield",
+            "slug": "korvanto-bento-drill"
+          },
+          {
+            "grade": "Foundry",
+            "industry": "Casting",
+            "key_property": "Green Strength",
+            "slug": "korvanto-bento-foundry"
+          },
+          {
+            "grade": "IOP",
+            "industry": "Pelletizing",
+            "key_property": "Pellet Bonding",
+            "slug": "korvanto-bento-iop"
+          },
+          {
+            "grade": "Civil",
+            "industry": "Piling",
+            "key_property": "High Swelling",
+            "slug": "korvanto-bento-civil"
+          },
+          {
+            "grade": "Feed",
+            "industry": "Animal Feed",
+            "key_property": "Mycotoxin Binder",
+            "slug": "korvanto-bento-feed"
+          },
+          {
+            "grade": "Pharma",
+            "industry": "Pharmaceutical",
+            "key_property": "High Purity",
+            "slug": "korvanto-bento-pharma"
+          },
+          {
+            "grade": "Cosmetic",
+            "industry": "Cosmetics",
+            "key_property": "Fine White Powder",
+            "slug": "korvanto-bento-cosmetic"
+          },
+          {
+            "grade": "Paper",
+            "industry": "Paper",
+            "key_property": "Retention Aid",
+            "slug": "korvanto-bento-paper-deink"
+          }
         ]
       },
       {
@@ -33,6 +93,16 @@
         "image": "assets/images/families/main kaolin china clay.png",
         "short": "Kaolin grades including crude, levigated noodles & lumps, hydrous, spray dried, calcined and metakaolin for ceramics, paints, paper, plastics and construction.",
         "portfolio_meta": "Crude · Levigated · Hydrous · Spray · Calcined",
+        "overview_panel": {
+          "section_label": "Overview",
+          "section_title": "About Korvanto Kaolin (China Clay)"
+        },
+        "overview": [
+          "Korvanto Kaolin (China Clay) includes a complete range of natural, processed, and calcined kaolin products manufactured for ceramic, paint, paper, rubber, plastic, construction, refractory, and specialty industrial applications.",
+          "Our portfolio covers crude kaolin, water-washed levigated kaolin, hydrous kaolin, spray dried kaolin, calcined kaolin, and highly reactive metakaolin, enabling customers to source multiple grades from a single export partner.",
+          "Available in customized particle sizes, brightness levels, and packaging options, Korvanto Kaolin is supplied with consistent quality, technical documentation, and worldwide export support."
+        ],
+        "product_guide_title": "Kaolin Grades at a Glance",
         "child_slugs": [
           "korvanto-kao-crude",
           "korvanto-kao-levigated-noodles",
@@ -41,6 +111,57 @@
           "korvanto-kao-spray",
           "korvanto-kao-calcined",
           "korvanto-kao-metakaolin"
+        ],
+        "product_guide": [
+          {
+            "product": "Crude Kaolin",
+            "form": "Lumps",
+            "processing": "Raw",
+            "applications": "Ceramics, Refractories",
+            "slug": "korvanto-kao-crude"
+          },
+          {
+            "product": "Levigated Kaolin Lumps",
+            "form": "Lumps",
+            "processing": "Water Washed",
+            "applications": "Ceramics",
+            "slug": "korvanto-kao-levigated-lumps"
+          },
+          {
+            "product": "Levigated Kaolin Noodles",
+            "form": "Noodles",
+            "processing": "Water Washed",
+            "applications": "Ceramic Bodies",
+            "slug": "korvanto-kao-levigated-noodles"
+          },
+          {
+            "product": "Hydrous Kaolin",
+            "form": "Powder",
+            "processing": "Water Washed",
+            "applications": "Paint, Paper, Plastic, Rubber",
+            "slug": "korvanto-kao-hydrous"
+          },
+          {
+            "product": "Spray Dried Kaolin",
+            "form": "Granular Powder",
+            "processing": "Spray Dried",
+            "applications": "Tiles & Sanitaryware",
+            "slug": "korvanto-kao-spray"
+          },
+          {
+            "product": "Calcined Kaolin",
+            "form": "Powder",
+            "processing": "Calcined",
+            "applications": "Paints, Plastics, Rubber, Wire & Cable",
+            "slug": "korvanto-kao-calcined"
+          },
+          {
+            "product": "Metakaolin",
+            "form": "Fine Powder",
+            "processing": "Calcined",
+            "applications": "Construction, Cement",
+            "slug": "korvanto-kao-metakaolin"
+          }
         ]
       },
       {
@@ -207,88 +328,77 @@
           "Sample Support",
           "Third-Party Testing Available Upon Request"
         ],
-        "custom_grade_note": "Custom foundry grades can be supplied according to casting type, sand system requirements, and foundry operating conditions."
+        "custom_grade_note": "Custom foundry grades can be supplied according to casting type, sand system requirements, and foundry operating conditions. Economy, Standard and Premium grades available.",
+        "typical_specs": [
+          {
+            "title": "Foundry Grade Bentonite Powder",
+            "type": "comparison",
+            "columns": [
+              {"header": "Particulars", "key": "parameter", "scope": "row"},
+              {"header": "F30", "key": "f30"},
+              {"header": "F32", "key": "f32"},
+              {"header": "F35", "key": "f35"}
+            ],
+            "rows": [
+              {"parameter": "Moisture", "f30": "10–12%", "f32": "10–12%", "f35": "10–12%"},
+              {"parameter": "pH", "f30": "9 to 9.5", "f32": "9.5 to 10", "f35": "9.5 to 10"},
+              {"parameter": "Swelling Capacity (At 2 gms/100ml water)", "f30": "30 to 32", "f32": "32 to 35", "f35": "35 to 40"},
+              {"parameter": "Gelling Time in minutes (10% Bentonite Slurry)", "f30": "Instant", "f32": "Instant", "f35": "Instant"},
+              {"parameter": "Gel Formation Index (2.4 gms Al₂O₃, 0.2 gms MgO and 1.4 gms Bentonite)", "f30": "65 to 75", "f32": "75 to 80", "f35": "80 to 85"},
+              {"parameter": "Liquid Limit", "f30": "550 to 650", "f32": "650 to 800", "f35": "800 to 900"},
+              {"parameter": "Green Comp Strength in PSI (Fresh sand 40/60 AFS; Bentonite/Water 5/2)", "f30": "9.5 to 10.5", "f32": "10.5 to 11", "f35": "11.0 to 12.0"},
+              {"parameter": "Methylene Blue Value (Mg of MB/100 gm of Bentonite)", "f30": "370 to 385", "f32": "390 to 405", "f35": "405 to 415"},
+              {"parameter": "Sieve Analysis — % Passing through 100 Mesh", "f30": "98", "f32": "98", "f35": "98"},
+              {"parameter": "Sieve Analysis — % Passing through 200 Mesh", "f30": "86", "f32": "86", "f35": "86"}
+            ]
+          },
+          {
+            "title": "Chemical Properties",
+            "type": "matrix",
+            "header_row": {
+              "label": "Elements",
+              "cells": ["SiO₂", "Al₂O₃", "Fe₂O₃", "CaO", "MgO", "Na₂O", "K₂O", "TiO₂", "L.O.I"]
+            },
+            "value_row": {
+              "label": "Result (%)",
+              "cells": ["45–55", "18–25", "2–4", "1–2", "2–4", "2–4", "0–1", "1–3", "8–12"]
+            }
+          },
+          {
+            "title": "Physical Properties",
+            "type": "matrix",
+            "header_row": {
+              "label": "Properties",
+              "cells": ["Bulk Density", "Specific Gravity", "Refractive Index", "Fusion Point", "BEC meq/100gm"]
+            },
+            "value_row": {
+              "label": "Result",
+              "cells": ["0.9 – 1.1 gm/cc", "2.4 – 2.8", "1.547 – 1.557", "1300° – 1400° C", "80 – 110"]
+            }
+          }
+        ]
       },
       "grades": [
         {
-          "grade": "F-100",
-          "name": "KORVANTO BENTO FOUNDRY F-100",
-          "subtitle": "Standard Foundry Grade",
+          "grade": "F30",
+          "name": "KORVANTO BENTO FOUNDRY F30",
+          "subtitle": "Economy Grade (30 Swelling)",
           "image": "assets/images/products/foundry/grade.png",
-          "specifications": [
-            {
-              "parameter": "Form",
-              "value": "Finely Divided Powder"
-            },
-            {
-              "parameter": "Free Swelling",
-              "value": "28–30 ml"
-            },
-            {
-              "parameter": "pH",
-              "value": "9.0–10.0"
-            },
-            {
-              "parameter": "Moisture",
-              "value": "12% Max"
-            },
-            {
-              "parameter": "Gelling Time",
-              "value": "Instant"
-            },
-            {
-              "parameter": "Gelling Index",
-              "value": "75–85%"
-            },
-            {
-              "parameter": "Methylene Blue Value",
-              "value": "390 ± 10"
-            },
-            {
-              "parameter": "Fineness",
-              "value": "85% Through 200 B.S. Sieve"
-            }
-          ]
+          "recommended_use": "Economy foundry bentonite for green sand casting applications"
         },
         {
-          "grade": "F-200",
-          "name": "KORVANTO BENTO FOUNDRY F-200",
-          "subtitle": "Premium Foundry Grade",
+          "grade": "F32",
+          "name": "KORVANTO BENTO FOUNDRY F32",
+          "subtitle": "Standard Grade (32 Swelling)",
           "image": "assets/images/products/foundry/grade 2.png",
-          "specifications": [
-            {
-              "parameter": "Form",
-              "value": "Finely Divided Powder"
-            },
-            {
-              "parameter": "Free Swelling",
-              "value": "32 ml"
-            },
-            {
-              "parameter": "pH",
-              "value": "9.0–10.0"
-            },
-            {
-              "parameter": "Moisture",
-              "value": "12% Max"
-            },
-            {
-              "parameter": "Gelling Time",
-              "value": "Instant"
-            },
-            {
-              "parameter": "Gelling Index",
-              "value": "85–90%"
-            },
-            {
-              "parameter": "Methylene Blue Value",
-              "value": "390 ± 10"
-            },
-            {
-              "parameter": "Fineness",
-              "value": "85% Through 200 B.S. Sieve"
-            }
-          ]
+          "recommended_use": "Standard performance foundry bentonite for general green sand molding"
+        },
+        {
+          "grade": "F35",
+          "name": "KORVANTO BENTO FOUNDRY F35",
+          "subtitle": "Premium Grade (35 Swelling)",
+          "image": "assets/images/products/foundry/bento foundry.png",
+          "recommended_use": "Premium foundry bentonite with high swelling, strength, and mold performance"
         }
       ],
       "family": "korvanto-bento",
@@ -1313,7 +1423,22 @@
           "Quality Verification Support",
           "Independent Third-Party Testing Available Upon Request"
         ],
-        "custom_grade_note": "Custom cat litter bentonite grades can be supplied based on granule size distribution, absorption capacity, clumping strength, color requirements, and private label manufacturing specifications."
+        "custom_grade_note": "Custom cat litter bentonite grades can be supplied based on granule size distribution, absorption capacity, clumping strength, color requirements, and private label manufacturing specifications.",
+        "custom_manufacturing": {
+          "section_label": "Custom Grade",
+          "title": "Custom Manufacturing Options",
+          "lead": "KORVANTO supplies cat litter bentonite according to customer requirements, including:",
+          "items": [
+            "Granule Size Distribution",
+            "Water Absorption Capacity",
+            "Clumping Strength",
+            "Color Selection",
+            "Fragrance Options",
+            "Dust Control",
+            "Private Label Manufacturing",
+            "Custom Packaging"
+          ]
+        }
       },
       "grades": [
         {
@@ -1565,24 +1690,16 @@
         ],
         "key_benefits": [],
         "applications": [
-          "Pharmaceutical Applications",
-          "Tablets",
-          "Capsules",
+          "Pharmaceutical Manufacturing",
+          "Tablet Formulations",
+          "Capsule Formulations",
           "Oral Suspensions",
           "Pharmaceutical Powders",
-          "Granules",
           "Medicinal Preparations",
-          "Healthcare & Nutraceutical Applications",
           "Herbal Formulations",
           "Nutraceutical Products",
           "Dietary Supplement Formulations",
-          "Veterinary Products",
-          "Personal Care & Cosmetic Applications",
-          "Creams",
-          "Ointments",
-          "Lotions",
-          "Skincare Products",
-          "Personal Care Formulations"
+          "Veterinary Products"
         ],
         "product_features": [],
         "product_advantages": [
@@ -1620,7 +1737,19 @@
           "Safety Data Sheet (SDS/MSDS)",
           "Third-Party Testing Reports"
         ],
-        "custom_grade_note": "Custom pharmaceutical-grade bentonite can be supplied according to customer specifications, purity requirements, particle size distribution, swelling characteristics, and regulatory needs."
+        "custom_grade_note": "Custom pharmaceutical-grade bentonite can be supplied according to customer specifications, purity requirements, particle size distribution, swelling characteristics, and regulatory needs.",
+        "quality_assurance": {
+          "section_label": "Compliance",
+          "title": "Quality Assurance",
+          "items": [
+            "Representative Technical Data Available",
+            "Batch-wise COA Available",
+            "Third-Party Inspection Available",
+            "Export Documentation Support",
+            "Customized Packaging",
+            "Samples Available on Request"
+          ]
+        }
       },
       "grades": [
         {
@@ -1830,31 +1959,22 @@
         ],
         "key_benefits": [],
         "applications": [
-          "Packaging & Moisture Control",
-          "Desiccant Sachets and Pouches",
+          "Desiccant Sachets & Pouches",
           "Container Desiccants",
-          "Packaging Moisture Control Systems",
-          "Export Packaging Solutions",
-          "Industrial Applications",
-          "Machinery and Equipment Packaging",
-          "Metal Components and Parts",
-          "Automotive Components",
-          "Electrical and Electronic Equipment",
-          "Pharmaceutical & Healthcare",
-          "Pharmaceutical Packaging",
-          "Medical Devices",
-          "Healthcare Products",
-          "Diagnostic Equipment Packaging",
-          "Food & Consumer Goods",
+          "Export Packaging",
+          "Industrial Packaging",
           "Food Packaging",
-          "Dry Food Products",
-          "Tea, Spices, and Agricultural Products",
+          "Pharmaceutical Packaging",
+          "Medical Device Packaging",
+          "Electronic Equipment Packaging",
+          "Automotive Components",
+          "Metal Parts Protection",
+          "Textile & Garment Packaging",
+          "Leather Goods",
           "Consumer Goods Packaging",
-          "Textile & Export Industries",
-          "Garments and Textiles",
-          "Leather Products",
-          "Footwear Packaging",
-          "Export Cargo Protection"
+          "Tea, Coffee & Spice Packaging",
+          "Machinery & Equipment Packaging",
+          "Cargo Moisture Protection"
         ],
         "product_features": [],
         "product_advantages": [
@@ -2172,24 +2292,31 @@
           "Widely used in wine, fruit juice, beverage, edible oil, and food processing industries, KORVANTO BENTO FOOD improves product clarity, stability, appearance, and shelf life while preserving the desired sensory characteristics of the final product. Its excellent swelling and adsorption properties make it an efficient and reliable clarifying agent for modern food and beverage processing operations.",
           "Carefully processed under strict quality controls, the product is designed to deliver consistent performance and reliable clarification efficiency across a variety of food-grade applications."
         ],
-        "key_benefits": [],
+        "key_benefits": [
+          "Improves Clarity and Visual Appearance of Beverages",
+          "Effectively Removes Haze-Forming Proteins and Suspended Particles",
+          "Enhances Product Stability During Storage and Transportation",
+          "Supports Consistent Beverage Quality",
+          "Improves Filtration and Processing Efficiency",
+          "Helps Reduce Sedimentation and Turbidity Issues",
+          "Natural Mineral-Based Clarification Solution",
+          "Suitable for Vegan-Friendly Processing Systems",
+          "Easy Dispersion and Application in Processing Operations",
+          "Reliable and Cost-Effective Purification Performance"
+        ],
         "applications": [
-          "Beverage Processing",
-          "Wine Clarification and Stabilization",
+          "Wine Clarification",
+          "Beer Clarification",
           "Fruit Juice Clarification",
           "Beverage Purification",
-          "Fermented Beverage Processing",
-          "Specialty Drink Manufacturing",
-          "Food Processing",
           "Edible Oil Purification",
-          "Food Ingredient Processing",
+          "Vinegar Processing",
           "Liquid Food Clarification",
-          "Food Additive Processing",
-          "Industrial Food Applications",
-          "Protein Removal Systems",
-          "Haze Reduction Applications",
-          "Filtration and Purification Processes",
-          "Food and Beverage Quality Enhancement Programs"
+          "Protein Removal",
+          "Haze Reduction",
+          "Food Ingredient Processing",
+          "Food & Beverage Manufacturing",
+          "Filtration & Purification"
         ],
         "product_features": [],
         "product_advantages": [
@@ -2217,34 +2344,105 @@
           "Suitable for Food and Beverage Processing Applications"
         ],
         "available_grades": [],
-        "packaging": [],
+        "packaging": [
+          "25 kg Bags",
+          "50 kg Bags",
+          "Jumbo Bags (FIBC)",
+          "Customized Export Packaging"
+        ],
         "short_website_description": [
           "KORVANTO BENTO FOOD is a premium food-grade bentonite used for beverage clarification and purification applications. Its superior adsorption and clarification properties help remove proteins, suspended particles, and impurities, improving product clarity, stability, and processing efficiency in wine, juice, and food manufacturing industries."
         ],
+        "documentation": [
+          "Technical Data Sheet (TDS)",
+          "Certificate of Analysis (COA)",
+          "Sample Support",
+          "Third-Party Testing Available Upon Request",
+          "Safety Data Sheet (SDS/MSDS)"
+        ],
+        "custom_grade_note": "Custom food-grade bentonite can be supplied according to particle size requirements, purity levels, clarification performance, and application-specific processing needs.",
+        "specs_section_label": "Product Information",
+        "specs_section_title": "Supply Information",
+        "specs_value_column": "Details",
+        "specs_table_note": "",
         "typical_specs": [
           {
-            "parameter": "Grade",
-            "value": "Food-grade bentonite"
-          },
-          {
-            "parameter": "Primary Use",
-            "value": "Beverage clarification & filtration"
-          },
-          {
-            "parameter": "Mineral",
-            "value": "Montmorillonite-rich clay"
-          },
-          {
-            "parameter": "Form",
-            "value": "Powder"
-          },
-          {
-            "parameter": "Documentation",
-            "value": "TDS & COA available on request"
+            "title": "",
+            "specs": [
+              {
+                "parameter": "Supply Type",
+                "value": "Custom & Application-Specific Grades"
+              },
+              {
+                "parameter": "Development",
+                "value": "Produced to Customer Requirements"
+              },
+              {
+                "parameter": "Documentation",
+                "value": "TDS, COA & Technical Support Available"
+              },
+              {
+                "parameter": "Packaging",
+                "value": "As Per Customer Requirement"
+              },
+              {
+                "parameter": "Export Supply",
+                "value": "Worldwide Export-Ready Supply"
+              }
+            ]
           }
         ]
       },
-      "grades": [],
+      "grades": [
+        {
+          "grade": "FOOD",
+          "name": "KORVANTO BENTO FOOD",
+          "subtitle": "Food & Beverage Grade Bentonite Powder",
+          "image": "assets/images/products/bento food/bento food 4.png",
+          "specifications": [
+            {
+              "parameter": "Grade",
+              "value": "Food-grade bentonite"
+            },
+            {
+              "parameter": "Primary Use",
+              "value": "Beverage clarification & filtration"
+            },
+            {
+              "parameter": "Mineral",
+              "value": "Montmorillonite-rich clay"
+            },
+            {
+              "parameter": "Form",
+              "value": "Powder"
+            },
+            {
+              "parameter": "pH Value",
+              "value": "8.0 – 9.5"
+            },
+            {
+              "parameter": "Montmorillonite Content",
+              "value": "80% Min"
+            },
+            {
+              "parameter": "Moisture",
+              "value": "12% Max"
+            },
+            {
+              "parameter": "Particle Size >45 Micron (Wet)",
+              "value": "2.0% Max"
+            },
+            {
+              "parameter": "Packaging",
+              "value": "25 kg / 50 kg Bags, Jumbo Bags (FIBC)"
+            },
+            {
+              "parameter": "Documentation",
+              "value": "TDS & COA available on request"
+            }
+          ]
+        }
+      ],
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-food.html",
       "image": "assets/images/products/bento food/bento food.png",
@@ -2263,16 +2461,14 @@
         ],
         "key_benefits": [],
         "applications": [
-          "Pencil Manufacturing",
           "Graphite Pencil Leads",
-          "Writing Pencil Production",
-          "School and Office Pencil Manufacturing",
-          "Artist Pencil Manufacturing",
-          "Colored Pencil Production",
-          "Industrial Applications",
-          "Graphite-Based Extrusion Systems",
-          "Carbon and Mineral Binder Applications",
-          "Specialty Writing Instrument Components"
+          "Colored Pencil Leads",
+          "Artist Pencil Leads",
+          "Mechanical Pencil Leads (if applicable)",
+          "Carbon & Mineral Binder Systems",
+          "Graphite Extrusion",
+          "Pencil Lead Manufacturing",
+          "Specialty Writing Products"
         ],
         "product_features": [
           "Excellent Binding Properties",
@@ -2310,7 +2506,6 @@
         "packaging": [
           "25 kg Bags",
           "50 kg Bags",
-          "1 Jumbo Bags",
           "Bulk Supply",
           "Jumbo Bags (FIBC)",
           "Customized Packaging Available"
@@ -2433,15 +2628,13 @@
           "Good Dispersion Characteristics",
           "Consistent Mineral Composition",
           "Suitable for Further Beneficiation and Processing",
-          "Available in Dried Lump Form"
+          "Excellent Firing Characteristics"
         ],
         "available_grades": [],
         "packaging": [
-          "Available in:",
-          "Dried Lump Form",
           "25 kg Bags",
           "50 kg Bags",
-          "1 Jumbo Bags",
+          "Jumbo Bags (FIBC)",
           "Bulk Supply"
         ],
         "short_website_description": [
@@ -2525,7 +2718,9 @@
       "grades": [],
       "family": "korvanto-kao",
       "page_file": "korvanto-kao-crude.html",
-      "image": "assets/images/Product-Images/crud Kaolin.png"
+      "image": "assets/images/Product-Images/Kaolin Lumps.png",
+      "hero_image": "assets/images/Product-Images/Crude Kaolin Lumps.png",
+      "overview_image": "assets/images/Product-Images/Kaolin Lumps.png"
     },
     {
       "slug": "korvanto-kao-levigated-noodles",
@@ -2534,7 +2729,8 @@
       "sections": {
         "overview": [
           "KORVANTO KAO LEVIGATED NOODLES are premium-grade water-washed and refined kaolin products manufactured through a controlled levigation process that removes grit, iron-bearing impurities, and other unwanted minerals. Supplied in noodle form with controlled moisture content, these grades offer excellent plasticity, workability, whiteness, and consistency required by modern ceramic manufacturers.",
-          "Designed for ceramic bodies, sanitaryware, vitrified tiles, porcelain, tableware, and refractory applications, the product provides superior molding characteristics, improved green strength, and enhanced fired properties. Its uniform composition and low impurity levels contribute to better production efficiency and high-quality finished products."
+          "Designed for ceramic bodies, sanitaryware, vitrified tiles, porcelain, tableware, and refractory applications, the product provides superior molding characteristics, improved green strength, and enhanced fired properties. Its uniform composition and low impurity levels contribute to better production efficiency and high-quality finished products.",
+          "Manufactured under controlled processing conditions to ensure consistent whiteness, plasticity, and low impurity levels across every batch."
         ],
         "key_benefits": [],
         "applications": [
@@ -2589,7 +2785,7 @@
           "Available in:",
           "25 kg Bags",
           "50 kg Bags",
-          "1 Jumbo Bags (FIBC)",
+          "Jumbo Bags (FIBC)",
           "Palletized Loads",
           "Container Loads",
           "Bulk Shipments"
@@ -2727,7 +2923,7 @@
           "Available in:",
           "25 kg Bags",
           "50 kg Bags",
-          "1 Jumbo Bags (FIBC)",
+          "Jumbo Bags (FIBC)",
           "Palletized Loads",
           "Container Loads",
           "Bulk Shipments"
@@ -2880,7 +3076,7 @@
           "Available in:",
           "25 kg Bags",
           "50 kg Bags",
-          "1 Jumbo Bags (FIBC)",
+          "Jumbo Bags (FIBC)",
           "Palletized Loads",
           "Container Loads",
           "Bulk Shipments"
@@ -3023,7 +3219,7 @@
           "Available in:",
           "25 kg Bags",
           "50 kg Bags",
-          "1 Jumbo Bags (FIBC)",
+          "Jumbo Bags (FIBC)",
           "Palletized Loads",
           "Container Loads",
           "Bulk Shipments"
@@ -3185,7 +3381,7 @@
           "Available in:",
           "25 kg Bags",
           "50 kg Bags",
-          "1 Jumbo Bags (FIBC)",
+          "Jumbo Bags (FIBC)",
           "Palletized Loads",
           "Container Loads",
           "Bulk Shipments"
@@ -3353,7 +3549,7 @@
           "Available in:",
           "25 kg Bags",
           "50 kg Bags",
-          "1 Jumbo Bags (FIBC)",
+          "Jumbo Bags (FIBC)",
           "Palletized Loads",
           "Container Loads",
           "Bulk Shipments"
@@ -3442,8 +3638,8 @@
       "subtitle": "Premium Ball Clay for Ceramics, Sanitaryware, Tiles & Refractory Applications",
       "sections": {
         "overview": [
-          "KORVANTO CLAY BALL is a high-quality, fine-grained clay renowned for its exceptional plasticity, strong binding characteristics, and excellent workability. Composed primarily of kaolinite along with naturally occurring quartz and mica, it serves as a critical raw material in ceramic, sanitaryware, porcelain, tile, refractory, and technical ceramic applications.",
-          "Carefully selected and processed to ensure consistency, KORVANTO CLAY BALL enhances shaping, molding, casting, and extrusion performance while providing excellent green strength and reliable firing characteristics. Its superior plasticity allows manufacturers to produce complex shapes, thin-walled products, and high-quality ceramic bodies with improved durability and surface finish.",
+          "Korvanto Ball Clay is a high-quality, fine-grained clay renowned for its exceptional plasticity, strong binding characteristics, and excellent workability. Composed primarily of kaolinite along with naturally occurring quartz and mica, it serves as a critical raw material in ceramic, sanitaryware, porcelain, tile, refractory, and technical ceramic applications.",
+          "Carefully selected and processed to ensure consistency, Korvanto Ball Clay enhances shaping, molding, casting, and extrusion performance while providing excellent green strength and reliable firing characteristics. Its superior plasticity allows manufacturers to produce complex shapes, thin-walled products, and high-quality ceramic bodies with improved durability and surface finish.",
           "Designed for modern ceramic manufacturing, it offers consistent performance across a wide range of industrial applications."
         ],
         "key_benefits": [],
@@ -3520,7 +3716,7 @@
         ],
         "packaging": [],
         "short_website_description": [
-          "KORVANTO CLAY BALL is a premium-grade ball clay designed for ceramic, sanitaryware, tile, porcelain, and refractory manufacturing. Its exceptional plasticity, binding strength, and workability help produce high-quality ceramic products with superior shaping, casting, and firing performance."
+          "Korvanto Ball Clay is a premium-grade ball clay designed for ceramic, sanitaryware, tile, porcelain, and refractory manufacturing. Its exceptional plasticity, binding strength, and workability help produce high-quality ceramic products with superior shaping, casting, and firing performance."
         ],
         "typical_specs": [
           {
@@ -3572,6 +3768,7 @@
       "grades": [],
       "family": "korvanto-clay",
       "page_file": "korvanto-clay.html",
+      "show_packaging": false,
       "image": "assets/images/families/ball clay home.png"
     },
     {
@@ -3580,8 +3777,8 @@
       "subtitle": "Laterite for Cement, Construction & Infrastructure Applications",
       "sections": {
         "overview": [
-          "KORVANTO LAT is a naturally occurring iron and alumina-rich lateritic mineral selectively mined and processed for use in cement manufacturing, construction materials, road infrastructure, and industrial applications. Formed through prolonged weathering of rocks in tropical environments, laterite offers excellent durability, weather resistance, and consistent chemical composition.",
-          "With its high iron and alumina content, KORVANTO LAT serves as a valuable corrective material in cement raw mix formulations while also finding applications in road construction, building materials, landscaping, and environmental projects. Available in lump, crushed, or powder form, it provides a cost-effective and sustainable mineral solution for large-scale industrial and infrastructure developments."
+          "Korvanto Laterite is a naturally occurring iron and alumina-rich lateritic mineral selectively mined and processed for use in cement manufacturing, construction materials, road infrastructure, and industrial applications. Formed through prolonged weathering of rocks in tropical environments, laterite offers excellent durability, weather resistance, and consistent chemical composition.",
+          "With its high iron and alumina content, Korvanto Laterite serves as a valuable corrective material in cement raw mix formulations while also finding applications in road construction, building materials, landscaping, and environmental projects. Available in lump, crushed, or powder form, it provides a cost-effective and sustainable mineral solution for large-scale industrial and infrastructure developments."
         ],
         "key_benefits": [],
         "applications": [
@@ -3636,14 +3833,18 @@
           "Environmentally Friendly Natural Mineral"
         ],
         "available_grades": [],
-        "packaging": [
+        "available_forms": [
           "Lumps",
           "Crushed Material",
           "Powder",
           "Customized Sizes Available"
         ],
+        "available_forms_lead": "Korvanto Laterite is supplied in multiple material forms to suit cement manufacturing, construction, road infrastructure and bulk industrial applications.",
+        "forms_section_label": "Export Supply",
+        "forms_section_title": "Supply Options",
+        "packaging": [],
         "short_website_description": [
-          "KORVANTO LAT is a high-quality lateritic mineral offering reliable performance in cement manufacturing, construction, road infrastructure, and environmental applications. Its natural durability, high iron content, and cost-effectiveness make it an ideal choice for large-scale industrial projects."
+          "Korvanto Laterite is a high-quality lateritic mineral offering reliable performance in cement manufacturing, construction, road infrastructure, and environmental applications. Its natural durability, high iron content, and cost-effectiveness make it an ideal choice for large-scale industrial projects."
         ],
         "typical_specs": [
           {
@@ -3850,7 +4051,7 @@
           "Customized Sizing",
           "25 kg Bags",
           "50 kg Bags",
-          "1 Jumbo Bags",
+          "Jumbo Bags (FIBC)",
           "Bulk Supply"
         ],
         "short_website_description": [
@@ -4024,7 +4225,136 @@
       ],
       "family": "korvanto-cham",
       "page_file": "korvanto-cham.html",
-      "image": "assets/images/Product-Images/chamotte.png"
+      "image": "assets/images/Product-Images/chamotte.png",
+      "grades_quick_reference": {
+        "section_label": "Quick Reference",
+        "section_title": "All Grades at a Glance",
+        "rows": [
+          {
+            "grade": "Korvanto Cham LF 42",
+            "alumina": "~42%",
+            "pce": "32",
+            "iron": "<1.25% max",
+            "typical_application": "Castables, ceramics, foundry",
+            "recommended_for": "Cost-effective refractory applications",
+            "sizes": "0–1, 1–3, 3–5 mm, 200M"
+          },
+          {
+            "grade": "Korvanto Cham LF 46",
+            "alumina": "~46%",
+            "pce": "32",
+            "iron": "<1.5% max",
+            "typical_application": "High-duty castables, kiln furniture",
+            "recommended_for": "Heavy-duty castables",
+            "sizes": "0–1, 1–3, 3–5 mm, 200M"
+          },
+          {
+            "grade": "Korvanto Cham LF 54",
+            "alumina": "~54%",
+            "pce": "32",
+            "iron": "<2%",
+            "typical_application": "Dense bricks, glass furnace, cement",
+            "recommended_for": "Dense refractory bricks",
+            "sizes": "0–1, 1–3, 3–5 mm, 200M"
+          },
+          {
+            "grade": "Korvanto Cham LF 60",
+            "alumina": "~60%",
+            "pce": "32",
+            "iron": "<2%",
+            "typical_application": "Steel plants, premium castables",
+            "recommended_for": "Steel plants",
+            "sizes": "0–1, 1–3, 3–5 mm, 200M"
+          },
+          {
+            "grade": "Korvanto Cham LF 70",
+            "alumina": "70%",
+            "pce": "32",
+            "iron": "<3%",
+            "typical_application": "Glass furnace, steel tundish, export",
+            "recommended_for": "Export-grade premium refractories",
+            "sizes": "0–1, 1–3, 3–5 mm, 200M"
+          }
+        ],
+        "cta": [
+          {
+            "text": "Request Samples or TDS",
+            "href": "request-quote.html",
+            "style": "gold"
+          },
+          {
+            "text": "Download Product Brochure",
+            "href": "request-quote.html",
+            "style": "outline"
+          }
+        ]
+      },
+      "product_comparison": {
+        "section_label": "Compare Options",
+        "section_title": "Not sure whether Chamotte or Calcined Bauxite is right for your application?",
+        "columns": [
+          {"header": "Property", "key": "property", "scope": "row"},
+          {"header": "Standard Chamotte (42%)", "key": "standard"},
+          {"header": "High Alumina Chamotte (60–70%)", "key": "high_alumina"},
+          {"header": "Calcined Bauxite (80–86%)", "key": "bauxite"}
+        ],
+        "rows": [
+          {
+            "property": "Al₂O₃ Content",
+            "standard": "~42%",
+            "high_alumina": "60–70%+",
+            "bauxite": "80–86%+"
+          },
+          {
+            "property": "Fe₂O₃",
+            "standard": "Low",
+            "high_alumina": "Very Low",
+            "bauxite": "Controlled"
+          },
+          {
+            "property": "Refractoriness (PCE)",
+            "standard": "SK 30–32",
+            "high_alumina": "SK 34–36",
+            "bauxite": "SK 37–38+"
+          },
+          {
+            "property": "Thermal Shock Resistance",
+            "standard": "Good",
+            "high_alumina": "Very Good",
+            "bauxite": "Excellent"
+          },
+          {
+            "property": "Typical Application",
+            "standard": "Ceramics, standard castables",
+            "high_alumina": "High-duty castables, bricks",
+            "bauxite": "Steel, glass, cement plants"
+          },
+          {
+            "property": "Particle Size Available",
+            "standard": "0–1, 1–3, 3–5 mm, 200 Mesh",
+            "high_alumina": "0–1, 1–3, 3–5 mm, 200 Mesh",
+            "bauxite": "Custom on request"
+          },
+          {
+            "property": "Quality Certification",
+            "standard": "ISO 9001 · XRF · Chemical Analysis · ASTM C:357",
+            "high_alumina": "ISO 9001 · XRF · Chemical Analysis · ASTM C:357",
+            "bauxite": "ISO 9001 · XRF · Chemical Analysis · ASTM C:357"
+          }
+        ],
+        "cta": [
+          {
+            "text": "Get Technical Data Sheet",
+            "href": "request-quote.html",
+            "style": "gold"
+          },
+          {
+            "text": "View All Chamotte Grades",
+            "href": "#pdQuickRef",
+            "style": "outline"
+          }
+        ]
+      }
     },
     {
       "slug": "korvanto-baux",
@@ -4037,14 +4367,16 @@
           "Our calcined bauxite grades are manufactured to provide consistent alumina content, controlled impurities, and reliable performance for steel plants, cement kilns, glass furnaces, foundries, refractory producers, and abrasive manufacturers worldwide."
         ],
         "key_benefits": [
-          "Good Thermal Shock Resistance",
-          "High Temperature Stability",
-          "Cost-Effective Performance",
-          "Enhanced Alumina Content",
-          "Lower Impurity Levels",
-          "Superior Refractory Performance",
-          "Maximum Refractoriness",
-          "Ultra-High Alumina Performance"
+          "High Alumina Content",
+          "Excellent Thermal Shock Resistance",
+          "High Refractoriness",
+          "Low Thermal Expansion",
+          "High Mechanical Strength",
+          "Low Impurity Levels",
+          "Excellent Abrasion Resistance",
+          "Excellent Chemical Stability",
+          "High Density",
+          "Long Service Life"
         ],
         "applications": [
           "Refractory Industry",
@@ -4118,7 +4450,7 @@
           "Customized Particle Sizes",
           "25 kg Bags",
           "50 kg Bags",
-          "1 Jumbo Bags",
+          "Jumbo Bags (FIBC)",
           "Bulk Supply"
         ],
         "short_website_description": [
@@ -4531,7 +4863,48 @@
       "family": "korvanto-carbo",
       "page_file": "korvanto-carbo.html",
       "image": "assets/images/Product-Images/Coal Additive banner.png",
-      "overview_image": "assets/images/Product-Images/Coal Additive product.png"
+      "overview_image": "assets/images/Product-Images/Coal Additive product.png",
+      "grades_quick_reference": {
+        "section_label": "Quick Reference",
+        "section_title": "All Grades at a Glance",
+        "columns": [
+          {"header": "Grade", "key": "grade", "scope": "row"},
+          {"header": "Volatile Matter", "key": "volatile_matter"},
+          {"header": "Ash", "key": "ash"},
+          {"header": "Fixed Carbon", "key": "fixed_carbon"},
+          {"header": "Typical Application", "key": "typical_application"}
+        ],
+        "rows": [
+          {
+            "grade": "Korvanto Carbon CA",
+            "volatile_matter": "55–65%",
+            "ash": "≤6%",
+            "fixed_carbon": "By Difference",
+            "typical_application": "Premium Foundries"
+          },
+          {
+            "grade": "Korvanto Carbon LCA",
+            "volatile_matter": "50–55%",
+            "ash": "≤8%",
+            "fixed_carbon": "By Difference",
+            "typical_application": "Grey Iron Castings"
+          },
+          {
+            "grade": "Korvanto Carbon HLCA",
+            "volatile_matter": "40–50%",
+            "ash": "≤7%",
+            "fixed_carbon": "By Difference",
+            "typical_application": "SG Iron & Precision Casting"
+          },
+          {
+            "grade": "Korvanto Carbon CS",
+            "volatile_matter": "Custom",
+            "ash": "Custom",
+            "fixed_carbon": "By Difference",
+            "typical_application": "Customer-Specific Applications"
+          }
+        ]
+      }
     },
     {
       "slug": "korvanto-bento-drill",

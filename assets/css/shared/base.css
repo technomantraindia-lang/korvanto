@@ -1,4 +1,4 @@
-﻿/* Korvanto — Base: variables, layout, buttons, reveal */
+/* Korvanto — Base: variables, layout, buttons, reveal */
 /* Korvanto - Premium 3D B2B Industrial Mineral Export */
 @import url('credentials-strip.css');
 @import url('floating-contact.css');
@@ -23,6 +23,7 @@
   --shadow-soft: 0 20px 50px rgba(9, 35, 61, 0.12);
   --shadow-card: 0 12px 40px rgba(9, 35, 61, 0.1);
   --transition: 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  --site-header-clearance: max(7rem, calc(2.5rem + clamp(72px, 9vw, 92px)));
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

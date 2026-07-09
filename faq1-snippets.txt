@@ -1,0 +1,92 @@
+﻿python : Traceback (most recent call last):
+At C:\Users\LENOVO\AppData\Local\Temp\ps-script-56c10005-c9e5-427f-a952-f68b9252f65c.ps1:105 char:1
++ python -c "
++ ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<string>", line 16, in <module>
+    for i in range(1545,1610): print(i, repr(lines[i]))
+                               ~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2082' in position 35: character maps to <undefined>
+1088 'Packing List'
+1089 'Commercial Invoice'
+1090 'Certificate of Origin (when required)'
+1091 'Other export documentation as per destination country requirements'
+1092 'Levigated noodles'
+1093 'Frequently Asked Questions (FAQs)'
+1094 '1. What is KORVANTO KAO NOODLES used for?'
+1095 'KORVANTO KAO NOODLES are refined levigated kaolin noodles primarily used in ceramic manufacturing. They provide a clean, consistent raw material for wall tiles, floor tiles, vitrified tiles, sanitaryware, porcelain products, ceramic glazes, and other white ceramic applications.'
+1096 '2. Why choose levigated kaolin noodles instead of crude kaolin?'
+1097 'Levigated kaolin noodles undergo washing and beneficiation to remove impurities and improve consistency. Compared to crude kaolin, they offer better plasticity, cleaner mineral composition, improved workability, and more consistent performance in ceramic production.'
+1098 '3. Which industries and applications use KORVANTO KAO NOODLES?'
+1099 'KORVANTO KAO NOODLES are suitable for:'
+---
+1138 'Packing List'
+1139 'Certificate of Origin (where applicable)'
+1140 'Other export documentation as required'
+1141 'Levigated lumps'
+1142 'Frequently Asked Questions (FAQs)'
+1143 '1. What is KORVANTO KAO LUMPS used for?'
+1144 'KORVANTO KAO LUMPS are refined levigated kaolin supplied in lump form for ceramic manufacturing and industrial mineral applications. They are widely used in ceramic bodies, sanitaryware, glazes, paints, polymers, rubber, construction materials, mineral processing, and further beneficiation operations.'
+1145 '2. Why choose levigated kaolin lumps instead of crude kaolin?'
+1146 'Levigated kaolin lumps are produced through washing and beneficiation processes that remove impurities and improve consistency. Compared to crude kaolin, they offer better purity, improved plasticity, more uniform mineral composition, and enhanced performance in ceramic and industrial applications.'
+1147 '3. Which industries and applications use KORVANTO KAO LUMPS?'
+---
+1545 'Certificate of Origin (where applicable)'
+1546 'Other export documentation as required'
+1547 '9. Does Korvanto export laterite internationally?'
+1548 'Yes. Korvanto supplies export-ready laterite with quality verification, reliable logistics coordination, secure packaging, and complete export documentation for international customers.'
+1549 'Frequently Asked Questions (FAQs)'
+1550 '1. What is KORVANTO CHAMÖ?'
+1551 'KORVANTO CHAMÖ is a high-quality calcined refractory clay (chamotte) produced by firing selected fireclays at controlled temperatures. It is widely used in refractory, ceramic, kiln furniture, and high-temperature industrial applications where thermal stability and consistent performance are required.'
+1552 '2. What grades of KORVANTO CHAMÖ are available?'
+1553 'Korvanto supplies five standard chamotte grades:'
+1554 'KORVANTO CHAM LF42'
+1555 'KORVANTO CHAM LF46'
+1556 'KORVANTO CHAM LF54'
+1557 'KORVANTO CHAM LF60'
+1558 'KORVANTO CHAM LF70'
+1559 'Each grade is designed to meet different alumina content and refractory performance requirements.'
+1560 '3. How do I select the right chamotte grade?'
+1561 'The appropriate grade depends on the required alumina content, service temperature, refractory design, and end-use application. Our technical team can recommend the most suitable grade based on your manufacturing process and performance requirements.'
+1562 '4. What particle sizes are available?'
+1563 'KORVANTO CHAMÖ is available in various particle sizes, including:'
+1564 'Powder (200 Mesh)'
+1565 '0û1 mm'
+1566 '1û3 mm'
+1567 '3û5 mm'
+1568 '5û8 mm'
+1569 'Custom sizing can also be supplied based on customer requirements.'
+1570 '5. Can Korvanto supply customized chamotte specifications?'
+1571 'Yes. Korvanto can supply customized chamotte grades with specific alumina content, particle size distribution, bulk density, and other technical parameters according to customer and application requirements.'
+1572 '6. Which industries use KORVANTO CHAMÖ?'
+1573 'KORVANTO CHAMÖ is supplied for refractory manufacturing, ceramics, kiln furniture, foundries, furnaces, and other high-temperature industrial applications. Detailed end-use industries are listed in the Applications section of this page.'
+1574 '7. What packaging options are available?'
+1575 'KORVANTO CHAMÖ is available in:'
+1576 '25 kg Bags'
+1577 '50 kg Bags'
+1578 'Jumbo Bags (FIBC)'
+1579 'Palletized Shipments'
+1580 'Bulk Container Loads'
+1581 'Customized export packaging is also available upon request.'
+1582 '8. What quality documents are available?'
+1583 'Depending on customer requirements, Korvanto can provide:'
+1584 'Technical Data Sheet (TDS)'
+1585 'Certificate of Analysis (COA)'
+1586 'Safety Data Sheet (SDS), where applicable'
+1587 'Commercial Invoice'
+1588 'Packing List'
+1589 'Certificate of Origin (where applicable)'
+1590 'Other export documentation as required'
+1591 '9. Does Korvanto export chamotte internationally?'
+1592 'Yes. Korvanto supplies export-ready chamotte with quality verification, secure packaging, and complete export documentation to customers worldwide.'
+1593 'Frequently Asked Questions (FAQs)'
+1594 '1. What is KORVANTO BAUXÖ?'
+1595 'KORVANTO BAUXÖ is a premium calcined bauxite produced by calcining high-grade bauxite ore at controlled temperatures. It is widely used as a refractory raw material due to its high alumina content, excellent thermal stability, mechanical strength, and resistance to high-temperature environments.'
+1596 '2. What grades of KORVANTO BAUXÖ are available?'
+1597 'Korvanto supplies three standard calcined bauxite grades:'
+1598 

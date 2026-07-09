@@ -619,41 +619,81 @@
     ]
   },
   {
-    "label": "KORVANTO BENTO FOUNDRY F-100",
-    "url": "korvanto-bento-foundry.html#grade-f-100",
+    "label": "KORVANTO BENTO FOOD",
+    "url": "korvanto-bento-food.html#grade-food",
     "type": "grade",
     "family": "Korvanto Bentonite",
     "keywords": [
-      "100",
       "bento",
       "bentonite",
-      "f-100",
-      "foundry",
+      "beverage",
+      "food",
+      "food & beverage grade bentonite powder",
       "grade",
       "korvanto",
-      "korvanto bento foundry f-100",
+      "korvanto bento food",
       "korvanto bentonite",
-      "standard",
-      "standard foundry grade"
+      "powder"
     ]
   },
   {
-    "label": "KORVANTO BENTO FOUNDRY F-200",
-    "url": "korvanto-bento-foundry.html#grade-f-200",
+    "label": "KORVANTO BENTO FOUNDRY F30",
+    "url": "korvanto-bento-foundry.html#grade-f30",
     "type": "grade",
     "family": "Korvanto Bentonite",
     "keywords": [
-      "200",
+      "30",
       "bento",
       "bentonite",
-      "f-200",
+      "economy",
+      "economy grade (30 swelling)",
+      "f30",
       "foundry",
       "grade",
       "korvanto",
-      "korvanto bento foundry f-200",
+      "korvanto bento foundry f30",
+      "korvanto bentonite",
+      "swelling"
+    ]
+  },
+  {
+    "label": "KORVANTO BENTO FOUNDRY F32",
+    "url": "korvanto-bento-foundry.html#grade-f32",
+    "type": "grade",
+    "family": "Korvanto Bentonite",
+    "keywords": [
+      "32",
+      "bento",
+      "bentonite",
+      "f32",
+      "foundry",
+      "grade",
+      "korvanto",
+      "korvanto bento foundry f32",
+      "korvanto bentonite",
+      "standard",
+      "standard grade (32 swelling)",
+      "swelling"
+    ]
+  },
+  {
+    "label": "KORVANTO BENTO FOUNDRY F35",
+    "url": "korvanto-bento-foundry.html#grade-f35",
+    "type": "grade",
+    "family": "Korvanto Bentonite",
+    "keywords": [
+      "35",
+      "bento",
+      "bentonite",
+      "f35",
+      "foundry",
+      "grade",
+      "korvanto",
+      "korvanto bento foundry f35",
       "korvanto bentonite",
       "premium",
-      "premium foundry grade"
+      "premium grade (35 swelling)",
+      "swelling"
     ]
   },
   {

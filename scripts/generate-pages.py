@@ -16,6 +16,7 @@ from content_dedupe import (
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "assets" / "js" / "products-data.json"
+FAQ_PATH = ROOT / "assets" / "js" / "product-faqs.json"
 GRADES_IMAGE_DIR = ROOT / "assets" / "images" / "grades"
 HEADER_PATH = ROOT / "components" / "header.html"
 QUOTE_PATH = ROOT / "request-quote.html"
@@ -29,6 +30,19 @@ QUOTE_OPTIONS_END = "<!-- catalog:quote-options:end -->"
 
 def load_data():
     return json.loads(DATA_PATH.read_text(encoding="utf-8"))
+
+
+_product_faqs = None
+
+
+def load_product_faqs():
+    global _product_faqs
+    if _product_faqs is None:
+        if FAQ_PATH.exists():
+            _product_faqs = json.loads(FAQ_PATH.read_text(encoding="utf-8"))
+        else:
+            _product_faqs = {}
+    return _product_faqs
 
 
 def get_families(data):
@@ -258,13 +272,18 @@ def collect_typical_spec_blocks(product, data):
     sections = product.get("sections") or {}
     typical = sections.get("typical_specs")
     if typical:
-        if isinstance(typical, list) and typical and isinstance(typical[0], dict) and typical[0].get("specs"):
+        if isinstance(typical, list) and typical and isinstance(typical[0], dict):
             blocks = []
             for group in typical:
+                if group.get("type") in ("comparison", "matrix"):
+                    blocks.append(group)
+                    continue
                 rows = rows_from_spec_list(group.get("specs"))
                 if rows:
-                    blocks.append({"title": group.get("title") or SPEC_SECTION_TITLE, "specs": rows})
-            return blocks
+                    title = group["title"] if "title" in group else SPEC_SECTION_TITLE
+                    blocks.append({"title": title, "specs": rows})
+            if blocks:
+                return blocks
         rows = rows_from_spec_list(typical)
         if rows:
             return [{"title": SPEC_SECTION_TITLE, "specs": rows}]
@@ -300,7 +319,7 @@ def grade_anchor_id(grade_code=None, name=""):
         return None
     cleaned = re.sub(r"[™\u2122]", "", raw).strip()
     code_match = re.search(
-        r"\b(F-\d+(?:\.\d+)?|I-\d+|C-\d+|AG-\d+|L-\d+|LF\d+|CB\d+|"
+        r"\b(F\d{2}|F-\d+(?:\.\d+)?|I-\d+|C-\d+|AG-\d+|L-\d+|LF\d+|CB\d+|"
         r"PHARMA-IP|PAPER-325|DEINK-100|COSMETIC-90|DESICCANT-\d+|"
         r"SEAL-[PG]|API|OCMA|CA|LCA|HLCA|CS)\b",
         cleaned,
@@ -441,24 +460,180 @@ def write_product_search_index(data):
     print(f"Wrote product search index ({len(index)} entries)")
 
 
-def render_spec_table(title, rows):
+def render_comparison_spec_block(block, sections=None):
+    columns = block.get("columns") or []
+    rows_data = block.get("rows") or []
+    if not columns or not rows_data:
+        return ""
+    title = block.get("title", "")
+    title_html = f'<h3 class="pd-spec-block-title">{esc(title)}</h3>' if title else ""
+    header_html = "".join(
+        f'<th scope="col">{esc(col["header"])}</th>' for col in columns
+    )
+    body = ""
+    for row in rows_data:
+        cells = ""
+        for i, col in enumerate(columns):
+            value = esc(row.get(col["key"], ""))
+            if i == 0 or col.get("scope") == "row":
+                cells += f'<th scope="row">{value}</th>'
+            else:
+                cells += f"<td>{value}</td>"
+        body += f"<tr>{cells}</tr>"
+    sections = sections or {}
+    note = block.get("table_note")
+    if note is None:
+        note = sections.get("specs_table_note")
+    if note is None:
+        note = SPEC_TABLE_NOTE
+    note_html = f'<p class="pd-spec-table-note">{esc(note)}</p>' if note else ""
+    return f"""<div class="pd-spec-block reveal">
+        {title_html}
+        <div class="pd-spec-table-wrap pd-spec-table-wrap--wide tilt-card">
+          <table class="pd-spec-table pd-spec-comparison-table">
+            <thead>
+              <tr>{header_html}</tr>
+            </thead>
+            <tbody>{body}</tbody>
+          </table>
+        </div>
+        {note_html}
+      </div>"""
+
+
+def render_matrix_spec_block(block):
+    header_row = block.get("header_row") or {}
+    value_row = block.get("value_row") or {}
+    header_cells = header_row.get("cells") or []
+    value_cells = value_row.get("cells") or []
+    if not header_cells or not value_cells:
+        return ""
+    title = block.get("title", "")
+    title_html = f'<h3 class="pd-spec-block-title">{esc(title)}</h3>' if title else ""
+    header_label = header_row.get("label", "")
+    value_label = value_row.get("label", "")
+    header_html = "".join(f"<th scope=\"col\">{esc(cell)}</th>" for cell in header_cells)
+    value_html = "".join(f"<td>{esc(cell)}</td>" for cell in value_cells)
+    return f"""<div class="pd-spec-block reveal">
+        {title_html}
+        <div class="pd-spec-table-wrap pd-spec-table-wrap--wide tilt-card">
+          <table class="pd-spec-table pd-spec-matrix-table">
+            <thead>
+              <tr>
+                <th scope="col">{esc(header_label)}</th>
+                {header_html}
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">{esc(value_label)}</th>
+                {value_html}
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>"""
+
+
+def render_spec_block(block, sections=None):
+    block_type = block.get("type", "standard")
+    if block_type == "comparison":
+        return render_comparison_spec_block(block, sections)
+    if block_type == "matrix":
+        return render_matrix_spec_block(block)
+    return render_spec_table(
+        block.get("title"),
+        block.get("specs") or [],
+        value_column=(sections or {}).get("specs_value_column"),
+        table_note=(sections or {}).get("specs_table_note"),
+    )
+
+
+def render_spec_table(title, rows, value_column=None, table_note=None):
+    value_col = value_column or "Representative Value"
     body = "".join(
         f'<tr><th scope="row">{esc(row["parameter"])}</th><td>{esc(row["value"])}</td></tr>'
         for row in rows
     )
     title_html = f'<h3 class="pd-spec-block-title">{esc(title)}</h3>' if title else ""
+    note = SPEC_TABLE_NOTE if table_note is None else table_note
+    note_html = f'<p class="pd-spec-table-note">{esc(note)}</p>' if note else ""
     return f"""<div class="pd-spec-block reveal">
         {title_html}
         <div class="pd-spec-table-wrap tilt-card">
           <table class="pd-spec-table">
             <thead>
-              <tr><th scope="col">Parameter</th><th scope="col">Representative Value</th></tr>
+              <tr><th scope="col">Parameter</th><th scope="col">{esc(value_col)}</th></tr>
             </thead>
             <tbody>{body}</tbody>
           </table>
         </div>
-        <p class="pd-spec-table-note">{esc(SPEC_TABLE_NOTE)}</p>
+        {note_html}
       </div>"""
+
+
+def grades_quick_reference_section(product):
+    ref = product.get("grades_quick_reference") or {}
+    rows_data = ref.get("rows") or []
+    if not rows_data:
+        return ""
+
+    section_label = ref.get("section_label", "Quick Reference")
+    section_title = ref.get("section_title", "All Grades at a Glance")
+    columns = ref.get("columns") or [
+        {"header": "Grade", "key": "grade", "scope": "row"},
+        {"header": "Al₂O₃ (%)", "key": "alumina"},
+        {"header": "PCE (SK)", "key": "pce"},
+        {"header": "Fe₂O₃", "key": "iron"},
+        {"header": "Typical Application", "key": "typical_application"},
+        {"header": "Recommended For", "key": "recommended_for"},
+        {"header": "Sizes Available", "key": "sizes"},
+    ]
+
+    header_html = "".join(
+        f'<th scope="col">{esc(col["header"])}</th>' for col in columns
+    )
+    body = ""
+    for row in rows_data:
+        cells = ""
+        for col in columns:
+            value = esc(row.get(col["key"], ""))
+            if col.get("scope") == "row":
+                cells += f'<th scope="row">{value}</th>'
+            else:
+                cells += f"<td>{value}</td>"
+        body += f"<tr>{cells}</tr>"
+
+    ctas = ref.get("cta") or []
+    cta_html = ""
+    if ctas:
+        buttons = ""
+        for item in ctas:
+            style = item.get("style", "gold")
+            btn_class = "btn btn-gold" if style == "gold" else "btn btn-outline btn-outline--light"
+            buttons += (
+                f'<a href="{esc(item.get("href", "request-quote.html"))}" class="{btn_class}">'
+                f'{esc(item.get("text", "Request Quote"))} <span class="arrow">&rarr;</span></a>'
+            )
+        cta_html = f'<div class="pd-quick-ref-actions reveal reveal-delay-2">{buttons}</div>'
+
+    return f"""<section class="section pd-section pd-section--navy pd-quick-ref-section" id="pdQuickRef">
+      <div class="container">
+        <header class="inner-section-head inner-section-head--center pd-section-head pd-quick-ref-head reveal">
+          <p class="section-label">{esc(section_label)}</p>
+          <h2 class="section-title">{esc(section_title)}</h2>
+        </header>
+        <div class="pd-quick-ref-table-wrap reveal reveal-delay-1">
+          <table class="pd-quick-ref-table">
+            <thead>
+              <tr>{header_html}</tr>
+            </thead>
+            <tbody>{body}</tbody>
+          </table>
+        </div>
+        {cta_html}
+      </div>
+    </section>"""
 
 
 def typical_specs_section(product, data):
@@ -476,17 +651,82 @@ def typical_specs_section(product, data):
                 ],
             }
         ]
-    tables = "".join(render_spec_table(block.get("title"), block["specs"]) for block in blocks)
+    tables = "".join(render_spec_block(block, sections) for block in blocks)
     custom_note = sections.get("custom_grade_note")
     custom_note_html = (
         f'<p class="pd-spec-note pd-spec-custom-note reveal">{esc(custom_note)}</p>'
         if custom_note else ""
     )
+    section_label = sections.get("specs_section_label", "Technical Data")
+    section_title = sections.get("specs_section_title", SPEC_SECTION_TITLE)
     return f"""<section class="section pd-section pd-section--white pd-specs-section" id="pdSpecs">
       <div class="container">
-        {section_header("Technical Data", SPEC_SECTION_TITLE)}
+        {section_header(section_label, section_title)}
         <div class="pd-spec-blocks reveal reveal-delay-1">{tables}</div>
         {custom_note_html}
+      </div>
+    </section>"""
+
+
+def product_comparison_section(product):
+    cmp = product.get("product_comparison") or {}
+    rows_data = cmp.get("rows") or []
+    columns = cmp.get("columns") or []
+    if not rows_data or not columns:
+        return ""
+
+    section_label = cmp.get("section_label", "Compare Options")
+    section_title = cmp.get(
+        "section_title",
+        "Not sure whether Chamotte or Calcined Bauxite is right for your application?",
+    )
+
+    header_html = "".join(
+        f'<th scope="col">{esc(col["header"])}</th>' for col in columns
+    )
+    body = ""
+    for row in rows_data:
+        # Skip packing rows if present in source data
+        prop = str(row.get("property") or row.get(columns[0]["key"]) or "").strip().lower()
+        if prop == "packing":
+            continue
+        cells = ""
+        for i, col in enumerate(columns):
+            value = esc(row.get(col["key"], ""))
+            if i == 0 or col.get("scope") == "row":
+                cells += f'<th scope="row">{value}</th>'
+            else:
+                cells += f"<td>{value}</td>"
+        body += f"<tr>{cells}</tr>"
+
+    ctas = cmp.get("cta") or []
+    cta_html = ""
+    if ctas:
+        buttons = ""
+        for item in ctas:
+            style = item.get("style", "gold")
+            btn_class = "btn btn-gold" if style == "gold" else "btn btn-outline btn-outline--light"
+            buttons += (
+                f'<a href="{esc(item.get("href", "request-quote.html"))}" class="{btn_class}">'
+                f'{esc(item.get("text", "Request Quote"))} <span class="arrow">&rarr;</span></a>'
+            )
+        cta_html = f'<div class="pd-quick-ref-actions reveal reveal-delay-2">{buttons}</div>'
+
+    return f"""<section class="section pd-section pd-section--navy pd-compare-section" id="pdCompare">
+      <div class="container">
+        <header class="inner-section-head inner-section-head--center pd-section-head pd-quick-ref-head reveal">
+          <p class="section-label">{esc(section_label)}</p>
+          <h2 class="section-title pd-compare-title">{esc(section_title)}</h2>
+        </header>
+        <div class="pd-quick-ref-table-wrap reveal reveal-delay-1">
+          <table class="pd-quick-ref-table pd-compare-table">
+            <thead>
+              <tr>{header_html}</tr>
+            </thead>
+            <tbody>{body}</tbody>
+          </table>
+        </div>
+        {cta_html}
       </div>
     </section>"""
 
@@ -738,6 +978,7 @@ def grade_cards_grades_array(product):
             f'<span class="pd-grade-tag">{esc(tag)}</span>'
             f"{subtitle_html}</article>"
         )
+    blocks.extend(render_supplementary_grade_cards(product))
     return f'<div class="pd-grade-grid">{"".join(blocks)}</div>' if blocks else ""
 
 
@@ -747,6 +988,7 @@ def short_grade_label(name):
     cleaned = re.sub(r"[™\u2122]", "", str(name)).strip()
     patterns = [
         r"\bOCMA\+",
+        r"\bF\d{2}\b",
         r"\b(?:F|I|C|L|AG)-\d+\b",
         r"\bLF\d+\b",
         r"\bCB\d+\b",
@@ -767,6 +1009,7 @@ def short_grade_label(name):
         r"\bCERA\b",
         r"\bWINE\b",
         r"\bCUSTOM\b",
+        r"\bPRIVATE LABEL\b",
     ]
     for pattern in patterns:
         if match := re.search(pattern, cleaned, re.I):
@@ -817,7 +1060,7 @@ def grade_recommended_use(grade_obj, entry=None, product=None):
     return "Contact our export team for grade guidance"
 
 
-def collect_grade_table_rows(product):
+def collect_primary_grade_table_rows(product):
     rows = []
     app_map = typical_spec_application_map(product)
 
@@ -859,6 +1102,100 @@ def collect_grade_table_rows(product):
                 "use": app_map.get(code.upper()) or "Contact our export team for grade guidance",
             })
 
+    return rows
+
+
+def supplementary_grade_defs(product):
+    slug = product.get("slug")
+    sections = product.get("sections") or {}
+    custom_use = sections.get("custom_grade_note") or (
+        "Tailored specifications based on application and processing requirements"
+    )
+
+    if slug == "korvanto-bento-foundry":
+        return [
+            {
+                "grade": "CUSTOM",
+                "subtitle": "Custom Grade",
+                "recommended_use": (
+                    "Economy, Standard and Premium grades tailored to casting type, "
+                    "sand system requirements, and foundry operating conditions."
+                ),
+            }
+        ]
+
+    primary_rows = collect_primary_grade_table_rows(product)
+    if len(primary_rows) != 1:
+        return []
+    defs = [
+        {
+            "grade": "CUSTOM",
+            "subtitle": (
+                "Custom Pharmaceutical Grade"
+                if product.get("slug") == "korvanto-bento-pharma"
+                else "Custom Grade"
+            ),
+            "recommended_use": custom_use,
+        }
+    ]
+    if product.get("slug") == "korvanto-bento-litter":
+        defs.append({
+            "grade": "PRIVATE LABEL",
+            "subtitle": "Private Label Grade",
+            "recommended_use": (
+                "Private label cat litter manufacturing and branded pet care products"
+            ),
+        })
+    return defs
+
+
+def resolve_primary_grade_image(product):
+    slug = product.get("slug", "")
+    for g in product.get("grades") or []:
+        if isinstance(g, dict) and g.get("entries"):
+            for entry in g["entries"]:
+                image = resolve_grade_image(slug, entry)
+                if image:
+                    return image
+            continue
+        if isinstance(g, dict) and g.get("grades"):
+            for entry in g["grades"]:
+                if isinstance(entry, dict):
+                    image = resolve_grade_image(slug, entry)
+                    if image:
+                        return image
+            continue
+        if isinstance(g, dict):
+            image = resolve_grade_image(slug, g)
+            if image:
+                return image
+    return None
+
+
+def render_supplementary_grade_cards(product):
+    cards = []
+    fallback_image = resolve_primary_grade_image(product)
+    for entry in supplementary_grade_defs(product):
+        tag = entry["grade"]
+        subtitle = entry.get("subtitle", "")
+        media = grade_media_html(fallback_image, tag) if fallback_image else ""
+        subtitle_html = f'<p class="pd-grade-size">{esc(subtitle)}</p>' if subtitle else ""
+        cards.append(
+            f'<article class="pd-grade-card tilt-card reveal"{grade_id_attr(grade_code=tag, name=tag)}>'
+            f"{media}"
+            f'<span class="pd-grade-tag">{esc(tag)}</span>'
+            f"{subtitle_html}</article>"
+        )
+    return cards
+
+
+def collect_grade_table_rows(product):
+    rows = collect_primary_grade_table_rows(product)
+    for entry in supplementary_grade_defs(product):
+        rows.append({
+            "grade": entry["grade"],
+            "use": entry.get("recommended_use", ""),
+        })
     return rows
 
 
@@ -908,10 +1245,12 @@ def grade_section(product):
     </section>"""
 
 
-def forms_section(items, lead=None):
+def forms_section(items, lead=None, section_label=None, section_title=None):
     items = filter_items(items)
     if not items:
         return ""
+    label = section_label or "Supply Formats"
+    title = section_title or "Available Forms"
     cards = ""
     form_icons = {
         "powder": '<path d="M6 3h12v4H6z"/><path d="M8 7v14h8V7"/><path d="M10 11h4"/>',
@@ -960,15 +1299,187 @@ def forms_section(items, lead=None):
         <span class="pd-forms-mesh" aria-hidden="true"></span>
       </div>
       <div class="container">
-        {section_header("Supply Formats", "Available Forms")}
+        {section_header(label, title)}
         <p class="pd-forms-lead reveal">{esc(lead_text)}</p>
         <div class="pd-forms-grid reveal reveal-delay-1">{cards}</div>
       </div>
     </section>"""
 
 
-def packaging_section(items=None):
-    items = STANDARD_PACKAGING_OPTIONS
+def faq_items_html(items, start_open=False):
+    blocks = []
+    for i, item in enumerate(items):
+        open_attr = " open" if i == 0 and start_open else ""
+        blocks.append(
+            f"""<details class="pd-faq-item"{open_attr}>
+            <summary class="pd-faq-question">{esc(item["question"])}</summary>
+            <div class="pd-faq-answer">{esc(item["answer"])}</div>
+          </details>"""
+        )
+    return "".join(blocks)
+
+
+def faq_section(slug):
+    if not slug:
+        return ""
+    data = load_product_faqs().get(slug)
+    if not data:
+        return ""
+
+    if data.get("groups"):
+        body = ""
+        for group in data["groups"]:
+            body += f"""<div class="pd-faq-group">
+            <h3 class="pd-faq-group-title">{esc(group["title"])}</h3>
+            <div class="pd-faq-list">{faq_items_html(group.get("items", []))}</div>
+          </div>"""
+    else:
+        body = f'<div class="pd-faq-list">{faq_items_html(data.get("items", []), start_open=True)}</div>'
+
+    return f"""<section class="section pd-section pd-section--mesh pd-faq-section" id="pdFaq">
+      <div class="container">
+        {section_header("Product Support", "Frequently Asked Questions", centered=True)}
+        <div class="pd-faq-wrap reveal reveal-delay-1">{body}</div>
+      </div>
+    </section>"""
+
+
+DEFAULT_CUSTOM_MANUFACTURING_ITEMS = [
+    "Particle Size Distribution",
+    "Custom Specifications & Grades",
+    "Application-Specific Formulations",
+    "Quality & Purity Requirements",
+    "Custom Packaging",
+    "Export Documentation Support",
+]
+
+
+def resolve_custom_manufacturing(product):
+    sections = product.get("sections") or {}
+    cm = sections.get("custom_manufacturing")
+    if isinstance(cm, dict) and cm.get("items"):
+        return {
+            "section_label": cm.get("section_label", "Custom Grade"),
+            "title": cm.get("title", "Custom Manufacturing Options"),
+            "lead": cm.get("lead", ""),
+            "items": filter_items(cm["items"]),
+        }
+
+    name = product.get("name", "products")
+    if name.lower().startswith("korvanto "):
+        name = name[9:]
+    return {
+        "section_label": "Custom Grade",
+        "title": "Custom Manufacturing Options",
+        "lead": f"KORVANTO supplies {name.lower()} according to customer requirements, including:",
+        "items": DEFAULT_CUSTOM_MANUFACTURING_ITEMS,
+    }
+
+
+def custom_manufacturing_section(product):
+    cm = resolve_custom_manufacturing(product)
+    items = cm.get("items") or []
+    if not items:
+        return ""
+
+    tiles = ""
+    for i, item in enumerate(items, 1):
+        delay = f" reveal-delay-{min(i % 4, 3)}" if i % 4 else ""
+        tiles += f"""<article class="pd-custom-tile tilt-card reveal{delay}">
+            <span class="pd-custom-tile-shine" aria-hidden="true"></span>
+            <span class="pd-custom-tile-index">{i:02d}</span>
+            <div class="pd-custom-tile-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                {custom_tile_icon_paths(item, i)}
+              </svg>
+            </div>
+            <p class="pd-custom-tile-label">{esc(item)}</p>
+          </article>"""
+
+    return f"""<section class="section pd-section pd-custom-section" id="pdCustom">
+      <div class="pd-custom-deco" aria-hidden="true">
+        <span class="pd-custom-mesh"></span>
+        <span class="pd-custom-orb pd-custom-orb--1"></span>
+        <span class="pd-custom-orb pd-custom-orb--2"></span>
+      </div>
+      <div class="container">
+        <div class="pd-custom-showcase tilt-card reveal">
+          <div class="pd-custom-showcase-left">
+            <span class="pd-custom-badge">Bespoke Supply</span>
+            <p class="section-label section-label--light">{esc(cm.get("section_label", "Custom Grade"))}</p>
+            <h2 class="pd-custom-title">{esc(cm.get("title", "Custom Manufacturing Options"))}</h2>
+            <p class="pd-custom-lead">{esc(cm.get("lead", ""))}</p>
+            <a href="request-quote.html" class="btn btn-gold btn-sm pd-custom-cta">Discuss Custom Specs <span class="arrow">&rarr;</span></a>
+          </div>
+          <div class="pd-custom-showcase-right">
+            <div class="pd-custom-grid">{tiles}</div>
+          </div>
+        </div>
+      </div>
+    </section>"""
+
+
+def custom_tile_icon_paths(label, index):
+    lowered = (label or "").lower()
+    if any(k in lowered for k in ("packag", "label", "export", "document")):
+        return '<path d="M4 8h16v12H4z"/><path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M12 12v4"/>'
+    if any(k in lowered for k in ("particle", "granule", "size", "moisture", "dust")):
+        return '<circle cx="7" cy="8" r="2"/><circle cx="17" cy="8" r="2"/><circle cx="12" cy="16" r="2"/>'
+    if any(k in lowered for k in ("quality", "purity", "strength", "absorption", "clump", "fragrance", "color")):
+        return '<path d="M12 3l2.2 6.8H21l-5.6 4.1 2.1 6.6L12 16.2 6.5 20.5l2.1-6.6L3 9.8h6.8z"/>'
+    if any(k in lowered for k in ("application", "formulation", "specification", "grade")):
+        return '<path d="M4 6h16v12H4z"/><path d="M8 10h8"/><path d="M8 14h5"/>'
+    icons = [
+        '<path d="M12 3v18"/><path d="M5 8h14"/><path d="M8 16h8"/>',
+        '<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>',
+        '<path d="M4 7h16"/><path d="M6 7V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"/><path d="M9 11h6"/><path d="M9 15h4"/>',
+        '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+    ]
+    return icons[(index - 1) % len(icons)]
+
+
+def quality_assurance_section(product):
+    qa = (product.get("sections") or {}).get("quality_assurance")
+    if not qa:
+        return ""
+
+    items = filter_items(qa.get("items") or [])
+    if not items:
+        return ""
+
+    section_label = qa.get("section_label", "Compliance")
+    title = qa.get("title", "Quality Assurance")
+    cards = ""
+    for i, item in enumerate(items, 1):
+        delay = f" reveal-delay-{min(i % 3, 2)}" if i % 3 else ""
+        cards += f"""<article class="pd-qa-card tilt-card reveal{delay}">
+            <span class="pd-qa-card-shine" aria-hidden="true"></span>
+            <div class="pd-qa-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M9 12l2 2 4-4"/>
+              </svg>
+            </div>
+            <p class="pd-qa-label">{esc(item)}</p>
+          </article>"""
+
+    return f"""<section class="section pd-section pd-qa-section" id="pdQuality">
+      <div class="container">
+        {section_header(section_label, title, centered=True)}
+        <div class="pd-qa-grid reveal reveal-delay-1">{cards}</div>
+      </div>
+    </section>"""
+
+
+def packaging_section(items=None, show=True):
+    if not show:
+        return ""
+    items = filter_items(items) or STANDARD_PACKAGING_OPTIONS
+    items = [
+        item for item in items
+        if item.strip().lower() not in {"available in:", "available in"}
+        and not item.strip().lower().startswith("available in")
+    ]
     cards = ""
     for i, item in enumerate(items, 1):
         delay = f" reveal-delay-{min(i % 4, 3)}" if i % 4 else ""
@@ -1129,13 +1640,23 @@ def render_detail_page(product, data, outfile):
         hero(product["name"], fam_label, product["name"], lead, hero_image, fam_file, badge),
         overview_section(s.get("overview", []), overview_image, product.get("overview_panel")),
         benefits_section(s.get("key_benefits") or s.get("key_features")),
+        grades_quick_reference_section(product),
         typical_specs_section(product, data),
+        product_comparison_section(product),
         applications_section(s.get("applications")),
         grade_section(product),
-        forms_section(s.get("available_forms", []), s.get("available_forms_lead")),
-        packaging_section(s.get("packaging", [])),
+        custom_manufacturing_section(product),
+        forms_section(
+            s.get("available_forms", []),
+            s.get("available_forms_lead"),
+            s.get("forms_section_label") or product.get("forms_section_label"),
+            s.get("forms_section_title") or product.get("forms_section_title"),
+        ),
+        packaging_section(s.get("packaging", []), show=product.get("show_packaging", True)),
+        quality_assurance_section(product),
+        faq_section(product.get("slug", "")),
+        request_section(product["name"], product.get("slug", "")),
     ]
-    parts.append(request_section(product["name"], product.get("slug", "")))
     parts.append("  </main>\n")
     parts.append(foot())
     (ROOT / outfile).write_text("\n".join(parts), encoding="utf-8")
@@ -1148,6 +1669,64 @@ def generate_detail_page(data, slug, outfile):
         print(f"SKIP missing product: {slug}")
         return
     render_detail_page(product, data, outfile)
+
+
+def family_product_guide_section(family, data):
+    rows_data = family.get("product_guide") or []
+    if not rows_data:
+        return ""
+
+    section_label = family.get("product_guide_label", "Product Guide")
+    section_title = family.get("product_guide_title", "Grades at a Glance")
+
+    if family.get("product_guide_columns"):
+        columns = family["product_guide_columns"]
+    else:
+        columns = [
+            {"header": "Product", "key": "product", "scope": "row"},
+            {"header": "Form", "key": "form"},
+            {"header": "Processing", "key": "processing"},
+            {"header": "Main Applications", "key": "applications"},
+        ]
+
+    header_html = "".join(
+        f'<th scope="col">{esc(col["header"])}</th>' for col in columns
+    )
+    header_html += '<th scope="col">Specifications</th>'
+
+    body = ""
+    for row in rows_data:
+        cells = ""
+        for col in columns:
+            value = esc(row.get(col["key"], ""))
+            if col.get("scope") == "row":
+                cells += f'<th scope="row">{value}</th>'
+            else:
+                cells += f"<td>{value}</td>"
+        slug = row.get("slug", "")
+        product = get_product(data, slug) if slug else None
+        page = (product.get("page_file") if product else None) or (f"{slug}.html" if slug else "#")
+        href = f"{page}#pdSpecs"
+        body += f"""<tr>
+            {cells}
+            <td class="pf-guide-spec-cell">
+              <a href="{esc(href)}" class="pf-guide-spec-link">View Specifications <span class="arrow">&rarr;</span></a>
+            </td>
+          </tr>"""
+
+    return f"""<section class="section pf-guide-section" id="pfProductGuide">
+      <div class="container">
+        {section_header(section_label, section_title)}
+        <div class="pf-guide-table-wrap reveal reveal-delay-1">
+          <table class="pf-guide-table">
+            <thead>
+              <tr>{header_html}</tr>
+            </thead>
+            <tbody>{body}</tbody>
+          </table>
+        </div>
+      </div>
+    </section>"""
 
 
 def generate_family_page(family, data):
@@ -1176,16 +1755,27 @@ def generate_family_page(family, data):
           <a href="{esc(href)}" class="btn btn-gold btn-sm">Explore Product <span class="arrow">&rarr;</span></a>
         </article>"""
 
+    guide = family_product_guide_section(family, data)
+    overview_html = overview_section(
+        family.get("overview", []),
+        family.get("overview_image") or family.get("image", ""),
+        family.get("overview_panel"),
+    )
+    faq_html = faq_section(family["slug"])
+
     content = f"""{head(family['name'], family['short'])}
   <div id="header-placeholder"></div>
   <main>
     {hero(family['name'], 'Product Family', family['name'], family['short'], family['image'], badge_text='Product Family')}
+    {overview_html}
     <section class="section pf-grid-section">
       <div class="container">
         {section_header("Product Range", f"Explore {family['name']} Grades")}
         <div class="pf-grid">{cards}</div>
       </div>
     </section>
+    {guide}
+    {faq_html}
     {cta_block(family['name'])}
   </main>
 {foot()}"""

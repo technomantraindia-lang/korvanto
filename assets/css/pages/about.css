@@ -1426,6 +1426,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: clamp(1.75rem, 3vw, 2.5rem);
   background: linear-gradient(165deg, var(--white) 0%, #f8fafc 100%);
   border: 1px solid var(--border);
@@ -1446,14 +1447,14 @@
 }
 
 .about-founder-message {
-  flex: 1;
+  flex: 0 1 auto;
 }
 
 .about-founder-message p {
   font-size: 1rem;
-  line-height: 1.75;
+  line-height: 1.7;
   color: var(--text-soft);
-  margin-bottom: 1rem;
+  margin-bottom: 0.85rem;
 }
 
 .about-founder-message p:last-child {
@@ -1465,8 +1466,8 @@
 }
 
 .about-founder-sign {
-  margin-top: auto;
-  padding-top: 1.5rem;
+  margin-top: 1.25rem;
+  padding-top: 1.15rem;
   border-top: 1px solid var(--border);
   display: flex;
   flex-direction: column;
@@ -2010,27 +2011,41 @@
 .about-founder .premium-scene-3d {
   position: relative;
   perspective: 1100px;
+  width: 100%;
   height: 100%;
-  min-height: 100%;
+  min-height: 0;
+  align-self: stretch;
   display: flex;
   flex-direction: column;
 }
 
 .about-founder .premium-scene-layer {
-  flex: 1;
+  flex: 1 1 auto;
+  min-height: 0;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
 .about-founder .premium-media-frame {
-  flex: 1;
+  flex: 1 1 auto;
   height: 100%;
-  min-height: 280px;
+  min-height: 0;
+  display: flex;
 }
 
-.about-founder .premium-media-frame img {
-  min-height: 280px;
+.about-founder .premium-media-frame.about-founder-photo {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #eef1f5 0%, #e4e9ef 100%);
+}
+
+.about-founder .premium-media-frame.about-founder-photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  object-position: center 10%;
 }
 
 .about-founder .premium-scene-3d:hover .about-frame-depth--back {
@@ -2112,6 +2127,18 @@
   .about-founder .premium-scene-3d {
     height: auto;
     min-height: 0;
+  }
+
+  .about-founder .premium-media-frame.about-founder-photo {
+    min-height: 320px;
+    height: auto;
+  }
+
+  .about-founder .premium-media-frame.about-founder-photo img {
+    min-height: 320px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 10%;
   }
 
   .about-page .media-frame,
