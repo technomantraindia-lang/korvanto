@@ -35,7 +35,7 @@ PRODUCT_APPLICATION: dict[str, str] = {
     "korvanto-bento-desiccant": f"{W}/thumb/8/81/Bentonite_bianca_uso_lettiera_per_gatti.jpg/1280px-Bentonite_bianca_uso_lettiera_per_gatti.jpg",
     "korvanto-bento-seal": f"{W}/thumb/7/7d/A_local_lake_was_bentonite_mine_pit.JPG/1280px-A_local_lake_was_bentonite_mine_pit.JPG",
     "korvanto-bento-food": f"{W}/thumb/4/44/Creating_a_bentonite_slurry_for_fining_after_wine_pressing.jpg/1280px-Creating_a_bentonite_slurry_for_fining_after_wine_pressing.jpg",
-    "korvanto-bento-pencil": f"{W}/3/3d/Graphite-233436.jpg",
+    "korvanto-bento-pencil": "assets/images/products/bento pencil/korvanto-bento-pencil-02.png",
     "korvanto-bento-specialty": f"{W}/thumb/4/44/Creating_a_bentonite_slurry_for_fining_after_wine_pressing.jpg/1280px-Creating_a_bentonite_slurry_for_fining_after_wine_pressing.jpg",
     # Kaolin applications
     "korvanto-kao-crude": f"{W}/1/11/Kaolin_%28China_Clay%29_-_geograph.org.uk_-_3178670.jpg",
@@ -88,7 +88,7 @@ GRADE_APPLICATION: dict[str, str] = {
     "korvanto-bento-desiccant/desiccant-24.jpg": PRODUCT_APPLICATION["korvanto-bento-desiccant"],
     "korvanto-bento-seal/seal-p.jpg": PRODUCT_APPLICATION["korvanto-bento-seal"],
     "korvanto-bento-seal/seal-g.jpg": PRODUCT_APPLICATION["korvanto-bento-seal"],
-    "korvanto-bento-pencil/pencil.jpg": PRODUCT_APPLICATION["korvanto-bento-pencil"],
+    "korvanto-bento-pencil/pencil.jpg": "assets/images/products/bento pencil/korvanto-bento-pencil-02.png",
     "korvanto-bento-specialty/wine.jpg": PRODUCT_APPLICATION["korvanto-bento-food"],
     "korvanto-bento-specialty/bleach.jpg": f"{W}/thumb/6/6d/AV_Nackawic_pulp_and_paper_mill.jpg/1280px-AV_Nackawic_pulp_and_paper_mill.jpg",
     "korvanto-bento-specialty/agro.jpg": PRODUCT_APPLICATION["korvanto-bento-fert"],

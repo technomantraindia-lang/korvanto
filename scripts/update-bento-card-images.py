@@ -30,7 +30,7 @@ BENTO_IMAGE_SOURCES: dict[str, str] = {
     "korvanto-bento-desiccant": "assets/images/grades/korvanto-bento-desiccant/desiccant-24.jpg",
     "korvanto-bento-seal": "assets/images/grades/korvanto-bento-seal/seal-p.jpg",
     "korvanto-bento-food": "assets/images/grades/korvanto-bento-specialty/wine.jpg",
-    "korvanto-bento-pencil": "assets/images/grades/korvanto-bento-pencil/pencil.jpg",
+    "korvanto-bento-pencil": "assets/images/products/bento pencil/korvanto-bento-pencil-02.png",
     "korvanto-bento-specialty": "assets/images/grades/korvanto-bento-specialty/custom.jpg",
 }
 

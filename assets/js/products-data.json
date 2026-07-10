@@ -9,7 +9,7 @@
         "short": "Premium bentonite grades for drilling, foundry, civil, feed, fertilizer, litter, paper, pharma, cosmetic, desiccant, seal, food, pencil and specialty applications.",
         "portfolio_meta": "Drilling · Foundry · Civil · Feed & More",
         "overview": [
-          "Korvanto supplies a comprehensive range of sodium and calcium bentonite products for drilling, foundry, civil engineering, iron ore pelletization, agriculture, paper, pharmaceuticals, cosmetics, environmental applications and specialty industries.",
+          "Korvanto LLP supplies a comprehensive range of sodium and calcium bentonite products for drilling, foundry, civil engineering, iron ore pelletization, agriculture, paper, pharmaceuticals, cosmetics, environmental applications and specialty industries.",
           "Available in customized grades with export-ready packaging, consistent quality and technical documentation."
         ],
         "child_slugs": [
@@ -31,9 +31,19 @@
         ],
         "product_guide_title": "Bentonite Grades at a Glance",
         "product_guide_columns": [
-          {"header": "Grade", "key": "grade", "scope": "row"},
-          {"header": "Industry", "key": "industry"},
-          {"header": "Key Property", "key": "key_property"}
+          {
+            "header": "Grade",
+            "key": "grade",
+            "scope": "row"
+          },
+          {
+            "header": "Industry",
+            "key": "industry"
+          },
+          {
+            "header": "Key Property",
+            "key": "key_property"
+          }
         ],
         "product_guide": [
           {
@@ -215,7 +225,7 @@
       "description": "Korvanto product portfolio — Bentonite, Kaolin, Ball Clay, Laterite, Chamotte, Bauxite and Carbon industrial mineral families for global B2B export.",
       "hero_label": "Supply Catalogue",
       "hero_title": "Seven Product Families.<br>One Export Partner.",
-      "hero_lead": "Explore Korvanto's branded industrial mineral families — each supplied with specification clarity, export packaging, documentation support and B2B dispatch coordination.",
+      "hero_lead": "Explore Korvanto LLP's branded industrial mineral families — each supplied with specification clarity, export packaging, documentation support and B2B dispatch coordination.",
       "section_label": "Industrial Mineral Portfolio",
       "section_title": "Korvanto Product Families",
       "section_lead": "Premium industrial minerals and raw materials for international B2B buyers — specification-focused sourcing, export-ready packaging and coordinated shipment execution.",
@@ -225,7 +235,7 @@
           "label": "Branded Families"
         },
         {
-          "value": "28+",
+          "value": "35+",
           "label": "Product Grades"
         },
         {
@@ -334,22 +344,85 @@
             "title": "Foundry Grade Bentonite Powder",
             "type": "comparison",
             "columns": [
-              {"header": "Particulars", "key": "parameter", "scope": "row"},
-              {"header": "F30", "key": "f30"},
-              {"header": "F32", "key": "f32"},
-              {"header": "F35", "key": "f35"}
+              {
+                "header": "Particulars",
+                "key": "parameter",
+                "scope": "row"
+              },
+              {
+                "header": "F30",
+                "key": "f30"
+              },
+              {
+                "header": "F32",
+                "key": "f32"
+              },
+              {
+                "header": "F35",
+                "key": "f35"
+              }
             ],
             "rows": [
-              {"parameter": "Moisture", "f30": "10–12%", "f32": "10–12%", "f35": "10–12%"},
-              {"parameter": "pH", "f30": "9 to 9.5", "f32": "9.5 to 10", "f35": "9.5 to 10"},
-              {"parameter": "Swelling Capacity (At 2 gms/100ml water)", "f30": "30 to 32", "f32": "32 to 35", "f35": "35 to 40"},
-              {"parameter": "Gelling Time in minutes (10% Bentonite Slurry)", "f30": "Instant", "f32": "Instant", "f35": "Instant"},
-              {"parameter": "Gel Formation Index (2.4 gms Al₂O₃, 0.2 gms MgO and 1.4 gms Bentonite)", "f30": "65 to 75", "f32": "75 to 80", "f35": "80 to 85"},
-              {"parameter": "Liquid Limit", "f30": "550 to 650", "f32": "650 to 800", "f35": "800 to 900"},
-              {"parameter": "Green Comp Strength in PSI (Fresh sand 40/60 AFS; Bentonite/Water 5/2)", "f30": "9.5 to 10.5", "f32": "10.5 to 11", "f35": "11.0 to 12.0"},
-              {"parameter": "Methylene Blue Value (Mg of MB/100 gm of Bentonite)", "f30": "370 to 385", "f32": "390 to 405", "f35": "405 to 415"},
-              {"parameter": "Sieve Analysis — % Passing through 100 Mesh", "f30": "98", "f32": "98", "f35": "98"},
-              {"parameter": "Sieve Analysis — % Passing through 200 Mesh", "f30": "86", "f32": "86", "f35": "86"}
+              {
+                "parameter": "Moisture",
+                "f30": "10–12%",
+                "f32": "10–12%",
+                "f35": "10–12%"
+              },
+              {
+                "parameter": "pH",
+                "f30": "9 to 9.5",
+                "f32": "9.5 to 10",
+                "f35": "9.5 to 10"
+              },
+              {
+                "parameter": "Swelling Capacity (At 2 gms/100ml water)",
+                "f30": "30 to 32",
+                "f32": "32 to 35",
+                "f35": "35 to 40"
+              },
+              {
+                "parameter": "Gelling Time in minutes (10% Bentonite Slurry)",
+                "f30": "Instant",
+                "f32": "Instant",
+                "f35": "Instant"
+              },
+              {
+                "parameter": "Gel Formation Index (2.4 gms Al₂O₃, 0.2 gms MgO and 1.4 gms Bentonite)",
+                "f30": "65 to 75",
+                "f32": "75 to 80",
+                "f35": "80 to 85"
+              },
+              {
+                "parameter": "Liquid Limit",
+                "f30": "550 to 650",
+                "f32": "650 to 800",
+                "f35": "800 to 900"
+              },
+              {
+                "parameter": "Green Comp Strength in PSI (Fresh sand 40/60 AFS; Bentonite/Water 5/2)",
+                "f30": "9.5 to 10.5",
+                "f32": "10.5 to 11",
+                "f35": "11.0 to 12.0"
+              },
+              {
+                "parameter": "Methylene Blue Value (Mg of MB/100 gm of Bentonite)",
+                "f30": "370 to 385",
+                "f32": "390 to 405",
+                "f35": "405 to 415"
+              },
+              {
+                "parameter": "Sieve Analysis — % Passing through 100 Mesh",
+                "f30": "98",
+                "f32": "98",
+                "f35": "98"
+              },
+              {
+                "parameter": "Sieve Analysis — % Passing through 200 Mesh",
+                "f30": "86",
+                "f32": "86",
+                "f35": "86"
+              }
             ]
           },
           {
@@ -357,11 +430,31 @@
             "type": "matrix",
             "header_row": {
               "label": "Elements",
-              "cells": ["SiO₂", "Al₂O₃", "Fe₂O₃", "CaO", "MgO", "Na₂O", "K₂O", "TiO₂", "L.O.I"]
+              "cells": [
+                "SiO₂",
+                "Al₂O₃",
+                "Fe₂O₃",
+                "CaO",
+                "MgO",
+                "Na₂O",
+                "K₂O",
+                "TiO₂",
+                "L.O.I"
+              ]
             },
             "value_row": {
               "label": "Result (%)",
-              "cells": ["45–55", "18–25", "2–4", "1–2", "2–4", "2–4", "0–1", "1–3", "8–12"]
+              "cells": [
+                "45–55",
+                "18–25",
+                "2–4",
+                "1–2",
+                "2–4",
+                "2–4",
+                "0–1",
+                "1–3",
+                "8–12"
+              ]
             }
           },
           {
@@ -369,11 +462,23 @@
             "type": "matrix",
             "header_row": {
               "label": "Properties",
-              "cells": ["Bulk Density", "Specific Gravity", "Refractive Index", "Fusion Point", "BEC meq/100gm"]
+              "cells": [
+                "Bulk Density",
+                "Specific Gravity",
+                "Refractive Index",
+                "Fusion Point",
+                "BEC meq/100gm"
+              ]
             },
             "value_row": {
               "label": "Result",
-              "cells": ["0.9 – 1.1 gm/cc", "2.4 – 2.8", "1.547 – 1.557", "1300° – 1400° C", "80 – 110"]
+              "cells": [
+                "0.9 – 1.1 gm/cc",
+                "2.4 – 2.8",
+                "1.547 – 1.557",
+                "1300° – 1400° C",
+                "80 – 110"
+              ]
             }
           }
         ]
@@ -2530,7 +2635,7 @@
           "grade": "PENCIL",
           "name": "KORVANTO BENTO PENCIL",
           "subtitle": "Pencil Grade Bentonite",
-          "image": "assets/images/products/bento pencil/bento pencil grade.png",
+          "image": "assets/images/products/bento pencil/korvanto-bento-pencil-02.png",
           "specifications": [
             {
               "parameter": "Form",
@@ -2562,9 +2667,9 @@
       ],
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-pencil.html",
-      "image": "assets/images/products/bento pencil/bento pencil.png",
-      "hero_image": "assets/images/products/bento pencil/bento pencil 3.png",
-      "overview_image": "assets/images/products/bento pencil/bento pencil 2.png"
+      "image": "assets/images/products/bento pencil/korvanto-bento-pencil-02.png",
+      "hero_image": "assets/images/products/bento pencil/korvanto-bento-pencil-02.png",
+      "overview_image": "assets/images/products/bento pencil/korvanto-bento-pencil-02.png"
     },
     {
       "slug": "korvanto-kao-crude",
@@ -3965,7 +4070,18 @@
           "Processed through advanced crushing, screening, and grading systems, KORVANTO CHAM is available in various particle sizes and alumina grades to meet the requirements of refractory manufacturers, ceramic producers, foundries, steel plants, cement kilns, and other high-temperature industries.",
           "Its superior resistance to thermal shock, abrasion, shrinkage, and chemical degradation makes it an ideal raw material for fire bricks, castables, refractory mortars, kiln furniture, insulation materials, and technical ceramics."
         ],
-        "key_benefits": [],
+        "key_benefits": [
+          "Withstands Extreme Operating Temperatures",
+          "Improves Refractory Service Life",
+          "Reduces Cracking and Firing Defects",
+          "Enhances Structural Integrity of Refractory Products",
+          "Improves Thermal Shock Resistance",
+          "Provides Consistent Performance in High-Heat Environments",
+          "Supports Stable Refractory and Ceramic Formulations",
+          "Suitable for Both Dense and Insulating Refractories",
+          "Improves Dimensional Accuracy in Ceramic Bodies",
+          "Reliable Batch-to-Batch Quality"
+        ],
         "applications": [
           "Refractory Industry",
           "Fire Bricks",
@@ -4293,10 +4409,23 @@
         "section_label": "Compare Options",
         "section_title": "Not sure whether Chamotte or Calcined Bauxite is right for your application?",
         "columns": [
-          {"header": "Property", "key": "property", "scope": "row"},
-          {"header": "Standard Chamotte (42%)", "key": "standard"},
-          {"header": "High Alumina Chamotte (60–70%)", "key": "high_alumina"},
-          {"header": "Calcined Bauxite (80–86%)", "key": "bauxite"}
+          {
+            "header": "Property",
+            "key": "property",
+            "scope": "row"
+          },
+          {
+            "header": "Standard Chamotte (42%)",
+            "key": "standard"
+          },
+          {
+            "header": "High Alumina Chamotte (60–70%)",
+            "key": "high_alumina"
+          },
+          {
+            "header": "Calcined Bauxite (80–86%)",
+            "key": "bauxite"
+          }
         ],
         "rows": [
           {
@@ -4367,16 +4496,16 @@
           "Our calcined bauxite grades are manufactured to provide consistent alumina content, controlled impurities, and reliable performance for steel plants, cement kilns, glass furnaces, foundries, refractory producers, and abrasive manufacturers worldwide."
         ],
         "key_benefits": [
-          "High Alumina Content",
-          "Excellent Thermal Shock Resistance",
-          "High Refractoriness",
-          "Low Thermal Expansion",
-          "High Mechanical Strength",
-          "Low Impurity Levels",
-          "Excellent Abrasion Resistance",
-          "Excellent Chemical Stability",
-          "High Density",
-          "Long Service Life"
+          "Withstands Extreme Operating Temperatures",
+          "Improves Refractory Service Life",
+          "Provides Excellent Thermal Shock Resistance",
+          "Enhances Mechanical Strength of Refractory Products",
+          "Maintains Structural Stability at High Temperatures",
+          "Resistant to Chemical Attack and Corrosion",
+          "Suitable for Critical Industrial Applications",
+          "Excellent Performance in Abrasive Applications",
+          "Reliable Batch-to-Batch Consistency",
+          "Available in Customized Particle Sizes"
         ],
         "applications": [
           "Refractory Industry",
@@ -4868,11 +4997,27 @@
         "section_label": "Quick Reference",
         "section_title": "All Grades at a Glance",
         "columns": [
-          {"header": "Grade", "key": "grade", "scope": "row"},
-          {"header": "Volatile Matter", "key": "volatile_matter"},
-          {"header": "Ash", "key": "ash"},
-          {"header": "Fixed Carbon", "key": "fixed_carbon"},
-          {"header": "Typical Application", "key": "typical_application"}
+          {
+            "header": "Grade",
+            "key": "grade",
+            "scope": "row"
+          },
+          {
+            "header": "Volatile Matter",
+            "key": "volatile_matter"
+          },
+          {
+            "header": "Ash",
+            "key": "ash"
+          },
+          {
+            "header": "Fixed Carbon",
+            "key": "fixed_carbon"
+          },
+          {
+            "header": "Typical Application",
+            "key": "typical_application"
+          }
         ],
         "rows": [
           {

@@ -9,9 +9,11 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from content_dedupe import (
     benefits_are_similar,
+    benefits_look_like_features,
     dedupe_applications,
     dedupe_benefits,
     filter_items,
+    format_company_prose,
 )
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -60,6 +62,10 @@ def esc(text):
     return html.escape(str(text or ""))
 
 
+def esc_prose(text):
+    return esc(format_company_prose(text))
+
+
 def mega_menu_child_label(name):
     """Drop redundant Korvanto prefix — family column header already shows the brand."""
     label = str(name or "").strip()
@@ -95,7 +101,9 @@ def head(title, description):
 
 def foot():
     return """  <div id="footer-placeholder"></div>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/product-search.js?v=6"></script>
+  <script src="assets/js/header-search.js?v=1"></script>
+  <script src="assets/js/main.js?v=14"></script>
 </body>
 </html>"""
 
@@ -107,14 +115,31 @@ SPEC_TABLE_NOTE = (
 )
 
 STANDARD_PACKAGING_OPTIONS = [
-    "25 kg Bags",
-    "50 kg Bags",
-    "Jumbo Bags (FIBC)",
-    "Palletized Loads",
+    "25 kg",
+    "50 kg",
+    "Jumbo Bag",
+    "Palletized Load",
     "Containerized Shipping",
     "Bulk Shipments",
     "Custom Packing Available",
 ]
+
+STANDARD_PACKAGING_FAQ_ANSWER = (
+    "Korvanto LLP supplies products in the following export-ready packing options:\n"
+    "25 kg\n"
+    "50 kg\n"
+    "Jumbo Bag\n"
+    "Palletized Load\n"
+    "Containerized Shipping\n"
+    "Bulk Shipments\n"
+    "Custom Packing Available"
+)
+
+STANDARD_PACKAGING_DOCS_FAQ_ANSWER = (
+    STANDARD_PACKAGING_FAQ_ANSWER
+    + "\n\nTechnical Data Sheets (TDS), Certificate of Analysis (COA), Safety Data Sheets (SDS), "
+    "and other export documentation are available upon request."
+)
 
 BTN_ICON_QUOTE = (
     '<span class="btn-icon" aria-hidden="true">'
@@ -147,6 +172,78 @@ SHARED_KEY_BENEFITS = [
     "Consistent Batch Quality",
 ]
 
+DRILLING_BENEFIT_SLUGS = {
+    "korvanto-bento-drill",
+    "korvanto-bento-drill-api",
+    "korvanto-bento-drill-ocma",
+}
+
+GRADE_NAME_BENEFIT_RE = re.compile(
+    r"(?:"
+    r"\b(?:High Purity )?[A-Za-z]+ Grade (?:Bentonite|Kaolin)\b"
+    r"|\bKORVANTO\b"
+    r"|\b(?:API|OCMA)[ /-]?\d*\s*(?:Grade|compliant)\b"
+    r"|\bGrade [A-Z]{1,4}(?:-\d+)?\b"
+    r"|\b(?:PHARMA-IP|AG-\d+|C-\d+)\b"
+    r"|\b(?:KORVANTO )?BENTO (?:FEED|FERT|IOP)\b"
+    r"|\b(?:Fine|Premium|Standard|Economy) (?:Powder )?Grade\b"
+    r"|\b(?:Mesh Sizes|Particle Sizes) and Grades\b"
+    r")",
+    re.I,
+)
+
+BENEFIT_REPLACEMENTS = {
+    "API / OCMA compliant": "Meets API and OCMA performance standards",
+    "API 13A compliant quality": "Meets API 13A performance standards",
+    "OCMA-compliant quality": "Meets OCMA performance standards",
+    "High Purity Cosmetic Grade Bentonite": "High Purity Mineral Composition",
+    "High Purity Food Grade Bentonite": "High Purity Mineral Composition",
+    "High Purity Bentonite": "High Purity Mineral Composition",
+}
+
+
+def sanitize_benefit_text(text):
+    text = (text or "").strip()
+    return BENEFIT_REPLACEMENTS.get(text, text)
+
+
+def is_grade_name_benefit(text):
+    if not text:
+        return True
+    if GRADE_NAME_BENEFIT_RE.search(text):
+        lowered = text.lower()
+        if "meets " in lowered and "performance" in lowered:
+            return False
+        return True
+    return False
+
+
+def sanitize_benefits(items, slug=None):
+    cleaned = []
+    for item in filter_items(items or []):
+        item = sanitize_benefit_text(item)
+        if not item or is_grade_name_benefit(item):
+            continue
+        if slug not in DRILLING_BENEFIT_SLUGS and item in SHARED_KEY_BENEFITS:
+            continue
+        cleaned.append(item)
+    return dedupe_benefits(cleaned)
+
+
+def resolve_product_benefits(product):
+    sections = product.get("sections") or {}
+    key_benefits = filter_items(sections.get("key_benefits") or [])
+    product_advantages = filter_items(sections.get("product_advantages") or [])
+    key_features = filter_items(sections.get("key_features") or [])
+
+    if key_benefits and not benefits_look_like_features(key_benefits, key_features):
+        items = key_benefits
+    elif product_advantages:
+        items = product_advantages
+    else:
+        items = key_benefits
+    return sanitize_benefits(items, product.get("slug"))
+
 
 def merge_compulsory_benefits(items):
     merged = dedupe_benefits(items)
@@ -169,8 +266,14 @@ def section_header(label, title, centered=True):
         </header>"""
 
 
-def benefits_section(items=None):
-    items = merge_compulsory_benefits(items)
+def benefits_section(product=None, items=None, slug=None):
+    if product is not None:
+        items = resolve_product_benefits(product)
+        slug = product.get("slug")
+    else:
+        items = sanitize_benefits(items, slug)
+    if slug in DRILLING_BENEFIT_SLUGS:
+        items = merge_compulsory_benefits(items)
     if not items:
         return ""
     cards = ""
@@ -938,7 +1041,7 @@ def grade_cards_drill(product):
         name = g.get("name") or tag
         subtitle = g.get("subtitle", "")
         overview = g.get("overview") or []
-        ov_html = "".join(f"<p>{esc(p)}</p>" for p in overview)
+        ov_html = "".join(f"<p>{esc_prose(p)}</p>" for p in overview)
         media = grade_media_html(resolve_grade_image(slug, g), name)
         blocks.append(
             f"""<article class="pd-grade-card pd-grade-card--wide tilt-card reveal"{grade_id_attr(grade_code=tag, name=name)}>
@@ -1313,7 +1416,7 @@ def faq_items_html(items, start_open=False):
         blocks.append(
             f"""<details class="pd-faq-item"{open_attr}>
             <summary class="pd-faq-question">{esc(item["question"])}</summary>
-            <div class="pd-faq-answer">{esc(item["answer"])}</div>
+            <div class="pd-faq-answer">{esc_prose(item["answer"])}</div>
           </details>"""
         )
     return "".join(blocks)
@@ -1408,7 +1511,7 @@ def custom_manufacturing_section(product):
             <span class="pd-custom-badge">Bespoke Supply</span>
             <p class="section-label section-label--light">{esc(cm.get("section_label", "Custom Grade"))}</p>
             <h2 class="pd-custom-title">{esc(cm.get("title", "Custom Manufacturing Options"))}</h2>
-            <p class="pd-custom-lead">{esc(cm.get("lead", ""))}</p>
+            <p class="pd-custom-lead">{esc_prose(cm.get("lead", ""))}</p>
             <a href="request-quote.html" class="btn btn-gold btn-sm pd-custom-cta">Discuss Custom Specs <span class="arrow">&rarr;</span></a>
           </div>
           <div class="pd-custom-showcase-right">
@@ -1443,12 +1546,17 @@ def quality_assurance_section(product):
     if not qa:
         return ""
 
-    items = filter_items(qa.get("items") or [])
+    if isinstance(qa, list):
+        items = filter_items(qa)
+        section_label = "Compliance"
+        title = "Quality Assurance"
+    else:
+        items = filter_items(qa.get("items") or [])
+        section_label = qa.get("section_label", "Compliance")
+        title = qa.get("title", "Quality Assurance")
+
     if not items:
         return ""
-
-    section_label = qa.get("section_label", "Compliance")
-    title = qa.get("title", "Quality Assurance")
     cards = ""
     for i, item in enumerate(items, 1):
         delay = f" reveal-delay-{min(i % 3, 2)}" if i % 3 else ""
@@ -1474,12 +1582,7 @@ def quality_assurance_section(product):
 def packaging_section(items=None, show=True):
     if not show:
         return ""
-    items = filter_items(items) or STANDARD_PACKAGING_OPTIONS
-    items = [
-        item for item in items
-        if item.strip().lower() not in {"available in:", "available in"}
-        and not item.strip().lower().startswith("available in")
-    ]
+    items = STANDARD_PACKAGING_OPTIONS
     cards = ""
     for i, item in enumerate(items, 1):
         delay = f" reveal-delay-{min(i % 4, 3)}" if i % 4 else ""
@@ -1501,7 +1604,7 @@ def packaging_section(items=None, show=True):
         <span class="pd-pack-orb pd-pack-orb--2"></span>
       </div>
       <div class="container">
-        {section_header("Export Supply", "Packing Options")}
+        {section_header("Export Supply", "Packaging Options")}
         <div class="pd-pack-grid reveal reveal-delay-1">{cards}</div>
       </div>
     </section>"""
@@ -1549,7 +1652,7 @@ def overview_section(paragraphs, image, panel=None):
     title = panel.get("section_title", "Product Overview")
     cta_text = panel.get("cta_text")
     cta_href = panel.get("cta_href", "request-quote.html")
-    body = "".join(f"<p>{esc(p)}</p>" for p in paras)
+    body = "".join(f"<p>{esc_prose(p)}</p>" for p in paras)
     cta_html = (
         f'<a href="{esc(cta_href)}" class="btn btn-gold pd-overview-cta">{esc(cta_text)} <span class="arrow">&rarr;</span></a>'
         if cta_text
@@ -1639,7 +1742,7 @@ def render_detail_page(product, data, outfile):
         '  <div id="header-placeholder"></div>\n  <main>',
         hero(product["name"], fam_label, product["name"], lead, hero_image, fam_file, badge),
         overview_section(s.get("overview", []), overview_image, product.get("overview_panel")),
-        benefits_section(s.get("key_benefits") or s.get("key_features")),
+        benefits_section(product=product),
         grades_quick_reference_section(product),
         typical_specs_section(product, data),
         product_comparison_section(product),
@@ -1893,7 +1996,7 @@ def generate_portfolio_page(data):
           <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / Products</nav>
           <p class="section-label">{esc(page.get('hero_label', ''))}</p>
           <h1>{page.get('hero_title', '')}</h1>
-          <p class="page-hero-lead">{esc(page.get('hero_lead', ''))}</p>
+          <p class="page-hero-lead">{esc_prose(page.get('hero_lead', ''))}</p>
           <div class="products-portfolio-stats">{stats_html}</div>
         </div>
         <div class="products-portfolio-visual reveal reveal-delay-1">
@@ -1906,10 +2009,10 @@ def generate_portfolio_page(data):
 
     <section class="products-search-bar" aria-label="Product search">
       <div class="container">
-        <div class="products-search" id="productSearch">
+        <div class="products-search product-search" id="productSearch">
           <label class="products-search-label" for="productSearchInput">Search products &amp; grades</label>
-          <div class="products-search-field">
-            <input type="search" id="productSearchInput" class="products-search-input" placeholder="Search by product, family, or grade code (e.g. LF42, Hydrous Kaolin, F-100)..." autocomplete="off" aria-controls="productSearchResults" aria-expanded="false" aria-autocomplete="list">
+          <div class="products-search-field product-search-field">
+            <input type="search" id="productSearchInput" class="products-search-input product-search-input" placeholder="Search by product, family, or grade code (e.g. LF42, Hydrous Kaolin, F-100)..." autocomplete="off" aria-controls="productSearchResults" aria-expanded="false" aria-autocomplete="list">
             <div class="product-search-results" id="productSearchResults" role="listbox" hidden></div>
           </div>
         </div>
@@ -1921,7 +2024,7 @@ def generate_portfolio_page(data):
         <header class="inner-section-head inner-section-head--center reveal">
           <p class="section-label">{esc(page.get('section_label', ''))}</p>
           <h2 class="section-title">{esc(page.get('section_title', ''))}</h2>
-          <p class="section-lead">{esc(page.get('section_lead', ''))}</p>
+          <p class="section-lead">{esc_prose(page.get('section_lead', ''))}</p>
         </header>
         <div class="products-family-grid">{cards}</div>
       </div>
@@ -1938,7 +2041,6 @@ def generate_portfolio_page(data):
   </main>
   <div id="footer-placeholder"></div>
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/product-search.js"></script>
 </body>
 </html>"""
     PRODUCTS_PAGE_PATH.write_text(content, encoding="utf-8")
@@ -1970,7 +2072,7 @@ def render_mega_menu(data):
     return f"""            <div class="mega-menu-inner">
               <div class="mega-col">
                 <p class="mega-label">Product Families</p>
-{family_links}                <a href="products.html" class="mega-all">View Full Catalogue →</a>
+{family_links}                <a href="products.html" class="mega-all">Explore All Products →</a>
               </div>
 {''.join(wide_cols)}
             </div>"""

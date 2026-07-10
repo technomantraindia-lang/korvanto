@@ -143,7 +143,7 @@ PORTFOLIO_PAGE = {
     "section_lead": "Premium industrial minerals and raw materials for international B2B buyers — specification-focused sourcing, export-ready packaging and coordinated shipment execution.",
     "stats": [
         {"value": "7", "label": "Branded Families"},
-        {"value": "28+", "label": "Product Grades"},
+        {"value": "35+", "label": "Product Grades"},
         {"value": "B2B", "label": "Export Ready"},
     ],
     "hero_image": "assets/images/Product-Images/Bentonite.png",

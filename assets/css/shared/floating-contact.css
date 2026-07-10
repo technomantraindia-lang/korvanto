@@ -43,14 +43,8 @@
 
 .float-quote-tab-inner {
   display: inline-flex;
-  flex-direction: column;
   align-items: center;
-  gap: 0.45rem;
-}
-
-.float-quote-tab .btn-icon svg {
-  width: 1rem;
-  height: 1rem;
+  justify-content: center;
 }
 
 .float-quote-tab:hover,

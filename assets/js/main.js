@@ -165,6 +165,23 @@
     });
 
     setActiveNav();
+    bootProductSearch();
+  }
+
+  function bootProductSearch() {
+    if (!window.KorvantoProductSearch) return;
+
+    var headerOverlay = document.getElementById('headerSearchOverlay');
+    if (headerOverlay) {
+      headerOverlay.removeAttribute('data-search-initialized');
+      window.KorvantoProductSearch.init(headerOverlay, BASE);
+    }
+
+    document.querySelectorAll('.product-search').forEach(function (root) {
+      if (root.id !== 'headerSearchOverlay') {
+        window.KorvantoProductSearch.init(root, BASE);
+      }
+    });
   }
 
   function setActiveNav() {
@@ -977,7 +994,7 @@
     startAutoplay();
   }
 
-  var FOOTER_ASSET_VERSION = '11';
+  var FOOTER_ASSET_VERSION = '12';
 
   var FOOTER_MENU_HTML =
     '<div class="footer-col">' +
@@ -996,7 +1013,7 @@
     '<ul>' +
     '<li><a href="about.html">About Us</a></li>' +
     '<li><a href="products.html">Products</a></li>' +
-    '<li><a href="quality-assurance.html">Quality Assurance</a></li>' +
+    '<li><a href="quality-assurance.html">Quality &amp; Documentation</a></li>' +
     '<li><a href="certifications.html">Certifications &amp; Registrations</a></li>' +
     '<li><a href="export-packaging.html">Export &amp; Packaging</a></li>' +
     '<li><a href="contact.html">Contact Us</a></li>' +
@@ -1114,9 +1131,6 @@
     var callbackIcon =
       '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 0 0-1.02.24l-2.2 2.2a15.07 15.07 0 0 1-6.59-6.59l2.2-2.21a1 1 0 0 0 .24-1.02A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1M16 4h2v2h-2zm4 0h2v2h-2zm-8 0h2v2h-2zm4 4h2v2h-2zm4 0h2v2h-2z"/></svg>';
 
-    var quoteIcon =
-      '<span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><path d="M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z"/><path d="M9 12h6"/><path d="M9 16h4"/></svg></span>';
-
     var wrap = document.createElement('div');
     wrap.className = 'float-contact';
     wrap.id = 'floatContact';
@@ -1124,9 +1138,7 @@
     wrap.innerHTML =
       '<a href="' +
       BASE +
-      'request-quote.html" class="float-quote-tab"><span class="float-quote-tab-inner">' +
-      quoteIcon +
-      'Get Instant Quote</span></a>' +
+      'request-quote.html" class="float-quote-tab"><span class="float-quote-tab-inner">Get Instant Quote</span></a>' +
       '<div class="float-live-chat" id="floatLiveChat" role="dialog" aria-label="Live chat with Korvanto" aria-hidden="true">' +
       '<div class="float-live-chat-header">' +
       '<div><div class="float-live-chat-title">Live Chat</div><div class="float-live-chat-subtitle">Riya · Export Support</div></div>' +
@@ -1360,9 +1372,12 @@
 
   /* ——— Init ——— */
   document.addEventListener('DOMContentLoaded', function () {
-    loadPartial('header-placeholder', 'components/header.html', function () {
+    loadPartial('header-placeholder', 'components/header.html?v=2', function () {
+      var stale = document.querySelector('#headerProductSearch #headerSearchOverlay');
+      if (stale) stale.remove();
       initHeader();
     });
+    bootProductSearch();
     loadPartial(
       'footer-placeholder',
       'components/footer.html?v=' + FOOTER_ASSET_VERSION,

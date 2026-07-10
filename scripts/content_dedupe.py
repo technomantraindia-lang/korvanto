@@ -15,6 +15,52 @@ APPLICATION_GENERIC_TOKENS = {
     "use", "uses", "works",
 }
 
+KORVANTO_PRODUCT_PREFIX_RE = re.compile(
+    r"\bKorvanto\s+(?:"
+    r"Bento[\w\s&-]*|"
+    r"Kaolin(?:\s*\([^)]+\))?|"
+    r"Ball\s+Clay|"
+    r"Laterite|"
+    r"Chamotte|"
+    r"Bauxite|"
+    r"Carbon(?:\s+(?:CA|LCA|HLCA|CS))?|"
+    r"Crude|"
+    r"Levigated[\w\s]*|"
+    r"Hydrous|"
+    r"Spray(?:\s+Dried)?|"
+    r"Calcined|"
+    r"Meta\s*Kaolin|"
+    r"Metakaolin"
+    r")\b",
+    re.I,
+)
+
+
+def format_company_prose(text):
+    """Use Korvanto LLP for company references; keep Korvanto product family names."""
+    if not text or "korvanto" not in text.lower():
+        return text
+
+    # Capitalize standalone brand mentions in prose (not URLs, emails, or slugs).
+    text = re.sub(r"\bkorvanto\b(?![-@.])", "Korvanto", text, flags=re.I)
+
+    tokens = {}
+
+    def protect(match):
+        key = f"__KORVANTO_PRODUCT_{len(tokens)}__"
+        tokens[key] = match.group(0)
+        return key
+
+    protected = KORVANTO_PRODUCT_PREFIX_RE.sub(protect, text)
+    protected = re.sub(
+        r"\bKorvanto\b(?! LLP)('s)?\b",
+        lambda match: "Korvanto LLP's" if match.group(1) else "Korvanto LLP",
+        protected,
+    )
+    for key, value in tokens.items():
+        protected = protected.replace(key, value)
+    return protected
+
 
 def filter_items(items):
     skip_prefixes = ("Website Category Description", "Bottom of Form")
@@ -111,6 +157,15 @@ def applications_are_similar(a, b):
     raw_b = set(normalize_text_key(b).split())
     raw_unique = (raw_a - raw_b) | (raw_b - raw_a)
     return bool(raw_unique) and raw_unique.issubset(APPLICATION_GENERIC_TOKENS)
+
+
+def benefits_look_like_features(benefits, features):
+    benefit_items = [normalize_text_key(b) for b in filter_items(benefits) if b]
+    feature_keys = {normalize_text_key(f) for f in filter_items(features) if f}
+    if not benefit_items or not feature_keys:
+        return False
+    matched = sum(1 for item in benefit_items if item in feature_keys)
+    return matched / len(benefit_items) >= 0.6
 
 
 def dedupe_benefits(items):

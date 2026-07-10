@@ -364,6 +364,8 @@
 
 .about-industry-copy .credentials-strip {
   margin-top: 1.25rem;
+  grid-template-columns: repeat(3, minmax(max-content, 1fr));
+  gap: 0.55rem 1rem;
 }
 
 .about-portfolio .credentials-strip {
