@@ -5292,9 +5292,9 @@
           ]
         },
         {
-          "grade": "DETOX",
-          "name": "KORVANTO BENTO DETOX",
-          "subtitle": "Water Treatment & Detoxification Grade",
+          "grade": "PURIFY",
+          "name": "KORVANTO BENTO PURIFY",
+          "subtitle": "Water Treatment & Purification Grade",
           "image": "assets/images/products/bento specialty/bento specialty grade 2.png",
           "applications": [
             "Water Purification",

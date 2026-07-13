@@ -1,0 +1,128 @@
+/* Documentation request pop-up forms — Quality & Documentation page */
+.doc-request-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background: rgba(9, 35, 61, 0.58);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.doc-request-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.doc-request-dialog {
+  position: relative;
+  width: min(560px, 100%);
+  max-height: min(92vh, 820px);
+  overflow-y: auto;
+  background: var(--white);
+  border-radius: 16px;
+  padding: 1.75rem 1.75rem 1.5rem;
+  box-shadow: var(--shadow-soft);
+  transform: translateY(14px);
+  transition: transform 0.25s ease;
+}
+
+.doc-request-modal.is-open .doc-request-dialog {
+  transform: translateY(0);
+}
+
+.doc-request-close {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 50%;
+  background: var(--grey-light);
+  color: var(--text-dark);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.doc-request-close:hover {
+  background: var(--border);
+}
+
+.doc-request-dialog h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  margin: 0 2rem 0.4rem 0;
+  color: var(--navy);
+}
+
+.doc-request-dialog .doc-request-lead {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  margin-bottom: 1.25rem;
+  line-height: 1.55;
+}
+
+.doc-request-section-label {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--navy-secondary);
+  margin: 0.25rem 0 0.75rem;
+}
+
+.doc-request-section-label + .form-row,
+.doc-request-section-label + .form-group {
+  margin-top: 0;
+}
+
+.doc-request-dialog .form-group {
+  margin-bottom: 1rem;
+}
+
+.doc-request-dialog .form-success {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background: rgba(201, 162, 39, 0.12);
+  color: var(--text-dark);
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.doc-request-dialog .btn[type="submit"] {
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+body.doc-request-open {
+  overflow: hidden;
+}
+
+@media (max-width: 575px) {
+  .doc-request-dialog {
+    padding: 1.35rem 1.15rem 1.15rem;
+  }
+
+  .doc-request-dialog .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .doc-request-modal,
+  .doc-request-dialog {
+    transition: none;
+  }
+}

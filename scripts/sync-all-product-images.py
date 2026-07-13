@@ -92,7 +92,7 @@ GRADE_APPLICATION: dict[str, str] = {
     "korvanto-bento-specialty/wine.jpg": PRODUCT_APPLICATION["korvanto-bento-food"],
     "korvanto-bento-specialty/bleach.jpg": f"{W}/thumb/6/6d/AV_Nackawic_pulp_and_paper_mill.jpg/1280px-AV_Nackawic_pulp_and_paper_mill.jpg",
     "korvanto-bento-specialty/agro.jpg": PRODUCT_APPLICATION["korvanto-bento-fert"],
-    "korvanto-bento-specialty/detox.jpg": PRODUCT_APPLICATION["korvanto-bento-cosmetic"],
+    "korvanto-bento-specialty/purify.jpg": PRODUCT_APPLICATION["korvanto-bento-cosmetic"],
     "korvanto-bento-specialty/cera.jpg": PRODUCT_APPLICATION["korvanto-kao-levigated-noodles"],
     "korvanto-bento-specialty/custom.jpg": f"{W}/thumb/b/ba/Bentonite_clay_to_make_slurry.JPG/1280px-Bentonite_clay_to_make_slurry.JPG",
     "korvanto-cham/korvanto-cham-lf42.jpg": PRODUCT_APPLICATION["korvanto-cham"],

@@ -872,7 +872,7 @@ def grade_code(grade_obj):
         if match := re.search(
             r"\b(hlca|lca|cb\d{2}|lf\d{2}|f-\d+|i-\d+|c-\d+|l-\d+|"
             r"api|ocma\+?|pharma-ip|cosmetic-90|desiccant-\d+|seal-[pg]|"
-            r"paper-325|deink-100|feed|pencil|ag-\d+|bleach|detox|agro|cera|wine|custom|ca|cs)\b",
+            r"paper-325|deink-100|feed|pencil|ag-\d+|bleach|purify|agro|cera|wine|custom|ca|cs)\b",
             val,
         ):
             return match.group(1)
@@ -892,7 +892,7 @@ def grade_tokens(grade_obj):
         for part in re.findall(r"[a-z0-9]+(?:-[0-9]+)?", lowered):
             tokens.add(part)
         for part in re.findall(
-            r"(?:lf|cb|ag|api|ocma|pharma|cosmetic|desiccant|seal|paper|deink|feed|pencil|custom|wine|bleach|agro|detox|cera)\d*",
+            r"(?:lf|cb|ag|api|ocma|pharma|cosmetic|desiccant|seal|paper|deink|feed|pencil|custom|wine|bleach|agro|purify|cera)\d*",
             lowered,
         ):
             tokens.add(part)
@@ -1107,7 +1107,7 @@ def short_grade_label(name):
         r"\bPENCIL\b",
         r"\bFEED\b",
         r"\bBLEACH\b",
-        r"\bDETOX\b",
+        r"\bPURIFY\b",
         r"\bAGRO\b",
         r"\bCERA\b",
         r"\bWINE\b",
@@ -1698,7 +1698,7 @@ def cta_block(name):
     return f"""<section class="cta-banner about-cta">
       <div class="cta-bg"><img src="assets/images/cta/1.png" alt="Export logistics"></div>
       <div class="container cta-content reveal">
-        <h2>Looking for a reliable mineral export partner ?</h2>
+        <h2>Looking For A Reliable Mineral Export Partner ?</h2>
         <p class="cta-tagline">Share your specifications, application requirements and destination country.<br>Our team will recommend suitable grades, packaging options and export solutions for {esc(name)}.</p>
         <a href="request-quote.html" class="btn btn-gold">Request a Quote <span class="arrow">&rarr;</span></a>
       </div>
@@ -2033,7 +2033,7 @@ def generate_portfolio_page(data):
     <section class="cta-banner">
       <div class="cta-bg"><img src="assets/images/cta/1.png" alt="Export logistics"></div>
       <div class="container cta-content reveal">
-        <h2>Looking for a reliable mineral export partner ?</h2>
+        <h2>Looking For A Reliable Mineral Export Partner ?</h2>
         <p class="cta-tagline">Share your specifications, application requirements and destination country.<br>Our team will recommend suitable grades, packaging options and export solutions.</p>
         <a href="request-quote.html" class="btn btn-gold">Request a Quote <span class="arrow">&rarr;</span></a>
       </div>

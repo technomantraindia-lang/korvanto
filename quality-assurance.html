@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="assets/css/shared/footer.css">
   <link rel="stylesheet" href="assets/css/shared/premium-inner.css">
   <link rel="stylesheet" href="assets/css/pages/inner.css">
+  <link rel="stylesheet" href="assets/css/pages/forms.css">
+  <link rel="stylesheet" href="assets/css/pages/doc-request-modals.css">
   <link rel="stylesheet" href="assets/css/shared/responsive.css">
   <link rel="stylesheet" href="assets/css/shared/mobile.css">
 </head>
@@ -203,22 +205,22 @@
           <article class="p-card tilt-card">
             <h4>TDS Available</h4>
             <p>Technical Data Sheets available for product grades upon request.</p>
-            <a href="request-quote.html" class="btn btn-gold btn-sm" style="margin-top:1rem;">Request TDS</a>
+            <button type="button" class="btn btn-gold btn-sm doc-request-trigger" data-doc-modal="docModalTds" style="margin-top:1rem;">Request TDS</button>
           </article>
           <article class="p-card tilt-card reveal-delay-1">
             <h4>COA Available</h4>
             <p>Certificate of Analysis support aligned with batch and buyer requirements.</p>
-            <a href="request-quote.html" class="btn btn-gold btn-sm" style="margin-top:1rem;">Request COA</a>
+            <button type="button" class="btn btn-gold btn-sm doc-request-trigger" data-doc-modal="docModalCoa" style="margin-top:1rem;">Request COA</button>
           </article>
           <article class="p-card tilt-card reveal-delay-2">
             <h4>SDS / MSDS Available</h4>
             <p>Safety documentation support for handling and regulatory compliance.</p>
-            <a href="contact.html" class="btn btn-gold btn-sm" style="margin-top:1rem;">Request SDS</a>
+            <button type="button" class="btn btn-gold btn-sm doc-request-trigger" data-doc-modal="docModalSds" style="margin-top:1rem;">Request SDS</button>
           </article>
           <article class="p-card tilt-card">
             <h4>Sample Support</h4>
             <p>Sample coordination for grade evaluation and specification verification.</p>
-            <a href="request-quote.html" class="btn btn-gold btn-sm" style="margin-top:1rem;">Request Sample</a>
+            <button type="button" class="btn btn-gold btn-sm doc-request-trigger" data-doc-modal="docModalSample" style="margin-top:1rem;">Request Sample</button>
           </article>
           <article class="p-card tilt-card reveal-delay-1">
             <h4>Third-Party Testing</h4>
@@ -228,7 +230,7 @@
           <article class="p-card tilt-card reveal-delay-2">
             <h4>Custom Grade Support</h4>
             <p>Specification-focused sourcing and custom grade coordination.</p>
-            <a href="request-quote.html" class="btn btn-gold btn-sm" style="margin-top:1rem;">Request Quote</a>
+            <a href="contact.html" class="btn btn-gold btn-sm" style="margin-top:1rem;">Contact Expert Team</a>
           </article>
           <article class="p-card tilt-card">
             <h4>Quality Verification Support</h4>
@@ -249,17 +251,192 @@
       </div>
     </section>
 
+    <!-- Documentation request pop-ups -->
+    <template id="docProductOptionsTpl">
+      <option value="">Select product</option>
+      <optgroup label="Korvanto Bentonite">
+        <option value="korvanto-bento-drill">Korvanto Bento Drilling</option>
+        <option value="korvanto-bento-foundry">Korvanto Bento Foundry</option>
+        <option value="korvanto-bento-iop">Korvanto Bento Iron Ore Palletizing</option>
+        <option value="korvanto-bento-civil">Korvanto Bento Civil</option>
+        <option value="korvanto-bento-feed">Korvanto Bento Animal Feed</option>
+        <option value="korvanto-bento-fert">Korvanto Bento Fertilizer</option>
+        <option value="korvanto-bento-litter">Korvanto Bento Cat Litter</option>
+        <option value="korvanto-bento-paper-deink">Korvanto Bento Paper &amp; Deink</option>
+        <option value="korvanto-bento-pharma">Korvanto Bento Pharma</option>
+        <option value="korvanto-bento-cosmetic">Korvanto Bento Cosmetic</option>
+        <option value="korvanto-bento-desiccant">Korvanto Bento Desiccant</option>
+        <option value="korvanto-bento-seal">Korvanto Bento Pond Seal</option>
+        <option value="korvanto-bento-food">Korvanto Bento Food</option>
+        <option value="korvanto-bento-pencil">Korvanto Bento Pencil</option>
+        <option value="korvanto-bento-specialty">Korvanto Bento Specialty</option>
+      </optgroup>
+      <optgroup label="Korvanto Kaolin (China Clay)">
+        <option value="korvanto-kao-crude">Korvanto Crude Kaolin</option>
+        <option value="korvanto-kao-levigated-noodles">Korvanto Levigated Kaolin Noodles</option>
+        <option value="korvanto-kao-levigated-lumps">Korvanto Levigated Kaolin Lumps</option>
+        <option value="korvanto-kao-hydrous">Korvanto Hydrous Kaolin</option>
+        <option value="korvanto-kao-spray">Korvanto Spray Dried Kaolin</option>
+        <option value="korvanto-kao-calcined">Korvanto Calcined Kaolin</option>
+        <option value="korvanto-kao-metakaolin">Korvanto Meta Kaolin</option>
+      </optgroup>
+      <optgroup label="Other Product Families">
+        <option value="korvanto-clay">Korvanto Ball Clay</option>
+        <option value="korvanto-lat">Korvanto Laterite</option>
+        <option value="korvanto-cham">Korvanto Chamotte</option>
+        <option value="korvanto-baux">Korvanto Bauxite</option>
+        <option value="korvanto-carbo">Korvanto Carbon</option>
+      </optgroup>
+      <option value="multiple">Multiple Products</option>
+    </template>
+
+    <div class="doc-request-modal" id="docModalTds" role="dialog" aria-modal="true" aria-labelledby="docModalTdsTitle" aria-hidden="true">
+      <div class="doc-request-dialog">
+        <button type="button" class="doc-request-close" aria-label="Close">&times;</button>
+        <h3 id="docModalTdsTitle">Request Technical Data Sheet (TDS)</h3>
+        <p class="doc-request-lead">Share your product and grade requirements. Our export team will arrange the relevant technical data sheet.</p>
+        <form class="doc-request-form" data-validate data-mailto="exports@korvanto.com" data-mailto-subject="Korvanto TDS Request" novalidate>
+          <div class="form-success" hidden>Your email app will open with your TDS request addressed to exports@korvanto.com. Send the email from there to complete your request.</div>
+          <p class="doc-request-section-label">Company Information</p>
+          <div class="form-row">
+            <div class="form-group"><label for="tdsName">Full Name *</label><input type="text" id="tdsName" name="name" required autocomplete="name"></div>
+            <div class="form-group"><label for="tdsCompany">Company Name *</label><input type="text" id="tdsCompany" name="company" required autocomplete="organization"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="tdsEmail">Email *</label><input type="email" id="tdsEmail" name="email" required autocomplete="email"></div>
+            <div class="form-group"><label for="tdsPhone">Phone / WhatsApp *</label><input type="tel" id="tdsPhone" name="phone" required autocomplete="tel"></div>
+          </div>
+          <div class="form-group"><label for="tdsCountry">Country *</label><input type="text" id="tdsCountry" name="country" required autocomplete="country-name"></div>
+          <p class="doc-request-section-label">Product Information</p>
+          <div class="form-group"><label for="tdsProduct">Product *</label><select id="tdsProduct" name="product" class="doc-product-select" required></select></div>
+          <div class="form-row">
+            <div class="form-group"><label for="tdsGrade">Grade / Specification</label><input type="text" id="tdsGrade" name="grade" placeholder="Optional"></div>
+            <div class="form-group"><label for="tdsApplication">Intended Application / Industry</label><input type="text" id="tdsApplication" name="application" placeholder="Optional"></div>
+          </div>
+          <div class="form-group"><label for="tdsParams">Specific Parameters Required</label><textarea id="tdsParams" name="specific_parameters" rows="2" placeholder="Optional — mesh size, chemical limits, moisture, etc."></textarea></div>
+          <div class="form-group"><label for="tdsTimeline">Expected Purchase Timeline *</label><select id="tdsTimeline" name="purchase_timeline" required><option value="">Select timeline</option><option value="immediate">Immediate</option><option value="within-1-month">Within 1 month</option><option value="within-3-months">Within 3 months</option><option value="evaluating">Just evaluating suppliers</option></select></div>
+          <div class="form-group"><label for="tdsNotes">Additional Notes *</label><textarea id="tdsNotes" name="additional_notes" rows="3" required></textarea></div>
+          <button type="submit" class="btn btn-gold">Request TDS <span class="arrow">&rarr;</span></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="doc-request-modal" id="docModalCoa" role="dialog" aria-modal="true" aria-labelledby="docModalCoaTitle" aria-hidden="true">
+      <div class="doc-request-dialog">
+        <button type="button" class="doc-request-close" aria-label="Close">&times;</button>
+        <h3 id="docModalCoaTitle">Request Certificate of Analysis (COA)</h3>
+        <p class="doc-request-lead">Certificate of Analysis support aligned with your batch and buyer requirements.</p>
+        <form class="doc-request-form" data-validate data-mailto="exports@korvanto.com" data-mailto-subject="Korvanto COA Request" novalidate>
+          <div class="form-success" hidden>Your email app will open with your COA request addressed to exports@korvanto.com. Send the email from there to complete your request.</div>
+          <p class="doc-request-section-label">Company Information</p>
+          <div class="form-row">
+            <div class="form-group"><label for="coaName">Full Name *</label><input type="text" id="coaName" name="name" required autocomplete="name"></div>
+            <div class="form-group"><label for="coaCompany">Company Name *</label><input type="text" id="coaCompany" name="company" required autocomplete="organization"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="coaEmail">Email *</label><input type="email" id="coaEmail" name="email" required autocomplete="email"></div>
+            <div class="form-group"><label for="coaPhone">Phone / WhatsApp *</label><input type="tel" id="coaPhone" name="phone" required autocomplete="tel"></div>
+          </div>
+          <div class="form-group"><label for="coaCountry">Country *</label><input type="text" id="coaCountry" name="country" required autocomplete="country-name"></div>
+          <p class="doc-request-section-label">Product Information</p>
+          <div class="form-group"><label for="coaProduct">Product *</label><select id="coaProduct" name="product" class="doc-product-select" required></select></div>
+          <div class="form-row">
+            <div class="form-group"><label for="coaGrade">Grade / Specification</label><input type="text" id="coaGrade" name="grade" placeholder="Optional"></div>
+            <div class="form-group"><label for="coaApplication">Intended Application / Industry</label><input type="text" id="coaApplication" name="application" placeholder="Optional"></div>
+          </div>
+          <div class="form-group"><label for="coaStatus">Purchase Status</label><select id="coaStatus" name="purchase_status"><option value="">Select status (optional)</option><option value="evaluating">Evaluating Supplier</option><option value="existing">Existing Customer</option><option value="approved">Approved Vendor</option><option value="other">Other</option></select></div>
+          <div class="form-group"><label for="coaTimeline">Expected Purchase Timeline *</label><select id="coaTimeline" name="purchase_timeline" required><option value="">Select timeline</option><option value="immediate">Immediate</option><option value="within-1-month">Within 1 month</option><option value="within-3-months">Within 3 months</option><option value="evaluating">Just evaluating suppliers</option></select></div>
+          <div class="form-group"><label for="coaNotes">Additional Notes *</label><textarea id="coaNotes" name="additional_notes" rows="3" required></textarea></div>
+          <button type="submit" class="btn btn-gold">Request COA <span class="arrow">&rarr;</span></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="doc-request-modal" id="docModalSds" role="dialog" aria-modal="true" aria-labelledby="docModalSdsTitle" aria-hidden="true">
+      <div class="doc-request-dialog">
+        <button type="button" class="doc-request-close" aria-label="Close">&times;</button>
+        <h3 id="docModalSdsTitle">Request SDS / MSDS</h3>
+        <p class="doc-request-lead">Safety documentation support for handling, storage, and regulatory compliance. Some SDS versions vary by regulations.</p>
+        <form class="doc-request-form" data-validate data-mailto="exports@korvanto.com" data-mailto-subject="Korvanto SDS Request" novalidate>
+          <div class="form-success" hidden>Your email app will open with your SDS request addressed to exports@korvanto.com. Send the email from there to complete your request.</div>
+          <p class="doc-request-section-label">Company Information</p>
+          <div class="form-row">
+            <div class="form-group"><label for="sdsName">Full Name *</label><input type="text" id="sdsName" name="name" required autocomplete="name"></div>
+            <div class="form-group"><label for="sdsCompany">Company Name *</label><input type="text" id="sdsCompany" name="company" required autocomplete="organization"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="sdsEmail">Email *</label><input type="email" id="sdsEmail" name="email" required autocomplete="email"></div>
+            <div class="form-group"><label for="sdsPhone">Phone / WhatsApp *</label><input type="tel" id="sdsPhone" name="phone" required autocomplete="tel"></div>
+          </div>
+          <div class="form-group"><label for="sdsCountry">Country *</label><input type="text" id="sdsCountry" name="country" required autocomplete="country-name"></div>
+          <p class="doc-request-section-label">Product Information</p>
+          <div class="form-group"><label for="sdsProduct">Product *</label><select id="sdsProduct" name="product" class="doc-product-select" required></select></div>
+          <div class="form-row">
+            <div class="form-group"><label for="sdsGrade">Grade / Specification</label><input type="text" id="sdsGrade" name="grade" placeholder="Optional"></div>
+            <div class="form-group"><label for="sdsApplication">Intended Application / Industry</label><input type="text" id="sdsApplication" name="application" placeholder="Optional"></div>
+          </div>
+          <div class="form-group"><label for="sdsImportCountry">Intended Country of Import</label><input type="text" id="sdsImportCountry" name="import_country" placeholder="Optional"></div>
+          <div class="form-group"><label for="sdsTimeline">Expected Purchase Timeline *</label><select id="sdsTimeline" name="purchase_timeline" required><option value="">Select timeline</option><option value="immediate">Immediate</option><option value="within-1-month">Within 1 month</option><option value="within-3-months">Within 3 months</option><option value="evaluating">Just evaluating suppliers</option></select></div>
+          <div class="form-group"><label for="sdsNotes">Additional Notes *</label><textarea id="sdsNotes" name="additional_notes" rows="3" required></textarea></div>
+          <button type="submit" class="btn btn-gold">Request SDS / MSDS <span class="arrow">&rarr;</span></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="doc-request-modal" id="docModalSample" role="dialog" aria-modal="true" aria-labelledby="docModalSampleTitle" aria-hidden="true">
+      <div class="doc-request-dialog">
+        <button type="button" class="doc-request-close" aria-label="Close">&times;</button>
+        <h3 id="docModalSampleTitle">Request Sample</h3>
+        <p class="doc-request-lead">Sample coordination for grade evaluation and specification verification before bulk supply.</p>
+        <form class="doc-request-form" data-validate data-mailto="exports@korvanto.com" data-mailto-subject="Korvanto Sample Request" novalidate>
+          <div class="form-success" hidden>Your email app will open with your sample request addressed to exports@korvanto.com. Send the email from there to complete your request.</div>
+          <p class="doc-request-section-label">Company Information</p>
+          <div class="form-row">
+            <div class="form-group"><label for="sampleName">Full Name *</label><input type="text" id="sampleName" name="name" required autocomplete="name"></div>
+            <div class="form-group"><label for="sampleCompany">Company Name *</label><input type="text" id="sampleCompany" name="company" required autocomplete="organization"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="sampleEmail">Email *</label><input type="email" id="sampleEmail" name="email" required autocomplete="email"></div>
+            <div class="form-group"><label for="samplePhone">Phone / WhatsApp *</label><input type="tel" id="samplePhone" name="phone" required autocomplete="tel"></div>
+          </div>
+          <div class="form-group"><label for="sampleCountry">Country *</label><input type="text" id="sampleCountry" name="country" required autocomplete="country-name"></div>
+          <p class="doc-request-section-label">Product Information</p>
+          <div class="form-group"><label for="sampleProduct">Product *</label><select id="sampleProduct" name="product" class="doc-product-select" required></select></div>
+          <div class="form-row">
+            <div class="form-group"><label for="sampleGrade">Grade / Specification</label><input type="text" id="sampleGrade" name="grade" placeholder="Optional"></div>
+            <div class="form-group"><label for="sampleApplication">Intended Application / Industry</label><input type="text" id="sampleApplication" name="application" placeholder="Optional"></div>
+          </div>
+          <p class="doc-request-section-label">Sample Details</p>
+          <div class="form-row">
+            <div class="form-group"><label for="sampleQty">Sample Quantity Required *</label><input type="text" id="sampleQty" name="sample_quantity" required placeholder="e.g. 1–2 kg"></div>
+            <div class="form-group"><label for="sampleRequiredGrade">Required Grade *</label><input type="text" id="sampleRequiredGrade" name="required_grade" required></div>
+          </div>
+          <div class="form-group"><label for="sampleIntendedApp">Intended Application *</label><input type="text" id="sampleIntendedApp" name="intended_application" required></div>
+          <div class="form-group"><label for="sampleAddress">Delivery Address *</label><textarea id="sampleAddress" name="delivery_address" rows="2" required></textarea></div>
+          <div class="form-row">
+            <div class="form-group"><label for="sampleCourier">Courier Account</label><input type="text" id="sampleCourier" name="courier_account" placeholder="Optional"></div>
+            <div class="form-group"><label for="sampleAnnual">Expected Annual Requirement *</label><input type="text" id="sampleAnnual" name="annual_requirement" required placeholder="e.g. 500 MT / year"></div>
+          </div>
+          <div class="form-group"><label for="sampleTimeline">Expected Purchase Timeline *</label><select id="sampleTimeline" name="purchase_timeline" required><option value="">Select timeline</option><option value="immediate">Immediate</option><option value="within-1-month">Within 1 month</option><option value="within-3-months">Within 3 months</option><option value="evaluating">Just evaluating suppliers</option></select></div>
+          <div class="form-group"><label for="sampleNotes">Additional Notes *</label><textarea id="sampleNotes" name="additional_notes" rows="3" required></textarea></div>
+          <button type="submit" class="btn btn-gold">Request Sample <span class="arrow">&rarr;</span></button>
+        </form>
+      </div>
+    </div>
+
     <section class="cta-banner">
       <div class="cta-bg"><img src="assets/images/cta/1.png" alt="" onerror="this.src='https://images.unsplash.com/photo-1578575437130-527eed3eabec?auto=format&fit=crop&w=1920&q=80'"></div>
       <div class="container cta-content reveal">
-        <h2>Looking for a reliable mineral export partner ?</h2>
+        <h2>Looking For A Reliable Mineral Export Partner ?</h2>
         <p class="cta-tagline">Share your specifications, application requirements and destination country.<br>Our team will recommend suitable grades, packaging options and export solutions.</p>
         <a href="request-quote.html" class="btn btn-gold">Request a Quote <span class="arrow">&rarr;</span></a>
       </div>
     </section>
   </main>
   <div id="footer-placeholder"></div>
-  <script src="assets/js/product-search.js?v=6"></script>`n  <script src="assets/js/header-search.js?v=1"></script>
+  <script src="assets/js/product-search.js?v=6"></script>
+  <script src="assets/js/header-search.js?v=1"></script>
   <script src="assets/js/main.js?v=14"></script>
+  <script src="assets/js/doc-request-modals.js?v=2"></script>
 </body>
 </html>
