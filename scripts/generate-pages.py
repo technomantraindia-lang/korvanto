@@ -720,6 +720,13 @@ def grades_quick_reference_section(product):
             )
         cta_html = f'<div class="pd-quick-ref-actions reveal reveal-delay-2">{buttons}</div>'
 
+    footnote = (ref.get("footnote") or "").strip()
+    footnote_html = (
+        f'<p class="pd-quick-ref-footnote reveal reveal-delay-1"><em>{esc(footnote)}</em></p>'
+        if footnote
+        else ""
+    )
+
     return f"""<section class="section pd-section pd-section--navy pd-quick-ref-section" id="pdQuickRef">
       <div class="container">
         <header class="inner-section-head inner-section-head--center pd-section-head pd-quick-ref-head reveal">
@@ -734,6 +741,7 @@ def grades_quick_reference_section(product):
             <tbody>{body}</tbody>
           </table>
         </div>
+        {footnote_html}
         {cta_html}
       </div>
     </section>"""

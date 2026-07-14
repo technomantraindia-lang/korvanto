@@ -1007,6 +1007,7 @@
     '<li><a href="calcined-bauxite.html">Calcined Bauxite</a></li>' +
     '<li><a href="laterite.html">Laterite</a></li>' +
     '<li><a href="coal-additive.html">Coal Additive</a></li>' +
+    '<li><a href="assets/documents/korvanto-product-catalogue.pdf" download="Korvanto-Product-Catalogue.pdf">Download Product Catalogue</a></li>' +
     '</ul></div>' +
     '<div class="footer-col">' +
     '<h4>Company</h4>' +
@@ -1018,6 +1019,7 @@
     '<li><a href="export-packaging.html">Export &amp; Packaging</a></li>' +
     '<li><a href="contact.html">Contact Us</a></li>' +
     '<li><a href="request-quote.html">Request a Quote</a></li>' +
+    '<li><a href="assets/documents/korvanto-company-profile.pdf" download="Korvanto-Company-Profile.pdf">Download Company Profile</a></li>' +
     '</ul></div>' +
     '<div class="footer-col footer-contact">' +
     '<h4>Contact</h4>' +
@@ -1136,9 +1138,14 @@
     wrap.id = 'floatContact';
     wrap.setAttribute('aria-label', 'Quick contact options');
     wrap.innerHTML =
+      '<div class="float-side-tabs" aria-label="Quick actions">' +
       '<a href="' +
       BASE +
       'request-quote.html" class="float-quote-tab"><span class="float-quote-tab-inner">Get Instant Quote</span></a>' +
+      '<a href="' +
+      BASE +
+      'assets/documents/korvanto-product-catalogue.pdf" class="float-quote-tab float-catalogue-tab" download="Korvanto-Product-Catalogue.pdf"><span class="float-quote-tab-inner">Download Catalogue</span></a>' +
+      '</div>' +
       '<div class="float-live-chat" id="floatLiveChat" role="dialog" aria-label="Live chat with Korvanto" aria-hidden="true">' +
       '<div class="float-live-chat-header">' +
       '<div><div class="float-live-chat-title">Live Chat</div><div class="float-live-chat-subtitle">Riya · Export Support</div></div>' +

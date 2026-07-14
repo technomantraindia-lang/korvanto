@@ -1,0 +1,94 @@
+/**
+ * Shared product → grade map (from product detail pages)
+ * Used by Request a Quote + Documentation request forms.
+ */
+window.KORVANTO_PRODUCT_GRADES = {
+  'korvanto-bento-drill': ['API', 'OCMA+', 'OCMA'],
+  'korvanto-bento-foundry': ['F30', 'F32', 'F35', 'CUSTOM'],
+  'korvanto-bento-iop': ['I-100', 'I-200', 'I-300'],
+  'korvanto-bento-civil': ['C-45', 'C-33'],
+  'korvanto-bento-feed': ['FEED', 'CUSTOM'],
+  'korvanto-bento-fert': ['AG-100', 'AG-200', 'AG-300'],
+  'korvanto-bento-litter': ['L-25', 'CUSTOM', 'PRIVATE LABEL'],
+  'korvanto-bento-paper-deink': ['PAPER-325', 'DEINK-100'],
+  'korvanto-bento-pharma': ['PHARMA-IP', 'CUSTOM'],
+  'korvanto-bento-cosmetic': ['COSMETIC-90', 'CUSTOM'],
+  'korvanto-bento-desiccant': ['DESICCANT-24', 'DESICCANT-05', 'DESICCANT-12'],
+  'korvanto-bento-seal': ['SEAL-P', 'SEAL-G'],
+  'korvanto-bento-food': ['FOOD', 'CUSTOM'],
+  'korvanto-bento-pencil': ['PENCIL', 'CUSTOM'],
+  'korvanto-bento-specialty': ['BLEACH', 'PURIFY', 'AGRO', 'CERA', 'WINE', 'CUSTOM'],
+  'korvanto-kao-crude': ['Standard / As Per Specification'],
+  'korvanto-kao-levigated-noodles': ['Standard / As Per Specification'],
+  'korvanto-kao-levigated-lumps': ['Standard / As Per Specification'],
+  'korvanto-kao-hydrous': ['Standard / As Per Specification'],
+  'korvanto-kao-spray': ['Standard / As Per Specification'],
+  'korvanto-kao-calcined': ['Standard / As Per Specification'],
+  'korvanto-kao-metakaolin': ['Standard / As Per Specification'],
+  'korvanto-clay': ['Standard / As Per Specification'],
+  'korvanto-lat': ['Standard / As Per Specification'],
+  'korvanto-cham': ['LF42', 'LF46', 'LF54', 'LF60', 'LF70'],
+  'korvanto-baux': ['CB80', 'CB82', 'CB86'],
+  'korvanto-carbo': ['ELITE', 'PREMIUM', 'ADVANCE', 'STANDARD'],
+  multiple: ['Multiple Grades / As Per Enquiry']
+};
+
+window.KorvantoGradeFilter = (function () {
+  function getGrades(slug) {
+    var map = window.KORVANTO_PRODUCT_GRADES || {};
+    return slug && map[slug] ? map[slug].slice() : [];
+  }
+
+  function fillGradeSelect(select, grades, required) {
+    if (!select) return;
+    var previous = select.value;
+    select.innerHTML = '';
+
+    var placeholder = document.createElement('option');
+    placeholder.value = '';
+    placeholder.textContent = grades && grades.length
+      ? (required ? 'Select grade' : 'Select grade (optional)')
+      : 'Select product first';
+    select.appendChild(placeholder);
+
+    (grades || []).forEach(function (grade) {
+      var opt = document.createElement('option');
+      opt.value = grade;
+      opt.textContent = grade;
+      select.appendChild(opt);
+    });
+
+    if (grades && grades.indexOf(previous) !== -1) {
+      select.value = previous;
+    }
+
+    select.disabled = !grades || !grades.length;
+  }
+
+  function updateForm(form) {
+    if (!form) return;
+    var productSelect = form.querySelector('.doc-product-select, [data-product-grade-source]');
+    if (!productSelect) return;
+    var grades = getGrades(productSelect.value || '');
+    form.querySelectorAll('.doc-grade-select, [data-product-grade-target]').forEach(function (gradeSelect) {
+      fillGradeSelect(gradeSelect, grades, gradeSelect.hasAttribute('required'));
+    });
+  }
+
+  function wireForm(form) {
+    if (!form) return;
+    var productSelect = form.querySelector('.doc-product-select, [data-product-grade-source]');
+    if (!productSelect) return;
+    productSelect.addEventListener('change', function () {
+      updateForm(form);
+    });
+    updateForm(form);
+  }
+
+  return {
+    getGrades: getGrades,
+    fillGradeSelect: fillGradeSelect,
+    updateForm: updateForm,
+    wireForm: wireForm
+  };
+})();

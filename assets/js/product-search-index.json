@@ -1237,79 +1237,71 @@
     ]
   },
   {
-    "label": "KORVANTO CARBO CA",
-    "url": "korvanto-carbo.html#grade-ca",
+    "label": "KORVANTO LUSTROUS ELITE",
+    "url": "korvanto-carbo.html#grade-elite",
     "type": "grade",
     "family": "Korvanto Carbon",
     "keywords": [
-      "additive",
+      "advance",
+      "carbo",
+      "carbon",
+      "coal seam hlca",
+      "elite",
+      "hlca",
+      "korvanto",
+      "korvanto carbon",
+      "korvanto lustrous elite",
+      "lustrous"
+    ]
+  },
+  {
+    "label": "KORVANTO LUSTROUS PREMIUM",
+    "url": "korvanto-carbo.html#grade-premium",
+    "type": "grade",
+    "family": "Korvanto Carbon",
+    "keywords": [
+      "carbo",
+      "carbon",
+      "coal seam lca",
+      "korvanto",
+      "korvanto carbon",
+      "korvanto lustrous premium",
+      "lca",
+      "lustrous",
+      "premium"
+    ]
+  },
+  {
+    "label": "KORVANTO LUSTROUS ADVANCE",
+    "url": "korvanto-carbo.html#grade-advance",
+    "type": "grade",
+    "family": "Korvanto Carbon",
+    "keywords": [
+      "advance",
       "ca",
       "carbo",
       "carbon",
+      "coal seam ca",
       "korvanto",
-      "korvanto carbo ca",
       "korvanto carbon",
-      "lustrous",
-      "standard",
-      "standard lustrous carbon additive"
-    ]
-  },
-  {
-    "label": "KORVANTO CARBO CS",
-    "url": "korvanto-carbo.html#grade-cs",
-    "type": "grade",
-    "family": "Korvanto Carbon",
-    "keywords": [
-      "carbo",
-      "carbon",
-      "cs",
-      "customized",
-      "customized foundry carbon solutions",
-      "foundry",
-      "korvanto",
-      "korvanto carbo cs",
-      "korvanto carbon",
-      "solutions"
-    ]
-  },
-  {
-    "label": "KORVANTO CARBO HLCA",
-    "url": "korvanto-carbo.html#grade-hlca",
-    "type": "grade",
-    "family": "Korvanto Carbon",
-    "keywords": [
-      "additive",
-      "ash",
-      "carbo",
-      "carbon",
-      "high",
-      "high performance low ash lustrous carbon additive",
-      "hlca",
-      "korvanto",
-      "korvanto carbo hlca",
-      "korvanto carbon",
-      "low",
-      "lustrous",
-      "performance"
-    ]
-  },
-  {
-    "label": "KORVANTO CARBO LCA",
-    "url": "korvanto-carbo.html#grade-lca",
-    "type": "grade",
-    "family": "Korvanto Carbon",
-    "keywords": [
-      "additive",
-      "ash",
-      "carbo",
-      "carbon",
-      "korvanto",
-      "korvanto carbo lca",
-      "korvanto carbon",
-      "lca",
-      "low",
-      "low ash lustrous carbon additive",
+      "korvanto lustrous advance",
       "lustrous"
+    ]
+  },
+  {
+    "label": "KORVANTO LUSTROUS STANDARD",
+    "url": "korvanto-carbo.html#grade-standard",
+    "type": "grade",
+    "family": "Korvanto Carbon",
+    "keywords": [
+      "carbo",
+      "carbon",
+      "coal seam",
+      "korvanto",
+      "korvanto carbon",
+      "korvanto lustrous standard",
+      "lustrous",
+      "standard"
     ]
   },
   {

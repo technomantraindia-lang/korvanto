@@ -215,8 +215,8 @@
         "name": "Korvanto Carbon",
         "file": "korvanto-carbo.html",
         "image": "assets/images/families/col additivie home.png",
-        "short": "Premium lustrous carbon additive for green sand foundry applications — grades CA, LCA, HLCA, and CS.",
-        "portfolio_meta": "CA · LCA · HLCA · CS",
+        "short": "Premium lustrous carbon additive for green sand foundry applications — grades ELITE, PREMIUM, ADVANCE, and STANDARD.",
+        "portfolio_meta": "ELITE · PREMIUM · ADVANCE · STANDARD",
         "single": "korvanto-carbo"
       }
     ],
@@ -4834,31 +4834,23 @@
           "Consistent Batch-to-Batch Quality"
         ],
         "available_grades": [
-          "KORVANTO CARBO CA",
-          "Standard Lustrous Carbon Additive",
-          "Suitable for:",
-          "General Purpose Foundries",
-          "Grey Iron Castings",
-          "Standard Green Sand Systems",
-          "KORVANTO CARBO LCA",
-          "Low Ash Lustrous Carbon Additive",
-          "Suitable for:",
-          "High-Quality Surface Finish Requirements",
-          "Automotive Castings",
-          "Precision Engineering Castings",
-          "KORVANTO CARBO HLCA",
-          "High Performance Low Ash Lustrous Carbon Additive",
-          "Suitable for:",
-          "Premium Foundry Applications",
-          "Critical Surface Finish Requirements",
-          "High-End Automotive and Industrial Castings",
-          "KORVANTO CARBO CS",
-          "Customized Foundry Carbon Solutions",
-          "Developed according to:",
-          "Sand System Characteristics",
-          "Casting Type",
-          "Production Requirements",
-          "Foundry Process Conditions"
+          "KORVANTO LUSTROUS ELITE™",
+          "Coal Seam HLCA",
+          "Volatile Matter (%) 40 – 50",
+          "Ash (%) Max 7.0",
+          "KORVANTO LUSTROUS PREMIUM™",
+          "Coal Seam LCA",
+          "Volatile Matter (%) 50 – 55",
+          "Ash (%) Max 8.0",
+          "KORVANTO LUSTROUS ADVANCE™",
+          "Coal Seam CA",
+          "Volatile Matter (%) 55 – 65",
+          "Ash (%) Max 6.0",
+          "KORVANTO LUSTROUS STANDARD™",
+          "Coal Seam",
+          "Volatile Matter (%) 45 – 55",
+          "Ash (%) Max 9.0",
+          "Fixed Carbon: By Difference"
         ],
         "packaging": [],
         "short_website_description": [
@@ -4866,8 +4858,12 @@
         ],
         "typical_specs": [
           {
-            "title": "KORVANTO CARBO CA™",
+            "title": "KORVANTO LUSTROUS ADVANCE™",
             "specs": [
+              {
+                "parameter": "Base Material",
+                "value": "Coal Seam CA"
+              },
               {
                 "parameter": "Volatile Matter",
                 "value": "55 – 65%"
@@ -4887,8 +4883,12 @@
             ]
           },
           {
-            "title": "KORVANTO CARBO LCA™",
+            "title": "KORVANTO LUSTROUS PREMIUM™",
             "specs": [
+              {
+                "parameter": "Base Material",
+                "value": "Coal Seam LCA"
+              },
               {
                 "parameter": "Volatile Matter",
                 "value": "50 – 55%"
@@ -4908,8 +4908,12 @@
             ]
           },
           {
-            "title": "KORVANTO CARBO HLCA™",
+            "title": "KORVANTO LUSTROUS ELITE™",
             "specs": [
+              {
+                "parameter": "Base Material",
+                "value": "Coal Seam HLCA"
+              },
               {
                 "parameter": "Volatile Matter",
                 "value": "40 – 50%"
@@ -4929,8 +4933,12 @@
             ]
           },
           {
-            "title": "KORVANTO CARBO CS™",
+            "title": "KORVANTO LUSTROUS STANDARD™",
             "specs": [
+              {
+                "parameter": "Base Material",
+                "value": "Coal Seam"
+              },
               {
                 "parameter": "Volatile Matter",
                 "value": "45 – 55%"
@@ -4954,29 +4962,18 @@
       },
       "grades": [
         {
-          "grade": "KORVANTO CARBO CA",
-          "image": "assets/images/grades/korvanto-carbo/coal additive grade.png",
-          "description": "Standard Lustrous Carbon Additive",
-          "suitable_for": [
-            "General Purpose Foundries",
-            "Grey Iron Castings",
-            "Standard Green Sand Systems"
-          ]
-        },
-        {
-          "grade": "KORVANTO CARBO LCA",
-          "image": "assets/images/grades/korvanto-carbo/coal additive grade 2.png",
-          "description": "Low Ash Lustrous Carbon Additive",
-          "suitable_for": [
-            "High-Quality Surface Finish Requirements",
-            "Automotive Castings",
-            "Precision Engineering Castings"
-          ]
-        },
-        {
-          "grade": "KORVANTO CARBO HLCA",
+          "grade": "ELITE",
+          "name": "KORVANTO LUSTROUS ELITE™",
+          "subtitle": "Coal Seam HLCA",
           "image": "assets/images/grades/korvanto-carbo/coal additive grade  3.png",
-          "description": "High Performance Low Ash Lustrous Carbon Additive",
+          "description": "High performance low-ash lustrous carbon additive",
+          "applications": [
+            "Premium Foundry Applications",
+            "Critical Surface Finish Requirements",
+            "High-End Automotive and Industrial Castings"
+          ],
+          "volatile_matter": "40 – 50",
+          "ash_max": "7.0",
           "suitable_for": [
             "Premium Foundry Applications",
             "Critical Surface Finish Requirements",
@@ -4984,9 +4981,61 @@
           ]
         },
         {
-          "grade": "KORVANTO CARBO CS",
+          "grade": "PREMIUM",
+          "name": "KORVANTO LUSTROUS PREMIUM™",
+          "subtitle": "Coal Seam LCA",
+          "image": "assets/images/grades/korvanto-carbo/coal additive grade 2.png",
+          "description": "Low ash lustrous carbon additive",
+          "applications": [
+            "High-Quality Surface Finish Requirements",
+            "Automotive Castings",
+            "Precision Engineering Castings"
+          ],
+          "volatile_matter": "50 – 55",
+          "ash_max": "8.0",
+          "suitable_for": [
+            "High-Quality Surface Finish Requirements",
+            "Automotive Castings",
+            "Precision Engineering Castings"
+          ]
+        },
+        {
+          "grade": "ADVANCE",
+          "name": "KORVANTO LUSTROUS ADVANCE™",
+          "subtitle": "Coal Seam CA",
+          "image": "assets/images/grades/korvanto-carbo/coal additive grade.png",
+          "description": "Standard lustrous carbon additive",
+          "applications": [
+            "General Purpose Foundries",
+            "Grey Iron Castings",
+            "Standard Green Sand Systems"
+          ],
+          "volatile_matter": "55 – 65",
+          "ash_max": "6.0",
+          "suitable_for": [
+            "General Purpose Foundries",
+            "Grey Iron Castings",
+            "Standard Green Sand Systems"
+          ]
+        },
+        {
+          "grade": "STANDARD",
+          "name": "KORVANTO LUSTROUS STANDARD™",
+          "subtitle": "Coal Seam",
           "image": "assets/images/grades/korvanto-carbo/coal additive grade 4.png",
-          "description": "Customized Foundry Carbon Solutions"
+          "description": "Standard foundry lustrous carbon additive",
+          "applications": [
+            "Standard Foundry Applications",
+            "General Casting Operations",
+            "Moulding Sand Additive"
+          ],
+          "volatile_matter": "45 – 55",
+          "ash_max": "9.0",
+          "suitable_for": [
+            "Standard Foundry Applications",
+            "General Casting Operations",
+            "Moulding Sand Additive"
+          ]
         }
       ],
       "family": "korvanto-carbo",
@@ -4994,59 +5043,59 @@
       "image": "assets/images/Product-Images/Coal Additive banner.png",
       "overview_image": "assets/images/Product-Images/Coal Additive product.png",
       "grades_quick_reference": {
-        "section_label": "Quick Reference",
-        "section_title": "All Grades at a Glance",
+        "section_label": "Grades",
+        "section_title": "Available Grades",
         "columns": [
           {
-            "header": "Grade",
-            "key": "grade",
+            "header": "Product Name",
+            "key": "product_name",
             "scope": "row"
           },
           {
-            "header": "Volatile Matter",
+            "header": "Base Material",
+            "key": "base_material"
+          },
+          {
+            "header": "Volatile Matter (%)",
             "key": "volatile_matter"
           },
           {
-            "header": "Ash",
+            "header": "Ash (%) Max",
             "key": "ash"
-          },
-          {
-            "header": "Fixed Carbon",
-            "key": "fixed_carbon"
-          },
-          {
-            "header": "Typical Application",
-            "key": "typical_application"
           }
         ],
         "rows": [
           {
-            "grade": "Korvanto Carbon CA",
-            "volatile_matter": "55–65%",
-            "ash": "≤6%",
-            "fixed_carbon": "By Difference",
-            "typical_application": "Premium Foundries"
+            "product_name": "KORVANTO LUSTROUS ELITE™",
+            "base_material": "Coal Seam HLCA",
+            "volatile_matter": "40 – 50",
+            "ash": "7.0"
           },
           {
-            "grade": "Korvanto Carbon LCA",
-            "volatile_matter": "50–55%",
-            "ash": "≤8%",
-            "fixed_carbon": "By Difference",
-            "typical_application": "Grey Iron Castings"
+            "product_name": "KORVANTO LUSTROUS PREMIUM™",
+            "base_material": "Coal Seam LCA",
+            "volatile_matter": "50 – 55",
+            "ash": "8.0"
           },
           {
-            "grade": "Korvanto Carbon HLCA",
-            "volatile_matter": "40–50%",
-            "ash": "≤7%",
-            "fixed_carbon": "By Difference",
-            "typical_application": "SG Iron & Precision Casting"
+            "product_name": "KORVANTO LUSTROUS ADVANCE™",
+            "base_material": "Coal Seam CA",
+            "volatile_matter": "55 – 65",
+            "ash": "6.0"
           },
           {
-            "grade": "Korvanto Carbon CS",
-            "volatile_matter": "Custom",
-            "ash": "Custom",
-            "fixed_carbon": "By Difference",
-            "typical_application": "Customer-Specific Applications"
+            "product_name": "KORVANTO LUSTROUS STANDARD™",
+            "base_material": "Coal Seam",
+            "volatile_matter": "45 – 55",
+            "ash": "9.0"
+          }
+        ],
+        "footnote": "Fixed Carbon: By Difference",
+        "cta": [
+          {
+            "text": "Request Samples or TDS",
+            "href": "request-quote.html",
+            "style": "gold"
           }
         ]
       }

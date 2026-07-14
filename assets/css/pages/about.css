@@ -3057,6 +3057,23 @@
   margin-top: 0;
 }
 
+.about-global-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.75rem;
+}
+
+.about-profile-btn {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-profile-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(197, 154, 74, 0.32);
+}
+
 @media (max-width: 1024px) {
   .about-industry-grid {
     grid-template-columns: 1fr;

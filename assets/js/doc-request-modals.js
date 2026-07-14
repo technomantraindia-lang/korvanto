@@ -1,5 +1,6 @@
 /**
  * Pop-up documentation request forms — Quality & Documentation page
+ * Uses shared product → grade filter from product-grades.js
  */
 (function () {
   var triggers = document.querySelectorAll('[data-doc-modal]');
@@ -9,6 +10,7 @@
   var activeModal = null;
   var lastFocus = null;
   var productTpl = document.getElementById('docProductOptionsTpl');
+  var GradeFilter = window.KorvantoGradeFilter;
 
   if (productTpl) {
     document.querySelectorAll('.doc-product-select').forEach(function (select) {
@@ -70,6 +72,7 @@
 
     var form = modal.querySelector('form[data-validate]');
     if (form) {
+      if (GradeFilter) GradeFilter.wireForm(form);
       form.addEventListener('submit', function () {
         setTimeout(function () {
           var success = form.querySelector('.form-success');

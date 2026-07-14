@@ -128,14 +128,12 @@
   gap: 1rem;
 }
 
-.form-success {
+.form-group select.doc-grade-select:disabled,
+.form-group select[data-product-grade-target]:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
   background: var(--grey-light);
-  border: 1px solid var(--gold);
-  padding: 1rem;
-  border-radius: 6px;
-  margin-bottom: 1rem;
-  color: var(--navy);
-  font-size: 0.9rem;
+  color: var(--text-soft);
 }
 
 /* Contact */

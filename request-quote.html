@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -45,8 +45,9 @@
           <h2>What to Include</h2>
           <ul>
             <li>Product name and required grade or specification</li>
+            <li>Expected purchase timeline</li>
             <li>Estimated volume per shipment or annual programme</li>
-            <li>Packaging preference — 25 kg bags, 50 kg bags, jumbo bags or containerized load</li>
+            <li>Packaging preference â€” 25 kg bags, 50 kg bags, jumbo bags or containerized load</li>
             <li>Destination port or country</li>
             <li>Target specification parameters and sample requirements if available</li>
           </ul>
@@ -71,7 +72,7 @@
           </div>
           <div class="form-group">
             <label for="product">Product *</label>
-            <select id="product" name="product" required>
+            <select id="product" name="product" class="doc-product-select" data-product-grade-source required>
               <!-- catalog:quote-options:start -->
               <option value="">Select product</option>
               <optgroup label="Korvanto Bentonite">
@@ -111,6 +112,22 @@
 <!-- catalog:quote-options:end -->
             </select>
           </div>
+          <div class="form-group">
+            <label for="grade">Grade / Specification</label>
+            <select id="grade" name="grade" class="doc-grade-select" data-product-grade-target disabled>
+              <option value="">Select product first</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="timeline">Expected Purchase Timeline *</label>
+            <select id="timeline" name="purchase_timeline" required>
+              <option value="">Select timeline</option>
+              <option value="immediate">Immediate</option>
+              <option value="within-1-month">Within 1 month</option>
+              <option value="within-3-months">Within 3 months</option>
+              <option value="evaluating">Just evaluating suppliers</option>
+            </select>
+          </div>
           <div class="form-row">
             <div class="form-group"><label for="volume">Estimated Volume</label><input type="text" id="volume" name="volume" placeholder="e.g. 500 MT / month"></div>
             <div class="form-group"><label for="packaging">Packaging Preference</label>
@@ -123,16 +140,26 @@
             </div>
           </div>
           <div class="form-group"><label for="destination">Destination Port / Country *</label><input type="text" id="destination" name="destination" required></div>
-          <div class="form-group"><label for="specs">Specification / Grade Requirements</label><textarea id="specs" name="specs" rows="4" placeholder="Share technical parameters, mesh size, chemical limits, etc."></textarea></div>
-          <div class="form-group"><label for="notes">Additional Notes</label><textarea id="notes" name="notes" rows="3"></textarea></div>
+          <div class="form-group"><label for="specs">Additional Specification Requirements</label><textarea id="specs" name="specs" rows="4" placeholder="Share technical parameters, mesh size, chemical limits, etc."></textarea></div>
+          <div class="form-group"><label for="notes">Additional Notes *</label><textarea id="notes" name="notes" rows="3" required></textarea></div>
           <button type="submit" class="btn btn-gold">Submit Quote Request <span class="arrow">&rarr;</span></button>
         </form>
       </div>
     </section>
   </main>
   <div id="footer-placeholder"></div>
-  <script src="assets/js/product-search.js?v=6"></script>`n  <script src="assets/js/header-search.js?v=1"></script>
-  <script src="assets/js/main.js?v=14"></script>
+  <script src="assets/js/product-search.js?v=6"></script>
+  <script src="assets/js/header-search.js?v=1"></script>
+  <script src="assets/js/product-grades.js?v=1"></script>
+  <script src="assets/js/main.js?v=15"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var form = document.querySelector('.quote-page form[data-validate]');
+      if (form && window.KorvantoGradeFilter) {
+        window.KorvantoGradeFilter.wireForm(form);
+      }
+    });
+  </script>
 </body>
 </html>
 
