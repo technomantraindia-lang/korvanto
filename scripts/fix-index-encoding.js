@@ -28,8 +28,8 @@ const replacements = [
   [/&larr;\u2019/g, '&rarr;'],
   [/&larr;\u0090/g, '&larr;'],
   [/â€"/g, '\u2014'],
-  [/â€™/g, "'"],
-  [/â€¦/g, '\u2026']
+  [/'/g, "'"],
+  [/.../g, '\u2026']
 ];
 
 replacements.forEach(function (pair) {
@@ -39,10 +39,10 @@ replacements.forEach(function (pair) {
 s = s.replace(/<span aria-hidden="true">[^<]*<\/span>(?=\s*<\/div>\s*<\/div>\s*<blockquote)/g, '<span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>');
 s = s.replace(/<div class="spotlight-rating"[^>]*><span aria-hidden="true">[^<]*<\/span><\/div>/g, '<div class="spotlight-rating" aria-label="5 out of 5 stars"><span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>');
 s = s.replace(/\u00c2\u00b7/g, ' &middot; ');
-s = s.replace(/ Â· /g, ' &middot; ');
+s = s.replace(/ · /g, ' &middot; ');
 s = s.replace(/YÄ±lmaz/g, 'Yilmaz');
 s = s.replace(/\u00e2\u02dc\u2026/g, '\u2605');
-s = s.replace(/â˜…/g, '\u2605');
+s = s.replace(/★/g, '\u2605');
 
 fs.writeFileSync(file, s, 'utf8');
 console.log('index.html encoding fixed');

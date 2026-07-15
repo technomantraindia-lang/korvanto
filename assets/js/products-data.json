@@ -6,11 +6,11 @@
         "name": "Korvanto Bentonite",
         "file": "korvanto-bento.html",
         "image": "assets/images/families/bentonite main.png",
-        "short": "Premium bentonite grades for drilling, foundry, civil, feed, fertilizer, litter, paper, pharma, cosmetic, desiccant, seal, food, pencil and specialty applications.",
+        "short": "Premium bentonite grades for drilling foundry civil feed fertilizer litter paper pharma cosmetic desiccant seal food pencil and specialty applications.",
         "portfolio_meta": "Drilling · Foundry · Civil · Feed & More",
         "overview": [
-          "Korvanto LLP supplies a comprehensive range of sodium and calcium bentonite products for drilling, foundry, civil engineering, iron ore pelletization, agriculture, paper, pharmaceuticals, cosmetics, environmental applications and specialty industries.",
-          "Available in customized grades with export-ready packaging, consistent quality and technical documentation."
+          "Korvanto LLP supplies a comprehensive range of sodium and calcium bentonite products for drilling foundry civil engineering iron ore pelletization agriculture paper pharmaceuticals cosmetics environmental applications and specialty industries.",
+          "Available in customized grades with export-ready packaging consistent quality and technical documentation."
         ],
         "child_slugs": [
           "korvanto-bento-drill",
@@ -101,16 +101,16 @@
         "name": "Korvanto Kaolin (China Clay)",
         "file": "korvanto-kao.html",
         "image": "assets/images/families/main kaolin china clay.png",
-        "short": "Kaolin grades including crude, levigated noodles & lumps, hydrous, spray dried, calcined and metakaolin for ceramics, paints, paper, plastics and construction.",
+        "short": "Kaolin grades including crude levigated noodles & lumps hydrous spray dried calcined and metakaolin for ceramics paints paper plastics and construction.",
         "portfolio_meta": "Crude · Levigated · Hydrous · Spray · Calcined",
         "overview_panel": {
           "section_label": "Overview",
           "section_title": "About Korvanto Kaolin (China Clay)"
         },
         "overview": [
-          "Korvanto Kaolin (China Clay) includes a complete range of natural, processed, and calcined kaolin products manufactured for ceramic, paint, paper, rubber, plastic, construction, refractory, and specialty industrial applications.",
-          "Our portfolio covers crude kaolin, water-washed levigated kaolin, hydrous kaolin, spray dried kaolin, calcined kaolin, and highly reactive metakaolin, enabling customers to source multiple grades from a single export partner.",
-          "Available in customized particle sizes, brightness levels, and packaging options, Korvanto Kaolin is supplied with consistent quality, technical documentation, and worldwide export support."
+          "Korvanto Kaolin (China Clay) includes a complete range of natural processed and calcined kaolin products manufactured for ceramic paint paper rubber plastic construction refractory and specialty industrial applications.",
+          "Our portfolio covers crude kaolin water-washed levigated kaolin hydrous kaolin spray dried kaolin calcined kaolin and highly reactive metakaolin enabling customers to source multiple grades from a single export partner.",
+          "Available in customized particle sizes brightness levels and packaging options Korvanto Kaolin is supplied with consistent quality technical documentation and worldwide export support."
         ],
         "product_guide_title": "Kaolin Grades at a Glance",
         "child_slugs": [
@@ -127,7 +127,7 @@
             "product": "Crude Kaolin",
             "form": "Lumps",
             "processing": "Raw",
-            "applications": "Ceramics, Refractories",
+            "applications": "Ceramics Refractories",
             "slug": "korvanto-kao-crude"
           },
           {
@@ -148,7 +148,7 @@
             "product": "Hydrous Kaolin",
             "form": "Powder",
             "processing": "Water Washed",
-            "applications": "Paint, Paper, Plastic, Rubber",
+            "applications": "Paint Paper Plastic Rubber",
             "slug": "korvanto-kao-hydrous"
           },
           {
@@ -162,14 +162,14 @@
             "product": "Calcined Kaolin",
             "form": "Powder",
             "processing": "Calcined",
-            "applications": "Paints, Plastics, Rubber, Wire & Cable",
+            "applications": "Paints Plastics Rubber Wire & Cable",
             "slug": "korvanto-kao-calcined"
           },
           {
             "product": "Metakaolin",
             "form": "Fine Powder",
             "processing": "Calcined",
-            "applications": "Construction, Cement",
+            "applications": "Construction Cement",
             "slug": "korvanto-kao-metakaolin"
           }
         ]
@@ -179,7 +179,7 @@
         "name": "Korvanto Ball Clay",
         "file": "korvanto-clay.html",
         "image": "assets/images/families/ball clay home.png",
-        "short": "Premium ball clay for ceramic, sanitaryware, tile, porcelain and refractory manufacturing.",
+        "short": "Premium ball clay for ceramic sanitaryware tile porcelain and refractory manufacturing.",
         "portfolio_meta": "Ball Clay",
         "single": "korvanto-clay"
       },
@@ -188,7 +188,7 @@
         "name": "Korvanto Laterite",
         "file": "korvanto-lat.html",
         "image": "assets/images/families/laterite home.png",
-        "short": "Iron and alumina-rich lateritic mineral for cement manufacturing, construction materials, road infrastructure and industrial applications.",
+        "short": "Iron and alumina-rich lateritic mineral for cement manufacturing construction materials road infrastructure and industrial applications.",
         "portfolio_meta": "Laterite",
         "single": "korvanto-lat"
       },
@@ -197,7 +197,7 @@
         "name": "Korvanto Chamotte",
         "file": "korvanto-cham.html",
         "image": "assets/images/Product-Images/chamotte.png",
-        "short": "Calcined refractory chamotte — grades LF42, LF46, LF54, LF60, LF70 for fire bricks, castables and high-temperature applications.",
+        "short": "Calcined refractory chamotte — grades LF42 LF46 LF54 LF60 LF70 for fire bricks castables and high-temperature applications.",
         "portfolio_meta": "LF42 · LF46 · LF54 · LF60 · LF70",
         "single": "korvanto-cham"
       },
@@ -206,7 +206,7 @@
         "name": "Korvanto Bauxite",
         "file": "korvanto-baux.html",
         "image": "assets/images/families/bauxite home.png",
-        "short": "Premium calcined bauxite for refractory, abrasive and high-temperature applications — grades CB80, CB82, CB86.",
+        "short": "Premium calcined bauxite for refractory abrasive and high-temperature applications — grades CB80 CB82 CB86.",
         "portfolio_meta": "CB80 · CB82 · CB86",
         "single": "korvanto-baux"
       },
@@ -215,20 +215,20 @@
         "name": "Korvanto Carbon",
         "file": "korvanto-carbo.html",
         "image": "assets/images/families/col additivie home.png",
-        "short": "Premium lustrous carbon additive for green sand foundry applications — grades ELITE, PREMIUM, ADVANCE, and STANDARD.",
+        "short": "Premium lustrous carbon additive for green sand foundry applications — grades ELITE PREMIUM ADVANCE and STANDARD.",
         "portfolio_meta": "ELITE · PREMIUM · ADVANCE · STANDARD",
         "single": "korvanto-carbo"
       }
     ],
     "portfolio_page": {
       "title": "Products | Korvanto",
-      "description": "Korvanto product portfolio — Bentonite, Kaolin, Ball Clay, Laterite, Chamotte, Bauxite and Carbon industrial mineral families for global B2B export.",
+      "description": "Korvanto product portfolio — Bentonite Kaolin Ball Clay Laterite Chamotte Bauxite and Carbon industrial mineral families for global B2B export.",
       "hero_label": "Supply Catalogue",
       "hero_title": "Seven Product Families.<br>One Export Partner.",
-      "hero_lead": "Explore Korvanto LLP's branded industrial mineral families — each supplied with specification clarity, export packaging, documentation support and B2B dispatch coordination.",
+      "hero_lead": "Explore Korvanto LLP's branded industrial mineral families — each supplied with specification clarity export packaging documentation support and B2B dispatch coordination.",
       "section_label": "Industrial Mineral Portfolio",
       "section_title": "Korvanto Product Families",
-      "section_lead": "Premium industrial minerals and raw materials for international B2B buyers — specification-focused sourcing, export-ready packaging and coordinated shipment execution.",
+      "section_lead": "Premium industrial minerals and raw materials for international B2B buyers — specification-focused sourcing export-ready packaging and coordinated shipment execution.",
       "stats": [
         {
           "value": "7",
@@ -255,7 +255,7 @@
       ]
     }
   },
-  "drill_category_description": "KORVANTO BENTO DRILL is a range of high-quality drilling-grade bentonite products developed for oil & gas, water well, HDD, geothermal, piling, and geotechnical drilling applications. Available in API and OCMA grades, these products provide excellent viscosity, gel strength, borehole stability, fluid loss control, and cuttings suspension for efficient drilling operations worldwide.",
+  "drill_category_description": "KORVANTO BENTO DRILL is a range of high-quality drilling-grade bentonite products developed for oil & gas water well HDD geothermal piling and geotechnical drilling applications. Available in API and OCMA grades these products provide excellent viscosity gel strength borehole stability fluid loss control and cuttings suspension for efficient drilling operations worldwide.",
   "products": [
     {
       "slug": "korvanto-bento-foundry",
@@ -263,8 +263,8 @@
       "subtitle": "High-Performance Bentonite for Foundry & Green Sand Casting",
       "sections": {
         "overview": [
-          "KORVANTO BENTO FOUNDRY is a premium-grade sodium and blended bentonite developed for green sand molding applications in ferrous and non-ferrous foundries. Carefully processed to deliver excellent bonding strength, thermal stability, plasticity, and sand reusability, it helps produce strong molds with superior dimensional accuracy and surface finish.",
-          "Designed for modern foundry operations, our foundry bentonite improves mold integrity, reduces casting defects, enhances sand system performance, and supports consistent production across both manual and automated molding lines."
+          "KORVANTO BENTO FOUNDRY is a premium-grade sodium and blended bentonite developed for green sand molding applications in ferrous and non-ferrous foundries. Carefully processed to deliver excellent bonding strength thermal stability plasticity and sand reusability it helps produce strong molds with superior dimensional accuracy and surface finish.",
+          "Designed for modern foundry operations our foundry bentonite improves mold integrity reduces casting defects enhances sand system performance and supports consistent production across both manual and automated molding lines."
         ],
         "key_benefits": [
           "High Green Compression Strength (GCS)",
@@ -272,7 +272,7 @@
           "Superior Thermal Stability",
           "Strong Bonding & Plasticity",
           "Improved Mold Edge Strength and Definition",
-          "Reduced Casting Defects such as Scabbing, Erosion, and Blowholes",
+          "Reduced Casting Defects such as Scabbing Erosion and Blowholes",
           "Better Sand Reusability and Lower Consumption",
           "Consistent Performance in High-Pressure Molding Systems",
           "Suitable for Both Ferrous and Non-Ferrous Castings"
@@ -311,7 +311,7 @@
         "product_advantages": [
           "Produces strong and durable molds with excellent bonding properties",
           "Improves green strength and wet tensile strength of molding sand",
-          "Reduces casting defects such as scabbing, erosion, and blowholes",
+          "Reduces casting defects such as scabbing erosion and blowholes",
           "Enhances mold surface finish and casting quality",
           "Provides excellent thermal stability during metal pouring",
           "Improves dimensional accuracy of cast components",
@@ -320,7 +320,7 @@
           "Suitable for both manual and automated molding systems",
           "Helps improve foundry productivity and process consistency",
           "Website Category Description (for KORVANTO BENTO DRILL)",
-          "KORVANTO BENTO DRILL is a range of high-quality drilling-grade bentonite products developed for oil & gas, water well, HDD, geothermal, piling, and geotechnical drilling applications. Available in API and OCMA grades, these products provide excellent viscosity, gel strength, borehole stability, fluid loss control, and cuttings suspension for efficient drilling operations worldwide."
+          "KORVANTO BENTO DRILL is a range of high-quality drilling-grade bentonite products developed for oil & gas water well HDD geothermal piling and geotechnical drilling applications. Available in API and OCMA grades these products provide excellent viscosity gel strength borehole stability fluid loss control and cuttings suspension for efficient drilling operations worldwide."
         ],
         "key_features": [],
         "available_grades": [],
@@ -338,7 +338,7 @@
           "Sample Support",
           "Third-Party Testing Available Upon Request"
         ],
-        "custom_grade_note": "Custom foundry grades can be supplied according to casting type, sand system requirements, and foundry operating conditions. Economy, Standard and Premium grades available.",
+        "custom_grade_note": "Custom foundry grades can be supplied according to casting type sand system requirements and foundry operating conditions. Economy Standard and Premium grades available.",
         "typical_specs": [
           {
             "title": "Foundry Grade Bentonite Powder",
@@ -388,7 +388,7 @@
                 "f35": "Instant"
               },
               {
-                "parameter": "Gel Formation Index (2.4 gms Al₂O₃, 0.2 gms MgO and 1.4 gms Bentonite)",
+                "parameter": "Gel Formation Index (2.4 gms Al₂O₃ 0.2 gms MgO and 1.4 gms Bentonite)",
                 "f30": "65 to 75",
                 "f32": "75 to 80",
                 "f35": "80 to 85"
@@ -503,7 +503,7 @@
           "name": "KORVANTO BENTO FOUNDRY F35",
           "subtitle": "Premium Grade (35 Swelling)",
           "image": "assets/images/products/foundry/bento foundry.png",
-          "recommended_use": "Premium foundry bentonite with high swelling, strength, and mold performance"
+          "recommended_use": "Premium foundry bentonite with high swelling strength and mold performance"
         }
       ],
       "family": "korvanto-bento",
@@ -515,11 +515,11 @@
     {
       "slug": "korvanto-bento-drill-api",
       "name": "Korvanto Bento Drilling API",
-      "subtitle": "API 13A Grade Bentonite for Oil, Gas & Industrial Drilling",
+      "subtitle": "API 13A Grade Bentonite for Oil Gas & Industrial Drilling",
       "sections": {
         "overview": [
-          "KORVANTO BENTO DRILL API is a high-performance sodium bentonite manufactured to meet API 13A specifications for drilling fluid applications. Processed from carefully selected bentonite deposits, it delivers excellent viscosity, gel strength, suspension characteristics, and fluid loss control required for demanding drilling operations.",
-          "When mixed with water, it forms a stable thixotropic drilling mud that helps maintain borehole stability, transports drill cuttings to the surface, cools and lubricates drilling equipment, and minimizes fluid loss into surrounding formations. Its consistent performance makes it suitable for both onshore and offshore drilling environments."
+          "KORVANTO BENTO DRILL API is a high-performance sodium bentonite manufactured to meet API 13A specifications for drilling fluid applications. Processed from carefully selected bentonite deposits it delivers excellent viscosity gel strength suspension characteristics and fluid loss control required for demanding drilling operations.",
+          "When mixed with water it forms a stable thixotropic drilling mud that helps maintain borehole stability transports drill cuttings to the surface cools and lubricates drilling equipment and minimizes fluid loss into surrounding formations. Its consistent performance makes it suitable for both onshore and offshore drilling environments."
         ],
         "key_benefits": [
           "API 13A compliant quality",
@@ -563,10 +563,10 @@
         {
           "grade": "API",
           "name": "KORVANTO BENTO DRILL API",
-          "subtitle": "API 13A Grade Bentonite for Oil, Gas & Industrial Drilling",
+          "subtitle": "API 13A Grade Bentonite for Oil Gas & Industrial Drilling",
           "overview": [
-            "KORVANTO BENTO DRILL API is a high-performance sodium bentonite manufactured to meet API 13A specifications for drilling fluid applications. Processed from carefully selected bentonite deposits, it delivers excellent viscosity, gel strength, suspension characteristics, and fluid loss control required for demanding drilling operations.",
-            "When mixed with water, it forms a stable thixotropic drilling mud that helps maintain borehole stability, transports drill cuttings to the surface, cools and lubricates drilling equipment, and minimizes fluid loss into surrounding formations. Its consistent performance makes it suitable for both onshore and offshore drilling environments."
+            "KORVANTO BENTO DRILL API is a high-performance sodium bentonite manufactured to meet API 13A specifications for drilling fluid applications. Processed from carefully selected bentonite deposits it delivers excellent viscosity gel strength suspension characteristics and fluid loss control required for demanding drilling operations.",
+            "When mixed with water it forms a stable thixotropic drilling mud that helps maintain borehole stability transports drill cuttings to the surface cools and lubricates drilling equipment and minimizes fluid loss into surrounding formations. Its consistent performance makes it suitable for both onshore and offshore drilling environments."
           ],
           "key_benefits": [
             "API 13A compliant quality",
@@ -613,8 +613,8 @@
       "subtitle": "OCMA Grade Bentonite for Drilling Fluid Systems",
       "sections": {
         "overview": [
-          "KORVANTO BENTO DRILL OCMA is a premium drilling-grade bentonite manufactured in accordance with OCMA (Oil Companies Materials Association) specifications. Designed for use in water-based drilling mud systems, it provides reliable rheological properties, good suspension characteristics, and effective borehole support for a wide range of drilling operations.",
-          "The product forms a stable drilling fluid that assists in transporting cuttings, sealing permeable formations, reducing fluid loss, and improving drilling efficiency. Its cost-effective performance makes it a preferred choice for water well, geotechnical, and industrial drilling applications."
+          "KORVANTO BENTO DRILL OCMA is a premium drilling-grade bentonite manufactured in accordance with OCMA (Oil Companies Materials Association) specifications. Designed for use in water-based drilling mud systems it provides reliable rheological properties good suspension characteristics and effective borehole support for a wide range of drilling operations.",
+          "The product forms a stable drilling fluid that assists in transporting cuttings sealing permeable formations reducing fluid loss and improving drilling efficiency. Its cost-effective performance makes it a preferred choice for water well geotechnical and industrial drilling applications."
         ],
         "key_benefits": [
           "OCMA-compliant quality",
@@ -644,7 +644,7 @@
           "Improves cuttings removal and hole cleaning efficiency",
           "Reduces seepage and fluid loss during drilling",
           "Offers good lubrication and cooling performance",
-          "Suitable for water well, geotechnical, and industrial drilling",
+          "Suitable for water well geotechnical and industrial drilling",
           "Easy slurry preparation and field application",
           "Cost-effective solution for drilling fluid systems",
           "Consistent quality for dependable drilling performance"
@@ -660,8 +660,8 @@
           "name": "KORVANTO BENTO DRILL OCMA",
           "subtitle": "OCMA Grade Bentonite for Drilling Fluid Systems",
           "overview": [
-            "KORVANTO BENTO DRILL OCMA is a premium drilling-grade bentonite manufactured in accordance with OCMA (Oil Companies Materials Association) specifications. Designed for use in water-based drilling mud systems, it provides reliable rheological properties, good suspension characteristics, and effective borehole support for a wide range of drilling operations.",
-            "The product forms a stable drilling fluid that assists in transporting cuttings, sealing permeable formations, reducing fluid loss, and improving drilling efficiency. Its cost-effective performance makes it a preferred choice for water well, geotechnical, and industrial drilling applications."
+            "KORVANTO BENTO DRILL OCMA is a premium drilling-grade bentonite manufactured in accordance with OCMA (Oil Companies Materials Association) specifications. Designed for use in water-based drilling mud systems it provides reliable rheological properties good suspension characteristics and effective borehole support for a wide range of drilling operations.",
+            "The product forms a stable drilling fluid that assists in transporting cuttings sealing permeable formations reducing fluid loss and improving drilling efficiency. Its cost-effective performance makes it a preferred choice for water well geotechnical and industrial drilling applications."
           ],
           "key_benefits": [
             "OCMA-compliant quality",
@@ -690,7 +690,7 @@
             "Improves cuttings removal and hole cleaning efficiency",
             "Reduces seepage and fluid loss during drilling",
             "Offers good lubrication and cooling performance",
-            "Suitable for water well, geotechnical, and industrial drilling",
+            "Suitable for water well geotechnical and industrial drilling",
             "Easy slurry preparation and field application",
             "Cost-effective solution for drilling fluid systems",
             "Consistent quality for dependable drilling performance"
@@ -708,8 +708,8 @@
       "subtitle": "Premium Bentonite for Iron Ore Palletizing",
       "sections": {
         "overview": [
-          "KORVANTO BENTO IOP is a premium-grade bentonite specially developed for iron ore pelletization applications. Produced from carefully selected bentonite deposits and processed to deliver consistent performance, it acts as an effective binder in the conversion of iron ore fines into strong, uniform pellets for blast furnace and direct reduction iron (DRI) processes.",
-          "Its high swelling capacity, excellent water absorption, and superior bonding characteristics help produce pellets with outstanding green strength, dry strength, and fired strength while maintaining low bentonite consumption. The result is improved pellet quality, reduced breakage, enhanced handling efficiency, and optimized steel production performance."
+          "KORVANTO BENTO IOP is a premium-grade bentonite specially developed for iron ore pelletization applications. Produced from carefully selected bentonite deposits and processed to deliver consistent performance it acts as an effective binder in the conversion of iron ore fines into strong uniform pellets for blast furnace and direct reduction iron (DRI) processes.",
+          "Its high swelling capacity excellent water absorption and superior bonding characteristics help produce pellets with outstanding green strength dry strength and fired strength while maintaining low bentonite consumption. The result is improved pellet quality reduced breakage enhanced handling efficiency and optimized steel production performance."
         ],
         "key_benefits": [
           "Excellent Green Ball Strength",
@@ -719,7 +719,7 @@
           "Improved Pellet Integrity and Reduced Breakage",
           "Excellent Thermal Stability During Induration",
           "Consistent Pellet Size and Quality",
-          "Enhanced Handling, Transportation, and Storage Performance",
+          "Enhanced Handling Transportation and Storage Performance",
           "Reduced Dust Generation and Pellet Losses",
           "Reliable Performance in Modern Pellet Plants"
         ],
@@ -749,7 +749,7 @@
           "Suitable for Iron Ore Pellet Manufacturing"
         ],
         "product_advantages": [
-          "Delivers superior green, dry, and fired pellet strength",
+          "Delivers superior green dry and fired pellet strength",
           "Promotes uniform pellet formation and size consistency",
           "Reduces pellet breakage during handling and transportation",
           "Provides excellent bonding at low dosage levels",
@@ -870,19 +870,19 @@
       ],
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-iop.html",
-      "image": "assets/images/products/iron ore palltetization/ChatGPT Image Jun 25, 2026, 02_17_49 PM (1).png",
-      "hero_image": "assets/images/products/iron ore palltetization/ChatGPT Image Jun 25, 2026, 02_17_50 PM (3).png",
-      "overview_image": "assets/images/products/iron ore palltetization/ChatGPT Image Jun 25, 2026, 02_17_49 PM (2).png"
+      "image": "assets/images/products/iron ore palltetization/ChatGPT Image Jun 25 2026 02_17_49 PM (1).png",
+      "hero_image": "assets/images/products/iron ore palltetization/ChatGPT Image Jun 25 2026 02_17_50 PM (3).png",
+      "overview_image": "assets/images/products/iron ore palltetization/ChatGPT Image Jun 25 2026 02_17_49 PM (2).png"
     },
     {
       "slug": "korvanto-bento-civil",
       "name": "Korvanto Bento Civil",
-      "subtitle": "High-Yield Bentonite for Piling, Diaphragm Walling, HDD & Civil Engineering Applications",
+      "subtitle": "High-Yield Bentonite for Piling Diaphragm Walling HDD & Civil Engineering Applications",
       "sections": {
         "overview": [
-          "KORVANTO BENTO CIVIL is a premium-grade sodium bentonite specially engineered for civil engineering, foundation, and construction projects. Processed from high-quality bentonite and optimized for superior rheological performance, it develops a stable thixotropic slurry that provides excellent excavation support, borehole stabilization, and seepage control.",
-          "When mixed with water, it forms a high-yield suspension capable of penetrating soil voids, sealing permeable formations, and creating a protective filter cake that stabilizes excavation walls. Its exceptional water absorption, swelling capacity, and gel strength make it ideal for demanding piling, trenching, tunneling, and foundation applications.",
-          "Designed for modern construction projects, KORVANTO BENTO CIVIL delivers reliable performance, improved operational efficiency, and reduced excavation risks."
+          "KORVANTO BENTO CIVIL is a premium-grade sodium bentonite specially engineered for civil engineering foundation and construction projects. Processed from high-quality bentonite and optimized for superior rheological performance it develops a stable thixotropic slurry that provides excellent excavation support borehole stabilization and seepage control.",
+          "When mixed with water it forms a high-yield suspension capable of penetrating soil voids sealing permeable formations and creating a protective filter cake that stabilizes excavation walls. Its exceptional water absorption swelling capacity and gel strength make it ideal for demanding piling trenching tunneling and foundation applications.",
+          "Designed for modern construction projects KORVANTO BENTO CIVIL delivers reliable performance improved operational efficiency and reduced excavation risks."
         ],
         "key_benefits": [
           "Stabilizes Boreholes and Excavation Walls",
@@ -906,7 +906,7 @@
           "Foundation Engineering",
           "Trenchless Construction",
           "Groundwater Control Systems",
-          "Metro, Highway, Railway & Bridge Projects",
+          "Metro Highway Railway & Bridge Projects",
           "Geotechnical and Infrastructure Projects"
         ],
         "product_features": [
@@ -947,7 +947,7 @@
           "Sample Support",
           "Third-Party Testing Available Upon Request"
         ],
-        "custom_grade_note": "Custom civil engineering bentonite grades can be supplied according to project specifications, soil conditions, slurry requirements, and engineering standards."
+        "custom_grade_note": "Custom civil engineering bentonite grades can be supplied according to project specifications soil conditions slurry requirements and engineering standards."
       },
       "grades": [
         {
@@ -1056,12 +1056,12 @@
     {
       "slug": "korvanto-bento-feed",
       "name": "Korvanto Bento Animal Feed",
-      "subtitle": "High Purity Animal Feed, Pellet Binding & Mycotoxin Control",
+      "subtitle": "High Purity Animal Feed Pellet Binding & Mycotoxin Control",
       "sections": {
         "overview": [
-          "KORVANTO BENTO FEED is a high-purity bentonite specially processed for use in livestock, poultry, aquaculture, and animal nutrition applications. With excellent adsorption capacity, high cation exchange properties, and natural binding characteristics, it functions as an effective mycotoxin binder, pellet binder, and anti-caking agent in animal feed formulations.",
-          "Designed to improve feed quality and safety, KORVANTO BENTO FEED helps reduce the harmful effects of mycotoxins such as aflatoxins, supports feed stability during storage and handling, and enhances pellet durability. Its natural detoxifying properties contribute to improved feed efficiency, better nutrient utilization, and overall animal performance.",
-          "Suitable for use in cattle, poultry, swine, sheep, goat, and aquaculture feed, KORVANTO BENTO FEED is manufactured under strict quality controls to ensure consistent performance and low impurity levels."
+          "KORVANTO BENTO FEED is a high-purity bentonite specially processed for use in livestock poultry aquaculture and animal nutrition applications. With excellent adsorption capacity high cation exchange properties and natural binding characteristics it functions as an effective mycotoxin binder pellet binder and anti-caking agent in animal feed formulations.",
+          "Designed to improve feed quality and safety KORVANTO BENTO FEED helps reduce the harmful effects of mycotoxins such as aflatoxins supports feed stability during storage and handling and enhances pellet durability. Its natural detoxifying properties contribute to improved feed efficiency better nutrient utilization and overall animal performance.",
+          "Suitable for use in cattle poultry swine sheep goat and aquaculture feed KORVANTO BENTO FEED is manufactured under strict quality controls to ensure consistent performance and low impurity levels."
         ],
         "key_benefits": [
           "Helps Reduce Mycotoxin Contamination in Feed",
@@ -1107,7 +1107,7 @@
           "Supports better storage stability and shelf life",
           "Reduces feed losses caused by dusting and breakage",
           "Improves feed handling and processing efficiency",
-          "Suitable for livestock, poultry, aquaculture, and pet food applications",
+          "Suitable for livestock poultry aquaculture and pet food applications",
           "Provides a natural and cost-effective solution for feed formulations"
         ],
         "key_features": [
@@ -1190,12 +1190,12 @@
     {
       "slug": "korvanto-bento-fert",
       "name": "Korvanto Bento Fertilizer",
-      "subtitle": "Bentonite for Fertilizer Manufacturing, Soil Conditioning & Agricultural Applications",
+      "subtitle": "Bentonite for Fertilizer Manufacturing Soil Conditioning & Agricultural Applications",
       "sections": {
         "overview": [
-          "KORVANTO BENTO FERT is a premium-grade sodium bentonite specially developed for fertilizer and agricultural applications. Its unique combination of high swelling capacity, moisture retention, cation exchange capability, and binding properties makes it an effective additive for fertilizer granulation, nutrient retention, and soil improvement.",
-          "Used extensively in NPK, DAP, urea, sulfur bentonite, micronutrient, organic, and bio-fertilizer formulations, KORVANTO BENTO FERT improves granule strength, reduces dust generation, enhances fertilizer efficiency, and promotes controlled nutrient release. It also acts as a natural soil conditioner by improving water-holding capacity, soil structure, and nutrient availability.",
-          "As an eco-friendly mineral additive, it supports sustainable agricultural practices while helping maximize fertilizer performance and crop productivity."
+          "KORVANTO BENTO FERT is a premium-grade sodium bentonite specially developed for fertilizer and agricultural applications. Its unique combination of high swelling capacity moisture retention cation exchange capability and binding properties makes it an effective additive for fertilizer granulation nutrient retention and soil improvement.",
+          "Used extensively in NPK DAP urea sulfur bentonite micronutrient organic and bio-fertilizer formulations KORVANTO BENTO FERT improves granule strength reduces dust generation enhances fertilizer efficiency and promotes controlled nutrient release. It also acts as a natural soil conditioner by improving water-holding capacity soil structure and nutrient availability.",
+          "As an eco-friendly mineral additive it supports sustainable agricultural practices while helping maximize fertilizer performance and crop productivity."
         ],
         "key_benefits": [
           "Improves Fertilizer Granule Strength and Durability",
@@ -1272,7 +1272,7 @@
           "Third-Party Testing Available Upon Request",
           "Quality Verification Support"
         ],
-        "custom_grade_note": "Custom fertilizer bentonite grades can be supplied according to fertilizer formulation, granulation process requirements, swelling characteristics, and customer specifications."
+        "custom_grade_note": "Custom fertilizer bentonite grades can be supplied according to fertilizer formulation granulation process requirements swelling characteristics and customer specifications."
       },
       "grades": [
         {
@@ -1460,12 +1460,12 @@
       "subtitle": "Premium Bentonite for Cat Litter Applications",
       "sections": {
         "overview": [
-          "KORVANTO BENTO LITTER is a high-quality natural bentonite specially processed for cat litter applications. With exceptional water absorption, rapid clumping ability, and natural odor control properties, it provides a clean, hygienic, and convenient litter solution for pet care manufacturers and private label brands.",
-          "When exposed to moisture, the bentonite granules quickly absorb liquid and form strong, stable clumps that can be easily removed while leaving the remaining litter fresh and reusable. Its superior absorption capacity helps control odors, reduce waste, and maintain a cleaner litter box environment.",
-          "Available in various granule sizes and customized formulations, KORVANTO BENTO LITTER can be supplied with or without fragrances to meet diverse market requirements."
+          "KORVANTO BENTO LITTER is a high-quality natural bentonite specially processed for cat litter applications. With exceptional water absorption rapid clumping ability and natural odor control properties it provides a clean hygienic and convenient litter solution for pet care manufacturers and private label brands.",
+          "When exposed to moisture the bentonite granules quickly absorb liquid and form strong stable clumps that can be easily removed while leaving the remaining litter fresh and reusable. Its superior absorption capacity helps control odors reduce waste and maintain a cleaner litter box environment.",
+          "Available in various granule sizes and customized formulations KORVANTO BENTO LITTER can be supplied with or without fragrances to meet diverse market requirements."
         ],
         "key_benefits": [
-          "Forms Firm, Easy-to-Remove Clumps",
+          "Forms Firm Easy-to-Remove Clumps",
           "Helps Maintain a Cleaner Litter Box",
           "Controls Unpleasant Odors Naturally",
           "Reduces Litter Consumption and Waste",
@@ -1495,7 +1495,7 @@
           "Naturally Controls Moisture and Odors",
           "Does Not Support Bacterial Growth Due to Drying Action",
           "Environmentally Friendly and Inert Mineral Material",
-          "Customizable Granule Size, Absorption Rate, and Fragrance Options"
+          "Customizable Granule Size Absorption Rate and Fragrance Options"
         ],
         "key_features": [
           "High Absorption Capacity",
@@ -1528,11 +1528,11 @@
           "Quality Verification Support",
           "Independent Third-Party Testing Available Upon Request"
         ],
-        "custom_grade_note": "Custom cat litter bentonite grades can be supplied based on granule size distribution, absorption capacity, clumping strength, color requirements, and private label manufacturing specifications.",
+        "custom_grade_note": "Custom cat litter bentonite grades can be supplied based on granule size distribution absorption capacity clumping strength color requirements and private label manufacturing specifications.",
         "custom_manufacturing": {
           "section_label": "Custom Grade",
           "title": "Custom Manufacturing Options",
-          "lead": "KORVANTO supplies cat litter bentonite according to customer requirements, including:",
+          "lead": "KORVANTO supplies cat litter bentonite according to customer requirements including:",
           "items": [
             "Granule Size Distribution",
             "Water Absorption Capacity",
@@ -1608,19 +1608,19 @@
     {
       "slug": "korvanto-bento-paper-deink",
       "name": "Korvanto Bento Paper & Deink",
-      "subtitle": "Bentonite for Paper Manufacturing, Pulp Processing & Deinking Applications",
+      "subtitle": "Bentonite for Paper Manufacturing Pulp Processing & Deinking Applications",
       "sections": {
         "overview": [
-          "KORVANTO BENTO PAPER & DEINK is a premium-grade sodium bentonite specially processed for the pulp, paper, and recycled paper industries. Its unique thixotropic properties, high surface area, and excellent cation exchange capacity make it an effective retention aid, drainage aid, formation aid, and deinking additive.",
-          "In paper manufacturing, it improves fiber and filler retention, enhances sheet formation, optimizes drainage, and contributes to better paper strength and surface quality. In deinking operations, it assists in the removal of ink particles, sticky contaminants, fines, and dissolved impurities from recycled paper pulp, helping improve process efficiency and final paper quality.",
-          "Carefully processed to maintain low sand content and consistent particle size distribution, KORVANTO BENTO PAPER & DEINK supports smoother machine operation, reduced downtime, and improved productivity in both virgin pulp and recycled fiber systems."
+          "KORVANTO BENTO PAPER & DEINK is a premium-grade sodium bentonite specially processed for the pulp paper and recycled paper industries. Its unique thixotropic properties high surface area and excellent cation exchange capacity make it an effective retention aid drainage aid formation aid and deinking additive.",
+          "In paper manufacturing it improves fiber and filler retention enhances sheet formation optimizes drainage and contributes to better paper strength and surface quality. In deinking operations it assists in the removal of ink particles sticky contaminants fines and dissolved impurities from recycled paper pulp helping improve process efficiency and final paper quality.",
+          "Carefully processed to maintain low sand content and consistent particle size distribution KORVANTO BENTO PAPER & DEINK supports smoother machine operation reduced downtime and improved productivity in both virgin pulp and recycled fiber systems."
         ],
         "key_benefits": [
-          "Improves Fiber, Filler, and Fine Particle Retention",
+          "Improves Fiber Filler and Fine Particle Retention",
           "Enhances Paper Formation and Sheet Uniformity",
           "Improves Drainage and Dewatering Efficiency",
           "Increases Paper Strength and Surface Quality",
-          "Enhances Brightness, Opacity, and Printability",
+          "Enhances Brightness Opacity and Printability",
           "Reduces Loss of Valuable Raw Materials",
           "Supports Efficient Ink and Contaminant Removal",
           "Minimizes Sticky Deposits and Pitch Problems",
@@ -1685,7 +1685,7 @@
           "Sample Support",
           "Third-Party Testing Available Upon Request"
         ],
-        "custom_grade_note": "Custom paper-grade and de-inking bentonite can be manufactured according to particle size distribution, brightness, retention performance, and application requirements."
+        "custom_grade_note": "Custom paper-grade and de-inking bentonite can be manufactured according to particle size distribution brightness retention performance and application requirements."
       },
       "grades": [
         {
@@ -1786,12 +1786,12 @@
     {
       "slug": "korvanto-bento-pharma",
       "name": "Korvanto Bento Pharma",
-      "subtitle": "High-Purity Bentonite for Pharmaceutical, Healthcare & Personal Care Applications",
+      "subtitle": "High-Purity Bentonite for Pharmaceutical Healthcare & Personal Care Applications",
       "sections": {
         "overview": [
-          "KORVANTO BENTO PHARMA is a high-purity bentonite specially processed for pharmaceutical, healthcare, nutraceutical, and personal care applications. Carefully selected and refined to ensure consistent quality, it offers excellent adsorption, suspension, swelling, and binding properties required in a wide range of formulations.",
-          "Its unique mineral structure and high surface area make it an effective suspending agent, stabilizer, binder, thickening agent, and rheology modifier in pharmaceutical preparations. The product is suitable for use in tablets, capsules, suspensions, topical formulations, herbal products, and other healthcare applications where product stability and consistency are essential.",
-          "Manufactured under stringent quality controls, KORVANTO BENTO PHARMA delivers reliable performance for pharmaceutical and allied industries."
+          "KORVANTO BENTO PHARMA is a high-purity bentonite specially processed for pharmaceutical healthcare nutraceutical and personal care applications. Carefully selected and refined to ensure consistent quality it offers excellent adsorption suspension swelling and binding properties required in a wide range of formulations.",
+          "Its unique mineral structure and high surface area make it an effective suspending agent stabilizer binder thickening agent and rheology modifier in pharmaceutical preparations. The product is suitable for use in tablets capsules suspensions topical formulations herbal products and other healthcare applications where product stability and consistency are essential.",
+          "Manufactured under stringent quality controls KORVANTO BENTO PHARMA delivers reliable performance for pharmaceutical and allied industries."
         ],
         "key_benefits": [],
         "applications": [
@@ -1842,7 +1842,7 @@
           "Safety Data Sheet (SDS/MSDS)",
           "Third-Party Testing Reports"
         ],
-        "custom_grade_note": "Custom pharmaceutical-grade bentonite can be supplied according to customer specifications, purity requirements, particle size distribution, swelling characteristics, and regulatory needs.",
+        "custom_grade_note": "Custom pharmaceutical-grade bentonite can be supplied according to customer specifications purity requirements particle size distribution swelling characteristics and regulatory needs.",
         "quality_assurance": {
           "section_label": "Compliance",
           "title": "Quality Assurance",
@@ -1877,7 +1877,7 @@
             },
             {
               "parameter": "Solubility",
-              "value": "Insoluble in water, methanol, ether & acetone; very slightly soluble in hot & cold water"
+              "value": "Insoluble in water methanol ether & acetone; very slightly soluble in hot & cold water"
             },
             {
               "parameter": "Swelling",
@@ -1923,12 +1923,12 @@
     {
       "slug": "korvanto-bento-cosmetic",
       "name": "Korvanto Bento Cosmetic",
-      "subtitle": "High-Purity Bentonite for Cosmetics, Personal Care & Beauty Applications",
+      "subtitle": "High-Purity Bentonite for Cosmetics Personal Care & Beauty Applications",
       "sections": {
         "overview": [
-          "KORVANTO BENTO COSMETIC is a premium-quality bentonite specially processed for cosmetic, skincare, haircare, and personal care applications. Derived from carefully selected natural bentonite deposits, it offers excellent absorption, adsorption, thickening, suspension, and rheological properties that make it a versatile ingredient in a wide range of beauty and personal care formulations.",
-          "Rich in naturally occurring minerals, KORVANTO BENTO COSMETIC helps absorb excess oil, impurities, and surface contaminants while improving product texture, stability, and application performance. Its fine particle size and smooth dispersion characteristics make it suitable for facial masks, cleansers, creams, lotions, shampoos, hair masks, and color cosmetic formulations.",
-          "Widely used by cosmetic manufacturers, the product contributes to enhanced formulation stability, improved sensory feel, and consistent product quality."
+          "KORVANTO BENTO COSMETIC is a premium-quality bentonite specially processed for cosmetic skincare haircare and personal care applications. Derived from carefully selected natural bentonite deposits it offers excellent absorption adsorption thickening suspension and rheological properties that make it a versatile ingredient in a wide range of beauty and personal care formulations.",
+          "Rich in naturally occurring minerals KORVANTO BENTO COSMETIC helps absorb excess oil impurities and surface contaminants while improving product texture stability and application performance. Its fine particle size and smooth dispersion characteristics make it suitable for facial masks cleansers creams lotions shampoos hair masks and color cosmetic formulations.",
+          "Widely used by cosmetic manufacturers the product contributes to enhanced formulation stability improved sensory feel and consistent product quality."
         ],
         "key_benefits": [],
         "applications": [
@@ -1969,7 +1969,7 @@
         "product_advantages": [
           "Helps Absorb Excess Oil and Surface Impurities",
           "Improves Texture and Consistency of Cosmetic Products",
-          "Enhances Stability of Creams, Lotions, and Emulsions",
+          "Enhances Stability of Creams Lotions and Emulsions",
           "Supports Uniform Pigment and Active Ingredient Distribution",
           "Improves Product Spreadability and Application",
           "Provides Effective Thickening and Suspension Performance",
@@ -2006,7 +2006,7 @@
           "Safety Data Sheet (SDS/MSDS)",
           "Third-Party Testing Reports Available"
         ],
-        "custom_grade_note": "Custom cosmetic-grade bentonite can be supplied according to particle size requirements, montmorillonite content, moisture levels, adsorption performance, and end-use formulation requirements."
+        "custom_grade_note": "Custom cosmetic-grade bentonite can be supplied according to particle size requirements montmorillonite content moisture levels adsorption performance and end-use formulation requirements."
       },
       "grades": [
         {
@@ -2058,9 +2058,9 @@
       "subtitle": "High-Absorption Bentonite Granules for Moisture Control & Packaging Protection",
       "sections": {
         "overview": [
-          "KORVANTO BENTO DESICCANT is a premium-grade bentonite specially processed into high-performance desiccant granules for moisture control applications. Manufactured from carefully selected bentonite with excellent adsorption characteristics, it effectively absorbs water vapor from enclosed environments, helping protect products from moisture damage during storage and transportation.",
-          "With its high surface area, natural adsorption capacity, and controlled particle size distribution, KORVANTO BENTO DESICCANT provides reliable humidity control for a wide range of packaging applications. It helps prevent corrosion, mold growth, product deterioration, and moisture-related quality issues while extending product shelf life.",
-          "As a natural and environmentally friendly alternative to synthetic desiccants, it offers an economical solution for moisture-sensitive goods across multiple industries."
+          "KORVANTO BENTO DESICCANT is a premium-grade bentonite specially processed into high-performance desiccant granules for moisture control applications. Manufactured from carefully selected bentonite with excellent adsorption characteristics it effectively absorbs water vapor from enclosed environments helping protect products from moisture damage during storage and transportation.",
+          "With its high surface area natural adsorption capacity and controlled particle size distribution KORVANTO BENTO DESICCANT provides reliable humidity control for a wide range of packaging applications. It helps prevent corrosion mold growth product deterioration and moisture-related quality issues while extending product shelf life.",
+          "As a natural and environmentally friendly alternative to synthetic desiccants it offers an economical solution for moisture-sensitive goods across multiple industries."
         ],
         "key_benefits": [],
         "applications": [
@@ -2077,20 +2077,20 @@
           "Textile & Garment Packaging",
           "Leather Goods",
           "Consumer Goods Packaging",
-          "Tea, Coffee & Spice Packaging",
+          "Tea Coffee & Spice Packaging",
           "Machinery & Equipment Packaging",
           "Cargo Moisture Protection"
         ],
         "product_features": [],
         "product_advantages": [
           "Protects Products from Moisture Damage",
-          "Helps Prevent Corrosion, Rust, and Oxidation",
-          "Reduces Risk of Mold, Mildew, and Fungal Growth",
+          "Helps Prevent Corrosion Rust and Oxidation",
+          "Reduces Risk of Mold Mildew and Fungal Growth",
           "Extends Product Shelf Life",
           "Maintains Product Quality During Storage and Transit",
           "Suitable for Long-Distance Export Shipments",
           "Cost-Effective Alternative to Synthetic Desiccants",
-          "Easy to Use in Sachets, Pouches, and Bulk Applications",
+          "Easy to Use in Sachets Pouches and Bulk Applications",
           "Natural and Eco-Friendly Moisture Control Solution",
           "Reliable Performance Across Diverse Climatic Conditions"
         ],
@@ -2109,7 +2109,7 @@
         "available_grades": [],
         "packaging": [],
         "short_website_description": [
-          "KORVANTO BENTO DESICCANT is a natural bentonite-based moisture adsorbent designed for packaging and storage applications. Its superior water vapor absorption and controlled granule size help protect products from humidity, corrosion, mold, and moisture-related damage during storage and transportation."
+          "KORVANTO BENTO DESICCANT is a natural bentonite-based moisture adsorbent designed for packaging and storage applications. Its superior water vapor absorption and controlled granule size help protect products from humidity corrosion mold and moisture-related damage during storage and transportation."
         ],
         "documentation": [
           "Technical Data Sheet (TDS)",
@@ -2118,7 +2118,7 @@
           "Third-Party Testing Available Upon Request",
           "Safety Data Sheet (SDS/MSDS)"
         ],
-        "custom_grade_note": "Custom desiccant bentonite grades are available in various granule sizes, moisture absorption capacities, packaging formats, and application-specific requirements."
+        "custom_grade_note": "Custom desiccant bentonite grades are available in various granule sizes moisture absorption capacities packaging formats and application-specific requirements."
       },
       "grades": [
         {
@@ -2227,12 +2227,12 @@
     {
       "slug": "korvanto-bento-seal",
       "name": "Korvanto Bento Pond Seal",
-      "subtitle": "Bentonite for Pond Sealing, Water Retention & Seepage Control",
+      "subtitle": "Bentonite for Pond Sealing Water Retention & Seepage Control",
       "sections": {
         "overview": [
-          "KORVANTO BENTO SEAL is a premium-grade natural sodium bentonite specially developed for pond sealing, water containment, and seepage control applications. Owing to its exceptional swelling and water absorption properties, the bentonite expands upon hydration to form a dense, low-permeability barrier that effectively minimizes water loss through soil.",
-          "When mixed with suitable soils, KORVANTO BENTO SEAL creates a durable and self-healing seal that helps retain water in ponds, reservoirs, lagoons, canals, and other water containment structures. Its natural rehydration and re-swelling characteristics enable long-term performance, making it an economical and environmentally friendly alternative to synthetic liners.",
-          "Suitable for both new construction and leak remediation projects, KORVANTO BENTO SEAL provides reliable water retention while preserving the natural characteristics of the site."
+          "KORVANTO BENTO SEAL is a premium-grade natural sodium bentonite specially developed for pond sealing water containment and seepage control applications. Owing to its exceptional swelling and water absorption properties the bentonite expands upon hydration to form a dense low-permeability barrier that effectively minimizes water loss through soil.",
+          "When mixed with suitable soils KORVANTO BENTO SEAL creates a durable and self-healing seal that helps retain water in ponds reservoirs lagoons canals and other water containment structures. Its natural rehydration and re-swelling characteristics enable long-term performance making it an economical and environmentally friendly alternative to synthetic liners.",
+          "Suitable for both new construction and leak remediation projects KORVANTO BENTO SEAL provides reliable water retention while preserving the natural characteristics of the site."
         ],
         "key_benefits": [],
         "applications": [
@@ -2265,7 +2265,7 @@
           "Creates a Durable Waterproof Barrier",
           "Helps Maintain Water Levels in Ponds and Reservoirs",
           "Natural and Environmentally Friendly Solution",
-          "Safe for Aquaculture, Livestock, and Wildlife Applications",
+          "Safe for Aquaculture Livestock and Wildlife Applications",
           "Cost-Effective Alternative to Synthetic Liners",
           "Easy Application and Installation",
           "Supports Long-Term Water Conservation",
@@ -2295,7 +2295,7 @@
           "Bulk Shipments"
         ],
         "short_website_description": [
-          "KORVANTO BENTO SEAL is a premium natural sodium bentonite designed for pond sealing and water containment applications. Its exceptional swelling and sealing properties create a durable low-permeability barrier that minimizes seepage and helps retain water in ponds, reservoirs, canals, and aquaculture systems."
+          "KORVANTO BENTO SEAL is a premium natural sodium bentonite designed for pond sealing and water containment applications. Its exceptional swelling and sealing properties create a durable low-permeability barrier that minimizes seepage and helps retain water in ponds reservoirs canals and aquaculture systems."
         ],
         "documentation": [
           "Technical Data Sheet (TDS)",
@@ -2305,7 +2305,7 @@
           "Quality Verification Support",
           "Independent Third-Party Testing Available Upon Request"
         ],
-        "custom_grade_note": "Custom pond sealant bentonite grades can be supplied based on swelling requirements, permeability specifications, particle size distribution, and project-specific performance requirements."
+        "custom_grade_note": "Custom pond sealant bentonite grades can be supplied based on swelling requirements permeability specifications particle size distribution and project-specific performance requirements."
       },
       "grades": [
         {
@@ -2390,12 +2390,12 @@
     {
       "slug": "korvanto-bento-food",
       "name": "Korvanto Bento Food",
-      "subtitle": "Food & Beverage Grade Bentonite for Wine Clarification, Beverage Purification & Processing Applications",
+      "subtitle": "Food & Beverage Grade Bentonite for Wine Clarification Beverage Purification & Processing Applications",
       "sections": {
         "overview": [
-          "KORVANTO BENTO FOOD is a high-purity food-grade bentonite specially processed for beverage clarification, purification, and filtration applications. Predominantly composed of montmorillonite clay, it possesses a naturally high adsorption capacity and negative surface charge that enables the effective removal of suspended particles, proteins, impurities, and haze-forming compounds from liquid systems.",
-          "Widely used in wine, fruit juice, beverage, edible oil, and food processing industries, KORVANTO BENTO FOOD improves product clarity, stability, appearance, and shelf life while preserving the desired sensory characteristics of the final product. Its excellent swelling and adsorption properties make it an efficient and reliable clarifying agent for modern food and beverage processing operations.",
-          "Carefully processed under strict quality controls, the product is designed to deliver consistent performance and reliable clarification efficiency across a variety of food-grade applications."
+          "KORVANTO BENTO FOOD is a high-purity food-grade bentonite specially processed for beverage clarification purification and filtration applications. Predominantly composed of montmorillonite clay it possesses a naturally high adsorption capacity and negative surface charge that enables the effective removal of suspended particles proteins impurities and haze-forming compounds from liquid systems.",
+          "Widely used in wine fruit juice beverage edible oil and food processing industries KORVANTO BENTO FOOD improves product clarity stability appearance and shelf life while preserving the desired sensory characteristics of the final product. Its excellent swelling and adsorption properties make it an efficient and reliable clarifying agent for modern food and beverage processing operations.",
+          "Carefully processed under strict quality controls the product is designed to deliver consistent performance and reliable clarification efficiency across a variety of food-grade applications."
         ],
         "key_benefits": [
           "Improves Clarity and Visual Appearance of Beverages",
@@ -2456,7 +2456,7 @@
           "Customized Export Packaging"
         ],
         "short_website_description": [
-          "KORVANTO BENTO FOOD is a premium food-grade bentonite used for beverage clarification and purification applications. Its superior adsorption and clarification properties help remove proteins, suspended particles, and impurities, improving product clarity, stability, and processing efficiency in wine, juice, and food manufacturing industries."
+          "KORVANTO BENTO FOOD is a premium food-grade bentonite used for beverage clarification and purification applications. Its superior adsorption and clarification properties help remove proteins suspended particles and impurities improving product clarity stability and processing efficiency in wine juice and food manufacturing industries."
         ],
         "documentation": [
           "Technical Data Sheet (TDS)",
@@ -2465,7 +2465,7 @@
           "Third-Party Testing Available Upon Request",
           "Safety Data Sheet (SDS/MSDS)"
         ],
-        "custom_grade_note": "Custom food-grade bentonite can be supplied according to particle size requirements, purity levels, clarification performance, and application-specific processing needs.",
+        "custom_grade_note": "Custom food-grade bentonite can be supplied according to particle size requirements purity levels clarification performance and application-specific processing needs.",
         "specs_section_label": "Product Information",
         "specs_section_title": "Supply Information",
         "specs_value_column": "Details",
@@ -2484,7 +2484,7 @@
               },
               {
                 "parameter": "Documentation",
-                "value": "TDS, COA & Technical Support Available"
+                "value": "TDS COA & Technical Support Available"
               },
               {
                 "parameter": "Packaging",
@@ -2539,7 +2539,7 @@
             },
             {
               "parameter": "Packaging",
-              "value": "25 kg / 50 kg Bags, Jumbo Bags (FIBC)"
+              "value": "25 kg / 50 kg Bags Jumbo Bags (FIBC)"
             },
             {
               "parameter": "Documentation",
@@ -2560,9 +2560,9 @@
       "subtitle": "Bentonite for Pencil Lead Manufacturing & Graphite Bonding Applications",
       "sections": {
         "overview": [
-          "KORVANTO BENTO PENCIL is a premium-grade bentonite specially developed for the pencil manufacturing industry. Produced from carefully selected bentonite deposits with high montmorillonite content, it serves as an effective binder in the production of pencil leads, providing the strength, cohesion, and workability required during extrusion, drying, and firing processes.",
-          "Its superior binding characteristics, high water absorption capacity, and excellent green and dry strength properties help produce pencil leads with consistent shape, smooth writing performance, and reduced breakage. The fine particle size and high surface area enable efficient bonding of graphite and other lead-forming materials while maintaining dimensional stability throughout manufacturing.",
-          "KORVANTO BENTO PENCIL is designed to support efficient production, improved lead quality, and reduced rejection rates in modern pencil manufacturing operations."
+          "KORVANTO BENTO PENCIL is a premium-grade bentonite specially developed for the pencil manufacturing industry. Produced from carefully selected bentonite deposits with high montmorillonite content it serves as an effective binder in the production of pencil leads providing the strength cohesion and workability required during extrusion drying and firing processes.",
+          "Its superior binding characteristics high water absorption capacity and excellent green and dry strength properties help produce pencil leads with consistent shape smooth writing performance and reduced breakage. The fine particle size and high surface area enable efficient bonding of graphite and other lead-forming materials while maintaining dimensional stability throughout manufacturing.",
+          "KORVANTO BENTO PENCIL is designed to support efficient production improved lead quality and reduced rejection rates in modern pencil manufacturing operations."
         ],
         "key_benefits": [],
         "applications": [
@@ -2616,7 +2616,7 @@
           "Customized Packaging Available"
         ],
         "short_website_description": [
-          "KORVANTO BENTO PENCIL is a high-performance bentonite developed for pencil lead manufacturing. Its excellent binding, strength, and water absorption properties help produce durable, uniform pencil leads with reduced breakage and improved manufacturing efficiency."
+          "KORVANTO BENTO PENCIL is a high-performance bentonite developed for pencil lead manufacturing. Its excellent binding strength and water absorption properties help produce durable uniform pencil leads with reduced breakage and improved manufacturing efficiency."
         ],
         "documentation": [
           "Technical Data Sheet (TDS)",
@@ -2628,7 +2628,7 @@
         "available_forms": [
           "Fine Powder Grade"
         ],
-        "available_forms_lead": "Premium bentonite for pencil lead manufacturing, supplied as a finely processed powder grade for binding and extrusion applications."
+        "available_forms_lead": "Premium bentonite for pencil lead manufacturing supplied as a finely processed powder grade for binding and extrusion applications."
       },
       "grades": [
         {
@@ -2674,12 +2674,12 @@
     {
       "slug": "korvanto-kao-crude",
       "name": "Korvanto Crude Kaolin",
-      "subtitle": "Crude Kaolin (China Clay) for Ceramic, Paint, Paper, Plastic & Industrial Applications",
+      "subtitle": "Crude Kaolin (China Clay) for Ceramic Paint Paper Plastic & Industrial Applications",
       "sections": {
         "overview": [
-          "KORVANTO KAO CRUDE is a naturally occurring kaolin clay (China Clay) selectively mined and supplied in its raw, unprocessed form. Composed primarily of hydrated aluminum silicate, it is valued for its natural whiteness, plasticity, fine particle structure, and low abrasiveness, making it an important raw material across numerous industrial applications.",
-          "Carefully sourced to ensure consistent quality, KORVANTO KAO CRUDE serves as a versatile mineral for ceramic bodies, paints, paper, rubber, plastics, sanitaryware, and construction materials. Its excellent workability, firing characteristics, and filler properties contribute to improved product performance and manufacturing efficiency.",
-          "Available in dried lump form, the material is suitable for further processing, grinding, levigation, calcination, or direct industrial use depending on application requirements."
+          "KORVANTO KAO CRUDE is a naturally occurring kaolin clay (China Clay) selectively mined and supplied in its raw unprocessed form. Composed primarily of hydrated aluminum silicate it is valued for its natural whiteness plasticity fine particle structure and low abrasiveness making it an important raw material across numerous industrial applications.",
+          "Carefully sourced to ensure consistent quality KORVANTO KAO CRUDE serves as a versatile mineral for ceramic bodies paints paper rubber plastics sanitaryware and construction materials. Its excellent workability firing characteristics and filler properties contribute to improved product performance and manufacturing efficiency.",
+          "Available in dried lump form the material is suitable for further processing grinding levigation calcination or direct industrial use depending on application requirements."
         ],
         "key_benefits": [],
         "applications": [
@@ -2743,7 +2743,7 @@
           "Bulk Supply"
         ],
         "short_website_description": [
-          "KORVANTO KAO CRUDE™ is raw kaolin ore supplied as crude kaolin lumps and crude kaolin powder for ceramic raw material, refractory industry, and further processing applications."
+          "KORVANTO KAO CRUDE is raw kaolin ore supplied as crude kaolin lumps and crude kaolin powder for ceramic raw material refractory industry and further processing applications."
         ],
         "typical_specs": [
           {
@@ -2755,7 +2755,7 @@
               },
               {
                 "parameter": "Product Description",
-                "value": "Crude Kaolin (China Clay) for Ceramic, Paint, Paper, Plastic & Industrial Applications"
+                "value": "Crude Kaolin (China Clay) for Ceramic Paint Paper Plastic & Industrial Applications"
               },
               {
                 "parameter": "Mineral Type",
@@ -2767,7 +2767,7 @@
               },
               {
                 "parameter": "Processing State",
-                "value": "Raw, unprocessed — selectively mined"
+                "value": "Raw unprocessed — selectively mined"
               },
               {
                 "parameter": "Supply Form",
@@ -2775,7 +2775,7 @@
               },
               {
                 "parameter": "Further Processing Suitability",
-                "value": "Grinding, levigation, calcination, or direct industrial use"
+                "value": "Grinding levigation calcination or direct industrial use"
               }
             ]
           },
@@ -2818,7 +2818,7 @@
           "Crude Kaolin Lumps",
           "Crude Kaolin Powder"
         ],
-        "available_forms_lead": "KORVANTO KAO CRUDE™ raw kaolin ore supplied in lump and powder forms."
+        "available_forms_lead": "KORVANTO KAO CRUDE raw kaolin ore supplied in lump and powder forms."
       },
       "grades": [],
       "family": "korvanto-kao",
@@ -2830,12 +2830,12 @@
     {
       "slug": "korvanto-kao-levigated-noodles",
       "name": "Korvanto Levigated Kaolin Noodles",
-      "subtitle": "High-Purity Levigated Kaolin Noodles for Ceramic, Sanitaryware & Tile Applications",
+      "subtitle": "High-Purity Levigated Kaolin Noodles for Ceramic Sanitaryware & Tile Applications",
       "sections": {
         "overview": [
-          "KORVANTO KAO LEVIGATED NOODLES are premium-grade water-washed and refined kaolin products manufactured through a controlled levigation process that removes grit, iron-bearing impurities, and other unwanted minerals. Supplied in noodle form with controlled moisture content, these grades offer excellent plasticity, workability, whiteness, and consistency required by modern ceramic manufacturers.",
-          "Designed for ceramic bodies, sanitaryware, vitrified tiles, porcelain, tableware, and refractory applications, the product provides superior molding characteristics, improved green strength, and enhanced fired properties. Its uniform composition and low impurity levels contribute to better production efficiency and high-quality finished products.",
-          "Manufactured under controlled processing conditions to ensure consistent whiteness, plasticity, and low impurity levels across every batch."
+          "KORVANTO KAO LEVIGATED NOODLES are premium-grade water-washed and refined kaolin products manufactured through a controlled levigation process that removes grit iron-bearing impurities and other unwanted minerals. Supplied in noodle form with controlled moisture content these grades offer excellent plasticity workability whiteness and consistency required by modern ceramic manufacturers.",
+          "Designed for ceramic bodies sanitaryware vitrified tiles porcelain tableware and refractory applications the product provides superior molding characteristics improved green strength and enhanced fired properties. Its uniform composition and low impurity levels contribute to better production efficiency and high-quality finished products.",
+          "Manufactured under controlled processing conditions to ensure consistent whiteness plasticity and low impurity levels across every batch."
         ],
         "key_benefits": [],
         "applications": [
@@ -2906,7 +2906,7 @@
               },
               {
                 "parameter": "Product Description",
-                "value": "High-Purity Levigated Kaolin Noodles for Ceramic, Sanitaryware & Tile Applications"
+                "value": "High-Purity Levigated Kaolin Noodles for Ceramic Sanitaryware & Tile Applications"
               },
               {
                 "parameter": "Processing",
@@ -2918,11 +2918,11 @@
               },
               {
                 "parameter": "Impurity Removal",
-                "value": "Grit, iron-bearing impurities, and unwanted minerals removed"
+                "value": "Grit iron-bearing impurities and unwanted minerals removed"
               },
               {
                 "parameter": "Intended Use",
-                "value": "Ceramic bodies, sanitaryware, vitrified tiles, porcelain, tableware, refractory"
+                "value": "Ceramic bodies sanitaryware vitrified tiles porcelain tableware refractory"
               }
             ]
           },
@@ -2973,8 +2973,8 @@
       "subtitle": "Water-Washed Levigated Kaolin Lumps for Ceramic & Industrial Processing",
       "sections": {
         "overview": [
-          "KORVANTO KAO LEVIGATED LUMPS are high-quality water-refined kaolin lumps produced through an advanced levigation process that removes coarse particles, iron impurities, and unwanted minerals. The resulting product offers enhanced whiteness, improved purity, controlled moisture content, and superior processing characteristics.",
-          "Supplied in lump form for further grinding, milling, or industrial processing, these grades are widely used by ceramic manufacturers, paint producers, rubber compounders, white cement manufacturers, and specialty mineral processors seeking consistent quality and reliable performance."
+          "KORVANTO KAO LEVIGATED LUMPS are high-quality water-refined kaolin lumps produced through an advanced levigation process that removes coarse particles iron impurities and unwanted minerals. The resulting product offers enhanced whiteness improved purity controlled moisture content and superior processing characteristics.",
+          "Supplied in lump form for further grinding milling or industrial processing these grades are widely used by ceramic manufacturers paint producers rubber compounders white cement manufacturers and specialty mineral processors seeking consistent quality and reliable performance."
         ],
         "key_benefits": [],
         "applications": [
@@ -3052,11 +3052,11 @@
               },
               {
                 "parameter": "Supply Form",
-                "value": "Lump form for grinding, milling, or industrial processing"
+                "value": "Lump form for grinding milling or industrial processing"
               },
               {
                 "parameter": "Impurity Removal",
-                "value": "Coarse particles, iron impurities, and unwanted minerals removed"
+                "value": "Coarse particles iron impurities and unwanted minerals removed"
               }
             ]
           },
@@ -3104,12 +3104,12 @@
     {
       "slug": "korvanto-kao-hydrous",
       "name": "Korvanto Hydrous Kaolin",
-      "subtitle": "Hydrous Kaolin Powder for Paint, Paper, Plastic, Rubber, Ink & Industrial Applications",
+      "subtitle": "Hydrous Kaolin Powder for Paint Paper Plastic Rubber Ink & Industrial Applications",
       "sections": {
         "overview": [
-          "KORVANTO KAO HYDROUS is a premium-grade water-washed kaolin produced from carefully selected deposits and processed to achieve high purity, excellent whiteness, controlled particle size, and superior dispersion characteristics. Composed primarily of naturally hydrated kaolinite, this product retains its original crystalline structure, making it an ideal functional filler, extender, and performance additive for a wide range of industrial applications.",
-          "Its fine particle size, chemical inertness, low abrasiveness, and high brightness make it suitable for paints, coatings, paper, plastics, rubber, printing inks, agrochemicals, ceramics, adhesives, and specialty formulations. KORVANTO KAO HYDROUS contributes to improved surface finish, opacity, gloss, printability, and mechanical performance while maintaining formulation stability.",
-          "Manufactured under strict quality controls, it delivers consistent performance and reliable results across diverse industries."
+          "KORVANTO KAO HYDROUS is a premium-grade water-washed kaolin produced from carefully selected deposits and processed to achieve high purity excellent whiteness controlled particle size and superior dispersion characteristics. Composed primarily of naturally hydrated kaolinite this product retains its original crystalline structure making it an ideal functional filler extender and performance additive for a wide range of industrial applications.",
+          "Its fine particle size chemical inertness low abrasiveness and high brightness make it suitable for paints coatings paper plastics rubber printing inks agrochemicals ceramics adhesives and specialty formulations. KORVANTO KAO HYDROUS contributes to improved surface finish opacity gloss printability and mechanical performance while maintaining formulation stability.",
+          "Manufactured under strict quality controls it delivers consistent performance and reliable results across diverse industries."
         ],
         "key_benefits": [],
         "applications": [
@@ -3187,7 +3187,7 @@
           "Bulk Shipments"
         ],
         "short_website_description": [
-          "KORVANTO KAO HYDROUS™ is hydrous kaolin supplied for paper, paint, rubber, plastic, and adhesive applications."
+          "KORVANTO KAO HYDROUS is hydrous kaolin supplied for paper paint rubber plastic and adhesive applications."
         ],
         "typical_specs": [
           {
@@ -3199,7 +3199,7 @@
               },
               {
                 "parameter": "Product Description",
-                "value": "Hydrous Kaolin Powder for Paint, Paper, Plastic, Rubber, Ink & Industrial Applications"
+                "value": "Hydrous Kaolin Powder for Paint Paper Plastic Rubber Ink & Industrial Applications"
               },
               {
                 "parameter": "Mineral Type",
@@ -3223,7 +3223,7 @@
               },
               {
                 "parameter": "Functional Role",
-                "value": "Functional filler, extender, and performance additive"
+                "value": "Functional filler extender and performance additive"
               }
             ]
           },
@@ -3271,12 +3271,12 @@
     {
       "slug": "korvanto-kao-spray",
       "name": "Korvanto Spray Dried Kaolin",
-      "subtitle": "Spray Dried Kaolin for Ceramic Bodies, Pressed Tiles & Sanitaryware Applications",
+      "subtitle": "Spray Dried Kaolin for Ceramic Bodies Pressed Tiles & Sanitaryware Applications",
       "sections": {
         "overview": [
-          "KORVANTO KAO SPRAY is a premium spray dried kaolin produced by atomizing refined kaolin slurry in a controlled drying process. The resulting granules offer uniform moisture content, excellent flow properties, and a consistent particle structure tailored for modern ceramic pressing and body formulation.",
-          "Designed for ceramic bodies, pressed tiles, and sanitaryware applications, this grade delivers reliable pressing performance, improved green strength, easy blending in ceramic formulations, and uniform composition for high-quality finished products.",
-          "Manufactured from a high-purity refined kaolin base with low impurity levels and strict quality controls, KORVANTO KAO SPRAY supports efficient ceramic production, consistent batch-to-batch performance, and export-ready supply for tile and sanitaryware manufacturers worldwide."
+          "KORVANTO KAO SPRAY is a premium spray dried kaolin produced by atomizing refined kaolin slurry in a controlled drying process. The resulting granules offer uniform moisture content excellent flow properties and a consistent particle structure tailored for modern ceramic pressing and body formulation.",
+          "Designed for ceramic bodies pressed tiles and sanitaryware applications this grade delivers reliable pressing performance improved green strength easy blending in ceramic formulations and uniform composition for high-quality finished products.",
+          "Manufactured from a high-purity refined kaolin base with low impurity levels and strict quality controls KORVANTO KAO SPRAY supports efficient ceramic production consistent batch-to-batch performance and export-ready supply for tile and sanitaryware manufacturers worldwide."
         ],
         "key_benefits": [],
         "applications": [
@@ -3330,7 +3330,7 @@
           "Bulk Shipments"
         ],
         "short_website_description": [
-          "KORVANTO KAO SPRAY™ is spray dried kaolin supplied for ceramic bodies, pressed tiles, and sanitaryware applications."
+          "KORVANTO KAO SPRAY is spray dried kaolin supplied for ceramic bodies pressed tiles and sanitaryware applications."
         ],
         "typical_specs": [
           {
@@ -3342,7 +3342,7 @@
               },
               {
                 "parameter": "Product Description",
-                "value": "Spray Dried Kaolin for Ceramic Bodies, Pressed Tiles & Sanitaryware Applications"
+                "value": "Spray Dried Kaolin for Ceramic Bodies Pressed Tiles & Sanitaryware Applications"
               },
               {
                 "parameter": "Processing",
@@ -3354,11 +3354,11 @@
               },
               {
                 "parameter": "Key Characteristics",
-                "value": "Controlled particle structure, uniform moisture, excellent flow"
+                "value": "Controlled particle structure uniform moisture excellent flow"
               },
               {
                 "parameter": "Intended Use",
-                "value": "Ceramic bodies, pressed tiles, sanitaryware, and technical ceramic pressing applications"
+                "value": "Ceramic bodies pressed tiles sanitaryware and technical ceramic pressing applications"
               }
             ]
           },
@@ -3406,12 +3406,12 @@
     {
       "slug": "korvanto-kao-calcined",
       "name": "Korvanto Calcined Kaolin",
-      "subtitle": "Calcined Kaolin for Paints, Plastics, Rubber, Paper, Wire & Cable Insulation Applications",
+      "subtitle": "Calcined Kaolin for Paints Plastics Rubber Paper Wire & Cable Insulation Applications",
       "sections": {
         "overview": [
-          "KORVANTO KAO CALCINED is a premium-grade anhydrous aluminum silicate produced by carefully calcining high-purity kaolin under controlled temperatures. The calcination process removes chemically bound water and modifies the kaolin crystal structure, resulting in enhanced whiteness, opacity, brightness, electrical insulation properties, thermal stability, and improved functional performance.",
-          "Engineered for demanding industrial applications, KORVANTO KAO CALCINED serves as a high-performance extender, filler, reinforcing agent, and pigment substitute in paints, coatings, plastics, rubber, paper, wire & cable compounds, printing inks, technical ceramics, and specialty formulations.",
-          "Its excellent dispersibility, low moisture content, controlled particle size distribution, and superior optical properties make it a preferred choice for manufacturers seeking improved product performance and cost optimization."
+          "KORVANTO KAO CALCINED is a premium-grade anhydrous aluminum silicate produced by carefully calcining high-purity kaolin under controlled temperatures. The calcination process removes chemically bound water and modifies the kaolin crystal structure resulting in enhanced whiteness opacity brightness electrical insulation properties thermal stability and improved functional performance.",
+          "Engineered for demanding industrial applications KORVANTO KAO CALCINED serves as a high-performance extender filler reinforcing agent and pigment substitute in paints coatings plastics rubber paper wire & cable compounds printing inks technical ceramics and specialty formulations.",
+          "Its excellent dispersibility low moisture content controlled particle size distribution and superior optical properties make it a preferred choice for manufacturers seeking improved product performance and cost optimization."
         ],
         "key_benefits": [],
         "applications": [
@@ -3492,7 +3492,7 @@
           "Bulk Shipments"
         ],
         "short_website_description": [
-          "KORVANTO KAO CALCINED™ is calcined kaolin supplied for paint, coatings, polymer compounds, cable compounds, rubber, and plastic applications."
+          "KORVANTO KAO CALCINED is calcined kaolin supplied for paint coatings polymer compounds cable compounds rubber and plastic applications."
         ],
         "typical_specs": [
           {
@@ -3504,7 +3504,7 @@
               },
               {
                 "parameter": "Product Description",
-                "value": "Calcined Kaolin for Paints, Plastics, Rubber, Paper, Wire & Cable Insulation Applications"
+                "value": "Calcined Kaolin for Paints Plastics Rubber Paper Wire & Cable Insulation Applications"
               },
               {
                 "parameter": "Mineral Type",
@@ -3524,7 +3524,7 @@
               },
               {
                 "parameter": "Functional Role",
-                "value": "High-performance extender, filler, reinforcing agent, and pigment substitute"
+                "value": "High-performance extender filler reinforcing agent and pigment substitute"
               }
             ]
           },
@@ -3572,12 +3572,12 @@
     {
       "slug": "korvanto-kao-metakaolin",
       "name": "Korvanto Meta Kaolin",
-      "subtitle": "High-Reactivity Metakaolin for Concrete, Cement, Construction Chemicals & Industrial Applications",
+      "subtitle": "High-Reactivity Metakaolin for Concrete Cement Construction Chemicals & Industrial Applications",
       "sections": {
         "overview": [
-          "KORVANTO KAO METAKAOLIN is a highly reactive pozzolanic material produced by the controlled calcination of high-purity kaolin clay. During this process, kaolinite is transformed into an amorphous aluminosilicate structure with exceptional reactivity, making it a valuable supplementary cementitious material for construction and industrial applications.",
-          "Engineered to enhance strength, durability, and long-term performance, KORVANTO KAO METAKAOLIN reacts with calcium hydroxide generated during cement hydration to form additional cementitious compounds. This results in denser microstructures, reduced permeability, improved chemical resistance, and superior mechanical properties.",
-          "In addition to construction applications, the product is widely used in paints, pigments, rubber, plastics, wire & cable compounds, and specialty industrial formulations where high whiteness, fine particle size, and reinforcing properties are required."
+          "KORVANTO KAO METAKAOLIN is a highly reactive pozzolanic material produced by the controlled calcination of high-purity kaolin clay. During this process kaolinite is transformed into an amorphous aluminosilicate structure with exceptional reactivity making it a valuable supplementary cementitious material for construction and industrial applications.",
+          "Engineered to enhance strength durability and long-term performance KORVANTO KAO METAKAOLIN reacts with calcium hydroxide generated during cement hydration to form additional cementitious compounds. This results in denser microstructures reduced permeability improved chemical resistance and superior mechanical properties.",
+          "In addition to construction applications the product is widely used in paints pigments rubber plastics wire & cable compounds and specialty industrial formulations where high whiteness fine particle size and reinforcing properties are required."
         ],
         "key_benefits": [],
         "applications": [
@@ -3660,7 +3660,7 @@
           "Bulk Shipments"
         ],
         "short_website_description": [
-          "KORVANTO KAO META™ is metakaolin supplied for construction, concrete admixtures, cement, geopolymers, and high performance concrete applications."
+          "KORVANTO KAO META is metakaolin supplied for construction concrete admixtures cement geopolymers and high performance concrete applications."
         ],
         "typical_specs": [
           {
@@ -3672,7 +3672,7 @@
               },
               {
                 "parameter": "Product Description",
-                "value": "High-Reactivity Metakaolin for Concrete, Cement, Construction Chemicals & Industrial Applications"
+                "value": "High-Reactivity Metakaolin for Concrete Cement Construction Chemicals & Industrial Applications"
               },
               {
                 "parameter": "Material Type",
@@ -3740,12 +3740,12 @@
     {
       "slug": "korvanto-clay",
       "name": "Korvanto Ball Clay",
-      "subtitle": "Premium Ball Clay for Ceramics, Sanitaryware, Tiles & Refractory Applications",
+      "subtitle": "Premium Ball Clay for Ceramics Sanitaryware Tiles & Refractory Applications",
       "sections": {
         "overview": [
-          "Korvanto Ball Clay is a high-quality, fine-grained clay renowned for its exceptional plasticity, strong binding characteristics, and excellent workability. Composed primarily of kaolinite along with naturally occurring quartz and mica, it serves as a critical raw material in ceramic, sanitaryware, porcelain, tile, refractory, and technical ceramic applications.",
-          "Carefully selected and processed to ensure consistency, Korvanto Ball Clay enhances shaping, molding, casting, and extrusion performance while providing excellent green strength and reliable firing characteristics. Its superior plasticity allows manufacturers to produce complex shapes, thin-walled products, and high-quality ceramic bodies with improved durability and surface finish.",
-          "Designed for modern ceramic manufacturing, it offers consistent performance across a wide range of industrial applications."
+          "Korvanto Ball Clay is a high-quality fine-grained clay renowned for its exceptional plasticity strong binding characteristics and excellent workability. Composed primarily of kaolinite along with naturally occurring quartz and mica it serves as a critical raw material in ceramic sanitaryware porcelain tile refractory and technical ceramic applications.",
+          "Carefully selected and processed to ensure consistency Korvanto Ball Clay enhances shaping molding casting and extrusion performance while providing excellent green strength and reliable firing characteristics. Its superior plasticity allows manufacturers to produce complex shapes thin-walled products and high-quality ceramic bodies with improved durability and surface finish.",
+          "Designed for modern ceramic manufacturing it offers consistent performance across a wide range of industrial applications."
         ],
         "key_benefits": [],
         "applications": [
@@ -3821,7 +3821,7 @@
         ],
         "packaging": [],
         "short_website_description": [
-          "Korvanto Ball Clay is a premium-grade ball clay designed for ceramic, sanitaryware, tile, porcelain, and refractory manufacturing. Its exceptional plasticity, binding strength, and workability help produce high-quality ceramic products with superior shaping, casting, and firing performance."
+          "Korvanto Ball Clay is a premium-grade ball clay designed for ceramic sanitaryware tile porcelain and refractory manufacturing. Its exceptional plasticity binding strength and workability help produce high-quality ceramic products with superior shaping casting and firing performance."
         ],
         "typical_specs": [
           {
@@ -3867,7 +3867,7 @@
             ]
           }
         ],
-        "available_forms_lead": "Processed and supplied in multiple industrial forms to match ceramic, sanitaryware, and refractory manufacturing requirements.",
+        "available_forms_lead": "Processed and supplied in multiple industrial forms to match ceramic sanitaryware and refractory manufacturing requirements.",
         "typical_specs_note": "Representative values for reference only. Detailed specifications are available on request — contact our export team for Technical Data Sheet (TDS) and Certificate of Analysis (COA)."
       },
       "grades": [],
@@ -3879,11 +3879,11 @@
     {
       "slug": "korvanto-lat",
       "name": "Korvanto Laterite",
-      "subtitle": "Laterite for Cement, Construction & Infrastructure Applications",
+      "subtitle": "Laterite for Cement Construction & Infrastructure Applications",
       "sections": {
         "overview": [
-          "Korvanto Laterite is a naturally occurring iron and alumina-rich lateritic mineral selectively mined and processed for use in cement manufacturing, construction materials, road infrastructure, and industrial applications. Formed through prolonged weathering of rocks in tropical environments, laterite offers excellent durability, weather resistance, and consistent chemical composition.",
-          "With its high iron and alumina content, Korvanto Laterite serves as a valuable corrective material in cement raw mix formulations while also finding applications in road construction, building materials, landscaping, and environmental projects. Available in lump, crushed, or powder form, it provides a cost-effective and sustainable mineral solution for large-scale industrial and infrastructure developments."
+          "Korvanto Laterite is a naturally occurring iron and alumina-rich lateritic mineral selectively mined and processed for use in cement manufacturing construction materials road infrastructure and industrial applications. Formed through prolonged weathering of rocks in tropical environments laterite offers excellent durability weather resistance and consistent chemical composition.",
+          "With its high iron and alumina content Korvanto Laterite serves as a valuable corrective material in cement raw mix formulations while also finding applications in road construction building materials landscaping and environmental projects. Available in lump crushed or powder form it provides a cost-effective and sustainable mineral solution for large-scale industrial and infrastructure developments."
         ],
         "key_benefits": [],
         "applications": [
@@ -3944,12 +3944,12 @@
           "Powder",
           "Customized Sizes Available"
         ],
-        "available_forms_lead": "Korvanto Laterite is supplied in multiple material forms to suit cement manufacturing, construction, road infrastructure and bulk industrial applications.",
+        "available_forms_lead": "Korvanto Laterite is supplied in multiple material forms to suit cement manufacturing construction road infrastructure and bulk industrial applications.",
         "forms_section_label": "Export Supply",
         "forms_section_title": "Supply Options",
         "packaging": [],
         "short_website_description": [
-          "Korvanto Laterite is a high-quality lateritic mineral offering reliable performance in cement manufacturing, construction, road infrastructure, and environmental applications. Its natural durability, high iron content, and cost-effectiveness make it an ideal choice for large-scale industrial projects."
+          "Korvanto Laterite is a high-quality lateritic mineral offering reliable performance in cement manufacturing construction road infrastructure and environmental applications. Its natural durability high iron content and cost-effectiveness make it an ideal choice for large-scale industrial projects."
         ],
         "typical_specs": [
           {
@@ -4002,7 +4002,7 @@
               },
               {
                 "parameter": "Color",
-                "value": "Red, Pink and Brown"
+                "value": "Red Pink and Brown"
               },
               {
                 "parameter": "Country of Origin",
@@ -4063,12 +4063,12 @@
     {
       "slug": "korvanto-cham",
       "name": "Korvanto Chamotte",
-      "subtitle": "Chamotte (Refractory Clay) for Refractory, Ceramic & High-Temperature Applications",
+      "subtitle": "Chamotte (Refractory Clay) for Refractory Ceramic & High-Temperature Applications",
       "sections": {
         "overview": [
-          "KORVANTO CHAM is a premium-grade calcined refractory clay (Chamotte) produced from carefully selected kaolinitic clays and fired at high temperatures to develop exceptional thermal stability, strength, and dimensional consistency. The calcination process transforms the clay into a highly stable refractory aggregate capable of withstanding extreme temperatures and thermal cycling.",
-          "Processed through advanced crushing, screening, and grading systems, KORVANTO CHAM is available in various particle sizes and alumina grades to meet the requirements of refractory manufacturers, ceramic producers, foundries, steel plants, cement kilns, and other high-temperature industries.",
-          "Its superior resistance to thermal shock, abrasion, shrinkage, and chemical degradation makes it an ideal raw material for fire bricks, castables, refractory mortars, kiln furniture, insulation materials, and technical ceramics."
+          "KORVANTO CHAM is a premium-grade calcined refractory clay (Chamotte) produced from carefully selected kaolinitic clays and fired at high temperatures to develop exceptional thermal stability strength and dimensional consistency. The calcination process transforms the clay into a highly stable refractory aggregate capable of withstanding extreme temperatures and thermal cycling.",
+          "Processed through advanced crushing screening and grading systems KORVANTO CHAM is available in various particle sizes and alumina grades to meet the requirements of refractory manufacturers ceramic producers foundries steel plants cement kilns and other high-temperature industries.",
+          "Its superior resistance to thermal shock abrasion shrinkage and chemical degradation makes it an ideal raw material for fire bricks castables refractory mortars kiln furniture insulation materials and technical ceramics."
         ],
         "key_benefits": [
           "Withstands Extreme Operating Temperatures",
@@ -4171,15 +4171,15 @@
           "Bulk Supply"
         ],
         "short_website_description": [
-          "KORVANTO CHAM is a premium refractory chamotte engineered for fire bricks, castables, refractory mortars, ceramics, and high-temperature industrial applications. Its excellent thermal stability, strength, and resistance to thermal shock ensure reliable performance in demanding operating environments."
+          "KORVANTO CHAM is a premium refractory chamotte engineered for fire bricks castables refractory mortars ceramics and high-temperature industrial applications. Its excellent thermal stability strength and resistance to thermal shock ensure reliable performance in demanding operating environments."
         ],
         "typical_specs": [
           {
-            "title": "KORVANTO CHAM LF42™",
+            "title": "KORVANTO CHAM LF42",
             "specs": [
               {
                 "parameter": "Application",
-                "value": "Castables, Ceramics, Foundry"
+                "value": "Castables Ceramics Foundry"
               },
               {
                 "parameter": "Al₂O₃",
@@ -4195,16 +4195,16 @@
               },
               {
                 "parameter": "Sizes Available",
-                "value": "0–1 mm, 1–3 mm, 3–5 mm, 200 Mesh"
+                "value": "0–1 mm 1–3 mm 3–5 mm 200 Mesh"
               }
             ]
           },
           {
-            "title": "KORVANTO CHAM LF46™",
+            "title": "KORVANTO CHAM LF46",
             "specs": [
               {
                 "parameter": "Application",
-                "value": "High-Duty Castables, Kiln Furniture"
+                "value": "High-Duty Castables Kiln Furniture"
               },
               {
                 "parameter": "Al₂O₃",
@@ -4220,16 +4220,16 @@
               },
               {
                 "parameter": "Sizes Available",
-                "value": "0–1 mm, 1–3 mm, 3–5 mm, 200 Mesh"
+                "value": "0–1 mm 1–3 mm 3–5 mm 200 Mesh"
               }
             ]
           },
           {
-            "title": "KORVANTO CHAM LF54™",
+            "title": "KORVANTO CHAM LF54",
             "specs": [
               {
                 "parameter": "Application",
-                "value": "Dense Refractory Bricks, Glass Furnace, Cement Industry"
+                "value": "Dense Refractory Bricks Glass Furnace Cement Industry"
               },
               {
                 "parameter": "Al₂O₃",
@@ -4245,16 +4245,16 @@
               },
               {
                 "parameter": "Sizes Available",
-                "value": "0–1 mm, 1–3 mm, 3–5 mm, 200 Mesh"
+                "value": "0–1 mm 1–3 mm 3–5 mm 200 Mesh"
               }
             ]
           },
           {
-            "title": "KORVANTO CHAM LF60™",
+            "title": "KORVANTO CHAM LF60",
             "specs": [
               {
                 "parameter": "Application",
-                "value": "Steel Plants, Premium Castables"
+                "value": "Steel Plants Premium Castables"
               },
               {
                 "parameter": "Al₂O₃",
@@ -4270,16 +4270,16 @@
               },
               {
                 "parameter": "Sizes Available",
-                "value": "0–1 mm, 1–3 mm, 3–5 mm, 200 Mesh"
+                "value": "0–1 mm 1–3 mm 3–5 mm 200 Mesh"
               }
             ]
           },
           {
-            "title": "KORVANTO CHAM LF70™",
+            "title": "KORVANTO CHAM LF70",
             "specs": [
               {
                 "parameter": "Application",
-                "value": "Glass Furnaces, Steel Tundish, Export Refractories"
+                "value": "Glass Furnaces Steel Tundish Export Refractories"
               },
               {
                 "parameter": "Al₂O₃",
@@ -4295,7 +4295,7 @@
               },
               {
                 "parameter": "Sizes Available",
-                "value": "0–1 mm, 1–3 mm, 3–5 mm, 200 Mesh"
+                "value": "0–1 mm 1–3 mm 3–5 mm 200 Mesh"
               }
             ]
           }
@@ -4351,45 +4351,45 @@
             "alumina": "~42%",
             "pce": "32",
             "iron": "<1.25% max",
-            "typical_application": "Castables, ceramics, foundry",
+            "typical_application": "Castables ceramics foundry",
             "recommended_for": "Cost-effective refractory applications",
-            "sizes": "0–1, 1–3, 3–5 mm, 200M"
+            "sizes": "0–1 1–3 3–5 mm 200M"
           },
           {
             "grade": "Korvanto Cham LF 46",
             "alumina": "~46%",
             "pce": "32",
             "iron": "<1.5% max",
-            "typical_application": "High-duty castables, kiln furniture",
+            "typical_application": "High-duty castables kiln furniture",
             "recommended_for": "Heavy-duty castables",
-            "sizes": "0–1, 1–3, 3–5 mm, 200M"
+            "sizes": "0–1 1–3 3–5 mm 200M"
           },
           {
             "grade": "Korvanto Cham LF 54",
             "alumina": "~54%",
             "pce": "32",
             "iron": "<2%",
-            "typical_application": "Dense bricks, glass furnace, cement",
+            "typical_application": "Dense bricks glass furnace cement",
             "recommended_for": "Dense refractory bricks",
-            "sizes": "0–1, 1–3, 3–5 mm, 200M"
+            "sizes": "0–1 1–3 3–5 mm 200M"
           },
           {
             "grade": "Korvanto Cham LF 60",
             "alumina": "~60%",
             "pce": "32",
             "iron": "<2%",
-            "typical_application": "Steel plants, premium castables",
+            "typical_application": "Steel plants premium castables",
             "recommended_for": "Steel plants",
-            "sizes": "0–1, 1–3, 3–5 mm, 200M"
+            "sizes": "0–1 1–3 3–5 mm 200M"
           },
           {
             "grade": "Korvanto Cham LF 70",
             "alumina": "70%",
             "pce": "32",
             "iron": "<3%",
-            "typical_application": "Glass furnace, steel tundish, export",
+            "typical_application": "Glass furnace steel tundish export",
             "recommended_for": "Export-grade premium refractories",
-            "sizes": "0–1, 1–3, 3–5 mm, 200M"
+            "sizes": "0–1 1–3 3–5 mm 200M"
           }
         ],
         "cta": [
@@ -4407,7 +4407,7 @@
       },
       "product_comparison": {
         "section_label": "Compare Options",
-        "section_title": "Not sure whether Chamotte or Calcined Bauxite is right for your application?",
+        "section_title": "Not sure whether Chamotte or Calcined Bauxite is right for your application",
         "columns": [
           {
             "header": "Property",
@@ -4454,14 +4454,14 @@
           },
           {
             "property": "Typical Application",
-            "standard": "Ceramics, standard castables",
-            "high_alumina": "High-duty castables, bricks",
-            "bauxite": "Steel, glass, cement plants"
+            "standard": "Ceramics standard castables",
+            "high_alumina": "High-duty castables bricks",
+            "bauxite": "Steel glass cement plants"
           },
           {
             "property": "Particle Size Available",
-            "standard": "0–1, 1–3, 3–5 mm, 200 Mesh",
-            "high_alumina": "0–1, 1–3, 3–5 mm, 200 Mesh",
+            "standard": "0–1 1–3 3–5 mm 200 Mesh",
+            "high_alumina": "0–1 1–3 3–5 mm 200 Mesh",
             "bauxite": "Custom on request"
           },
           {
@@ -4488,12 +4488,12 @@
     {
       "slug": "korvanto-baux",
       "name": "Korvanto Bauxite",
-      "subtitle": "Calcined Bauxite for Refractory, Abrasive & High-Temperature Industrial Applications",
+      "subtitle": "Calcined Bauxite for Refractory Abrasive & High-Temperature Industrial Applications",
       "sections": {
         "overview": [
-          "KORVANTO BAUX is a premium-grade calcined bauxite produced by carefully calcining high-quality bauxite ore at controlled temperatures to remove moisture and volatile compounds, resulting in a dense, hard, and highly refractory material with elevated alumina content.",
-          "Renowned for its exceptional hardness, thermal stability, chemical resistance, and low thermal expansion characteristics, KORVANTO BAUX is widely used in refractory manufacturing, abrasive applications, welding consumables, and other demanding industrial processes operating under extreme temperatures and abrasive conditions.",
-          "Our calcined bauxite grades are manufactured to provide consistent alumina content, controlled impurities, and reliable performance for steel plants, cement kilns, glass furnaces, foundries, refractory producers, and abrasive manufacturers worldwide."
+          "KORVANTO BAUX is a premium-grade calcined bauxite produced by carefully calcining high-quality bauxite ore at controlled temperatures to remove moisture and volatile compounds resulting in a dense hard and highly refractory material with elevated alumina content.",
+          "Renowned for its exceptional hardness thermal stability chemical resistance and low thermal expansion characteristics KORVANTO BAUX is widely used in refractory manufacturing abrasive applications welding consumables and other demanding industrial processes operating under extreme temperatures and abrasive conditions.",
+          "Our calcined bauxite grades are manufactured to provide consistent alumina content controlled impurities and reliable performance for steel plants cement kilns glass furnaces foundries refractory producers and abrasive manufacturers worldwide."
         ],
         "key_benefits": [
           "Withstands Extreme Operating Temperatures",
@@ -4583,12 +4583,12 @@
           "Bulk Supply"
         ],
         "short_website_description": [
-          "KORVANTO BAUX is a premium calcined bauxite range engineered for refractory, abrasive, welding, and high-temperature industrial applications. Available in CB80, CB82, and CB86 grades, it delivers exceptional thermal stability, mechanical strength, and long-term performance under demanding operating conditions.",
+          "KORVANTO BAUX is a premium calcined bauxite range engineered for refractory abrasive welding and high-temperature industrial applications. Available in CB80 CB82 and CB86 grades it delivers exceptional thermal stability mechanical strength and long-term performance under demanding operating conditions.",
           "Grades Available: CB80 | CB82 | CB86"
         ],
         "typical_specs": [
           {
-            "title": "KORVANTO BAUX CB80™",
+            "title": "KORVANTO BAUX CB80",
             "specs": [
               {
                 "parameter": "Al₂O₃",
@@ -4600,7 +4600,7 @@
               },
               {
                 "parameter": "Application",
-                "value": "Refractory Bricks, Monolithics"
+                "value": "Refractory Bricks Monolithics"
               },
               {
                 "parameter": "Features",
@@ -4613,7 +4613,7 @@
             ]
           },
           {
-            "title": "KORVANTO BAUX CB82™",
+            "title": "KORVANTO BAUX CB82",
             "specs": [
               {
                 "parameter": "Al₂O₃",
@@ -4625,7 +4625,7 @@
               },
               {
                 "parameter": "Application",
-                "value": "Kiln Furniture, High-Strength Castables"
+                "value": "Kiln Furniture High-Strength Castables"
               },
               {
                 "parameter": "Features",
@@ -4638,7 +4638,7 @@
             ]
           },
           {
-            "title": "KORVANTO BAUX CB86™",
+            "title": "KORVANTO BAUX CB86",
             "specs": [
               {
                 "parameter": "Al₂O₃",
@@ -4650,7 +4650,7 @@
               },
               {
                 "parameter": "Application",
-                "value": "Steel, Glass & Cement Industries"
+                "value": "Steel Glass & Cement Industries"
               },
               {
                 "parameter": "Features",
@@ -4681,7 +4681,7 @@
             },
             {
               "parameter": "Application",
-              "value": "Refractory Bricks, Monolithics"
+              "value": "Refractory Bricks Monolithics"
             },
             {
               "parameter": "Features",
@@ -4714,7 +4714,7 @@
             },
             {
               "parameter": "Application",
-              "value": "Kiln Furniture, High-Strength Castables"
+              "value": "Kiln Furniture High-Strength Castables"
             },
             {
               "parameter": "Features",
@@ -4747,7 +4747,7 @@
             },
             {
               "parameter": "Application",
-              "value": "Steel, Glass & Cement Industries"
+              "value": "Steel Glass & Cement Industries"
             },
             {
               "parameter": "Features",
@@ -4777,9 +4777,9 @@
       "subtitle": "Lustrous Carbon Additive for Green Sand Foundry Applications",
       "sections": {
         "overview": [
-          "KORVANTO CARBO is a premium-quality lustrous carbon additive manufactured from carefully selected carbonaceous materials and processed to deliver superior performance in green sand molding systems. Designed specifically for ferrous foundries, it improves casting surface finish, reduces sand-related defects, and enhances molding sand performance.",
-          "When exposed to molten metal temperatures, KORVANTO CARBO generates a reducing gaseous atmosphere and forms a lustrous carbon layer at the mold-metal interface. This protective carbon film acts as a non-wetting barrier between molten metal and molding sand, minimizing metal penetration, sand adhesion, burn-on defects, and surface irregularities.",
-          "Engineered for modern foundry operations, KORVANTO CARBO helps improve casting quality, reduce rejection rates, enhance sand recyclability, and optimize overall production efficiency."
+          "KORVANTO CARBO is a premium-quality lustrous carbon additive manufactured from carefully selected carbonaceous materials and processed to deliver superior performance in green sand molding systems. Designed specifically for ferrous foundries it improves casting surface finish reduces sand-related defects and enhances molding sand performance.",
+          "When exposed to molten metal temperatures KORVANTO CARBO generates a reducing gaseous atmosphere and forms a lustrous carbon layer at the mold-metal interface. This protective carbon film acts as a non-wetting barrier between molten metal and molding sand minimizing metal penetration sand adhesion burn-on defects and surface irregularities.",
+          "Engineered for modern foundry operations KORVANTO CARBO helps improve casting quality reduce rejection rates enhance sand recyclability and optimize overall production efficiency."
         ],
         "key_benefits": [],
         "applications": [
@@ -4810,7 +4810,7 @@
         "product_advantages": [
           "Improves Casting Surface Finish",
           "Reduces Sand Burn-On and Metal Penetration",
-          "Minimizes Scabbing, Erosion, and Surface Defects",
+          "Minimizes Scabbing Erosion and Surface Defects",
           "Improves Sand-to-Casting Separation During Shakeout",
           "Enhances Mold Collapsibility",
           "Reduces Fettling and Finishing Costs",
@@ -4834,19 +4834,19 @@
           "Consistent Batch-to-Batch Quality"
         ],
         "available_grades": [
-          "KORVANTO LUSTROUS ELITE™",
+          "KORVANTO LUSTROUS ELITE",
           "Coal Seam HLCA",
           "Volatile Matter (%) 40 – 50",
           "Ash (%) Max 7.0",
-          "KORVANTO LUSTROUS PREMIUM™",
+          "KORVANTO LUSTROUS PREMIUM",
           "Coal Seam LCA",
           "Volatile Matter (%) 50 – 55",
           "Ash (%) Max 8.0",
-          "KORVANTO LUSTROUS ADVANCE™",
+          "KORVANTO LUSTROUS ADVANCE",
           "Coal Seam CA",
           "Volatile Matter (%) 55 – 65",
           "Ash (%) Max 6.0",
-          "KORVANTO LUSTROUS STANDARD™",
+          "KORVANTO LUSTROUS STANDARD",
           "Coal Seam",
           "Volatile Matter (%) 45 – 55",
           "Ash (%) Max 9.0",
@@ -4854,11 +4854,11 @@
         ],
         "packaging": [],
         "short_website_description": [
-          "KORVANTO CARBO is a premium lustrous carbon additive designed for ferrous foundries and green sand molding systems. It forms a protective carbon layer at the mold-metal interface, reducing casting defects, improving surface finish, and increasing foundry productivity."
+          "KORVANTO CARBO is a premium lustrous carbon additive designed for ferrous foundries and green sand molding systems. It forms a protective carbon layer at the mold-metal interface reducing casting defects improving surface finish and increasing foundry productivity."
         ],
         "typical_specs": [
           {
-            "title": "KORVANTO LUSTROUS ADVANCE™",
+            "title": "KORVANTO LUSTROUS ADVANCE",
             "specs": [
               {
                 "parameter": "Base Material",
@@ -4883,7 +4883,7 @@
             ]
           },
           {
-            "title": "KORVANTO LUSTROUS PREMIUM™",
+            "title": "KORVANTO LUSTROUS PREMIUM",
             "specs": [
               {
                 "parameter": "Base Material",
@@ -4908,7 +4908,7 @@
             ]
           },
           {
-            "title": "KORVANTO LUSTROUS ELITE™",
+            "title": "KORVANTO LUSTROUS ELITE",
             "specs": [
               {
                 "parameter": "Base Material",
@@ -4933,7 +4933,7 @@
             ]
           },
           {
-            "title": "KORVANTO LUSTROUS STANDARD™",
+            "title": "KORVANTO LUSTROUS STANDARD",
             "specs": [
               {
                 "parameter": "Base Material",
@@ -4963,9 +4963,9 @@
       "grades": [
         {
           "grade": "ELITE",
-          "name": "KORVANTO LUSTROUS ELITE™",
+          "name": "KORVANTO LUSTROUS ELITE",
           "subtitle": "Coal Seam HLCA",
-          "image": "assets/images/grades/korvanto-carbo/coal additive grade  3.png",
+          "image": "assets/images/grades/korvanto-carbo/coal additive grade 3.png",
           "description": "High performance low-ash lustrous carbon additive",
           "applications": [
             "Premium Foundry Applications",
@@ -4982,7 +4982,7 @@
         },
         {
           "grade": "PREMIUM",
-          "name": "KORVANTO LUSTROUS PREMIUM™",
+          "name": "KORVANTO LUSTROUS PREMIUM",
           "subtitle": "Coal Seam LCA",
           "image": "assets/images/grades/korvanto-carbo/coal additive grade 2.png",
           "description": "Low ash lustrous carbon additive",
@@ -5001,7 +5001,7 @@
         },
         {
           "grade": "ADVANCE",
-          "name": "KORVANTO LUSTROUS ADVANCE™",
+          "name": "KORVANTO LUSTROUS ADVANCE",
           "subtitle": "Coal Seam CA",
           "image": "assets/images/grades/korvanto-carbo/coal additive grade.png",
           "description": "Standard lustrous carbon additive",
@@ -5020,7 +5020,7 @@
         },
         {
           "grade": "STANDARD",
-          "name": "KORVANTO LUSTROUS STANDARD™",
+          "name": "KORVANTO LUSTROUS STANDARD",
           "subtitle": "Coal Seam",
           "image": "assets/images/grades/korvanto-carbo/coal additive grade 4.png",
           "description": "Standard foundry lustrous carbon additive",
@@ -5066,25 +5066,25 @@
         ],
         "rows": [
           {
-            "product_name": "KORVANTO LUSTROUS ELITE™",
+            "product_name": "KORVANTO LUSTROUS ELITE",
             "base_material": "Coal Seam HLCA",
             "volatile_matter": "40 – 50",
             "ash": "7.0"
           },
           {
-            "product_name": "KORVANTO LUSTROUS PREMIUM™",
+            "product_name": "KORVANTO LUSTROUS PREMIUM",
             "base_material": "Coal Seam LCA",
             "volatile_matter": "50 – 55",
             "ash": "8.0"
           },
           {
-            "product_name": "KORVANTO LUSTROUS ADVANCE™",
+            "product_name": "KORVANTO LUSTROUS ADVANCE",
             "base_material": "Coal Seam CA",
             "volatile_matter": "55 – 65",
             "ash": "6.0"
           },
           {
-            "product_name": "KORVANTO LUSTROUS STANDARD™",
+            "product_name": "KORVANTO LUSTROUS STANDARD",
             "base_material": "Coal Seam",
             "volatile_matter": "45 – 55",
             "ash": "9.0"
@@ -5110,7 +5110,7 @@
       "hero_badge": "Export Ready",
       "sections": {
         "overview": [
-          "KORVANTO BENTO DRILL is a range of high-quality drilling-grade bentonite products developed for oil & gas, water well, HDD, geothermal, piling, and geotechnical drilling applications. Available in API and OCMA grades, these products provide excellent viscosity, gel strength, borehole stability, fluid loss control, and cuttings suspension for efficient drilling operations worldwide."
+          "KORVANTO BENTO DRILL is a range of high-quality drilling-grade bentonite products developed for oil & gas water well HDD geothermal piling and geotechnical drilling applications. Available in API and OCMA grades these products provide excellent viscosity gel strength borehole stability fluid loss control and cuttings suspension for efficient drilling operations worldwide."
         ],
         "key_benefits": [
           "API / OCMA compliant",
@@ -5162,7 +5162,7 @@
           "Improves cuttings removal and hole cleaning efficiency",
           "Reduces seepage and fluid loss during drilling",
           "Offers good lubrication and cooling performance",
-          "Suitable for water well, geotechnical, and industrial drilling",
+          "Suitable for water well geotechnical and industrial drilling",
           "Easy slurry preparation and field application",
           "Cost-effective solution for drilling fluid systems",
           "Consistent quality for dependable drilling performance"
@@ -5278,7 +5278,7 @@
       "family": "korvanto-bento",
       "page_file": "korvanto-bento-specialty.html",
       "page_type": "detail",
-      "subtitle": "Application-specific bentonite grades developed for adsorption, purification, filtration, environmental, agricultural, and industrial processes.",
+      "subtitle": "Application-specific bentonite grades developed for adsorption purification filtration environmental agricultural and industrial processes.",
       "hero_badge": "Custom Grades",
       "overview_panel": {
         "section_label": "Specialty Supply",
@@ -5288,7 +5288,7 @@
       },
       "sections": {
         "overview": [
-          "For specialty bentonite grades and application-specific requirements, contact Korvanto LLP. Our team supports specification-focused sourcing, quality verification, and export-ready supply coordination."
+          "For specialty bentonite grades and application-specific requirements contact Korvanto LLP. Our team supports specification-focused sourcing quality verification and export-ready supply coordination."
         ],
         "key_benefits": [],
         "applications": [],
@@ -5305,7 +5305,7 @@
           "Third-Party Testing Available Upon Request",
           "Safety Data Sheet (SDS/MSDS)"
         ],
-        "custom_grade_note": "Custom grades can be developed based on swelling capacity, CEC value, montmorillonite content, particle size distribution, moisture content, pH range, adsorption capacity, and end-use application requirements.",
+        "custom_grade_note": "Custom grades can be developed based on swelling capacity CEC value montmorillonite content particle size distribution moisture content pH range adsorption capacity and end-use application requirements.",
         "typical_specs": [
           {
             "parameter": "Supply Type",

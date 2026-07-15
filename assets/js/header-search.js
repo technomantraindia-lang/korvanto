@@ -40,7 +40,7 @@
       '</div>' +
       '<div class="search-overlay-field product-search-field">' +
       '<input type="search" id="headerSearchInput" class="search-overlay-input product-search-input" ' +
-      'placeholder="Type product name, grade, or code..." autocomplete="off" ' +
+      'placeholder="Type product name grade or code..." autocomplete="off" ' +
       'aria-controls="headerSearchResults" aria-expanded="false" aria-autocomplete="list">' +
       '</div>' +
       '<div class="product-search-results search-overlay-results" id="headerSearchResults" role="listbox" hidden></div>' +

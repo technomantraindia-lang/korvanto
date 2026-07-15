@@ -87,7 +87,7 @@
     function render(items) {
       if (!items.length) {
         results.innerHTML =
-          '<p class="product-search-empty">No matches found. Try a grade code such as F30, LF42, or Hydrous Kaolin.</p>';
+          '<p class="product-search-empty">No matches found. Try a grade code such as F30 LF42 or Hydrous Kaolin.</p>';
         results.hidden = false;
         setExpanded(true);
         return;
