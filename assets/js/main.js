@@ -861,7 +861,7 @@
       lines.push(label + ': ' + val);
     });
     var body = lines.join('\r\n');
-    return 'mailto:' + to + 'subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    return 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
   }
 
   function initForms() {
@@ -1364,7 +1364,7 @@
         phone;
       if (note) body += '\r\nNote: ' + note;
       window.location.href =
-        'mailto:' + email + 'subject=' + encodeURIComponent('Schedule a Call — ' + name) + '&body=' + encodeURIComponent(body);
+        'mailto:' + email + '?subject=' + encodeURIComponent('Schedule a Call — ' + name) + '&body=' + encodeURIComponent(body);
       setCallbackOpen(false);
       callbackForm.reset();
     });
@@ -1379,7 +1379,7 @@
 
   /* ——— Init ——— */
   document.addEventListener('DOMContentLoaded', function () {
-    loadPartial('header-placeholder', 'components/header.htmlv=2', function () {
+    loadPartial('header-placeholder', 'components/header.html?v=2', function () {
       var stale = document.querySelector('#headerProductSearch #headerSearchOverlay');
       if (stale) stale.remove();
       initHeader();
@@ -1387,7 +1387,7 @@
     bootProductSearch();
     loadPartial(
       'footer-placeholder',
-      'components/footer.htmlv=' + FOOTER_ASSET_VERSION,
+      'components/footer.html?v=' + FOOTER_ASSET_VERSION,
       function () {
         ensureFooterMenus();
         initFooterYear();

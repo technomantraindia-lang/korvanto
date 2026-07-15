@@ -25,10 +25,9 @@ TEXT_ATTRS = {
 }
 
 
-def clean_text(value: str) -> str:
+def clean_text(value: str, remove_question: bool = True) -> str:
     replacements = {
         ",": "",
-        "?": "",
         "\u2122": "",
         "&trade;": "",
         "&#8482;": "",
@@ -36,6 +35,8 @@ def clean_text(value: str) -> str:
         "ï¿½": "",
         "\ufffd": "",
     }
+    if remove_question:
+        replacements["?"] = ""
     for bad, good in replacements.items():
         value = value.replace(bad, good)
     value = value.replace("â€”", "-").replace("â€“", "-")
@@ -137,7 +138,9 @@ def clean_js_strings(text: str) -> str:
                 buf.append(ch)
                 escape = True
             elif ch == quote:
-                out.append(clean_text("".join(buf)))
+                value = "".join(buf)
+                functional_query = value.startswith("?") or re.search(r"\.[A-Za-z0-9]+[?]", value)
+                out.append(clean_text(value, remove_question=not functional_query))
                 out.append(ch)
                 quote = None
                 buf = []
@@ -155,7 +158,9 @@ def clean_js_strings(text: str) -> str:
         i += 1
 
     if quote:
-        out.append(clean_text("".join(buf)))
+        value = "".join(buf)
+        functional_query = value.startswith("?") or re.search(r"\.[A-Za-z0-9]+[?]", value)
+        out.append(clean_text(value, remove_question=not functional_query))
     return "".join(out)
 
 
