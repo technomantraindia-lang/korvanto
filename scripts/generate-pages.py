@@ -2024,6 +2024,9 @@ def generate_portfolio_page(data):
             <div class="product-search-results" id="productSearchResults" role="listbox" hidden></div>
           </div>
         </div>
+        <div class="products-catalogue-wrap">
+          <a href="assets/documents/korvanto-product-catalogue.pdf" class="btn btn-gold products-catalogue-btn" download="Korvanto-Product-Catalogue.pdf">Download Product Catalogue <span class="arrow">&rarr;</span></a>
+        </div>
       </div>
     </section>
 

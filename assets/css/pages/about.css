@@ -142,11 +142,13 @@
   margin-bottom: 0;
 }
 
-.about-page .about-founder-panel .inner-section-head {
-  margin-bottom: 1.25rem;
+.about-page .about-founder-head {
+  margin-bottom: 1.35rem;
+  position: relative;
+  z-index: 1;
 }
 
-.about-page .about-founder-panel .section-title {
+.about-page .about-founder-head .section-title {
   max-width: none;
   margin-bottom: 0;
 }
@@ -1413,50 +1415,74 @@
 
 /* ——— Founder's Message ——— */
 .about-founder {
-  overflow: hidden;
-}
-
-.about-founder-grid {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: clamp(2.5rem, 5vw, 4rem);
-  align-items: stretch;
-}
-
-.about-founder-panel {
   position: relative;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: clamp(1.75rem, 3vw, 2.5rem);
-  background: linear-gradient(165deg, var(--white) 0%, #f8fafc 100%);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-card);
+  overflow: visible;
+  background:
+    linear-gradient(180deg, #f7f8fa 0%, #eef2f6 48%, #f5f6f7 100%);
+}
+
+.about-founder-atmosphere {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
   overflow: hidden;
-  transform-style: preserve-3d;
-  transition: transform 0.5s var(--about-ease), box-shadow 0.5s ease, border-color 0.4s ease;
+  background:
+    radial-gradient(ellipse 48% 55% at 88% 42%, rgba(197, 154, 74, 0.14) 0%, transparent 68%),
+    radial-gradient(ellipse 42% 50% at 8% 70%, rgba(9, 35, 61, 0.08) 0%, transparent 70%);
 }
 
-.about-founder-panel:hover {
-  border-color: rgba(66, 165, 245, 0.35);
-  box-shadow: 0 28px 64px rgba(9, 35, 61, 0.12);
+.about-founder-atmosphere::after {
+  content: "";
+  position: absolute;
+  inset: 12% 6% auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(197, 154, 74, 0.35), transparent);
 }
 
-.about-founder-panel:hover .about-panel-shine {
-  left: 120%;
+.about-founder-layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: start;
+}
+
+.about-founder-copy {
+  position: relative;
+  padding: clamp(0.5rem, 1.5vw, 1rem) 0 clamp(0.5rem, 1.5vw, 1rem) clamp(1.1rem, 2vw, 1.6rem);
+  border-left: 3px solid var(--gold);
+}
+
+.about-founder-quote {
+  position: absolute;
+  top: 5.75rem;
+  left: 1rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(5rem, 9vw, 7.25rem);
+  line-height: 0.75;
+  color: rgba(197, 154, 74, 0.18);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.about-founder-head {
+  position: relative;
+  z-index: 2;
 }
 
 .about-founder-message {
-  flex: 0 1 auto;
+  position: relative;
+  z-index: 1;
+  max-width: 40rem;
 }
 
 .about-founder-message p {
-  font-size: 1rem;
-  line-height: 1.7;
+  font-size: 1.02rem;
+  line-height: 1.75;
   color: var(--text-soft);
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.95rem;
 }
 
 .about-founder-message p:last-child {
@@ -1465,33 +1491,153 @@
 
 .about-founder-message p strong {
   color: var(--navy);
+  font-size: 1.08rem;
 }
 
 .about-founder-sign {
-  margin-top: 1.25rem;
-  padding-top: 1.15rem;
-  border-top: 1px solid var(--border);
+  position: relative;
+  z-index: 1;
+  margin-top: 1.75rem;
+  padding-top: 1.35rem;
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 0.15rem;
+  max-width: 22rem;
 }
 
-.about-founder-sign strong {
-  font-family: var(--font-heading);
-  font-size: 1.05rem;
+.about-founder-sign::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3.5rem;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+.about-founder-sign-name {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(1.55rem, 2.4vw, 1.95rem);
   color: var(--navy);
+  letter-spacing: 0.01em;
+  line-height: 1.15;
 }
 
 .about-founder-sign span {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   color: var(--text-soft);
 }
 
 .about-founder-org {
   font-family: var(--font-heading);
   font-weight: 600;
+  font-size: 0.95rem !important;
   color: var(--navy) !important;
-  margin-top: 0.25rem;
+  margin-top: 0.2rem;
+}
+
+.about-founder-portrait {
+  position: sticky;
+  top: 6.75rem;
+  align-self: start;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 0;
+  height: fit-content;
+  padding: 0.35rem 0 1rem;
+  isolation: isolate;
+}
+
+.about-founder-portrait-glow {
+  position: absolute;
+  width: min(88%, 380px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(197, 154, 74, 0.28) 0%, rgba(9, 35, 61, 0.08) 48%, transparent 72%);
+  filter: blur(8px);
+  z-index: 0;
+  animation: aboutFounderGlow 7s ease-in-out infinite alternate;
+}
+
+.about-founder-portrait-orbit {
+  position: absolute;
+  width: min(calc(78% + 28px), 368px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px dashed rgba(197, 154, 74, 0.5);
+  z-index: 2;
+  pointer-events: none;
+  animation: aboutFounderOrbit 18s linear infinite;
+}
+
+.about-founder-portrait-orbit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 6px rgba(197, 154, 74, 0.15);
+  transform: translate(-50%, -50%);
+}
+
+.about-founder-portrait-frame {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  width: min(78%, 340px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid rgba(255, 255, 255, 0.95);
+  box-shadow:
+    0 0 0 10px rgba(197, 154, 74, 0.18),
+    0 24px 48px rgba(9, 35, 61, 0.22);
+  background: linear-gradient(160deg, #e8edf2 0%, #d7dee6 100%);
+  transition: transform 0.55s var(--about-ease), box-shadow 0.55s ease;
+}
+
+.about-founder-portrait:hover .about-founder-portrait-frame {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow:
+    0 0 0 12px rgba(197, 154, 74, 0.22),
+    0 30px 60px rgba(9, 35, 61, 0.26);
+}
+
+.about-founder-portrait-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transform: scale(1.06);
+  transform-origin: center top;
+  display: block;
+}
+
+.about-founder-portrait-accent {
+  position: absolute;
+  z-index: 0;
+  width: min(58%, 250px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(145deg, var(--navy) 0%, var(--navy-secondary) 100%);
+  opacity: 0.9;
+  transform: translate(42%, 38%);
+}
+
+@keyframes aboutFounderGlow {
+  from { transform: scale(0.96); opacity: 0.75; }
+  to { transform: scale(1.05); opacity: 1; }
+}
+
+@keyframes aboutFounderOrbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 /* ——— Vision & Values (legacy) ——— */
@@ -2010,58 +2156,6 @@
   background: linear-gradient(90deg, transparent, rgba(197, 154, 74, 0.35), transparent);
 }
 
-.about-founder .premium-scene-3d {
-  position: relative;
-  perspective: 1100px;
-  width: 100%;
-  height: 100%;
-  min-height: 0;
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-}
-
-.about-founder .premium-scene-layer {
-  flex: 1 1 auto;
-  min-height: 0;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.about-founder .premium-media-frame {
-  flex: 1 1 auto;
-  height: 100%;
-  min-height: 0;
-  display: flex;
-}
-
-.about-founder .premium-media-frame.about-founder-photo {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, #eef1f5 0%, #e4e9ef 100%);
-}
-
-.about-founder .premium-media-frame.about-founder-photo img {
-  width: 100%;
-  height: 100%;
-  min-height: 0;
-  object-fit: cover;
-  object-position: center center;
-}
-
-.about-founder .premium-scene-3d:hover .about-frame-depth--back {
-  transform: translate(6px, -6px);
-}
-
-.about-founder .premium-scene-3d:hover .about-frame-depth--mid {
-  transform: translate(3px, -3px);
-}
-
-.about-founder .premium-scene-3d:hover .premium-media-frame img {
-  transform: scale(1.05);
-}
-
 /* ——— Journey (about page enhancements) ——— */
 .about-page .journey-section {
   position: relative;
@@ -2112,35 +2206,46 @@
 @media (max-width: 1024px) {
   .about-manifesto-grid,
   .about-story-grid,
-  .about-founder-grid,
+  .about-founder-layout,
   .about-difference-layout {
     grid-template-columns: 1fr;
   }
 
   .about-manifesto-panel,
   .about-story-panel,
-  .about-founder-panel,
   .about-difference-main {
     height: auto;
   }
 
   .about-scene-3d,
-  .about-story .premium-scene-3d,
-  .about-founder .premium-scene-3d {
+  .about-story .premium-scene-3d {
     height: auto;
     min-height: 0;
   }
 
-  .about-founder .premium-media-frame.about-founder-photo {
-    min-height: 320px;
-    height: auto;
+  .about-founder-layout {
+    gap: 2.25rem;
   }
 
-  .about-founder .premium-media-frame.about-founder-photo img {
-    min-height: 320px;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 10%;
+  .about-founder-copy {
+    order: 2;
+    padding-left: 1.1rem;
+  }
+
+  .about-founder-portrait {
+    order: 1;
+    position: relative;
+    top: auto;
+    min-height: 0;
+  }
+
+  .about-founder-portrait-frame {
+    width: min(70%, 280px);
+  }
+
+  .about-founder-quote {
+    top: 5.5rem;
+    left: 0.55rem;
   }
 
   .about-page .media-frame,
@@ -2291,7 +2396,9 @@
   .about-orb,
   .about-timeline-dot,
   .about-exists-ring,
-  .about-portfolio-highlight-glow {
+  .about-portfolio-highlight-glow,
+  .about-founder-portrait-glow,
+  .about-founder-portrait-orbit {
     animation: none;
   }
 

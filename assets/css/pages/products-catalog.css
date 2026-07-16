@@ -2385,6 +2385,19 @@
   box-shadow: 0 0 0 3px rgba(197, 154, 74, 0.15);
 }
 
+.products-catalogue-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.15rem;
+}
+
+.products-catalogue-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 .product-search-results {
   position: absolute;
   top: calc(100% + 0.45rem);

@@ -46,7 +46,7 @@
  <ul>
  <li>Product name and required grade or specification</li>
  <li>Expected purchase timeline</li>
- <li>Estimated volume per shipment or annual programme</li>
+ <li>Required quantity per shipment or annual programme</li>
  <li>Packaging preference — 25 kg bags 50 kg bags jumbo bags or containerized load</li>
  <li>Destination port or country</li>
  <li>Target specification parameters and sample requirements if available</li>
@@ -129,12 +129,13 @@
  </select>
  </div>
  <div class="form-row">
- <div class="form-group"><label for="volume">Estimated Volume</label><input type="text" id="volume" name="volume" placeholder="e.g. 500 MT / month"></div>
+ <div class="form-group"><label for="volume">Required Quantity</label><input type="text" id="volume" name="volume" placeholder="e.g. 500 MT / month"></div>
  <div class="form-group"><label for="packaging">Packaging Preference</label>
  <select id="packaging" name="packaging">
  <option value="">Select</option>
  <option value="jumbo">Jumbo Bags</option>
- <option value="sacks">25/50 kg Sacks</option>
+ <option value="25kg">25 kg Sacks</option>
+ <option value="50kg">50 kg Sacks</option>
  <option value="bulk">Bulk Container</option>
  </select>
  </div>
