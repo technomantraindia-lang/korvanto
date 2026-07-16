@@ -26,7 +26,7 @@
     modal.classList.add('is-open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('doc-request-open');
-    var firstField = modal.querySelector('input select textarea');
+    var firstField = modal.querySelector('input, select, textarea');
     if (firstField) {
       setTimeout(function () {
         firstField.focus();

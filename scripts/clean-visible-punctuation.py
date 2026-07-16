@@ -25,9 +25,8 @@ TEXT_ATTRS = {
 }
 
 
-def clean_text(value: str, remove_question: bool = True) -> str:
+def clean_text(value: str, remove_question: bool = True, remove_comma: bool = True) -> str:
     replacements = {
-        ",": "",
         "\u2122": "",
         "&trade;": "",
         "&#8482;": "",
@@ -35,6 +34,8 @@ def clean_text(value: str, remove_question: bool = True) -> str:
         "ï¿½": "",
         "\ufffd": "",
     }
+    if remove_comma:
+        replacements[","] = ""
     if remove_question:
         replacements["?"] = ""
     for bad, good in replacements.items():
@@ -45,6 +46,16 @@ def clean_text(value: str, remove_question: bool = True) -> str:
     value = re.sub(r" +", " ", value)
     value = re.sub(r" +([.;:!])", r"\1", value)
     return value
+
+
+def looks_like_selector(value: str) -> bool:
+    return bool(
+        re.search(r"[.#\[]", value)
+        or re.fullmatch(
+            r"(?:input|textarea|select|button|form|a|div|span|label)(?:\s*,\s*(?:input|textarea|select|button|form|a|div|span|label))+",
+            value,
+        )
+    )
 
 
 def clean_attrs(tag: str) -> str:
@@ -140,7 +151,13 @@ def clean_js_strings(text: str) -> str:
             elif ch == quote:
                 value = "".join(buf)
                 functional_query = value.startswith("?") or re.search(r"\.[A-Za-z0-9]+[?]", value)
-                out.append(clean_text(value, remove_question=not functional_query))
+                out.append(
+                    clean_text(
+                        value,
+                        remove_question=not functional_query,
+                        remove_comma=not looks_like_selector(value),
+                    )
+                )
                 out.append(ch)
                 quote = None
                 buf = []
@@ -160,7 +177,13 @@ def clean_js_strings(text: str) -> str:
     if quote:
         value = "".join(buf)
         functional_query = value.startswith("?") or re.search(r"\.[A-Za-z0-9]+[?]", value)
-        out.append(clean_text(value, remove_question=not functional_query))
+        out.append(
+            clean_text(
+                value,
+                remove_question=not functional_query,
+                remove_comma=not looks_like_selector(value),
+            )
+        )
     return "".join(out)
 
 

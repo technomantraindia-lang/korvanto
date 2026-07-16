@@ -67,17 +67,17 @@ window.KorvantoGradeFilter = (function () {
 
   function updateForm(form) {
     if (!form) return;
-    var productSelect = form.querySelector('.doc-product-select [data-product-grade-source]');
+    var productSelect = form.querySelector('.doc-product-select, [data-product-grade-source]');
     if (!productSelect) return;
     var grades = getGrades(productSelect.value || '');
-    form.querySelectorAll('.doc-grade-select [data-product-grade-target]').forEach(function (gradeSelect) {
+    form.querySelectorAll('.doc-grade-select, [data-product-grade-target]').forEach(function (gradeSelect) {
       fillGradeSelect(gradeSelect, grades, gradeSelect.hasAttribute('required'));
     });
   }
 
   function wireForm(form) {
     if (!form) return;
-    var productSelect = form.querySelector('.doc-product-select [data-product-grade-source]');
+    var productSelect = form.querySelector('.doc-product-select, [data-product-grade-source]');
     if (!productSelect) return;
     productSelect.addEventListener('change', function () {
       updateForm(form);

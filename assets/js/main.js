@@ -851,7 +851,7 @@
       }
     }
     var lines = [];
-    $$('input textarea select', form).forEach(function (field) {
+    $$('input, textarea, select', form).forEach(function (field) {
       if (field.type === 'submit' || field.type === 'hidden' || !field.name) return;
       var val = getFormFieldValue(field);
       if (!val) return;
