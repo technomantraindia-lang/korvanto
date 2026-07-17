@@ -994,7 +994,7 @@
     startAutoplay();
   }
 
-  var FOOTER_ASSET_VERSION = '12';
+  var FOOTER_ASSET_VERSION = '13';
 
   var FOOTER_MENU_HTML =
     '<div class="footer-col">' +
@@ -1024,9 +1024,15 @@
     '<div class="footer-col footer-contact">' +
     '<h4>Contact</h4>' +
     '<ul class="contact-list">' +
-    '<li><span class="label">Email</span><a href="mailto:[your-email@company.com]">[your-email@company.com]</a></li>' +
-    '<li><span class="label">Phone</span><a href="tel:[your-phone]">[your-phone]</a></li>' +
-    '<li><span class="label">Address</span><span class="contact-value">[Your business address]</span></li>' +
+    '<li><span class="label">Email</span><span class="contact-emails">' +
+    '<a href="mailto:info@korvanto.com">info@korvanto.com</a>' +
+    '<a href="mailto:exports@korvanto.com">exports@korvanto.com</a>' +
+    '<a href="mailto:j.jadeja@korvanto.com">j.jadeja@korvanto.com</a>' +
+    '<a href="mailto:sales@korvanto.com">sales@korvanto.com</a>' +
+    '<a href="mailto:support@korvanto.com">support@korvanto.com</a>' +
+    '</span></li>' +
+    '<li><span class="label">Phone</span><a href="tel:+919054007999">+91 90540 07999</a></li>' +
+    '<li><span class="label">Address</span><span class="contact-value">304 The City Centre Near Amrapali Underbridge Raiya Road Rajkot Gujarat India</span></li>' +
     '</ul></div>';
 
   function ensureFooterMenus() {

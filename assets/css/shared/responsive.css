@@ -19,11 +19,15 @@
   .why-header-lead { max-width: none; }
   .why-panels { grid-template-columns: repeat(2, 1fr); }
   .footer-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.75rem 1.5rem;
   }
 
   .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-contact {
     grid-column: 1 / -1;
   }
   .products-grid { grid-template-columns: repeat(2, 1fr); }

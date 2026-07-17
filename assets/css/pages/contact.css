@@ -233,6 +233,17 @@
   color: var(--gold);
 }
 
+.contact-emails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contact-channel-card .contact-emails a,
+.contact-detail-body .contact-emails a {
+  display: inline-block;
+}
+
 .contact-quick-actions {
   display: flex;
   flex-wrap: wrap;

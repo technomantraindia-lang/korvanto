@@ -437,3 +437,288 @@
     transform: none;
   }
 }
+
+/* ——— All-device layout polish (no design/text changes) ——— */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body,
+main,
+.section,
+.container,
+.page-hero,
+.product-hero-detail,
+.footer-grid,
+.form-grid,
+.form-row,
+.pd-overview-grid,
+.contact-layout,
+.premium-hero-layout,
+.pd-hero-grid,
+.product-hero-grid {
+  min-width: 0;
+}
+
+img,
+video,
+iframe,
+embed,
+object {
+  max-width: 100%;
+}
+
+table {
+  max-width: 100%;
+}
+
+.contact-emails a,
+.footer-contact a,
+.contact-detail-body a,
+.footer-col a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: min(var(--site-max), calc(100% - 2 * max(1.15rem, 3.5vw)));
+  }
+}
+
+@media (max-width: 1024px) {
+  html,
+  body {
+    overflow-x: clip;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.75rem 1.5rem;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-contact {
+    grid-column: 1 / -1;
+  }
+
+  .about-founder-portrait {
+    position: relative;
+    top: auto;
+  }
+
+  .form-grid,
+  .quote-page .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pd-benefits-grid,
+  .pd-apps-grid,
+  .pd-features-grid,
+  .pd-advantages-grid,
+  .pd-forms-grid,
+  .pd-qa-grid,
+  .pd-related-grid,
+  .pd-pack-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pd-spec-table-wrap,
+  .pd-grade-use-table-wrap,
+  .pd-quick-ref-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+  }
+
+  .products-search,
+  .products-catalogue-wrap,
+  .products-search-bar {
+    max-width: 100%;
+  }
+
+  .contact-map-frame,
+  .contact-map-wrap iframe {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-brand,
+  .footer-contact {
+    grid-column: auto;
+  }
+
+  .pd-benefits-grid,
+  .pd-apps-grid,
+  .pd-features-grid,
+  .pd-advantages-grid,
+  .pd-forms-grid,
+  .pd-qa-grid,
+  .pd-related-grid,
+  .pd-pack-grid,
+  .pd-custom-grid,
+  .pd-grade-grid,
+  .pd-grade-grid--pair,
+  .pd-grade-grid--triple,
+  .why-panels,
+  .products-family-grid,
+  .pf-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .btn,
+  .btn-sm,
+  .product-hero-actions .btn,
+  .products-catalogue-btn,
+  .cta-content .btn {
+    max-width: 100%;
+  }
+
+  .products-catalogue-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .contact-emails {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .about-founder-layout {
+    gap: 1.75rem;
+  }
+
+  .about-founder-copy {
+    padding-left: 0.95rem;
+  }
+
+  .about-founder-portrait-frame {
+    width: min(72%, 260px);
+  }
+
+  .float-side-tabs {
+    top: auto;
+    bottom: calc(5.75rem + env(safe-area-inset-bottom, 0px));
+    transform: none;
+    gap: 0.35rem;
+  }
+
+  .float-quote-tab {
+    min-height: 6.4rem;
+    font-size: 0.58rem;
+    padding: 0.55rem 0.35rem;
+  }
+
+  .float-contact {
+    right: max(0.85rem, env(safe-area-inset-right, 0px));
+    bottom: max(0.85rem, env(safe-area-inset-bottom, 0px));
+  }
+
+  .float-callback-dialog,
+  .float-contact-panel {
+    max-width: calc(100vw - 1.5rem);
+  }
+
+  .legal-content,
+  .prose,
+  .page-hero-lead,
+  .section-lead,
+  .pd-forms-lead,
+  .pd-request-lead,
+  .breadcrumb {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  .pd-overview-panel,
+  .pd-spec-block,
+  .form-card,
+  .p-form-shell,
+  .contact-aside-panel,
+  .pd-custom-showcase {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .site-footer {
+    padding-bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --site-gutter: max(0.85rem, 3.5vw);
+  }
+
+  .logo-img {
+    height: 58px;
+    max-width: 168px;
+  }
+
+  .site-header.is-scrolled .logo-img {
+    height: 52px;
+    max-width: 150px;
+  }
+
+  .contact-channel-card,
+  .contact-aside-panel,
+  .form-card,
+  .p-form-shell,
+  .products-search-bar .products-search,
+  .inner-premium .legal-content {
+    padding-left: 1.05rem;
+    padding-right: 1.05rem;
+  }
+
+  .float-side-tabs {
+    right: 0;
+  }
+
+  .float-quote-tab {
+    min-height: 5.75rem;
+    font-size: 0.52rem;
+    letter-spacing: 0.06em;
+  }
+
+  .site-footer {
+    padding-bottom: calc(4.75rem + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .page-hero,
+  .product-hero-detail {
+    padding-top: calc(3.75rem + 64px);
+    padding-bottom: 2rem;
+  }
+
+  .float-live-chat {
+    height: min(420px, calc(100vh - 3.5rem));
+  }
+
+  .about-founder-portrait-frame {
+    width: min(42%, 220px);
+  }
+}
+
+@media (min-width: 1025px) {
+  .about-founder-portrait {
+    position: sticky;
+    top: 6.75rem;
+  }
+}
