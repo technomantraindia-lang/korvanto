@@ -239,9 +239,20 @@
   gap: 0.25rem;
 }
 
+.contact-phone-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
 .contact-channel-card .contact-emails a,
+.contact-channel-card .contact-phone-lines a,
 .contact-detail-body .contact-emails a {
   display: inline-block;
+}
+
+.contact-detail-body > a {
+  display: block;
 }
 
 .contact-quick-actions {
