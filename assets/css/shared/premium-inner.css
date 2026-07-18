@@ -1499,7 +1499,9 @@ a.p-visual-tile:hover h4 {
 
   .export-why-card h4 {
     font-size: 0.95rem;
-    white-space: nowrap;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
   }
 }
 

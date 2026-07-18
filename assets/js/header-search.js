@@ -1,5 +1,6 @@
 (function () {
   'use strict';
+  var lastFocus = null;
 
   function getBase() {
     var path = window.location.pathname;
@@ -74,6 +75,7 @@
     if (!overlay || !input) return;
 
     if (open) {
+      lastFocus = document.activeElement;
       overlay.removeAttribute('hidden');
       overlay.classList.add('is-open');
       overlay.setAttribute('aria-hidden', 'false');
@@ -98,6 +100,10 @@
       results.innerHTML = '';
     }
     input.setAttribute('aria-expanded', 'false');
+    if (lastFocus && typeof lastFocus.focus === 'function') {
+      lastFocus.focus();
+    }
+    lastFocus = null;
   }
 
   function bindEvents() {
@@ -129,6 +135,25 @@
       var overlay = document.getElementById('headerSearchOverlay');
       if (event.key === 'Escape' && overlay && overlay.classList.contains('is-open')) {
         setOpen(false);
+        return;
+      }
+      if (event.key !== 'Tab' || !overlay || !overlay.classList.contains('is-open')) return;
+      var focusable = Array.prototype.slice.call(
+        overlay.querySelectorAll(
+          'button:not([disabled]), [href], input:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        )
+      ).filter(function (el) {
+        return el.offsetParent !== null;
+      });
+      if (!focusable.length) return;
+      var first = focusable[0];
+      var last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
       }
     });
   }

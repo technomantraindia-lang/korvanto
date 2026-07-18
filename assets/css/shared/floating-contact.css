@@ -413,6 +413,7 @@ button.float-contact-link {
   align-items: center;
   justify-content: center;
   padding: 1.25rem;
+  overflow-y: auto;
   background: rgba(9, 35, 61, 0.55);
   opacity: 0;
   visibility: hidden;
@@ -426,12 +427,20 @@ button.float-contact-link {
 
 .float-callback-dialog {
   width: min(420px, 100%);
+  max-height: calc(100dvh - 1.5rem);
+  overflow-y: auto;
   background: var(--white);
   border-radius: 16px;
   padding: 1.35rem;
   box-shadow: var(--shadow-soft);
   transform: translateY(12px);
   transition: transform 0.25s ease;
+}
+
+@media (max-height: 560px) {
+  .float-callback-modal {
+    align-items: flex-start;
+  }
 }
 
 .float-callback-modal.is-open .float-callback-dialog {

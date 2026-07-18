@@ -24,6 +24,7 @@
     lastFocus = document.activeElement;
     activeModal = modal;
     modal.classList.add('is-open');
+    modal.removeAttribute('inert');
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('doc-request-open');
     var firstField = modal.querySelector('input, select, textarea');
@@ -38,6 +39,7 @@
     if (!modal) return;
     modal.classList.remove('is-open');
     modal.setAttribute('aria-hidden', 'true');
+    modal.setAttribute('inert', '');
     if (activeModal === modal) activeModal = null;
     if (!document.querySelector('.doc-request-modal.is-open')) {
       document.body.classList.remove('doc-request-open');
@@ -88,6 +90,29 @@
   });
 
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closeActiveModal();
+    if (e.key === 'Escape') {
+      closeActiveModal();
+      return;
+    }
+    if (e.key !== 'Tab' || !activeModal) return;
+
+    var focusable = Array.prototype.slice.call(
+      activeModal.querySelectorAll(
+        'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      )
+    ).filter(function (el) {
+      return el.offsetParent !== null;
+    });
+    if (!focusable.length) return;
+
+    var first = focusable[0];
+    var last = focusable[focusable.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
   });
 })();

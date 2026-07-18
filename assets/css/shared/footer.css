@@ -77,9 +77,9 @@
 
 .footer-logo-img {
   display: block;
-  height: clamp(100px, 11vw, 128px);
-  width: auto;
-  max-width: min(260px, 38vw);
+  width: min(260px, 100%);
+  height: auto;
+  max-width: 100%;
   object-fit: contain;
 }
 

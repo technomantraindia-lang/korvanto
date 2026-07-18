@@ -1,7 +1,7 @@
 /* Korvanto — Base: variables, layout, buttons, reveal */
 /* Korvanto - Premium 3D B2B Industrial Mineral Export */
-@import url('credentials-strip.css');
-@import url('floating-contact.css');
+@import url('credentials-strip.css?v=2');
+@import url('floating-contact.css?v=2');
 
 :root {
   --navy: #09233D;

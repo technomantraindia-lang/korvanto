@@ -78,7 +78,7 @@
  var dest = text.match(/\bto\s+([a-z][a-z\s]{2,30})\b/i);
  if (dest) session.destination = dest[1].trim();
  }
- if (has(text, /\bmy name is\s+([a-z][a-z\s'-]{130})\b/i)) {
+if (has(text, /\bmy name is\s+([a-z][a-z\s'-]{1,30})\b/i)) {
  session.name = text.match(/\bmy name is\s+([a-z][a-z\s'-]{1,30})\b/i)[1].trim();
  }
  }
@@ -120,7 +120,7 @@
  return (
  pick(OPENERS) +
  'To prepare an accurate export quotation please share:\n' +
- '1. Product & grade (e.g. API bentonite F-200 foundry)\n' +
+'1. Product & grade (e.g. API bentonite F32 foundry)\n' +
  '2. Monthly or trial quantity\n' +
  '3. Packaging preference (25 kg 50 kg FIBC)\n' +
  '4. Destination port / country\n\n' +
@@ -207,8 +207,7 @@
  var text = normalize(userText);
  if (!text) return welcome();
 
- extractDetails(text);
- session.turn += 1;
+extractDetails(text);
 
  if (/^(hi|hello|hey|good\s*(morning|afternoon|evening)|namaste)\b/.test(text)) {
  return welcome();
@@ -254,8 +253,8 @@
  session.product = 'KORVANTO BENTO FOUNDRY';
  return (
  pick(OPENERS) +
- 'KORVANTO BENTO FOUNDRY grades F-100 and F-200 are for green sand molding — grey iron ductile iron steel and non-ferrous castings.\n\n' +
- 'F-100: swelling 28–30 ml MBV ~390\nF-200: swelling 32 ml higher gelling index\n\n' +
+'KORVANTO BENTO FOUNDRY grades F30 F32 and F35 are for green sand molding — grey iron ductile iron steel and non-ferrous castings.\n\n' +
+'F30: economy grade\nF32: standard grade\nF35: premium grade\n\n' +
  'What casting line and monthly tonnage are you running'
  );
  }

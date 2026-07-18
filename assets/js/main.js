@@ -98,6 +98,14 @@
         }
       }
 
+      function resetDropdowns() {
+        $$('.has-dropdown.is-open', nav).forEach(function (dropdown) {
+          dropdown.classList.remove('is-open');
+          var trigger = $('.dropdown-trigger', dropdown);
+          if (trigger) trigger.setAttribute('aria-expanded', 'false');
+        });
+      }
+
       toggle.addEventListener('click', function () {
         setNavOpen(!nav.classList.contains('is-open'));
       });
@@ -125,33 +133,41 @@
           setNavOpen(false);
         });
       });
+
+      var desktopNav = window.matchMedia('(min-width: 1101px)');
+      var handleDesktopNav = function (event) {
+        if (!event.matches) return;
+        setNavOpen(false);
+        resetDropdowns();
+      };
+      if (desktopNav.addEventListener) desktopNav.addEventListener('change', handleDesktopNav);
+      else desktopNav.addListener(handleDesktopNav);
     }
 
     $$('.dropdown-trigger').forEach(function (btn) {
       var parent = btn.closest('.has-dropdown');
       if (!parent) return;
 
-      var mobileDropdown = window.matchMedia('(max-width: 768px) (hover: none)');
+      var mobileDropdown = window.matchMedia('(max-width: 1100px)');
+      var hoverDropdown = window.matchMedia('(hover: hover)');
 
       btn.addEventListener('click', function (e) {
-        if (!mobileDropdown.matches) return;
+        if (!mobileDropdown.matches && hoverDropdown.matches) return;
         e.preventDefault();
         var open = parent.classList.toggle('is-open');
         btn.setAttribute('aria-expanded', open ? 'true' : 'false');
       });
 
-      if (window.matchMedia('(hover: hover)').matches) {
-        parent.addEventListener('mouseenter', function () {
-          if (mobileDropdown.matches) return;
-          parent.classList.add('is-open');
-          btn.setAttribute('aria-expanded', 'true');
-        });
-        parent.addEventListener('mouseleave', function () {
-          if (mobileDropdown.matches) return;
-          parent.classList.remove('is-open');
-          btn.setAttribute('aria-expanded', 'false');
-        });
-      }
+      parent.addEventListener('mouseenter', function () {
+        if (mobileDropdown.matches || !hoverDropdown.matches) return;
+        parent.classList.add('is-open');
+        btn.setAttribute('aria-expanded', 'true');
+      });
+      parent.addEventListener('mouseleave', function () {
+        if (mobileDropdown.matches || !hoverDropdown.matches) return;
+        parent.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
     });
 
     document.addEventListener('click', function (e) {
@@ -173,7 +189,6 @@
 
     var headerOverlay = document.getElementById('headerSearchOverlay');
     if (headerOverlay) {
-      headerOverlay.removeAttribute('data-search-initialized');
       window.KorvantoProductSearch.init(headerOverlay, BASE);
     }
 
@@ -352,7 +367,7 @@
       items.forEach(function (el) {
         var strength = parseFloat(el.getAttribute('data-parallax')) || 12;
         el.style.transform =
-          'translate3d(' + x * strength + 'px' + y * strength * 0.6 + 'px0)';
+          'translate3d(' + x * strength + 'px, ' + y * strength * 0.6 + 'px, 0)';
       });
     };
 
@@ -380,7 +395,7 @@
         var rect = el.getBoundingClientRect();
         var center = rect.top + rect.height / 2 - window.innerHeight / 2;
         var factor = parseFloat(el.getAttribute('data-scroll-parallax')) || 0.08;
-        el.style.transform = 'translate3d(0' + center * factor + 'px0)';
+        el.style.transform = 'translate3d(0, ' + center * factor + 'px, 0)';
       });
     };
     window.addEventListener('scroll', onScroll, { passive: true });
@@ -892,7 +907,7 @@
           if (mailtoHref) {
             window.location.href = mailtoHref;
           }
-          form.reset();
+          if (!mailtoHref) form.reset();
           if (success) {
             setTimeout(function () {
               success.hidden = true;
@@ -994,7 +1009,7 @@
     startAutoplay();
   }
 
-  var FOOTER_ASSET_VERSION = '13';
+  var FOOTER_ASSET_VERSION = '14';
 
   var FOOTER_MENU_HTML =
     '<div class="footer-col">' +
@@ -1019,7 +1034,7 @@
     '<li><a href="export-packaging.html">Export &amp; Packaging</a></li>' +
     '<li><a href="contact.html">Contact Us</a></li>' +
     '<li><a href="request-quote.html">Request a Quote</a></li>' +
-    '<li><a href="assets/documents/korvanto-company-profile.pdf" download="Korvanto-Company-Profile.pdf">Download Company Profile</a></li>' +
+    '<li><a href="assets/documents/korvanto-product-catalogue.pdf" download="Korvanto-Product-Catalogue.pdf">Download Product Catalogue</a></li>' +
     '</ul></div>' +
     '<div class="footer-col footer-contact">' +
     '<h4>Contact</h4>' +
@@ -1111,7 +1126,7 @@
       return;
     }
     var script = document.createElement('script');
-    script.src = BASE + 'assets/js/live-chat-bot.js';
+    script.src = BASE + 'assets/js/live-chat-bot.js?v=2';
     script.onload = callback;
     script.onerror = function () {
       console.warn('Korvanto live chat bot failed to load');
@@ -1391,6 +1406,7 @@
       initHeader();
     });
     bootProductSearch();
+    initFloatingContact();
     loadPartial(
       'footer-placeholder',
       'components/footer.html?v=' + FOOTER_ASSET_VERSION,

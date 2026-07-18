@@ -143,7 +143,7 @@
 .has-dropdown { position: relative; }
 
 /* Hover bridge — keeps mega menu open while moving pointer from trigger to panel */
-@media (min-width: 769px) and (hover: hover) {
+@media (min-width: 1101px) and (hover: hover) {
   .has-dropdown::before {
     content: "";
     position: absolute;
@@ -351,6 +351,7 @@ body.search-overlay-open {
   align-items: flex-start;
   justify-content: center;
   padding: clamp(5rem, 12vh, 7rem) 1.25rem 2rem;
+  overflow-y: auto;
 }
 
 .search-overlay[hidden] {
@@ -376,6 +377,7 @@ body.search-overlay-open {
 .search-overlay-dialog {
   position: relative;
   width: min(720px, 100%);
+  max-height: calc(100dvh - 2rem);
   z-index: 1;
   animation: searchOverlayIn 0.28s ease;
 }
@@ -392,11 +394,19 @@ body.search-overlay-open {
 }
 
 .search-overlay-inner {
+  display: flex;
+  flex-direction: column;
+  max-height: inherit;
   background: var(--white);
   border: 1px solid rgba(9, 35, 61, 0.08);
   border-radius: 18px;
   box-shadow: 0 28px 80px rgba(9, 35, 61, 0.28);
   overflow: hidden;
+}
+
+.search-overlay-results {
+  min-height: 0;
+  overflow-y: auto;
 }
 
 .search-overlay-top {

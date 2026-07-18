@@ -34,7 +34,7 @@
     if (indexLoaded) return Promise.resolve(index);
     if (indexPromise) return indexPromise;
 
-    indexPromise = fetch((base || '') + 'assets/js/product-search-index.json')
+    indexPromise = fetch((base || '') + 'assets/js/product-search-index.json?v=2')
       .then(function (response) {
         if (!response.ok) throw new Error('Search index unavailable');
         return response.json();
