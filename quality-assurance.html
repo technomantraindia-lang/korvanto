@@ -317,11 +317,11 @@
  <div class="form-group"><label for="tdsProduct">Product *</label><select id="tdsProduct" name="product" class="doc-product-select" required></select></div>
  <div class="form-row">
  <div class="form-group"><label for="tdsGrade">Grade / Specification</label><select id="tdsGrade" name="grade" class="doc-grade-select" disabled><option value="">Select product first</option></select></div>
- <div class="form-group"><label for="tdsApplication">Intended Application / Industry</label><input type="text" id="tdsApplication" name="application" placeholder="Optional"></div>
+ <div class="form-group"><label for="tdsApplication">Intended Application / Industry *</label><input type="text" id="tdsApplication" name="application" required></div>
  </div>
  <div class="form-group"><label for="tdsParams">Specific Parameters Required</label><textarea id="tdsParams" name="specific_parameters" rows="2" placeholder="Optional — mesh size chemical limits moisture etc."></textarea></div>
  <div class="form-group"><label for="tdsTimeline">Expected Purchase Timeline *</label><select id="tdsTimeline" name="purchase_timeline" required><option value="">Select timeline</option><option value="immediate">Immediate</option><option value="within-1-month">Within 1 month</option><option value="within-3-months">Within 3 months</option><option value="evaluating">Just evaluating suppliers</option></select></div>
- <div class="form-group"><label for="tdsNotes">Additional Notes *</label><textarea id="tdsNotes" name="additional_notes" rows="3" required></textarea></div>
+ <div class="form-group"><label for="tdsNotes">Additional Notes</label><textarea id="tdsNotes" name="additional_notes" rows="3" placeholder="Optional"></textarea></div>
  </div>
  <div class="doc-request-actions">
  <button type="submit" class="btn btn-gold">Request TDS <span class="arrow">&rarr;</span></button>
@@ -357,11 +357,11 @@
  <div class="form-group"><label for="coaProduct">Product *</label><select id="coaProduct" name="product" class="doc-product-select" required></select></div>
  <div class="form-row">
  <div class="form-group"><label for="coaGrade">Grade / Specification</label><select id="coaGrade" name="grade" class="doc-grade-select" disabled><option value="">Select product first</option></select></div>
- <div class="form-group"><label for="coaApplication">Intended Application / Industry</label><input type="text" id="coaApplication" name="application" placeholder="Optional"></div>
+ <div class="form-group"><label for="coaApplication">Intended Application / Industry *</label><input type="text" id="coaApplication" name="application" required></div>
  </div>
  <div class="form-group"><label for="coaStatus">Purchase Status</label><select id="coaStatus" name="purchase_status"><option value="">Select status (optional)</option><option value="evaluating">Evaluating Supplier</option><option value="existing">Existing Customer</option><option value="approved">Approved Vendor</option><option value="other">Other</option></select></div>
  <div class="form-group"><label for="coaTimeline">Expected Purchase Timeline *</label><select id="coaTimeline" name="purchase_timeline" required><option value="">Select timeline</option><option value="immediate">Immediate</option><option value="within-1-month">Within 1 month</option><option value="within-3-months">Within 3 months</option><option value="evaluating">Just evaluating suppliers</option></select></div>
- <div class="form-group"><label for="coaNotes">Additional Notes *</label><textarea id="coaNotes" name="additional_notes" rows="3" required></textarea></div>
+ <div class="form-group"><label for="coaNotes">Additional Notes</label><textarea id="coaNotes" name="additional_notes" rows="3" placeholder="Optional"></textarea></div>
  </div>
  <div class="doc-request-actions">
  <button type="submit" class="btn btn-gold">Request COA <span class="arrow">&rarr;</span></button>
@@ -397,11 +397,11 @@
  <div class="form-group"><label for="sdsProduct">Product *</label><select id="sdsProduct" name="product" class="doc-product-select" required></select></div>
  <div class="form-row">
  <div class="form-group"><label for="sdsGrade">Grade / Specification</label><select id="sdsGrade" name="grade" class="doc-grade-select" disabled><option value="">Select product first</option></select></div>
- <div class="form-group"><label for="sdsApplication">Intended Application / Industry</label><input type="text" id="sdsApplication" name="application" placeholder="Optional"></div>
+ <div class="form-group"><label for="sdsApplication">Intended Application / Industry *</label><input type="text" id="sdsApplication" name="application" required></div>
  </div>
  <div class="form-group"><label for="sdsImportCountry">Intended Country of Import</label><input type="text" id="sdsImportCountry" name="import_country" placeholder="Optional"></div>
  <div class="form-group"><label for="sdsTimeline">Expected Purchase Timeline *</label><select id="sdsTimeline" name="purchase_timeline" required><option value="">Select timeline</option><option value="immediate">Immediate</option><option value="within-1-month">Within 1 month</option><option value="within-3-months">Within 3 months</option><option value="evaluating">Just evaluating suppliers</option></select></div>
- <div class="form-group"><label for="sdsNotes">Additional Notes *</label><textarea id="sdsNotes" name="additional_notes" rows="3" required></textarea></div>
+ <div class="form-group"><label for="sdsNotes">Additional Notes</label><textarea id="sdsNotes" name="additional_notes" rows="3" placeholder="Optional"></textarea></div>
  </div>
  <div class="doc-request-actions">
  <button type="submit" class="btn btn-gold">Request SDS / MSDS <span class="arrow">&rarr;</span></button>
@@ -437,7 +437,7 @@
  <div class="form-group"><label for="sampleProduct">Product *</label><select id="sampleProduct" name="product" class="doc-product-select" required></select></div>
  <div class="form-row">
  <div class="form-group"><label for="sampleGrade">Grade / Specification</label><select id="sampleGrade" name="grade" class="doc-grade-select" disabled><option value="">Select product first</option></select></div>
- <div class="form-group"><label for="sampleApplication">Intended Application / Industry</label><input type="text" id="sampleApplication" name="application" placeholder="Optional"></div>
+ <div class="form-group"><label for="sampleApplication">Intended Application / Industry *</label><input type="text" id="sampleApplication" name="application" required></div>
  </div>
  </div>
  <div class="doc-request-section">
@@ -453,7 +453,7 @@
  <div class="form-group"><label for="sampleAnnual">Expected Annual Requirement *</label><input type="text" id="sampleAnnual" name="annual_requirement" required placeholder="e.g. 500 MT / year"></div>
  </div>
  <div class="form-group"><label for="sampleTimeline">Expected Purchase Timeline *</label><select id="sampleTimeline" name="purchase_timeline" required><option value="">Select timeline</option><option value="immediate">Immediate</option><option value="within-1-month">Within 1 month</option><option value="within-3-months">Within 3 months</option><option value="evaluating">Just evaluating suppliers</option></select></div>
- <div class="form-group"><label for="sampleNotes">Additional Notes *</label><textarea id="sampleNotes" name="additional_notes" rows="3" required></textarea></div>
+ <div class="form-group"><label for="sampleNotes">Additional Notes</label><textarea id="sampleNotes" name="additional_notes" rows="3" placeholder="Optional"></textarea></div>
  </div>
  <div class="doc-request-actions">
  <button type="submit" class="btn btn-gold">Request Sample <span class="arrow">&rarr;</span></button>
