@@ -30,7 +30,7 @@ PORTFOLIO_META = {
     "korvanto-lat": "Laterite",
     "korvanto-cham": "LF42 · LF46 · LF54 · LF60 · LF70",
     "korvanto-baux": "CB80 · CB82 · CB86",
-    "korvanto-carbo": "CA · LCA · HLCA · CS",
+    "korvanto-carbo": "ELITE · PREMIUM · ADVANCE · STANDARD",
 }
 
 

@@ -127,7 +127,7 @@ CATALOG_FAMILIES = [
         "file": "korvanto-carbo.html",
         "image": "assets/images/Product-Images/Coal-Additive-Lustrous-Coal.png",
         "short": "Lustrous carbon additive for green sand foundry — grades CA, LCA, HLCA, CS for improved casting surface finish and reduced defects.",
-        "portfolio_meta": "CA · LCA · HLCA · CS",
+        "portfolio_meta": "ELITE · PREMIUM · ADVANCE · STANDARD",
         "single": "korvanto-carbo",
     },
 ]
